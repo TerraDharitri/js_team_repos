@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es6",
+		"outDir": "out",
+		"lib": [
+			"es6",
+			"ES2022.Error"
+		],
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"rootDir": "src",
+		"strict": true,
+		"strictPropertyInitialization": false,
+		"strictNullChecks": false,
+		/* Additional Checks */
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUnusedParameters": true
+	},
+	"exclude": [
+		"node_modules"
+	]
+}

@@ -1,0 +1,319 @@
+{
+	"name": "vscode-numbat-ide",
+	"displayName": "DharitrI IDE",
+	"description": "DharitrI IDE for developing Smart Contracts",
+	"version": "0.22.0",
+	"publisher": "Numbat",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TerraDharitri/drt-ide-vscode.git"
+	},
+	"engines": {
+		"vscode": "^1.76.2"
+	},
+	"categories": [
+		"Programming Languages",
+		"Extension Packs",
+		"Debuggers",
+		"Other"
+	],
+	"icon": "content/logo.png",
+	"activationEvents": [
+		"workspaceContains:**/dharitri.workspace.json"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "dharitri.setupWorkspace",
+				"title": "Setup Workspace",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.installSdk",
+				"title": "Install SDK",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.installSdkModule",
+				"title": "Install Module or Dependency",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.installRustDebuggerPrettyPrinterScript",
+				"title": "Install the rust debugger pretty printer script",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.refreshTemplates",
+				"title": "Refresh",
+				"category": "dharitri",
+				"icon": {
+					"light": "content/light/refresh.svg",
+					"dark": "content/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "dharitri.newFromTemplate",
+				"title": "New Contract",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.refreshContracts",
+				"title": "Refresh",
+				"category": "dharitri",
+				"icon": {
+					"light": "content/light/refresh.svg",
+					"dark": "content/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "dharitri.buildContract",
+				"title": "Build Contract",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.cleanContract",
+				"title": "Clean Contract",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.runScenarios",
+				"title": "Run Scenarios",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.gotoContract",
+				"title": "Show in Workspace Explorer",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.runFreshLocalnet",
+				"title": "Start Fresh Localnet",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.resumeExistingLocalnet",
+				"title": "Resume Localnet",
+				"category": "dharitri"
+			},
+			{
+				"command": "dharitri.stopLocalnet",
+				"title": "Stop Localnet",
+				"category": "dharitri"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "dharitri.buildContract",
+					"when": "explorerResourceIsFolder && resourceFilename != output && resourceFilename != debug && resourceFilename != target && resourceFilename != js-snippets && resourceFilename != interaction",
+					"group": "dharitri"
+				},
+				{
+					"command": "dharitri.buildContract",
+					"when": "resourceFilename == dharitri.json",
+					"group": "dharitri"
+				},
+				{
+					"command": "dharitri.cleanContract",
+					"when": "explorerResourceIsFolder && resourceFilename != output && resourceFilename != debug && resourceFilename != target && resourceFilename != js-snippets && resourceFilename != interaction",
+					"group": "dharitri"
+				},
+				{
+					"command": "dharitri.cleanContract",
+					"when": "resourceFilename == dharitri.json",
+					"group": "dharitri"
+				},
+				{
+					"command": "dharitri.runScenarios",
+					"when": "resourceFilename =~ /.scen.json/",
+					"group": "dharitri"
+				},
+				{
+					"command": "dharitri.runScenarios",
+					"when": "explorerResourceIsFolder && resourceFilename != output && resourceFilename != debug && resourceFilename != target && resourceFilename != js-snippets && resourceFilename != interaction",
+					"group": "dharitri"
+				},
+				{
+					"command": "dharitri.runFreshLocalnet",
+					"when": "resourceFilename == localnet.toml",
+					"group": "dharitri Localnet"
+				},
+				{
+					"command": "dharitri.resumeExistingLocalnet",
+					"when": "resourceFilename == localnet.toml",
+					"group": "dharitri Localnet"
+				},
+				{
+					"command": "dharitri.stopLocalnet",
+					"when": "resourceFilename == localnet.toml",
+					"group": "dharitri Localnet"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "dharitri.refreshContracts",
+					"when": "false"
+				},
+				{
+					"command": "dharitri.refreshTemplates",
+					"when": "false"
+				},
+				{
+					"command": "dharitri.newFromTemplate",
+					"when": "false"
+				},
+				{
+					"command": "dharitri.buildContract",
+					"when": "false"
+				},
+				{
+					"command": "dharitri.cleanContract",
+					"when": "false"
+				},
+				{
+					"command": "dharitri.runScenarios",
+					"when": "false"
+				},
+				{
+					"command": "dharitri.gotoContract",
+					"when": "false"
+				},
+				{
+					"command": "dharitri.runFreshLocalnet",
+					"when": "false"
+				},
+				{
+					"command": "dharitri.resumeExistingLocalnet",
+					"when": "false"
+				},
+				{
+					"command": "dharitri.stopLocalnet",
+					"when": "false"
+				}
+			],
+			"editor/context": [],
+			"view/title": [
+				{
+					"command": "dharitri.refreshTemplates",
+					"when": "view == contractTemplates",
+					"group": "navigation"
+				},
+				{
+					"command": "dharitri.refreshContracts",
+					"when": "view == smartContracts",
+					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "dharitri.buildContract",
+					"when": "view == smartContracts && viewItem == contract"
+				},
+				{
+					"command": "dharitri.cleanContract",
+					"when": "view == smartContracts && viewItem == contract"
+				},
+				{
+					"command": "dharitri.runScenarios",
+					"when": "view == smartContracts && viewItem == contract"
+				},
+				{
+					"command": "dharitri.gotoContract",
+					"when": "view == smartContracts && viewItem == contract"
+				},
+				{
+					"command": "dharitri.newFromTemplate",
+					"when": "view == contractTemplates",
+					"group": "inline"
+				}
+			]
+		},
+		"configuration": {
+			"title": "vscode-numbat-ide",
+			"properties": {
+				"dharitri.sdkPath": {
+					"type": "string",
+					"default": "~/dharitri-sdk"
+				}
+			}
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "dharitri",
+					"title": "DharitrI",
+					"icon": "content/logo-monochrome.png"
+				}
+			]
+		},
+		"views": {
+			"dharitri": [
+				{
+					"id": "smartContracts",
+					"name": "Smart Contracts",
+					"contextualTitle": "Smart Contracts in Workspace"
+				},
+				{
+					"id": "contractTemplates",
+					"name": "Templates",
+					"contextualTitle": "Smart Contract Templates"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "contractTemplates",
+				"contents": "Hit the refresh button to fetch or update the available Smart Contract templates."
+			},
+			{
+				"view": "smartContracts",
+				"contents": "Hit the refresh button to update the list of Smart Contracts within your workspace."
+			}
+		]
+	},
+	"scripts": {
+		"vscode:package": "vsce package",
+		"vscode:prepublish": "npm run package",
+		"vscode:publish": "vsce publish",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"test-compile": "tsc -p ./",
+		"test": "node ./out/test/runTest.js",
+		"unit-tests": "mocha",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@terradharitri/sdk-wallet": "4.0.0",
+		"@types/chai": "4.2.11",
+		"@types/eventsource": "1.1.11",
+		"@types/glob": "7.1.3",
+		"@types/mocha": "10.0.1",
+		"@types/node": "18.15.10",
+		"@types/uuid": "9.0.1",
+		"@types/vscode": "1.76.0",
+		"@typescript-eslint/eslint-plugin": "5.56.0",
+		"@typescript-eslint/parser": "5.56.0",
+		"@vscode/codicons": "0.0.32",
+		"@vscode/webview-ui-toolkit": "1.2.2",
+		"axios": "1.6.1",
+		"chai": "4.3.10",
+		"copy-webpack-plugin": "11.0.0",
+		"eslint": "8.36.0",
+		"eventsource": "2.0.2",
+		"glob": "8.1.0",
+		"html-loader": "4.2.0",
+		"mocha": "10.2.0",
+		"semver": "7.5.2",
+		"ts-loader": "9.4.2",
+		"ts-node": "10.9.1",
+		"typescript": "4.9.5",
+		"uuid": "8.3.2",
+		"vsce": "2.15.0",
+		"webpack": "5.76.3",
+		"webpack-cli": "5.0.1"
+	},
+	"extensionDependencies": []
+}
