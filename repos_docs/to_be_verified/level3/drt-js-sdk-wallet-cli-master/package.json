@@ -1,0 +1,26 @@
+{
+  "name": "@terradharitri/sdk-wallet-cli",
+  "version": "2.1.0",
+  "description": "Light CLI wrapper over the wallet components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DharitrI/mx-sdk-js-wallet-cli"
+  },
+  "main": "index.js",
+  "bin": {
+    "mxjs-wallet": "./index.js"
+  },
+  "scripts": {
+    "test": "cd ./tests && . ./test_cli.sh && testAll"
+  },
+  "keywords": [
+    "crypto"
+  ],
+  "author": "DharitrI",
+  "license": "MIT",
+  "dependencies": {
+    "@terradharitri/sdk-core": "11.2.0",
+    "@terradharitri/sdk-wallet": "2.1.2",
+    "commander": "9.0.0"
+  }
+}

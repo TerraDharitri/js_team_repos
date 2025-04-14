@@ -1,0 +1,113 @@
+import axios from 'axios';
+import useSwr from 'swr';
+
+import { NFTS_ENDPOINT, TOKENS_ENDPOINT } from 'apiCalls/endpoints';
+import { useGetNetworkConfig } from 'hooks/useGetNetworkConfig';
+import { NftEnumType } from 'types/tokens.types';
+import { getIdentifierType } from 'utils/validation/getIdentifierType';
+
+export interface TokenAssets {
+  description: string;
+  status: string;
+  svgUrl: string;
+  website?: string;
+  pngUrl?: string;
+  social?: any;
+  extraTokens?: string[];
+  lockedAccounts?: { [key: string]: string };
+}
+
+export interface TokenMediaType {
+  url?: string;
+  originalUrl?: string;
+  thumbnailUrl?: string;
+  fileType?: string;
+  fileSize?: number;
+}
+
+export interface TokenOptionType {
+  tokenLabel: string;
+  tokenDecimals: number;
+  tokenAvatar: string;
+  assets?: TokenAssets;
+  type?: NftEnumType;
+  error?: string;
+  dcdtPrice?: number;
+  ticker?: string;
+  identifier?: string;
+  name?: string;
+  isLoading?: boolean;
+}
+
+interface TokenInfoResponse {
+  identifier: string;
+  name: string;
+  ticker: string;
+  decimals: number;
+  type?: NftEnumType;
+  assets: TokenAssets;
+  media?: TokenMediaType[];
+  price: number;
+}
+
+interface TokenInfoResponseDataType {
+  data?: TokenInfoResponse;
+  error?: string;
+  isLoading?: boolean;
+}
+
+const fetcher = (url: string) =>
+  axios.get(url).then((response) => response.data);
+
+export function useGetTokenDetails({
+  tokenId
+}: {
+  tokenId: string;
+}): TokenOptionType {
+  const { network } = useGetNetworkConfig();
+  const { isNft } = getIdentifierType(tokenId);
+
+  const tokenIdentifier = tokenId;
+  const tokenEndpoint = isNft ? NFTS_ENDPOINT : TOKENS_ENDPOINT;
+
+  const {
+    data: selectedToken,
+    error,
+    isLoading
+  }: TokenInfoResponseDataType = useSwr(
+    Boolean(tokenIdentifier)
+      ? `${network.apiAddress}/${tokenEndpoint}/${tokenIdentifier}`
+      : null,
+    fetcher
+  );
+
+  if (!tokenIdentifier) {
+    return {
+      tokenDecimals: Number(network.decimals),
+      tokenLabel: '',
+      tokenAvatar: ''
+    };
+  }
+
+  const tokenDecimals = selectedToken
+    ? selectedToken?.decimals
+    : Number(network.decimals);
+  const tokenLabel = selectedToken ? selectedToken?.name : '';
+  const tokenAvatar = selectedToken
+    ? selectedToken?.assets?.svgUrl ?? selectedToken?.media?.[0].thumbnailUrl
+    : '';
+
+  return {
+    isLoading,
+    tokenDecimals: tokenDecimals,
+    tokenLabel,
+    type: selectedToken?.type,
+    tokenAvatar,
+    identifier: selectedToken?.identifier,
+    assets: selectedToken?.assets,
+    dcdtPrice: selectedToken?.price,
+    ticker: selectedToken?.ticker,
+    name: selectedToken?.name,
+    error
+  };
+}
