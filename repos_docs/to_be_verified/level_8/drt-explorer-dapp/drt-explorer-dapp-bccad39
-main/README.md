@@ -1,6 +1,6 @@
 # DharitrI Explorer
 
-![explorer.dharitri.com](https://github.com/TerraDharitri/drt-explorer-dapp/blob/main/public/share.jpg)
+![explorer.dharitri.org](https://github.com/TerraDharitri/drt-explorer-dapp/blob/main/public/share.jpg)
 
 This project was bootstrapped with [Vite](https://vitejs.dev/guide/).
 

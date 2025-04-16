@@ -3,7 +3,7 @@ import { openProviderModal, checkUrl } from '../../utils/actions.ts';
 
 describe('Check Ledger Modal', () => {
   beforeEach(async () => {
-    await browser.url('https://integration.template-dapp.dharitri.com/');
+    await browser.url('https://integration.template-dapp.dharitri.org/');
     await $(GlobalSelectorEnum.connectBtn).click();
   });
 

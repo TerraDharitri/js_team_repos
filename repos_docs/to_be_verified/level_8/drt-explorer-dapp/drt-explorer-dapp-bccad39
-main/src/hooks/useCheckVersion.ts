@@ -14,7 +14,7 @@ export const useCheckVersion = () => {
   const { addNotification } = useNotifications();
 
   const isMainnetExplorer =
-    window.location.origin === 'https://explorer.dharitri.com';
+    window.location.origin === 'https://explorer.dharitri.org';
   const explorerVersion = import.meta.env.VITE_APP_CACHE_BUST;
   const explorerVersionUrl = import.meta.env.VITE_APP_VERSION_URL;
 

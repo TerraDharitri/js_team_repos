@@ -37,8 +37,8 @@ export class DataService {
                 switch (market) {
                     case 'hatom':
                         return (await axios.get<TokenPrice>(`${this.appConfigService.getDataApiHatomUrl()}/${tokenId}?date=${date.format('YYYY-MM-DD')}`)).data.price;
-                    case 'xexchange':
-                        return (await axios.get<TokenPrice>(`${this.appConfigService.getDataApiXexchangeUrl()}/${tokenId}?date=${date.format('YYYY-MM-DD')}`)).data.price;
+                    case 'dharitrix':
+                        return (await axios.get<TokenPrice>(`${this.appConfigService.getDataApidharitriXUrl()}/${tokenId}?date=${date.format('YYYY-MM-DD')}`)).data.price;
                     case 'cex':
                         return (await axios.get<TokenPrice>(`${this.appConfigService.getDataApiCexUrl()}/${tokenId}?date=${date.format('YYYY-MM-DD')}`)).data.price;
                     default:
@@ -49,7 +49,7 @@ export class DataService {
             if (tokenId.startsWith('USD')) {
                 return (await axios.get<TokenPrice>(`${this.appConfigService.getDataApiCexUrl()}/${tokenId}?date=${date.format('YYYY-MM-DD')}`)).data.price;
             }
-            return (await axios.get<TokenPrice>(`${this.appConfigService.getDataApiXexchangeUrl()}/${tokenId}?date=${date.format('YYYY-MM-DD')}`)).data.price;
+            return (await axios.get<TokenPrice>(`${this.appConfigService.getDataApidharitriXUrl()}/${tokenId}?date=${date.format('YYYY-MM-DD')}`)).data.price;
         }
         catch (error) {
             this.logger.error(error);

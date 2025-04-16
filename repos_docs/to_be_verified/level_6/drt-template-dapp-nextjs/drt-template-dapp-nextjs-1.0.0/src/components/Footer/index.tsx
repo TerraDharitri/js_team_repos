@@ -4,7 +4,7 @@ export default function Footer() {
             <a
                 target='_blank'
                 className='d-flex align-items-center'
-                href='https://dharitri.com/'
+                href='https://dharitri.org/'
             >
                 Made by DharitrI.
             </a>

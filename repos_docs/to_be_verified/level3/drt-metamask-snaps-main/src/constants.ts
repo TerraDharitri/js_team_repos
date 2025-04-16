@@ -12,20 +12,20 @@ export const networks: NetworkType[] = [
     name: "Testnet",
     chainId: "T",
     rewaLabel: "xREWA",
-    apiAddress: "https://testnet-api.TerraDharitri.com",
+    apiAddress: "https://testnet-api.dharitri.org",
   },
   {
     id: "devnet",
     name: "Devnet",
     chainId: "D",
     rewaLabel: "xREWA",
-    apiAddress: "https://devnet-api.TerraDharitri.com",
+    apiAddress: "https://devnet-api.dharitri.org",
   },
   {
     id: "mainnet",
     name: "Mainnet",
     chainId: "1",
     rewaLabel: "REWA",
-    apiAddress: "https://api.TerraDharitri.com",
+    apiAddress: "https://api.dharitri.org",
   },
 ];

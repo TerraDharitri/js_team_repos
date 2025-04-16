@@ -1117,7 +1117,7 @@ Due to this, you cannot yet use the DappProvider wrapping logic in a React Nativ
 
 We have a couple of solutions in mind and are actively working on exploring ways to overcome these limitations.
 Until then, you can use @terradharitri/drtjs libraries and @walletconnect to connect to the xPortal App.
-There are also guide for doing this from the [community](https://github.com/S4F-IT/maiar-integration/blob/master/README.md)
+There are also guide for doing this from the [community](https://github.com/S4F-IT/durian-integration/blob/master/README.md)
 
 ## Next.js support
 

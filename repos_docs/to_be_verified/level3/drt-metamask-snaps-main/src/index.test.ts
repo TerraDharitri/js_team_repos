@@ -184,7 +184,7 @@ describe('onRpcRequest', () => {
     const { mock, request, close } = await installSnap();
 
     await mock({
-      url: 'https://devnet-api.TerraDharitri.com/network/config',
+      url: 'https://devnet-api.dharitri.org/network/config',
       response: {
         contentType: 'application/json',
         body: JSON.stringify({
@@ -274,7 +274,7 @@ describe('onRpcRequest', () => {
     const { mock, request, close } = await installSnap();
 
     await mock({
-      url: 'https://devnet-api.TerraDharitri.com/network/config',
+      url: 'https://devnet-api.dharitri.org/network/config',
       response: {
         contentType: 'application/json',
         body: JSON.stringify({
@@ -399,7 +399,7 @@ describe('onRpcRequest', () => {
     const { mock, request, close } = await installSnap();
 
     await mock({
-      url: 'https://devnet-api.TerraDharitri.com/network/config',
+      url: 'https://devnet-api.dharitri.org/network/config',
       response: {
         contentType: 'application/json',
         body: JSON.stringify({

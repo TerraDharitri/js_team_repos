@@ -20,7 +20,7 @@ export class SftChangeTransactionExtractor implements TransactionExtractorInterf
       return BinaryUtils.hexToString(collectionIdentifierHex);
     } catch (error: any) {
       const logger = new Logger(SftChangeTransactionExtractor.name);
-      logger.error(`Error in tryExtractCollectionIdentifierFromChangeSftToMetaEsdTransaction function. Could not convert hex '${collectionIdentifierHex}' to string`);
+      logger.error(`Error in tryExtractCollectionIdentifierFromChangeSftToMetaDcdTransaction function. Could not convert hex '${collectionIdentifierHex}' to string`);
       logger.error(error);
       return undefined;
     }

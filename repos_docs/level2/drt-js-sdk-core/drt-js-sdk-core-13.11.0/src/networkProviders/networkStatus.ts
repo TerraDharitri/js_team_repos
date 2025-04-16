@@ -20,7 +20,7 @@ export class NetworkStatus {
     public HighestFinalNonce: number;
 
     /**
-     * The erd nonce.
+     * The drt nonce.
      */
     public Nonce: number;
 

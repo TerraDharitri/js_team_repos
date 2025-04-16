@@ -3,7 +3,7 @@ import { promises } from "fs"; // md-ignore
 
 // ## Explicit decoding / encoding of values
 
-// When needed, you can use the `class:BinaryCodec` to [decode and encode values](https://docs.dharitri.com/developers/data/serialization-overview/) manually,
+// When needed, you can use the `class:BinaryCodec` to [decode and encode values](https://docs.dharitri.org/developers/data/serialization-overview/) manually,
 // leveraging contract ABIs:
 
 // ```js

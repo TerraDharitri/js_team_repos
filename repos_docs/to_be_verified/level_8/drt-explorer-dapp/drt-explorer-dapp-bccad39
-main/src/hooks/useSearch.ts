@@ -77,10 +77,10 @@ export const useSearch = (hash: string) => {
           searchHash.length < 65 &&
           addressIsBech32(bech32.encode(searchHash, hrp));
       } catch {}
-      let isErdAddress = false;
+      let isDrtAddress = false;
       try {
         const drtAddress = Address.newFromBech32(searchHash);
-        isErdAddress = drtAddress.getHrp() === DEFAULT_HRP;
+        isDrtAddress = drtAddress.getHrp() === DEFAULT_HRP;
       } catch {}
 
       switch (true) {
@@ -100,10 +100,10 @@ export const useSearch = (hash: string) => {
           });
           break;
 
-        case isErdAddress:
+        case isDrtAddress:
         case isAccount:
           let searchAddress = searchHash;
-          if (isErdAddress) {
+          if (isDrtAddress) {
             try {
               const drtAddress = new Address(
                 Address.newFromBech32(searchHash).getPublicKey(),

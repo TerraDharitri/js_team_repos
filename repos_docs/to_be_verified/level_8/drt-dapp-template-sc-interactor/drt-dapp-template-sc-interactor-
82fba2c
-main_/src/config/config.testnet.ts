@@ -3,11 +3,11 @@ import { EnvironmentsEnum } from 'types';
 
 export * from './sharedConfig';
 
-export const API_URL = 'https://testnet-template-api.dharitri.com';
+export const API_URL = 'https://testnet-template-api.dharitri.org';
 export const sampleAuthenticatedDomains = [API_URL];
 export const environment = EnvironmentsEnum.testnet;
 export const metamaskSnapWalletAddress =
-  'https://testnet-snap-wallet.dharitri.com';
+  'https://testnet-snap-wallet.dharitri.org';
 
 interface IWhitelistEndpoint {
   name: string;

@@ -1,9 +1,9 @@
 import { Injectable } from "@nestjs/common";
-import { ErdnestConfigService } from "@terradharitri/sdk-nestjs-common";
+import { DrtnestConfigService } from "@terradharitri/sdk-nestjs-common";
 import { CommonConfigService } from "./common.config.service";
 
 @Injectable()
-export class SdkNestjsConfigServiceImpl implements ErdnestConfigService {
+export class SdkNestjsConfigServiceImpl implements DrtnestConfigService {
   constructor(
     private readonly commonConfigService: CommonConfigService,
   ) { }

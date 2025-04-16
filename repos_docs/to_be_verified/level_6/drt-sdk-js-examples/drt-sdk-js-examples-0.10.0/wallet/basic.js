@@ -3,7 +3,7 @@ const axios = require("axios");
 
 // https://github.com/TerraDharitri/drt-sdk-testwallets/blob/main/users/mnemonic.txt
 const DummyMnemonic = "moral volcano peasant pass circle pen over picture flat shop clap goat never lyrics gather prepare woman film husband gravity behind test tiger improve";
-const APIUrl = "https://devnet-api.dharitri.com";
+const APIUrl = "https://devnet-api.dharitri.org";
 
 module.exports.exampleDeriveAccountsFromMnemonic = function () {
     const mnemonic = Mnemonic.fromString(DummyMnemonic);
@@ -33,10 +33,10 @@ module.exports.exampleSignAndBroadcastTransaction = async function () {
     const address = userPublicKey.toAddress();
     const signer = new UserSigner(userSecretKey);
 
-    // https://docs.dharitri.com/integrators/creating-transactions/#nonce-management
+    // https://docs.dharitri.org/integrators/creating-transactions/#nonce-management
     const nonce = await recallAccountNonce(address);
 
-    // https://docs.dharitri.com/sdk-and-tools/sdk-js/sdk-js-cookbook/#preparing-a-simple-transaction
+    // https://docs.dharitri.org/sdk-and-tools/sdk-js/sdk-js-cookbook/#preparing-a-simple-transaction
     const data = "for the lunch"
     const gasLimit = new GasEstimator().forREWATransfer(data.length);
     const transaction = new Transaction({
@@ -102,7 +102,7 @@ module.exports.exampleSignMessage = async function () {
     console.log("Message signature", message.getSignature().toString("hex"));
 
     // In order to validate a message signature, follow:
-    // https://docs.dharitri.com/sdk-and-tools/sdk-js/sdk-js-signing-providers/#verifying-the-signature-of-a-login-token
+    // https://docs.dharitri.org/sdk-and-tools/sdk-js/sdk-js-signing-providers/#verifying-the-signature-of-a-login-token
 }
 
 module.exports.exampleVerifyMessage = async function () {

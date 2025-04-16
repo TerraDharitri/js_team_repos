@@ -2,7 +2,7 @@ import { TokenTransfer } from '@terradharitri/sdk-core';
 import { WALLET_PROVIDER_SEND_TRANSACTION_URL } from '@terradharitri/sdk-dapp/constants';
 
 /**
- * For documentation, check out {@link https://docs.dharitri.com/wallet/webhooks#send-transaction-hook send transaciton hook}
+ * For documentation, check out {@link https://docs.dharitri.org/wallet/webhooks#send-transaction-hook send transaciton hook}
  */
 export const getTransactionUrl = (walletAddress: string) => {
   const walletBaseUrl = `${walletAddress}/${WALLET_PROVIDER_SEND_TRANSACTION_URL}`;

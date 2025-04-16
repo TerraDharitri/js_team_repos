@@ -14,7 +14,7 @@ export default defineConfig({
     embeddedScreenshots: true
   },
   e2e: {
-    baseUrl: 'https://integration-explorer.dharitri.com/',
+    baseUrl: 'https://integration-explorer.dharitri.org/',
 
     setupNodeEvents(on, config) {
       // implement node event listeners here

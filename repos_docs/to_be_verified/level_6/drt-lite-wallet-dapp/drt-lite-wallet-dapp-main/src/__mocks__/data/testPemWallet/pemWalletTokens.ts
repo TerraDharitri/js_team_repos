@@ -13,9 +13,9 @@ export const pemWalletTokens = [
         'AshSwap is the first stable-swap DEX built on the DharitrI blockchain that allows users to trade stable assets with high volume and small slippage.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/ASH-e3d1b7/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/ASH-e3d1b7/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/ASH-e3d1b7/logo.svg',
+        'https://devnet-media.dharitri.org/tokens/asset/ASH-e3d1b7/logo.svg',
       lockedAccounts: {
         drt1w280yjym0xc2aw80dvn2a4ew5vzvtshtr8nux8wa5wzqm78y7nvsanpgld:
           'Locked Account #1'
@@ -74,14 +74,14 @@ export const pemWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://xexchange.com',
+      website: 'https://dharitrix.com',
       description:
         'wREWA is an DCDT token that has the same value as REWA, the native coin of the DharitrI blockchain.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/WREWA-a28c59/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/WREWA-a28c59/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/WREWA-a28c59/logo.svg'
+        'https://devnet-media.dharitri.org/tokens/asset/WREWA-a28c59/logo.svg'
     },
     transactions: 51722,
     transactionsLastUpdatedAt: 1718723498,

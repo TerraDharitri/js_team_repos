@@ -5,8 +5,8 @@ import { DynamicModule, Provider } from "@nestjs/common";
 import { ClientOptions, ClientProxyFactory, Transport } from "@nestjs/microservices";
 import { ApiConfigModule } from "src/common/api-config/api.config.module";
 import { ApiConfigService } from "src/common/api-config/api.config.service";
-import { MxnestConfigServiceImpl } from "src/common/api-config/drtnest-config-service-impl.service";
-import { MXNEST_CONFIG_SERVICE } from "@terradharitri/sdk-nestjs-common";
+import { DrtnestConfigServiceImpl } from "src/common/api-config/drtnest-config-service-impl.service";
+import { Drtnest_CONFIG_SERVICE } from "@terradharitri/sdk-nestjs-common";
 
 export class DynamicModuleUtils {
   static getElasticModule(): DynamicModule {
@@ -67,8 +67,8 @@ export class DynamicModuleUtils {
 
   static getNestJsApiConfigService(): Provider {
     return {
-      provide: MXNEST_CONFIG_SERVICE,
-      useClass: MxnestConfigServiceImpl,
+      provide: Drtnest_CONFIG_SERVICE,
+      useClass: DrtnestConfigServiceImpl,
     };
   }
 

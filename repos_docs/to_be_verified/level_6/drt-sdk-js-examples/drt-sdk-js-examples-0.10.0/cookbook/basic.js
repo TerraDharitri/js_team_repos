@@ -9,7 +9,7 @@ const notYetSignedTx = getNotYetSignedTx(); // md-ignore
 // ```js
 import { ApiNetworkProvider } from "@terradharitri/sdk-core";
 
-const apiNetworkProvider = new ApiNetworkProvider("https://devnet-api.dharitri.com", { clientName: "dharitri-your-client-name" });
+const apiNetworkProvider = new ApiNetworkProvider("https://devnet-api.dharitri.org", { clientName: "dharitri-your-client-name" });
 // ```
 
 // Creating a Proxy provider:
@@ -17,12 +17,12 @@ const apiNetworkProvider = new ApiNetworkProvider("https://devnet-api.dharitri.c
 // ```js
 import { ProxyNetworkProvider } from "@terradharitri/sdk-core";
 
-const proxyNetworkProvider = new ProxyNetworkProvider("https://devnet-gateway.dharitri.com", { clientName: "dharitri-your-client-name" });
+const proxyNetworkProvider = new ProxyNetworkProvider("https://devnet-gateway.dharitri.org", { clientName: "dharitri-your-client-name" });
 // ```
 
 // md-insert:customNetworkProviders
 
-// On this topic, please see [extending sdk-js](https://docs.dharitri.com/sdk-and-tools/sdk-js/extending-sdk-js).
+// On this topic, please see [extending sdk-js](https://docs.dharitri.org/sdk-and-tools/sdk-js/extending-sdk-js).
 
 // ## Fetching network parameters
 
@@ -67,4 +67,4 @@ console.log("Nonce:", alice.nonce);
 notYetSignedTx.nonce = alice.getNonceThenIncrement();
 // ```
 
-// For further reference, please see [nonce management](https://docs.dharitri.com/integrators/creating-transactions/#nonce-management).
+// For further reference, please see [nonce management](https://docs.dharitri.org/integrators/creating-transactions/#nonce-management).

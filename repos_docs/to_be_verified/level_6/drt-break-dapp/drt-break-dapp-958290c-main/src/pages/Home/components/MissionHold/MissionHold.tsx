@@ -23,7 +23,7 @@ export const MissionHold = () => {
       </div>
 
       <a
-        href="https://dharitri.com/sovereign-chains"
+        href="https://dharitri.org/sovereign-chains"
         target="_blank"
         className="mission-hold-button"
       >

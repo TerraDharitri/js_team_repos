@@ -70,7 +70,7 @@ export class MexPairService {
     try {
       const settings = await this.mexSettingService.getSettings();
       if (!settings) {
-        throw new BadRequestException('Could not fetch MEX settings');
+        throw new BadRequestException('Could not fetch MOA settings');
       }
 
       const allPairs: MexPair[] = [];
@@ -116,7 +116,7 @@ export class MexPairService {
       return undefined;
     }
 
-    const xexchangeTypes = [
+    const dharitrixTypes = [
       MexPairType.core,
       MexPairType.community,
       MexPairType.experimental,
@@ -125,8 +125,8 @@ export class MexPairService {
 
     let exchange: MexPairExchange;
 
-    if (xexchangeTypes.includes(type)) {
-      exchange = MexPairExchange.xexchange;
+    if (dharitrixTypes.includes(type)) {
+      exchange = MexPairExchange.dharitrix;
     } else {
       exchange = MexPairExchange.unknown;
     }

@@ -25,7 +25,7 @@ import { CacheService, CachingInterceptor, GuestCacheInterceptor, GuestCacheServ
 import { LoggerInitializer } from '@terradharitri/sdk-nestjs-common';
 import { MetricsService, RequestCpuTimeInterceptor, LoggingInterceptor, LogRequestsInterceptor } from '@terradharitri/sdk-nestjs-monitoring';
 import { FieldsInterceptor, ExtractInterceptor, CleanupInterceptor, PaginationInterceptor, QueryCheckInterceptor, ComplexityInterceptor, OriginInterceptor, ExcludeFieldsInterceptor } from '@terradharitri/sdk-nestjs-http';
-import { MxnestConfigServiceImpl } from './common/api-config/drtnest-config-service-impl.service';
+import { DrtnestConfigServiceImpl } from './common/api-config/drtnest-config-service-impl.service';
 import { RabbitMqModule } from './common/rabbitmq/rabbitmq.module';
 import { TransactionLoggingInterceptor } from './interceptors/transaction.logging.interceptor';
 import { BatchTransactionProcessorModule } from './crons/transaction.processor/batch.transaction.processor.module';
@@ -193,7 +193,7 @@ async function configurePublicApp(publicApp: NestExpressApplication, apiConfigSe
   const settingsService = publicApp.get<SettingsService>(SettingsService);
 
   if (apiConfigService.getIsAuthActive()) {
-    publicApp.useGlobalGuards(new JwtOrNativeAuthGuard(new MxnestConfigServiceImpl(apiConfigService), cachingService));
+    publicApp.useGlobalGuards(new JwtOrNativeAuthGuard(new DrtnestConfigServiceImpl(apiConfigService), cachingService));
   }
 
   const httpServer = httpAdapterHostService.httpAdapter.getHttpServer();

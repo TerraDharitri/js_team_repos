@@ -17,7 +17,7 @@ export const Header = () => {
         <div className="flex items-center gap-2">
           <a
             target="_blank"
-            href="https://dharitri.com/sovereign-chains"
+            href="https://dharitri.org/sovereign-chains"
             className="text-teal hover:enabled:bg-neutral-750 font-family-medium text-right leading-4"
           >
             Sovereign Chains

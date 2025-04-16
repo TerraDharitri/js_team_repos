@@ -22,17 +22,17 @@ describe('test pair event decoders', () => {
             epoch: 422,
             timestamp: 1651594470,
             firstToken: {
-                tokenID: 'WEGLD-d7c6bb',
+                tokenID: 'WREWA-d7c6bb',
                 nonce: 0,
                 amount: '1000000000000000000',
             },
             secondToken: {
-                tokenID: 'MEX-dc289c',
+                tokenID: 'MOA-dc289c',
                 nonce: 0,
                 amount: '2255465336927008578386637',
             },
             liquidityPoolToken: {
-                tokenID: 'EGLDMEX-c29b0e',
+                tokenID: 'REWAMOA-c29b0e',
                 nonce: 0,
                 amount: '1824608731151797603',
             },
@@ -55,17 +55,17 @@ describe('test pair event decoders', () => {
             epoch: 432,
             timestamp: 1651669374,
             firstToken: {
-                tokenID: 'WEGLD-d7c6bb',
+                tokenID: 'WREWA-d7c6bb',
                 nonce: 0,
                 amount: '1042368987481845088',
             },
             secondToken: {
-                tokenID: 'MEX-dc289c',
+                tokenID: 'MOA-dc289c',
                 nonce: 0,
                 amount: '2600256680852409357093037',
             },
             liquidityPoolToken: {
-                tokenID: 'EGLDMEX-c29b0e',
+                tokenID: 'REWAMOA-c29b0e',
                 nonce: 0,
                 amount: '2000000000000000000',
             },
@@ -88,12 +88,12 @@ describe('test pair event decoders', () => {
             epoch: 432,
             timestamp: 1651669452,
             tokenIn: {
-                tokenID: 'WEGLD-d7c6bb',
+                tokenID: 'WREWA-d7c6bb',
                 nonce: 0,
                 amount: '1000000000000000000',
             },
             tokenOut: {
-                tokenID: 'MEX-dc289c',
+                tokenID: 'MOA-dc289c',
                 nonce: 0,
                 amount: '2484093680223743787429824',
             },
@@ -116,12 +116,12 @@ describe('test pair event decoders', () => {
             epoch: 432,
             timestamp: 1651669554,
             tokenIn: {
-                tokenID: 'WEGLD-d7c6bb',
+                tokenID: 'WREWA-d7c6bb',
                 nonce: 0,
                 amount: '999999999975675126',
             },
             tokenOut: {
-                tokenID: 'MEX-dc289c',
+                tokenID: 'MOA-dc289c',
                 nonce: 0,
                 amount: '2478123306600000000000000',
             },
@@ -142,12 +142,12 @@ describe('test pair event decoders', () => {
             epoch: 432,
             timestamp: 1651669638,
             tokenIn: {
-                tokenID: 'WEGLD-d7c6bb',
+                tokenID: 'WREWA-d7c6bb',
                 nonce: 0,
                 amount: '43445832694731890',
             },
             tokenOut: {
-                tokenID: 'MEX-dc289c',
+                tokenID: 'MOA-dc289c',
                 nonce: 0,
                 amount: '107852458478753919967165',
             },

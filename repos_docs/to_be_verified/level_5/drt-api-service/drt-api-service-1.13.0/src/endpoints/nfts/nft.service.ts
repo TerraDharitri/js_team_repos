@@ -664,7 +664,7 @@ export class NftService {
 
     try {
       const network = this.apiConfigService.getNetwork();
-      // const defaultMediaUrl = `https://${network === 'mainnet' ? '' : `${network}-`}media.numbat.com`;
+      // const defaultMediaUrl = `https://${network === 'mainnet' ? '' : `${network}-`}media.dharitri.org`;
       const defaultMediaUrl = `https://${network === 'mainnet' ? '' : `${network}-`}api.dharitri.org/media`;
 
       for (const media of nft.media) {

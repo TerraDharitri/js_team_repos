@@ -81,7 +81,7 @@ describe('TransactionsValue tests', () => {
     );
     expect(transactionValueIcon).toBeDefined();
     expect(transactionValueIcon.innerHTML).toContain(
-      '1 WREWA (WREWA-bd4d79)\n281,066.754391919467235791 MEX (MEX-455c57)'
+      '1 WREWA (WREWA-bd4d79)\n281,066.754391919467235791 MOA (MOA-455c57)'
     );
   });
 });

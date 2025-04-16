@@ -4,13 +4,13 @@ export class MexToken {
     Object.assign(this, init);
   }
 
-  @ApiProperty({ type: String, example: 'MEX-455c57' })
+  @ApiProperty({ type: String, example: 'MOA-455c57' })
   id: string = '';
 
-  @ApiProperty({ type: String, example: 'MEX' })
+  @ApiProperty({ type: String, example: 'MOA' })
   symbol: string = '';
 
-  @ApiProperty({ type: String, example: 'MEX' })
+  @ApiProperty({ type: String, example: 'MOA' })
   name: string = '';
 
   @ApiProperty({ type: Number, example: 0.000206738758250580 })

@@ -36,8 +36,8 @@ export class MexSettings {
       .flat()
       .distinct();
 
-    settings.lockedAssetIdentifier = lockedAssetIdentifiers.find((identifier: string) => identifier.startsWith('LKMEX'));
-    settings.lockedAssetIdentifierV2 = lockedAssetIdentifiers.find((identifier: string) => identifier.startsWith('XMEX'));
+    settings.lockedAssetIdentifier = lockedAssetIdentifiers.find((identifier: string) => identifier.startsWith('LKMOA'));
+    settings.lockedAssetIdentifierV2 = lockedAssetIdentifiers.find((identifier: string) => identifier.startsWith('XMOA'));
 
     const wrappedToken = response.wrappingInfo[0].wrappedToken.identifier;
     const mexToken = response.simpleLockEnergy.baseAssetToken.identifier;

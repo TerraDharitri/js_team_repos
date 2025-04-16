@@ -30,7 +30,7 @@ export const robot = (app: Probot) => {
           const newOwners: string[] = [];
           const networkPath = network === 'mainnet' ? '' : `${network}/`;
 
-          const infoJsonUrl = `https://raw.githubusercontent.com/dharitri/mx-assets/master/${networkPath}identities/${asset}/info.json`;
+          const infoJsonUrl = `https://raw.githubusercontent.com/dharitri/drt-assets/master/${networkPath}identities/${asset}/info.json`;
 
           // we try to read the contents of the info.json file
           const { data: infoFromMaster } = await axios.get(infoJsonUrl, { validateStatus: status => [200, 404].includes(status) });
@@ -354,7 +354,7 @@ export const robot = (app: Probot) => {
           return [...addressSet];
         }
 
-        const { data: pullRequest } = await axios.get(`https://api.github.com/repos/dharitri/mx-assets/pulls/${context.pullRequest().pull_number}`);
+        const { data: pullRequest } = await axios.get(`https://api.github.com/repos/TerraDharitri/drt-assets/pulls/${context.pullRequest().pull_number}`);
         const state = pullRequest.state;
 
         if (state === 'closed' || state === 'locked' || state === 'draft') {

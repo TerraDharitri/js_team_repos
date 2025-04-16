@@ -99,10 +99,10 @@ describe('API Config', () => {
     it("should return socket url", () => {
       jest
         .spyOn(ConfigService.prototype, "get")
-        .mockImplementation(jest.fn(() => ['socket-fra.numbat.com']));
+        .mockImplementation(jest.fn(() => ['socket-fra.dharitri.org']));
 
       const results = apiConfigService.getSocketUrl();
-      expect(results).toEqual(['socket-fra.numbat.com']);
+      expect(results).toEqual(['socket-fra.dharitri.org']);
     });
 
     it("should throw error because test simulates that socket url is not defined", () => {
@@ -114,7 +114,7 @@ describe('API Config', () => {
     });
   });
 
-  describe("getMaiarIdUrl", () => {
+  describe("getDurianIdUrl", () => {
     it("should return durianId url", () => {
       jest
         .spyOn(ConfigService.prototype, "get")
@@ -1090,10 +1090,10 @@ describe('API Config', () => {
     it("should return media url", () => {
       jest
         .spyOn(ConfigService.prototype, "get")
-        .mockImplementation(jest.fn(() => 'https://media.numbat.com'));
+        .mockImplementation(jest.fn(() => 'https://media.dharitri.org'));
 
       const results = apiConfigService.getMediaUrl();
-      expect(results).toEqual('https://media.numbat.com');
+      expect(results).toEqual('https://media.dharitri.org');
     });
 
     it.skip("should throw error because test simulates that media url is not defined", () => {
@@ -1109,10 +1109,10 @@ describe('API Config', () => {
     it("should return media internal url", () => {
       jest
         .spyOn(ConfigService.prototype, "get")
-        .mockImplementation(jest.fn(() => 'https://media-internal.numbat.com'));
+        .mockImplementation(jest.fn(() => 'https://media-internal.dharitri.org'));
 
       const results = apiConfigService.getMediaInternalUrl();
-      expect(results).toEqual('https://media-internal.numbat.com');
+      expect(results).toEqual('https://media-internal.dharitri.org');
     });
 
     it("should throw error because test simulates that media internal url is not defined", () => {
@@ -1129,10 +1129,10 @@ describe('API Config', () => {
     it("should return nft thumbnails url", () => {
       jest
         .spyOn(ConfigService.prototype, "get")
-        .mockImplementation(jest.fn(() => 'https://media.numbat.com/nfts/thumbnail'));
+        .mockImplementation(jest.fn(() => 'https://media.dharitri.org/nfts/thumbnail'));
 
       const results = apiConfigService.getNftThumbnailsUrl();
-      expect(results).toEqual('https://media.numbat.com/nfts/thumbnail');
+      expect(results).toEqual('https://media.dharitri.org/nfts/thumbnail');
     });
 
     it("should throw error because test simulates that nft thumbnails urls are not defined", () => {
@@ -1321,17 +1321,17 @@ describe('API Config', () => {
     });
   });
 
-  describe("getMaiarExchangeUrlMandatory", () => {
-    it("should return Maiar Exchange Url", () => {
+  describe("getDurianExchangeUrlMandatory", () => {
+    it("should return Durian Exchange Url", () => {
       jest
         .spyOn(ConfigService.prototype, "get")
-        .mockImplementation(jest.fn(() => 'https://graph.xexchange.com/graphql'));
+        .mockImplementation(jest.fn(() => 'https://graph.dharitrix.com/graphql'));
 
       const results = apiConfigService.getExchangeServiceUrlMandatory();
-      expect(results).toEqual('https://graph.xexchange.com/graphql');
+      expect(results).toEqual('https://graph.dharitrix.com/graphql');
     });
 
-    it("should throw new error because test simulates that Maiar Exchange Url is not defined", () => {
+    it("should throw new error because test simulates that Durian Exchange Url is not defined", () => {
       jest
         .spyOn(ConfigService.prototype, 'get')
         .mockImplementation(jest.fn(() => undefined));

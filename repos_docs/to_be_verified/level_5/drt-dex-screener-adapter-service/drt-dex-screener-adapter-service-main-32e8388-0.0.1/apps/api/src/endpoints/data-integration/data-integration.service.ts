@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from "@nestjs/common";
 import {
   ApiConfigService, Asset, AssetResponse, Block, ElasticRound, EventsResponse,
   IndexerService, JoinExitEvent, LatestBlockResponse,
-  ApiService, PairResponse, SwapEvent, XExchangeService,
+  ApiService, PairResponse, SwapEvent, DharitrixService,
 } from "@mvx-monorepo/common";
 import { AddressUtils, BatchUtils, OriginLogger } from "@terradharitri/sdk-nestjs-common";
 import { IProviderService } from "@mvx-monorepo/common/providers/interface";
@@ -17,11 +17,11 @@ export class DataIntegrationService {
     private readonly apiConfigService: ApiConfigService,
     private readonly indexerService: IndexerService,
     private readonly dharitrIApiService: ApiService,
-    xExchangeService: XExchangeService,
+    DharitriXService: DharitrixService,
     oneDexService: OneDexService,
   ) {
     this.providers = [
-      xExchangeService,
+      DharitriXService,
       oneDexService,
     ];
   }

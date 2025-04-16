@@ -17,7 +17,7 @@ This will install the CLI globally so you can use it from anywhere in your termi
 To expand a shorthand configuration schema into a JSON schema, use the expand command with the CLI. Specify the input file containing the shorthand schema and the desired output file for the JSON schema:
 
 ```bash
-mxnest schema expand <inputfile> <outputfile>
+drtnest schema expand <inputfile> <outputfile>
 ```
 
 Assuming you have a shorthand configuration schema in a file named config.yml:
@@ -40,7 +40,7 @@ libs:
 Run the command:
 
 ```bash
-mxnest schema expand schema.yaml schema.json
+drtnest schema expand schema.yaml schema.json
 ```
 
 This command will transform the shorthand schema in schema.yaml into a JSON schema and save it in schema.json. The resulting JSON schema will look like:
@@ -123,7 +123,7 @@ This command will transform the shorthand schema in schema.yaml into a JSON sche
 Use the generate command to create a YAML schema from a YAML configuration file that contains concrete values. This command infers the types from the actual values in the YAML file:
 
 ```bash
-mxnest schema generate <inputfile> <outputfile>
+drtnest schema generate <inputfile> <outputfile>
 ```
 
 Assuming you have a YAML configuration file named config.yaml:
@@ -145,7 +145,7 @@ libs:
 Run the command:
 
 ```bash
-mxnest schema generate config.yaml schema.yaml
+drtnest schema generate config.yaml schema.yaml
 ```
 
 This command will infer the types from the values provided in config.yaml and generate a YAML schema like this:
@@ -170,7 +170,7 @@ libs:
 Use the `schema types` command to generate TypeScript interfaces from a YAML configuration schema. This command converts the schema into TypeScript interfaces, facilitating type safety in development.
 
 ```bash
-mxnest schema types <inputfile> <outputfile>
+drtnest schema types <inputfile> <outputfile>
 ```
 
 Assuming you have a YAML configuration schema named schema.yaml:
@@ -192,7 +192,7 @@ libs:
 
 Run the command:
 
-mxnest schema types schema.yaml types.ts
+drtnest schema types schema.yaml types.ts
 
 This command will generate TypeScript interfaces in types.ts based on the schema provided in schema.yaml. The resulting TypeScript file will look like this:
 

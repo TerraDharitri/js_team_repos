@@ -45,7 +45,7 @@ features:
     serviceUrl: 'https://testnet-nfts-graph.dharitri.org/graphql'
   exchange:
     enabled: false
-    serviceUrl: 'https://testnet-graph.xexchange.com/graphql'
+    serviceUrl: 'https://testnet-graph.dharitrix.com/graphql'
   dataApi:
     enabled: false
     serviceUrl: 'https://testnet-data-api.dharitri.org'
@@ -114,7 +114,7 @@ features:
   mediaRedirect:
     enabled: false
     storageUrls:
-      - 'https://s3.amazonaws.com/testnet-media.numbat.com'
+      - 'https://s3.amazonaws.com/testnet-media.dharitri.org'
 image:
   width: 600
   height: 600
@@ -122,7 +122,7 @@ image:
 aws:
   s3KeyId: ''
   s3Secret: ''
-  s3Bucket: 'testnet-media.numbat.com'
+  s3Bucket: 'testnet-media.dharitri.org'
   s3Region: ''
 urls:
   self: 'https://testnet-api.dharitri.org'
@@ -135,8 +135,8 @@ urls:
   rabbitmq: 'amqp://127.0.0.1:5672'
   providers: 'https://testnet-delegation-api.dharitri.org/providers'
   delegation: 'https://testnet-delegation-api.dharitri.org'
-  media: 'https://testnet-media.numbat.com'
-  nftThumbnails: 'https://testnet-media.numbat.com/nfts/thumbnail'
+  media: 'https://testnet-media.dharitri.org'
+  nftThumbnails: 'https://testnet-media.dharitri.org/nfts/thumbnail'
   tmp: '/tmp'
   ipfs: 'https://ipfs.io/ipfs'
   socket: 'testnet-socket-api.dharitri.org'

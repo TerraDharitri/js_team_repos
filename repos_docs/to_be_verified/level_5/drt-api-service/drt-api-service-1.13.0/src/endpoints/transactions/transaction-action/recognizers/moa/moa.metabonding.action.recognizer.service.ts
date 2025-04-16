@@ -48,7 +48,7 @@ export class MetabondingActionRecognizerService {
     const result = new TransactionAction();
     result.name = MexFunction.claimRewards;
     result.category = TransactionActionCategory.mex;
-    result.description = `Eligible stake for ${metabondingWeeks.map((week) => `week ${week.week}: REWA ${NumberUtils.toDenominatedString(BigInt(week.rewaStaked))}, LKMEX ${NumberUtils.toDenominatedString(BigInt(week.lkmexStaked))}`).join('; ')}`;
+    result.description = `Eligible stake for ${metabondingWeeks.map((week) => `week ${week.week}: REWA ${NumberUtils.toDenominatedString(BigInt(week.rewaStaked))}, LKMOA ${NumberUtils.toDenominatedString(BigInt(week.lkmexStaked))}`).join('; ')}`;
     result.arguments = {
       weeks: metabondingWeeks,
       functionName: metadata.functionName,

@@ -26,7 +26,7 @@ const result = await server.validate(accessToken);
   // The endpoint from where the current block information will be fetched upon validation.
   // The default value points to the mainnet API, but can be overridden to be network-specific
   // or to point to a self-hosted location
-  apiUrl: string = 'https://api.dharitri.com';
+  apiUrl: string = 'https://api.dharitri.org';
 
   // An optional list of accepted hosts in case the server component must validate the incoming requests
   // by domain

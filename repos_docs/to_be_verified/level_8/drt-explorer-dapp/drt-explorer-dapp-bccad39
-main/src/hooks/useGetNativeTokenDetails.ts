@@ -52,9 +52,9 @@ export const useGetNativeTokenDetails = () => {
     description,
     ...(!isSovereign
       ? {
-          website: 'https://dharitri.com/',
+          website: 'https://dharitri.org/',
           social: {
-            blog: 'https://dharitri.com/blog',
+            blog: 'https://dharitri.org/blog',
             x: 'https://x.com/DharitrI',
             telegram: 'https://t.me/DharitrI',
             discord: 'https://discord.com/invite/dharitribuilders',

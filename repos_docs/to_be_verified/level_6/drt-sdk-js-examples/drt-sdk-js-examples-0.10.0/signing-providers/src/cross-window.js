@@ -13,7 +13,7 @@ import {
 } from "./auth";
 import { displayOutcome } from "./helpers";
 
-const walletAddress = "https://testnet-wallet.dharitri.com";
+const walletAddress = "https://testnet-wallet.dharitri.org";
 const callbackUrl = window.location.href;
 
 export class CrossWindowWallet {

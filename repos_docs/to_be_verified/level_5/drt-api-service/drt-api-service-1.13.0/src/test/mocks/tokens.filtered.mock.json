@@ -7,11 +7,11 @@
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://xexchange.com",
+      "website": "https://dharitrix.com",
       "description": "wREWA is an DCDT token that has the same value as REWA, the native coin of the  blockchain.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/WREWA-bd4d79/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/WREWA-bd4d79/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/WREWA-bd4d79/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/WREWA-bd4d79/logo.svg",
       "ledgerSignature": "3044022062a68d4bdd649aebb5e4ed5c6284e211c689c3b8142e59a47b01cc9997b16dfa0220475b064836849b9c4aa9c5ff18daed91a64f847bd96aa0a26768349f2cd0c24f"
     },
     "transactions": 5901078,
@@ -27,17 +27,17 @@
   },
   {
     "type": "FungibleDCDT",
-    "identifier": "MEX-455c57",
-    "name": "MEX",
+    "identifier": "MOA-455c57",
+    "name": "MOA",
     "owner": "drt1ss6u80ruas2phpmr82r42xnkd6rxy40g9jl69frppl4qez9w2jpsaws9xq",
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://xexchange.com",
-      "description": "MEX is the utility token of the xExchange.",
+      "website": "https://dharitrix.com",
+      "description": "MOA is the utility token of the DharitriX.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/MEX-455c57/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/MEX-455c57/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/MOA-455c57/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/MOA-455c57/logo.svg",
       "ledgerSignature": "304402207c9727bf3a0af254052154bceefe835856e4a7f6538cb6f5c3ef12422c6ab5dd02207d7a6c88777032079cd57b5b859a6e8dee4b73bb4fa699f0340f99fb70080a8d"
     },
     "transactions": 1676444,
@@ -59,11 +59,11 @@
     "decimals": 6,
     "isPaused": false,
     "assets": {
-      "website": "https://xexchange.com",
+      "website": "https://dharitrix.com",
       "description": "USDC stablecoin originating on Ethereum, bridged as an DCDT token on . 1 USDC = 1 WrappedUSDC",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/USDC-c76f1f/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/USDC-c76f1f/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/USDC-c76f1f/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/USDC-c76f1f/logo.svg",
       "ledgerSignature": "3045022100f03b1ec0d83d8d75d436f688c2007ffb0c71b39a4f72aba036062ea8d7ade99402203449426b83203617279c04ccb00387a77deffc468c27015bfc1590f1950edde9"
     },
     "transactions": 896926,
@@ -79,17 +79,17 @@
   },
   {
     "type": "FungibleDCDT",
-    "identifier": "REWAMEX-0be9e5",
-    "name": "REWAMEXLP",
+    "identifier": "REWAMOA-0be9e5",
+    "name": "REWAMOALP",
     "owner": "drt1qqqqqqqqqqqqqpgqq66xk9gfr4esuhem3jru86wg5hvp33a62jpsh4nhal",
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://xexchange.com",
-      "description": "Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/MEX pool on the xExchange.",
+      "website": "https://dharitrix.com",
+      "description": "Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/MOA pool on the DharitriX.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/REWAMEX-0be9e5/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/REWAMEX-0be9e5/logo.svg"
+      "pngUrl": "https://media.dharitri.org/tokens/asset/REWAMOA-0be9e5/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/REWAMOA-0be9e5/logo.svg"
     },
     "transactions": 640866,
     "accounts": 6729,
@@ -113,8 +113,8 @@
       "website": "https://www.holoride.com",
       "description": "The RIDE token is essential for building a vibrant and sustainable economy for the holoride ecosystem, connecting car manufacturers, content creators, brands, and passengers and enabling them to capture value along the way.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/RIDE-7d18e9/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/RIDE-7d18e9/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/RIDE-7d18e9/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/RIDE-7d18e9/logo.svg",
       "lockedAccounts": {
         "drt1fnq9urh6945yez393jf86umt7zhqz3wa5dqxa2fwv5gemj0fxqps0y2qu9": "Locked Account #1",
         "drt1jtl4gcgcvh6ktuj2phj7rq0dumsr0czhcny8ztrlt2atq83fdnxsm08ne5": "Locked Account #2",
@@ -172,7 +172,7 @@
         "METARIDELK-bd8cda",
         "METARIDE-a68897",
         "SRIDE-4ab1d4",
-        "MEXRIDEF-bf0320",
+        "MOARIDEF-bf0320",
         "REWARIDEFL-74b819",
         "REWARIDEF-6c5d7c"
       ],
@@ -207,8 +207,8 @@
       "website": "https://aerovek.com",
       "description": "Aerovek is a social economic platform that aims to elevate the aviation industry using web3 technologies built on the  Blockchain",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/AERO-458bbf/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/AERO-458bbf/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/AERO-458bbf/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/AERO-458bbf/logo.svg",
       "ledgerSignature": "3045022100ba6735ab8da2adcb980edc76edf5405102d971cda21252d314e4f14b1739948a0220192ecef920188c68bbd08830adcaf7600af3896d0e913d5a7e343d95d3d02941",
       "social": {
         "email": "support@aerovek.com",
@@ -241,8 +241,8 @@
       "website": "https://www.zoidpay.com",
       "description": "Shop Anything from Anywhere with Crypto",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/ZPAY-247875/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/ZPAY-247875/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/ZPAY-247875/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/ZPAY-247875/logo.svg",
       "lockedAccounts": {
         "drt136kalm60ndyyps7paexvz38pf09f58f7nzqg8tw60p9pq7ygyspsmxt9ym": "Owner Account"
       },
@@ -282,8 +282,8 @@
       "website": "https://kavarii.com/",
       "description": "Decentralized NFT Video sharing platform using web3 technologies",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/KVRI-743439/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/KVRI-743439/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/KVRI-743439/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/KVRI-743439/logo.svg",
       "social": {
         "email": "support@kavarii.com",
         "twitter": "https://twitter.com/KavariiOfficial"
@@ -311,8 +311,8 @@
       "website": "https://utrust.com/",
       "description": "Web3 L1 Payments Technology",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/UTK-2f80e9/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/UTK-2f80e9/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/UTK-2f80e9/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/UTK-2f80e9/logo.svg",
       "extraTokens": [
         "UTKWREWA-c960d1",
         "METAUTKLK-e6a445",
@@ -349,8 +349,8 @@
       "website": "https://bh.network/",
       "description": "The BHAT Token is the epicenter of the BH Network web3 hub and allows access and interaction with all DeFi modules within the hub.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/BHAT-c1fde3/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/BHAT-c1fde3/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/BHAT-c1fde3/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/BHAT-c1fde3/logo.svg",
       "lockedAccounts": {
         "drt1qqqqqqqqqqqqqpgqrg6hj7pvwvu8ph0wjnj57mn8hwl4a9xdm0qsunwk7y": "StakingUnvested",
         "drt1qqqqqqqqqqqqqpgq58gew3q4mldmu9ggwtvx6ygfhe728fdfm0qs4yvw5z": "LiquidityAndExchangeListingsUnvested",
@@ -399,8 +399,8 @@
     "assets": {
       "description": "Liquidity for Web3",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/WATER-9ed400/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/WATER-9ed400/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/WATER-9ed400/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/WATER-9ed400/logo.svg",
       "social": {
         "telegram": "https://t.me/Web3Water",
         "twitter": "https://twitter.com/Web3Water"
@@ -425,11 +425,11 @@
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://xexchange.com",
-      "description": "Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/USDC pool on the xExchange.",
+      "website": "https://dharitrix.com",
+      "description": "Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/USDC pool on the DharitriX.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/REWAUSDC-594e5e/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/REWAUSDC-594e5e/logo.svg"
+      "pngUrl": "https://media.dharitri.org/tokens/asset/REWAUSDC-594e5e/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/REWAUSDC-594e5e/logo.svg"
     },
     "transactions": 190956,
     "accounts": 1620,
@@ -450,11 +450,11 @@
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://xexchange.com",
-      "description": "Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/RIDE pool on the xExchange.",
+      "website": "https://dharitrix.com",
+      "description": "Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/RIDE pool on the DharitriX.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/REWARIDE-7bd51a/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/REWARIDE-7bd51a/logo.svg"
+      "pngUrl": "https://media.dharitri.org/tokens/asset/REWARIDE-7bd51a/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/REWARIDE-7bd51a/logo.svg"
     },
     "transactions": 175804,
     "accounts": 2253,
@@ -478,8 +478,8 @@
       "website": "https://itheum.io",
       "description": "The ITHEUM token forms the foundation for a decentralized web3 data economy, enabling vibrant and personalized metaverse worlds where data is traded with shared value between data creators and data consumers.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/ITHEUM-df6f26/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/ITHEUM-df6f26/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/ITHEUM-df6f26/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/ITHEUM-df6f26/logo.svg",
       "lockedAccounts": {
         "drt1fasw55a2zfztcy7e8424g9kn8clwnksjl7mlw9zdpkl473m9pljsxjk4d5": "Ecosystem, Community, Treasury",
         "drt1m38hwpeq9x5m9l5cckxfmrsmnxmsm5gwv5atymqp84y988t5haaswftvmk": "Investors, Team"
@@ -525,8 +525,8 @@
       "website": "https://qowatt.network",
       "description": "QoWatt Tokens, first EV charging network using Blockchain in Europe",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/QWT-46ac01/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/QWT-46ac01/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/QWT-46ac01/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/QWT-46ac01/logo.svg",
       "ledgerSignature": "3045022100e43c1ad7d3e4a5439e2ff7b97bb7901ca1a36a130b0e6e74464d65cc8d282bbb02206d318a05ff0dde6148856fc8391f1878cbdea591db47a74ad117a6a821e835f2",
       "social": {
         "email": "dcdt@qowatt.com",
@@ -558,8 +558,8 @@
       "website": "https://efforteconomy.io/",
       "description": "WEFFT is an DCDT token that has the same value as EFFORT.  The EFFORT token is the utility token of the Effort Economy where the community can play, collect, compete, DeFi, learn and many more activities to earn",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/WEFFT-db4cf1/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/WEFFT-db4cf1/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/WEFFT-db4cf1/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/WEFFT-db4cf1/logo.svg",
       "social": {
         "email": "contact@efforteconomy.io",
         "blog": "https://t.me/EffortEconomy",
@@ -589,8 +589,8 @@
       "website": "https://cantinaroyale.io",
       "description": "The CRT token is essential for powering in-game utilities like NFT character progression, NFT recruiting, staking, and unlocking in-game assets inside of the Cantina Royale ecosystem.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/CRT-52decf/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/CRT-52decf/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/CRT-52decf/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/CRT-52decf/logo.svg",
       "lockedAccounts": {
         "drt1s9gcnzgjyzdn205xdy3gy3jtm8yl95k4g3kq54ryprs0h486v7dqnk43qh": "Investors",
         "drt1xaa6p8uxtzrzq7s2khy9q6kqzka5f3pu8t5rmrz0nm804lvn5z2q4m360t": "Team",
@@ -628,8 +628,8 @@
       "website": "https://plata.network",
       "description": "PLATA is the utility token of Plata Network. The blockchain is yours.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/PLATA-9ba6c3/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/PLATA-9ba6c3/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/PLATA-9ba6c3/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/PLATA-9ba6c3/logo.svg",
       "social": {
         "whitepaper": "https://plata.network/whitepaper",
         "twitter": "https://twitter.com/platanetwork",
@@ -660,8 +660,8 @@
       "website": "https://ashswap.io",
       "description": "AshSwap is the first stable-swap DEX built on the  blockchain that allows users to trade stable assets with high volume and small slippage.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/ASH-a642d1/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/ASH-a642d1/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/ASH-a642d1/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/ASH-a642d1/logo.svg",
       "lockedAccounts": {
         "drt1w280yjym0xc2aw80dvn2a4ew5vzvtshtr8nux8wa5wzqm78y7nvsanpgld": "Locked Account #1"
       },
@@ -705,8 +705,8 @@
       "website": "https://www.ofero.network/",
       "description": "The OFERO Token is the utility coin of the Ofero Network.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/OFE-29eb54/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/OFE-29eb54/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/OFE-29eb54/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/OFE-29eb54/logo.svg",
       "social": {
         "email": "contact@ofero.network",
         "twitter": "https://twitter.com/oferonetwork",
@@ -735,8 +735,8 @@
       "website": "https://efforteconomy.io/",
       "description": "The EFFORT token is the utility token of the Effort Economy where the community can play, collect, compete, DeFi, learn and many more activities to earn",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/EFFORT-a13513/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/EFFORT-a13513/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/EFFORT-a13513/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/EFFORT-a13513/logo.svg",
       "ledgerSignature": "3045022100a769bdd805036ebaf6a18bebf656d3aedbfbb21be270b74493a3d06bcaba66aa02202a1140f782718d24a472d5e5ba7e2826f110bdfe2d271a7f0760b1609e3add8b",
       "social": {
         "email": "contact@efforteconomy.io",
@@ -767,8 +767,8 @@
       "website": "https://jexchange.io/",
       "description": "A P2P decentralized exchange built on ",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/JEX-9040ca/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/JEX-9040ca/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/JEX-9040ca/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/JEX-9040ca/logo.svg",
       "social": {
         "blog": "https://medium.com/@jexchangep2p",
         "twitter": "https://twitter.com/jexchangeP2P",
@@ -797,8 +797,8 @@
       "website": "https://isengard.market",
       "description": "ISET is the Official token of the Isengard Marketplace",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/ISET-84e55e/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/ISET-84e55e/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/ISET-84e55e/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/ISET-84e55e/logo.svg",
       "ledgerSignature": "304402201cb6ecc0a50e93cac00a0ba06f8a07efb04803aeb2bf748efd5078efe3b79f8b02204013c555b35f09d4a87ca30483a4f1e996554463c8354cfd80e93d09d4140a00",
       "social": {
         "email": "contact@isengardmarket.com",
@@ -829,8 +829,8 @@
       "website": "https://www.numbathodlers.com/",
       "description": "HODL, for the right mindset.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/HODL-d7f4b5/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/HODL-d7f4b5/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/HODL-d7f4b5/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/HODL-d7f4b5/logo.svg",
       "social": {
         "email": "contact@numbathodlers.com",
         "twitter": "https://twitter.com/numbathodlers"
@@ -855,17 +855,17 @@
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://erdlaunchpad.com",
-      "description": "LPAD Token is the native token for the governances and economy of ErdLaunchpad",
+      "website": "https://drtlaunchpad.com",
+      "description": "LPAD Token is the native token for the governances and economy of DrtLaunchpad",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/LPAD-84628f/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/LPAD-84628f/logo.svg",
+      "pngUrl": "https://media.dharitri.org/tokens/asset/LPAD-84628f/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/LPAD-84628f/logo.svg",
       "social": {
-        "email": "contact@erdlaunchpad.com",
-        "twitter": "https://twitter.com/ErdLaunchpad",
-        "telegram": "https://t.me/ErdLaunchpad",
+        "email": "contact@drtlaunchpad.com",
+        "twitter": "https://twitter.com/DrtLaunchpad",
+        "telegram": "https://t.me/DrtLaunchpad",
         "discord": "https://discord.com/invite/8q5rUGmQnM",
-        "whitepaper": "https://erd-launchpad.gitbook.io/"
+        "whitepaper": "https://drt-launchpad.gitbook.io/"
       }
     },
     "transactions": 38173,
@@ -888,11 +888,11 @@
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://xexchange.com",
-      "description": "This token tracks your LKMEX stake in the MEX farm on the xExchange.",
+      "website": "https://dharitrix.com",
+      "description": "This token tracks your LKMOA stake in the MOA farm on the DharitriX.",
       "status": "active",
-      "pngUrl": "https://media.numbat.com/tokens/asset/LKFARM-9d1ea8/logo.png",
-      "svgUrl": "https://media.numbat.com/tokens/asset/LKFARM-9d1ea8/logo.svg"
+      "pngUrl": "https://media.dharitri.org/tokens/asset/LKFARM-9d1ea8/logo.png",
+      "svgUrl": "https://media.dharitri.org/tokens/asset/LKFARM-9d1ea8/logo.svg"
     },
     "transactions": 9705324,
     "accounts": 63478,

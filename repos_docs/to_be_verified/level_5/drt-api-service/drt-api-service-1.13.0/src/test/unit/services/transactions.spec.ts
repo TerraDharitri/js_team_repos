@@ -98,7 +98,7 @@ describe('TransactionService', () => {
         {
           provide: ApiConfigService,
           useValue: {
-            getMaiarIdUrl: jest.fn(),
+            getDurianIdUrl: jest.fn(),
           },
         },
         {
@@ -201,7 +201,7 @@ describe('TransactionService', () => {
         hasOperations: true,
         tokens: [''],
         dcdtValues: ['10'],
-        receivers: ['drt1', 'erd2'],
+        receivers: ['drt1', 'drt2'],
         receiversShardIDs: [1],
         operation: 'transfer',
         scResults: [''],
@@ -242,7 +242,7 @@ describe('TransactionService', () => {
         hasOperations: true,
         tokens: [''],
         dcdtValues: ['10'],
-        receivers: ['drt1', 'erd2'],
+        receivers: ['drt1', 'drt2'],
         receiversShardIDs: [1],
         operation: 'transfer',
         scResults: [''],

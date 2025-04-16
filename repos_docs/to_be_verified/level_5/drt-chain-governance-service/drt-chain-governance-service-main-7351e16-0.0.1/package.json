@@ -26,7 +26,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./apps/api/test/jest-e2e.json",
-    "generate-types": "mxnest schema types config/schema.yaml libs/common/src/entities/config.d.ts"
+    "generate-types": "drtnest schema types config/schema.yaml libs/common/src/entities/config.d.ts"
   },
   "dependencies": {
     "@terradharitri/sdk-core": "13.2.1",

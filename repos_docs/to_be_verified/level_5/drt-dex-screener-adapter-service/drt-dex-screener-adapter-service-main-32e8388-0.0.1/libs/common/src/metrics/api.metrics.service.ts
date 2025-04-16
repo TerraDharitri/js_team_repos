@@ -7,7 +7,7 @@ import { OnEvent } from "@nestjs/event-emitter";
 @Injectable()
 export class ApiMetricsService {
   private static indexerDurationHistogram: Histogram<string>;
-  private static xExchangeDurationHistogram: Histogram<string>;
+  private static DharitriXDurationHistogram: Histogram<string>;
   private static onedexDurationHistogram: Histogram<string>;
   private static vmQueryDurationHistogram: Histogram<string>;
 
@@ -23,10 +23,10 @@ export class ApiMetricsService {
       });
     }
 
-    if (!ApiMetricsService.xExchangeDurationHistogram) {
-      ApiMetricsService.xExchangeDurationHistogram = new Histogram({
-        name: 'xexchange_duration',
-        help: 'xExchange Duration',
+    if (!ApiMetricsService.DharitriXDurationHistogram) {
+      ApiMetricsService.DharitriXDurationHistogram = new Histogram({
+        name: 'dharitrix_duration',
+        help: 'DharitriX Duration',
         labelNames: ['action'],
         buckets: [],
       });
@@ -58,11 +58,11 @@ export class ApiMetricsService {
     ApiMetricsService.indexerDurationHistogram.labels(action).observe(duration);
   }
 
-  @OnEvent(MetricsEvents.SetXExchangeDuration)
-  setXExchangeDurationHistogram(payload: LogMetricsEvent) {
+  @OnEvent(MetricsEvents.SetDharitrixDuration)
+  setDharitrixDurationHistogram(payload: LogMetricsEvent) {
     const [action, duration] = payload.args;
-    this.metricsService.setExternalCall('xexchange', duration);
-    ApiMetricsService.xExchangeDurationHistogram.labels(action).observe(duration);
+    this.metricsService.setExternalCall('dharitrix', duration);
+    ApiMetricsService.DharitriXDurationHistogram.labels(action).observe(duration);
   }
 
   @OnEvent(MetricsEvents.SetOneDexDuration)

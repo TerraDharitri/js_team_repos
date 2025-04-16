@@ -2,7 +2,7 @@
   "name": "assets-identities-signature-validator",
   "version": "1.0.0",
   "private": true,
-  "description": "Signature validation for DharitrI Identities in the mx-assets repository",
+  "description": "Signature validation for DharitrI Identities in the drt-assets repository",
   "author": "DharitrI",
   "license": "ISC",
   "type": "module",

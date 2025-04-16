@@ -414,7 +414,7 @@ export class AccountService {
     ]);
 
     const numBlocksBeforeUnBond = parseInt(BinaryUtils.base64ToBigInt(encodedNumBlocksBeforeUnBond).toString());
-    const erdNonce = drt_nonce;
+    const drtNonce = drt_nonce;
 
     const data: AccountDeferred[] = encodedUserDeferredPaymentList.reduce((result: AccountDeferred[], _, index, array) => {
       if (index % 2 === 0) {
@@ -422,7 +422,7 @@ export class AccountService {
 
         const deferredPayment = BinaryUtils.base64ToBigInt(encodedDeferredPayment).toString();
         const unstakedNonce = parseInt(BinaryUtils.base64ToBigInt(encodedUnstakedNonce).toString());
-        const blocksLeft = Math.max(0, unstakedNonce + numBlocksBeforeUnBond - erdNonce);
+        const blocksLeft = Math.max(0, unstakedNonce + numBlocksBeforeUnBond - drtNonce);
         const secondsLeft = blocksLeft * 6; // 6 seconds per block
 
         result.push({ deferredPayment, secondsLeft });

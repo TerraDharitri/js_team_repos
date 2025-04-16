@@ -21,8 +21,8 @@ export class AppConfigService {
     return configuration().libs.common.urls.dataApiCex ?? "";
   }
 
-  getDataApiXexchangeUrl(): string {
-    return configuration().libs.common.urls.dataApiXexchange ?? "";
+  getDataApidharitriXUrl(): string {
+    return configuration().libs.common.urls.dataApidharitriX ?? "";
   }
 
   getDuneApiUrl(): string {

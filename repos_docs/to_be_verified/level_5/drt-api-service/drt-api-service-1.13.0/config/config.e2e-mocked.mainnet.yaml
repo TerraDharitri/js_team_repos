@@ -33,8 +33,8 @@ urls:
   rabbitmq: 'amqp://127.0.0.1:5672'
   providers: 'https://internal-delegation-api.dharitri.org/providers'
   delegation: 'https://delegation-api.dharitri.org'
-  media: 'https://media.numbat.com'
-  nftThumbnails: 'https://media.numbat.com/nfts/thumbnail'
+  media: 'https://media.dharitri.org'
+  nftThumbnails: 'https://media.dharitri.org/nfts/thumbnail'
   durianId: 'https://id-api.dharitri.org'
 database:
   enabled: false
@@ -76,4 +76,4 @@ test:
   mockPath: './src/test/mocks/'
 transaction-action:
   mex:
-    microServiceUrl: 'https://graph.xexchange.com/graphql'
+    microServiceUrl: 'https://graph.dharitrix.com/graphql'

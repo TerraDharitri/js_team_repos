@@ -17,14 +17,14 @@ describe("Native Auth", () => {
   const TOKEN = `YXBpLm11bHRpdmVyc3guY29t.${BLOCK_HASH}.${TTL}.e30`;
   const ACCESS_TOKEN = `ZXJkMXFuazJ2bXVxeXdmcXRkbmttYXV2cG04bHMweGgwMGs4eGV1cHVhZjZjbTZjZDRyeDg5cXF6MHBwZ2w.WVhCcExtMTFiSFJwZG1WeWMzZ3VZMjl0LjgyZWM4MDQ0OTY2ZWZiMmQwMGU4YTYzNjdlYTIzZGRiYzdiZWE2NTA0ZWQ5OGY0YTFhNTM2ZDdjMjFiYjI2ODIuODY0MDAuZTMw.${SIGNATURE}`;
   const BLOCK_TIMESTAMP = 1671009408;
-  const HOST = 'api.dharitri.com';
+  const HOST = 'api.dharitri.org';
 
   const onLatestBlockTimestampGet = function (mock: MockAdapter): RequestHandler {
-    return mock.onGet('https://api.dharitri.com/blocks?size=1&fields=timestamp');
+    return mock.onGet('https://api.dharitri.org/blocks?size=1&fields=timestamp');
   };
 
   const onSpecificBlockTimestampGet = function (mock: MockAdapter): RequestHandler {
-    return mock.onGet(`https://api.dharitri.com/blocks/${BLOCK_HASH}?extract=timestamp`);
+    return mock.onGet(`https://api.dharitri.org/blocks/${BLOCK_HASH}?extract=timestamp`);
   };
 
   beforeAll(() => {

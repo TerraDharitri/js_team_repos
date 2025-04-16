@@ -31,13 +31,13 @@ export async function askContractName() {
     return result;
 }
 
-export async function askInstallMxpy(requiredVersion: Version): Promise<boolean> {
+export async function askInstallDrtpy(requiredVersion: Version): Promise<boolean> {
     let answer = await askYesNo(`DharitrI IDE requires drtpy ${requiredVersion}, which isn't available in your environment.
 Do you agree to install it?`);
     return answer;
 }
 
-export async function askMxpyVersion(defaultVersion: Version): Promise<Version> {
+export async function askDrtpyVersion(defaultVersion: Version): Promise<Version> {
     const result = await vscode.window.showInputBox({
         prompt: "Enter the drtpy version to install",
         value: defaultVersion.toString(),
@@ -55,7 +55,7 @@ export async function askMxpyVersion(defaultVersion: Version): Promise<Version> 
     return Version.parse(result);
 }
 
-export async function askInstallMxpyGroup(group: string): Promise<boolean> {
+export async function askInstallDrtpyGroup(group: string): Promise<boolean> {
     let answer = await askYesNo(`It seems that your workspace requires the dependency group "${group}", which isn't available in your environment.
 Do you agree to install it?`);
     return answer;

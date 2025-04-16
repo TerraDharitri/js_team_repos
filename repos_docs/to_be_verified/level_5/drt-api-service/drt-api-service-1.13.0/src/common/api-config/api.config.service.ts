@@ -83,7 +83,7 @@ export class ApiConfigService {
     return url;
   }
 
-  getMaiarIdUrl(): string | undefined {
+  getDurianIdUrl(): string | undefined {
     return this.configService.get<string>('urls.durianId');
   }
 

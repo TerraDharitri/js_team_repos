@@ -1,8 +1,8 @@
 import { Injectable } from "@nestjs/common";
-import { ErdnestConfigService } from "@terradharitri/sdk-nestjs-common";
+import { DrtnestConfigService } from "@terradharitri/sdk-nestjs-common";
 
 @Injectable()
-export class SdkNestjsConfigServiceImpl implements ErdnestConfigService {
+export class SdkNestjsConfigServiceImpl implements DrtnestConfigService {
   getSecurityAdmins(): string[] {
     return [];
   }

@@ -46,7 +46,7 @@ export class MexLockedAssetActionRecognizerService {
     const value = transfers.sumBigInt(x => BigInt(x.value.toString()));
     const valueDenominated = NumberUtils.toDenominatedString(value);
 
-    const description = `Merge ${transfers.length} LKMEX positions into a single LKMEX position of value ${valueDenominated}`;
+    const description = `Merge ${transfers.length} LKMOA positions into a single LKMOA position of value ${valueDenominated}`;
 
     return this.transactionActionDcdtNftRecognizerService.getMultiTransferAction(metadata, TransactionActionCategory.mex, MexFunction.mergeLockedAssetTokens, description);
   }

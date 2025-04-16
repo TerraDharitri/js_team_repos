@@ -1,3 +1,3 @@
 export * from './indexer';
 export * from './dharitri.api';
-export * from '../providers/xexchange';
+export * from '../providers/dharitrix';

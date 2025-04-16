@@ -1,9 +1,9 @@
 {
   "numbat": {
-    "elastic": "https://testnet-index.numbat.com",
-    "numbatApi": "https://testnet-api.numbat.com",
-    "gateway": "https://testnet-gateway.numbat.com",
-    "explorer": "https://testnet-explorer.numbat.com",
+    "elastic": "https://testnet-index.dharitri.org",
+    "numbatApi": "https://testnet-api.dharitri.org",
+    "gateway": "https://testnet-gateway.dharitri.org",
+    "explorer": "https://testnet-explorer.dharitri.org",
     "chainID": "T",
     "transactionProcessorMaxLookBehind": 10
   }

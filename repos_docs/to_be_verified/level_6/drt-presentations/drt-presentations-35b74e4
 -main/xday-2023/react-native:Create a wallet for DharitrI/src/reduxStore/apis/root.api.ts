@@ -7,7 +7,7 @@ import { ExpandedTransactionType } from 'types/transactions';
 export const USER_ACCOUNT_TAG = 'USER_ACCOUNT_TAG';
 export const USER_TRANSACTIONS_TAG = 'USER_TRANSACTIONS_TAG';
 
-const baseUrl = 'https://devnet-api.dharitri.com';
+const baseUrl = 'https://devnet-api.dharitri.org';
 
 export const RootApi = createApi({
   reducerPath: 'API',

@@ -1,9 +1,9 @@
 import { ElasticEvent, ElasticLog } from "@mvx-monorepo/common";
-import { XExchangePair } from "./xexchange.pair";
-import { XExchangeLiquidityEvent } from "./xexchange.liquidity.event";
+import { DharitrixPair } from "./dharitrix.pair";
+import { DharitrixLiquidityEvent } from "./dharitrix.liquidity.event";
 
-export class XExchangeAddLiquidityEvent extends XExchangeLiquidityEvent {
-  constructor(event: ElasticEvent, log: ElasticLog, pair: XExchangePair) {
+export class DharitrixAddLiquidityEvent extends DharitrixLiquidityEvent {
+  constructor(event: ElasticEvent, log: ElasticLog, pair: DharitrixPair) {
     super(event, log, pair, "addLiquidity");
 
     const decodedEvent = this.decodeEvent();

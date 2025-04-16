@@ -19,7 +19,7 @@
     "rewa": "REWA",
     "burnAddress": "drt1deaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaqksct7k",
     "pemFileName": "wallet.pem",
-    "marketplacesIconsBaseUrl": "https://media.numbat.com/markets"
+    "marketplacesIconsBaseUrl": "https://media.dharitri.org/markets"
   },
   "fileStorage": {
     "host": "ipfs.infura.io",

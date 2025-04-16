@@ -5,7 +5,7 @@ Creating an API provider:
 ```js
 import { ApiNetworkProvider } from "@terradharitri/sdk-core";
 
-const apiNetworkProvider = new ApiNetworkProvider("https://devnet-api.dharitri.com", { clientName: "dharitri-your-client-name" });
+const apiNetworkProvider = new ApiNetworkProvider("https://devnet-api.dharitri.org", { clientName: "dharitri-your-client-name" });
 ```
 
 Creating a Proxy provider:
@@ -13,7 +13,7 @@ Creating a Proxy provider:
 ```js
 import { ProxyNetworkProvider } from "@terradharitri/sdk-core";
 
-const proxyNetworkProvider = new ProxyNetworkProvider("https://devnet-gateway.dharitri.com", { clientName: "dharitri-your-client-name" });
+const proxyNetworkProvider = new ProxyNetworkProvider("https://devnet-gateway.dharitri.org", { clientName: "dharitri-your-client-name" });
 ```
 
 Use the classes from `@terradharitri/sdk-core/out/networkProviders` **only as a starting point**.
@@ -773,7 +773,7 @@ You can do so by means of the [`TransactionEventsParser`](https://dharitri.githu
 
 Suppose we'd like to decode a `startPerformAction` event emitted by the [**multisig**](https://github.com/TerraDharitri/drt-contracts-rs/tree/main/contracts/multisig) contract.
 
-Let's fetch [a previously-processed transaction](https://devnet-explorer.dharitri.com/transactions/05d445cdd145ecb20374844dcc67f0b1e370b9aa28a47492402bc1a150c2bab4),
+Let's fetch [a previously-processed transaction](https://devnet-explorer.dharitri.org/transactions/05d445cdd145ecb20374844dcc67f0b1e370b9aa28a47492402bc1a150c2bab4),
 to serve as an example, and convert it to a [`TransactionOutcome`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionOutcome.html) (see above why):
 
 ```js

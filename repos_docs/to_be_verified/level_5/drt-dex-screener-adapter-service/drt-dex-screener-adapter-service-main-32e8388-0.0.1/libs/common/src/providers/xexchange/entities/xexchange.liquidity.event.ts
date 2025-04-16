@@ -1,9 +1,9 @@
 import { AddressType, BigUIntType, BinaryCodec, FieldDefinition, StructType, TokenIdentifierType, U64Type } from "@terradharitri/sdk-core/out";
 import { ElasticEvent, ElasticLog } from "@mvx-monorepo/common";
 import { GeneralEvent } from "../../entities/general.event";
-import { XExchangePair } from "./xexchange.pair";
+import { DharitrixPair } from "./dharitrix.pair";
 
-export class XExchangeLiquidityEvent extends GeneralEvent {
+export class DharitrixLiquidityEvent extends GeneralEvent {
   caller: string;
   firstTokenId: string;
   firstTokenAmount: string;
@@ -19,9 +19,9 @@ export class XExchangeLiquidityEvent extends GeneralEvent {
   txHash: string;
   txOrder: number;
   eventOrder: number;
-  pair: XExchangePair;
+  pair: DharitrixPair;
 
-  constructor(event: ElasticEvent, log: ElasticLog, pair: XExchangePair, eventType: "addLiquidity" | "removeLiquidity") {
+  constructor(event: ElasticEvent, log: ElasticLog, pair: DharitrixPair, eventType: "addLiquidity" | "removeLiquidity") {
     super(event, eventType);
 
     const decodedEvent = this.decodeEvent();
@@ -72,7 +72,7 @@ export class XExchangeLiquidityEvent extends GeneralEvent {
   }
 
   private getStructure(): StructType {
-    return new StructType('XexchangeLiquidityEvent', [
+    return new StructType('dharitriXLiquidityEvent', [
       new FieldDefinition('caller', '', new AddressType()),
       new FieldDefinition('firstTokenID', '', new TokenIdentifierType()),
       new FieldDefinition('firstTokenAmount', '', new BigUIntType()),

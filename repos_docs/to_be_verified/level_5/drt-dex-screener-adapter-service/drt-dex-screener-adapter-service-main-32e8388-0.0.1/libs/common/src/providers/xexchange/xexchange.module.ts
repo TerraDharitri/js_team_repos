@@ -1,14 +1,14 @@
 import { Module } from "@nestjs/common";
 import { DynamicModuleUtils } from "@mvx-monorepo/common";
-import { XExchangeService } from "./xexchange.service";
+import { DharitrixService } from "./dharitrix.service";
 import { IndexerModule } from "../../services/indexer";
 import { ApiModule } from "../../services/dharitri.api";
 
 @Module({})
-export class XExchangeModule {
+export class DharitrixModule {
   static forRoot(configuration: () => Record<string, any>) {
     return {
-      module: XExchangeModule,
+      module: DharitrixModule,
       imports: [
         DynamicModuleUtils.getApiModule(configuration),
         DynamicModuleUtils.getCachingModule(configuration),
@@ -16,10 +16,10 @@ export class XExchangeModule {
         ApiModule.forRoot(configuration),
       ],
       providers: [
-        XExchangeService,
+        DharitrixService,
       ],
       exports: [
-        XExchangeService,
+        DharitrixService,
       ],
     };
   }

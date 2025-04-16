@@ -29,13 +29,13 @@ export class MexPair {
   @ApiProperty()
   quotePrevious24hPrice: number = 0;
 
-  @ApiProperty({ type: String, example: 'MEX-455c57' })
+  @ApiProperty({ type: String, example: 'MOA-455c57' })
   baseId: string = '';
 
-  @ApiProperty({ type: String, example: 'MEX' })
+  @ApiProperty({ type: String, example: 'MOA' })
   baseSymbol: string = '';
 
-  @ApiProperty({ type: String, example: 'MEX' })
+  @ApiProperty({ type: String, example: 'MOA' })
   baseName: string = '';
 
   @ApiProperty({ type: Number, example: 0.00020596180499578328 })

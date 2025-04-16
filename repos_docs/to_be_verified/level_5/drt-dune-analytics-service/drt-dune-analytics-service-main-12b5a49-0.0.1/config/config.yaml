@@ -13,7 +13,7 @@ libs:
     urls:
       api: ${API_URL}
       dataApiCex: ${DATA_API_CEX_URL}
-      dataApiXexchange: ${DATA_API_XEXCHANGE_URL}
+      dataApidharitriX: ${DATA_API_DHARITRIX_URL}
       dataApiHatom: ${DATA_API_HATOM_URL}
       duneApi: ${DUNE_API_URL}
     database:

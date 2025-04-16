@@ -22,15 +22,15 @@ import { ApiService } from "../../services/dharitri.api";
 import { PerformanceProfiler } from "@terradharitri/sdk-nestjs-monitoring";
 import { GeneralEvent } from "@mvx-monorepo/common/providers/entities/general.event";
 import { IProviderService } from "@mvx-monorepo/common/providers";
-import { XExchangePair } from "@mvx-monorepo/common/providers/xexchange/entities/xexchange.pair";
-import { XExchangeSwapEvent } from "@mvx-monorepo/common/providers/xexchange/entities/xexchange.swap.event";
-import { XExchangeAddLiquidityEvent } from "@mvx-monorepo/common/providers/xexchange/entities/xexchange.add.liquidity.event";
-import { XExchangeRemoveLiquidityEvent } from "@mvx-monorepo/common/providers/xexchange/entities/xexchange.remove.liquidity.event";
+import { DharitrixPair } from "@mvx-monorepo/common/providers/dharitrix/entities/dharitrix.pair";
+import { DharitrixSwapEvent } from "@mvx-monorepo/common/providers/dharitrix/entities/dharitrix.swap.event";
+import { DharitrixAddLiquidityEvent } from "@mvx-monorepo/common/providers/dharitrix/entities/dharitrix.add.liquidity.event";
+import { DharitrixRemoveLiquidityEvent } from "@mvx-monorepo/common/providers/dharitrix/entities/dharitrix.remove.liquidity.event";
 
 @Injectable()
-export class XExchangeService implements IProviderService {
+export class DharitrixService implements IProviderService {
   private readonly SWAP_FEE_PERCENT_BASE_POINTS = 100000;
-  private readonly logger = new OriginLogger(XExchangeService.name);
+  private readonly logger = new OriginLogger(DharitrixService.name);
   private readonly resultsParser: ResultsParser;
   private readonly routerContract: SmartContract;
 
@@ -44,18 +44,18 @@ export class XExchangeService implements IProviderService {
   ) {
     this.resultsParser = new ResultsParser();
 
-    const routerAddress = this.apiConfigService.getXExchangeRouterAddress();
+    const routerAddress = this.apiConfigService.getDharitrixRouterAddress();
     this.routerContract = new SmartContract({
       address: new Address(routerAddress),
       abi: AbiRegistry.create(routerAbi),
     });
   }
 
-  @LogPerformanceAsync(MetricsEvents.SetXExchangeDuration)
-  public async getPairs(): Promise<XExchangePair[]> {
+  @LogPerformanceAsync(MetricsEvents.SetDharitrixDuration)
+  public async getPairs(): Promise<DharitrixPair[]> {
     const pairsMetadata = await this.getPairsMetadata();
 
-    const pairs: XExchangePair[] = [];
+    const pairs: DharitrixPair[] = [];
     for (const metadata of pairsMetadata) {
       const [firstToken, secondToken] = await Promise.all([
         this.dharitrIApiService.getToken(metadata.firstTokenId),
@@ -162,7 +162,7 @@ export class XExchangeService implements IProviderService {
     }
   }
 
-  @LogPerformanceAsync(MetricsEvents.SetXExchangeDuration)
+  @LogPerformanceAsync(MetricsEvents.SetDharitrixDuration)
   public async getEvents(before: number, after: number): Promise<GeneralEvent[]> {
     const pairs = await this.getPairs();
     const pairAddresses = pairs.map((p) => p.address);
@@ -174,7 +174,7 @@ export class XExchangeService implements IProviderService {
 
     const logs = await this.indexerService.getLogs(before, after, pairAddresses, eventNames);
 
-    const events: (XExchangeSwapEvent | XExchangeAddLiquidityEvent | XExchangeRemoveLiquidityEvent)[] = [];
+    const events: (DharitrixSwapEvent | DharitrixAddLiquidityEvent | DharitrixRemoveLiquidityEvent)[] = [];
     for (const log of logs) {
       for (const event of log.events) {
         const pair = pairs.find((p) => p.address === event.address);
@@ -185,15 +185,15 @@ export class XExchangeService implements IProviderService {
 
         switch (event.topics[0]) {
           case swapTopic:
-            const swapEvent = new XExchangeSwapEvent(event, log, pair);
+            const swapEvent = new DharitrixSwapEvent(event, log, pair);
             events.push(swapEvent);
             break;
           case addLiquidityTopic:
-            const addLiquidityEvent = new XExchangeAddLiquidityEvent(event, log, pair);
+            const addLiquidityEvent = new DharitrixAddLiquidityEvent(event, log, pair);
             events.push(addLiquidityEvent);
             break;
           case removeLiquidityTopic:
-            const removeLiquidityEvent = new XExchangeRemoveLiquidityEvent(event, log, pair);
+            const removeLiquidityEvent = new DharitrixRemoveLiquidityEvent(event, log, pair);
             events.push(removeLiquidityEvent);
             break;
           default:
@@ -206,9 +206,9 @@ export class XExchangeService implements IProviderService {
   }
 
   public async getPair(identifier: string): Promise<PairResponse | undefined> {
-    const xExchangePairs = await this.getPairs();
-    const xExchangePair = xExchangePairs.find((p) => p.address === identifier);
-    if (!xExchangePair) {
+    const DharitriXPairs = await this.getPairs();
+    const DharitriXPair = DharitriXPairs.find((p) => p.address === identifier);
+    if (!DharitriXPair) {
       return undefined;
     }
 
@@ -217,7 +217,7 @@ export class XExchangeService implements IProviderService {
     const { deployTxHash, deployedAt } = await this.dharitrIApiService.getContractDeployInfo(identifier);
     const round = deployedAt ? await this.indexerService.getRound(deployedAt) : undefined;
 
-    const pair = this.fromCustomPair(xExchangePair, pairFeePercent, {
+    const pair = this.fromCustomPair(DharitriXPair, pairFeePercent, {
       deployTxHash,
       deployedAt,
       deployRound: round?.round,
@@ -228,10 +228,10 @@ export class XExchangeService implements IProviderService {
   }
 
   public getProviderName(): string {
-    return "xExchange";
+    return "DharitriX";
   }
 
-  private fromCustomPair(pair: XExchangePair, feePercent: number, deployInfo?: { deployRound?: number, deployTxHash?: string, deployedAt?: number }): Pair {
+  private fromCustomPair(pair: DharitrixPair, feePercent: number, deployInfo?: { deployRound?: number, deployTxHash?: string, deployedAt?: number }): Pair {
     return {
       id: pair.address,
       dexKey: this.getProviderName(),
@@ -244,7 +244,7 @@ export class XExchangeService implements IProviderService {
     };
   }
 
-  public fromSwapEvent(event: XExchangeSwapEvent): SwapEvent {
+  public fromSwapEvent(event: DharitrixSwapEvent): SwapEvent {
     let asset0In: string | undefined = undefined;
     let asset1In: string | undefined = undefined;
     let asset0Out: string | undefined = undefined;
@@ -286,7 +286,7 @@ export class XExchangeService implements IProviderService {
     };
   }
 
-  public fromAddRemoveLiquidityEvent(event: XExchangeAddLiquidityEvent | XExchangeRemoveLiquidityEvent): JoinExitEvent {
+  public fromAddRemoveLiquidityEvent(event: DharitrixAddLiquidityEvent | DharitrixRemoveLiquidityEvent): JoinExitEvent {
     const eventType = event.type === "addLiquidity" ? "join" : "exit";
 
     return {

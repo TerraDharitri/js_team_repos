@@ -29,8 +29,8 @@ There's an ongoing effort to standardize the network interaction SDKs, so they b
 
 And, since the specs are in progress, the implementing libraries are still subject to change and improvement. For example, while the JavaScript and the Python libraries are mostly aligned with one another (see the cookbooks), they are not aligned YET with the newer specs.
 
- - https://docs.dharitri.com/sdk-and-tools/sdk-js/sdk-js-cookbook
- - https://docs.dharitri.com/sdk-and-tools/sdk-py/sdk-py-cookbook
+ - https://docs.dharitri.org/sdk-and-tools/sdk-js/sdk-js-cookbook
+ - https://docs.dharitri.org/sdk-and-tools/sdk-py/sdk-py-cookbook
 
 And since the alignment is not complete yet, in this workshop we will be using the libraries as they are now. 
 

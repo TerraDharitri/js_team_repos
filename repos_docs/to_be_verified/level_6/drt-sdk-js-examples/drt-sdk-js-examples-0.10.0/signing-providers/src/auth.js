@@ -32,7 +32,7 @@ ${nativeAuthToken}
 Normally, you would now send this token to your server, which would then validate it.
 
 Go and check it on:
-https://utils.dharitri.com/auth (switch to ${NETWORK_NAME})`;
+https://utils.dharitri.org/auth (switch to ${NETWORK_NAME})`;
 
     console.log(message);
     alert(message);

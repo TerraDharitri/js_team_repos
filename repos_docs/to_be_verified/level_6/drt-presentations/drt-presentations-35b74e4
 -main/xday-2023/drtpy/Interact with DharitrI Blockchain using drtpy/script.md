@@ -74,7 +74,7 @@ drtpy wallet new --format keystore-mnemonic --outfile test_wallet.json
 
 The wallet's mnemonic will appear, followed by a prompt to set a password for the file. Once you input the password and press Enter, the file will be generated at the location specified by the `--outfile` argument. Will set the password to be `password`.
 
-> **_INFO:_** The network does not register a newly created address until funds are sent to that address. You'll need funds for deploying contracts and sending transactions. Easyest way to get funds is to use the [faucet](https://devnet-wallet.dharitri.com/faucet).
+> **_INFO:_** The network does not register a newly created address until funds are sent to that address. You'll need funds for deploying contracts and sending transactions. Easyest way to get funds is to use the [faucet](https://devnet-wallet.dharitri.org/faucet).
 
 ## Converting wallets
 
@@ -98,7 +98,7 @@ To create a new transaction we use the `drtpy tx new` command. We will use a `.p
 drtpy tx new --pem converted_wallet.pem --recall-nonce \
     --receiver drt1qyu5wthldzr8wx5c9ucg8kjagg0jfs53s8nr3zpz3hypefsdd8ssey5egf \
     --gas-limit 50000 --value 1000000000000000000 \
-    --proxy https://devnet-gateway.dharitri.com --chain D \
+    --proxy https://devnet-gateway.dharitri.org --chain D \
     --send
 ```
 
@@ -138,13 +138,13 @@ After making sure that our contract is built and we have enough funds to pay the
 
 ```sh
 drtpy contract deploy --bytecode adder/output/adder.wasm \
-    --proxy=https://devnet-gateway.dharitri.com --chain D \
+    --proxy=https://devnet-gateway.dharitri.org --chain D \
     --recall-nonce --arguments 0 --gas-limit 5000000 \
     --pem=converted_wallet.pem \
     --send
 ```
 
-The `--bytecode` argument is used to provide the generated `.wasm` file, the `--proxy` is used to specify the url of the proxy and the `--chain` is used to select on which network the contract will be deployed. The chain ID and the proxy need to match for our transaction to be executed. We can't prepare a transaction for the Devnet (using `--chain D`) and send it using the mainnet proxy (https://gateway.dharitri.com).
+The `--bytecode` argument is used to provide the generated `.wasm` file, the `--proxy` is used to specify the url of the proxy and the `--chain` is used to select on which network the contract will be deployed. The chain ID and the proxy need to match for our transaction to be executed. We can't prepare a transaction for the Devnet (using `--chain D`) and send it using the mainnet proxy (https://gateway.dharitri.org).
 
 The `--recall-nonce` is used to get the nonce of the address so we don't search it manually. It simply makes an API request to get the nonce of the account. The `--arguments` is used in case our contract needs any arguments for the initialization. We know our `adder` needs a value to start adding from, so we set that to `0`. The `--gas-limit` is used to set the gas we are willing to pay so our transaction will be executed. 5 million gas is a bit too much because our contract is very small and simple, but better to be sure. In case our transaction doesn't have enough gas the network will not execute it, saying something like `Insufficent gas limit`.
 
@@ -159,7 +159,7 @@ To call a function we use the `drtpy contract call` command. Here's an example o
 ```sh
 drtpy contract call <contract-address> \
     --pem=converted_wallet.pem --recall-nonce \
-    --proxy=https://devnet-gateway.dharitri.com --chain D \
+    --proxy=https://devnet-gateway.dharitri.org --chain D \
     --function add --arguments 5 --gas-limit 2000000 \
     --send
 ```
@@ -178,7 +178,7 @@ If you remember, when we deployed the contract we passed the value `0` as a cont
 
 ```sh
 drtpy contract query <contract-address> \
-    --proxy https://devnet-gateway.dharitri.com \
+    --proxy https://devnet-gateway.dharitri.org \
     --function getSum
 ```
 
@@ -211,7 +211,7 @@ Then we upgrade the contract by running:
 ```sh
 drtpy contract upgrade <contract-address> \
     --bytecode adder/output/adder.wasm \
-    --proxy=https://devnet-gateway.dharitri.com --chain D \
+    --proxy=https://devnet-gateway.dharitri.org --chain D \
     --recall-nonce --arguments 0 --gas-limit 5000000 \
     --pem=converted_wallet.pem \
     --send
@@ -224,7 +224,7 @@ Now let's add `5` to the contract one more time. We do so by running the followi
 ```sh
 drtpy contract call <contract-address> \
     --pem=converted_wallet.pem --recall-nonce \
-    --proxy=https://devnet-gateway.dharitri.com --chain D \
+    --proxy=https://devnet-gateway.dharitri.org --chain D \
     --function add --arguments 5 --gas-limit 1000000 \
     --send
 ```
@@ -232,7 +232,7 @@ drtpy contract call <contract-address> \
 Now, if we query the contract we should see the value `6`. We added `5` in the contract but modified the contract code to add `1` to every value. Let's see!
 
 ```sh
-drtpy contract query <contract_address> --proxy https://devnet-gateway.dharitri.com --function getSum
+drtpy contract query <contract_address> --proxy https://devnet-gateway.dharitri.org --function getSum
 ```
 
 We see that we indeed got the value `6`. Our upgrade was sucessfull.

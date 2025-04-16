@@ -249,7 +249,7 @@ describe('Token Service', () => {
       tokenService.applySupply = jest.fn().mockResolvedValue(undefined);
       tokenService.getTokenRoles = jest.fn().mockResolvedValue([]);
 
-      const result = await tokenService.getToken('wEglD-bd4D79');
+      const result = await tokenService.getToken('wRewA-bd4D79');
       expect(tokenService.getAllTokens).toHaveBeenCalledTimes(1);
       expect(tokenService.applyTickerFromAssets).toHaveBeenCalledTimes(1);
       expect(tokenService.applySupply).toHaveBeenCalledTimes(1);
@@ -373,13 +373,13 @@ describe('Token Service', () => {
       jest.spyOn(tokenService, 'applyTickerFromAssets').mockImplementation();
 
       const queryPagination: QueryPagination = new QueryPagination();
-      const filter: TokenFilter = new TokenFilter({ identifiers: ['MEX-455c57', 'WREWA-bd4d79'] });
+      const filter: TokenFilter = new TokenFilter({ identifiers: ['MOA-455c57', 'WREWA-bd4d79'] });
 
       const result = await tokenService.getTokens(queryPagination, filter);
 
       expect(result).toHaveLength(2);
       expect(result).toEqual(expect.arrayContaining([
-        expect.objectContaining({ identifier: 'MEX-455c57' }),
+        expect.objectContaining({ identifier: 'MOA-455c57' }),
         expect.objectContaining({ identifier: 'WREWA-bd4d79' }),
       ]));
     });
@@ -497,7 +497,7 @@ describe('Token Service', () => {
       const getFilteredTokensMock = jest.spyOn(tokenService, 'getAllTokens').mockReturnValue(mockTokens);
 
       const filter = new TokenFilter();
-      filter.identifiers = ['MEX-455c57', 'WREWA-bd4d79'];
+      filter.identifiers = ['MOA-455c57', 'WREWA-bd4d79'];
 
       const result = await tokenService.getTokenCount(filter);
 
@@ -605,11 +605,11 @@ describe('Token Service', () => {
         decimals: 18,
         isPaused: false,
         assets: {
-          website: "https://xexchange.com",
+          website: "https://dharitrix.com",
           description: "wREWA is an DCDT token that has the same value as REWA, the native coin of the  blockchain.",
           status: TokenAssetStatus.active,
-          pngUrl: "https://media.numbat.com/tokens/asset/WREWA-bd4d79/logo.png",
-          svgUrl: "https://media.numbat.com/tokens/asset/WREWA-bd4d79/logo.svg",
+          pngUrl: "https://media.dharitri.org/tokens/asset/WREWA-bd4d79/logo.png",
+          svgUrl: "https://media.dharitri.org/tokens/asset/WREWA-bd4d79/logo.svg",
           ledgerSignature: "3044022062a68d4bdd649aebb5e4ed5c6284e211c689c3b8142e59a47b01cc9997b16dfa0220475b064836849b9c4aa9c5ff18daed91a64f847bd96aa0a26768349f2cd0c24f",
           extraTokens: [],
 
@@ -627,18 +627,18 @@ describe('Token Service', () => {
       },
       {
         type: "FungibleDCDT",
-        identifier: "MEX-455c57",
-        name: "MEX",
-        ticker: "MEX",
+        identifier: "MOA-455c57",
+        name: "MOA",
+        ticker: "MOA",
         owner: "drt1ss6u80ruas2phpmr82r42xnkd6rxy40g9jl69frppl4qez9w2jpsaws9xq",
         decimals: 18,
         isPaused: false,
         assets: {
-          website: "https://xexchange.com",
+          website: "https://dharitrix.com",
           description: "wREWA is an DCDT token that has the same value as REWA, the native coin of the  blockchain.",
           status: "active",
-          pngUrl: "https://media.numbat.com/tokens/asset/WREWA-bd4d79/logo.png",
-          svgUrl: "https://media.numbat.com/tokens/asset/WREWA-bd4d79/logo.svg",
+          pngUrl: "https://media.dharitri.org/tokens/asset/WREWA-bd4d79/logo.png",
+          svgUrl: "https://media.dharitri.org/tokens/asset/WREWA-bd4d79/logo.svg",
           ledgerSignature: "3044022062a68d4bdd649aebb5e4ed5c6284e211c689c3b8142e59a47b01cc9997b16dfa0220475b064836849b9c4aa9c5ff18daed91a64f847bd96aa0a26768349f2cd0c24f",
         },
         transactions: 5998186,
@@ -816,7 +816,7 @@ describe('Token Service', () => {
         'drt1ss6u80ruas2phpmr82r42xnkd6rxy40g9jl69frppl4qez9w2jpsaws9xq': '1000000000000000000',
         'drt1ss6u80ruas2phpmr82r42xnkd6rxy40g9jl69frppl4qez9w2jpsqj8x91': '500000000000000000',
       },
-      extraTokens: ['MEX-455c57', 'USDC-c76f1f'],
+      extraTokens: ['MOA-455c57', 'USDC-c76f1f'],
       preferredRankAlgorithm: NftRankAlgorithm.trait,
       priceSource: undefined,
     };

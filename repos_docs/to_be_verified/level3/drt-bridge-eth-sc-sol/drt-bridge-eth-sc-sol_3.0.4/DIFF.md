@@ -1,8 +1,8 @@
 ## Main differences
 
-**Old version**: https://github.com/TerraDharitri/mx-bridge-eth-go/tree/437947a0c447b80f78f578bd5fb0f13b74c6fcde
+**Old version**: https://github.com/TerraDharitri/drt-go-bridge-eth/tree/437947a0c447b80f78f578bd5fb0f13b74c6fcde
 
-**New version**: https://github.com/TerraDharitri/mx-bridge-eth-sc-sol/tree/bd5a9b63dd869a99470469385d2b15896d40908e
+**New version**: https://github.com/TerraDharitri/drt-sol-sc-bridge-eth/tree/bd5a9b63dd869a99470469385d2b15896d40908e
 
 ### Functionality diff
 

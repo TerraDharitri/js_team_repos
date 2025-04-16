@@ -27,7 +27,7 @@ describe('MediaController', () => {
   });
 
   it(`/GET media/:uri(*)`, async () => {
-    const mockUrl = 'https://s3.amazonaws.com/media.numbat.com/nfts/thumbnail/XPACHIEVE-5a0519-e302a15d';
+    const mockUrl = 'https://s3.amazonaws.com/media.dharitri.org/nfts/thumbnail/XPACHIEVE-5a0519-e302a15d';
 
     mediaService.getRedirectUrl.mockResolvedValue(mockUrl);
 

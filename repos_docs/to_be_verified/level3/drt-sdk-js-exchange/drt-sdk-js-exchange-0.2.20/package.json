@@ -1,11 +1,11 @@
 {
     "name": "@terradharitri/sdk-exchange",
     "version": "0.2.20",
-    "description": "Utilities modules for xExchange interactions",
+    "description": "Utilities modules for DharitriX interactions",
     "author": "DharitrI",
     "repository": {
         "type": "git",
-        "url": "https://github.com/TerraDharitri/mx-sdk-js-exchange.git"
+        "url": "https://github.com/TerraDharitri/drt-js-sdk-exchange.git"
     },
     "license": "MIT",
     "files": [

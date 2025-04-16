@@ -188,6 +188,6 @@ export const pingPongHandler = async (type: string) => {
 
 export const accesDaap = async () => {
   await browser.reloadSession();
-  await browser.url('https://integration.template-dapp.dharitri.com/');
+  await browser.url('https://integration.template-dapp.dharitri.org/');
   await $(GlobalSelectorEnum.connectBtn).click();
 };

@@ -67,8 +67,8 @@ export class ApiConfigService extends BaseConfigService {
     return this.getOrFallback('caching.processTtl', 60);
   }
 
-  getXExchangeRouterAddress(): string {
-    return this.getOrFail('xExchange.routerAddress');
+  getDharitrixRouterAddress(): string {
+    return this.getOrFail('DharitriX.routerAddress');
   }
 
   getOneDexSwapAddress(): string {

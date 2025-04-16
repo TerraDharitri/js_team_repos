@@ -98,7 +98,7 @@ export class MexTokenService {
 
       const settings = await this.mexSettingsService.getSettings();
       if (settings) {
-        const mexToken = tokens.find(x => x.symbol === 'MEX');
+        const mexToken = tokens.find(x => x.symbol === 'MOA');
         if (mexToken) {
           const lkmexIdentifier = settings.lockedAssetIdentifier;
           if (lkmexIdentifier) {
@@ -256,7 +256,7 @@ export class MexTokenService {
     try {
       const settings = await this.mexSettingsService.getSettings();
       if (!settings) {
-        throw new BadRequestException('Could not fetch MEX tokens');
+        throw new BadRequestException('Could not fetch MOA tokens');
       }
 
       const result: any = await this.graphQlService.getExchangeServiceData(tokensQuery);

@@ -405,7 +405,7 @@ export default [
         transfers: [
           {
             type: 'MetaDCDT',
-            name: 'LockedMEX',
+            name: 'LockedMOA',
             ticker: 'LKMOA',
             svgUrl:
               'https://media.dharitri.org/tokens/asset/LKMOA-aab910/logo.svg',
@@ -416,7 +416,7 @@ export default [
           },
           {
             type: 'MetaDCDT',
-            name: 'LockedMEX',
+            name: 'LockedMOA',
             ticker: 'LKMOA',
             svgUrl:
               'https://media.dharitri.org/tokens/asset/LKMOA-aab910/logo.svg',
@@ -430,7 +430,7 @@ export default [
           'drt1qqqqqqqqqqqqqpgqjpt0qqgsrdhp2xqygpjtfrpwf76f9nvg2jps4fhagf',
         functionName: 'mergeLockedAssetTokens',
         receiverAssets: {
-          name: 'xExchange: Locked asset Contract',
+          name: 'DharitriX: Locked asset Contract',
           tags: ['moa', 'lockedasset']
         }
       }
@@ -489,7 +489,7 @@ export default [
     nonce: 864,
     receiver: 'drt1qqqqqqqqqqqqqpgqa0fsfshnff4n76jhcye6k7uvd7qacsq42jpsux8555',
     receiverAssets: {
-      name: 'xExchange: MEX/WREWA Liquidity Pool',
+      name: 'DharitriX: MOA/WREWA Liquidity Pool',
       tags: ['moa', 'liquiditypool']
     },
     receiverShard: 1,
@@ -508,7 +508,7 @@ export default [
       category: 'moa',
       name: 'swap',
       description:
-        'Swap 1 WREWA for a minimum of 281066.754391919467235791 MEX',
+        'Swap 1 WREWA for a minimum of 281066.754391919467235791 MOA',
       arguments: {
         transfers: [
           {
@@ -523,11 +523,11 @@ export default [
           },
           {
             type: 'FungibleDCDT',
-            name: 'MEX',
-            ticker: 'MEX',
+            name: 'MOA',
+            ticker: 'MOA',
             svgUrl:
-              'https://media.dharitri.org/tokens/asset/MEX-455c57/logo.svg',
-            token: 'MEX-455c57',
+              'https://media.dharitri.org/tokens/asset/MOA-455c57/logo.svg',
+            token: 'MOA-455c57',
             decimals: 18,
             value: '281066754391919467235791'
           }
@@ -537,7 +537,7 @@ export default [
         functionName: 'swapTokensFixedInput',
         functionArgs: ['4d4f412d343535633537', '3b84a8c6fbf6b2ad09cf'],
         receiverAssets: {
-          name: 'xExchange: MEX/WREWA Liquidity Pool',
+          name: 'DharitriX: MOA/WREWA Liquidity Pool',
           tags: ['moa', 'liquiditypool']
         }
       }
@@ -730,8 +730,8 @@ export default [
           '0000000000000000050026751893d6789be9e5a99863ba9eeaa8088dd25f5483'
         ],
         receiverAssets: {
-          name: 'xExchange: Proxy',
-          tags: ['maiar', 'exchange', 'proxy'],
+          name: 'DharitriX: Proxy',
+          tags: ['durian', 'exchange', 'proxy'],
           iconPng:
             'https://raw.githubusercontent.com/Dharitri/assets/master/accounts/icons/dharitri.png',
           iconSvg:
@@ -765,7 +765,7 @@ export default [
       category: 'moa',
       name: 'addLiquidity',
       description:
-        'Added liquidity for 0.309893556225986569 WREWA, 88246.97734239037166522 MEX',
+        'Added liquidity for 0.309893556225986569 WREWA, 88246.97734239037166522 MOA',
       arguments: {
         transfers: [
           {
@@ -780,11 +780,11 @@ export default [
           },
           {
             type: 'FungibleDCDT',
-            name: 'MEX',
-            ticker: 'MEX',
+            name: 'MOA',
+            ticker: 'MOA',
             svgUrl:
-              'https://media.dharitri.org/tokens/asset/MEX-455c57/logo.svg',
-            token: 'MEX-455c57',
+              'https://media.dharitri.org/tokens/asset/MOA-455c57/logo.svg',
+            token: 'MOA-455c57',
             decimals: 18,
             value: '88246977342390371665220'
           }
@@ -794,7 +794,7 @@ export default [
         functionName: 'addLiquidity',
         functionArgs: ['0441f414ffa9826f', '12800a1914f9d3e59017'],
         receiverAssets: {
-          name: 'xExchange: MEX/WREWA Liquidity Pool',
+          name: 'DharitriX: MOA/WREWA Liquidity Pool',
           tags: ['moa', 'liquiditypool']
         }
       }
@@ -846,8 +846,8 @@ export default [
           '00000000000000000500656d0acc53561c5d6f6fd7d7e82bf13247014f615483'
         ],
         receiverAssets: {
-          name: 'xExchange: Proxy',
-          tags: ['maiar', 'exchange', 'proxy'],
+          name: 'DharitriX: Proxy',
+          tags: ['durian', 'exchange', 'proxy'],
           iconPng:
             'https://raw.githubusercontent.com/Dharitri/assets/master/accounts/icons/dharitri.png',
           iconSvg:
@@ -881,16 +881,16 @@ export default [
       category: 'moa',
       name: 'enterFarm',
       description:
-        'Enter farm and lock rewards with 61.229451140721546841 REWAMEX',
+        'Enter farm and lock rewards with 61.229451140721546841 REWAMOA',
       arguments: {
         transfers: [
           {
             type: 'FungibleDCDT',
-            name: 'REWAMEXLP',
-            ticker: 'REWAMEX',
+            name: 'REWAMOALP',
+            ticker: 'REWAMOA',
             svgUrl:
-              'https://media.dharitri.org/tokens/asset/REWAMEX-0be9e5/logo.svg',
-            token: 'REWAMEX-0be9e5',
+              'https://media.dharitri.org/tokens/asset/REWAMOA-0be9e5/logo.svg',
+            token: 'REWAMOA-0be9e5',
             decimals: 18,
             value: '61229451140721546841'
           }
@@ -899,7 +899,7 @@ export default [
           'drt1qqqqqqqqqqqqqpgqye633y7k0zd7nedfnp3m48h24qygm5jl2jpsz62uuf',
         functionName: 'enterFarmAndLockRewards',
         receiverAssets: {
-          name: 'xExchange: REWAMEXLPStaked Farm',
+          name: 'DharitriX: REWAMOALPStaked Farm',
           tags: ['moa', 'farm']
         }
       }
@@ -934,7 +934,7 @@ export default [
         transfers: [
           {
             type: 'MetaDCDT',
-            name: 'LockedMEX',
+            name: 'LockedMOA',
             ticker: 'LKMOA',
             svgUrl:
               'https://media.dharitri.org/tokens/asset/LKMOA-aab910/logo.svg',
@@ -951,8 +951,8 @@ export default [
           '00000000000000000500656d0acc53561c5d6f6fd7d7e82bf13247014f615483'
         ],
         receiverAssets: {
-          name: 'xExchange: Proxy',
-          tags: ['maiar', 'exchange', 'proxy'],
+          name: 'DharitriX: Proxy',
+          tags: ['durian', 'exchange', 'proxy'],
           iconPng:
             'https://raw.githubusercontent.com/Dharitri/assets/master/accounts/icons/dharitri.png',
           iconSvg:
@@ -971,7 +971,7 @@ export default [
     nonce: 806,
     receiver: 'drt1qqqqqqqqqqqqqpgqa0fsfshnff4n76jhcye6k7uvd7qacsq42jpsux8555',
     receiverAssets: {
-      name: 'xExchange: MEX/WREWA Liquidity Pool',
+      name: 'DharitriX: MOA/WREWA Liquidity Pool',
       tags: ['moa', 'liquiditypool']
     },
     receiverShard: 1,
@@ -989,16 +989,16 @@ export default [
     action: {
       category: 'moa',
       name: 'removeLiquidity',
-      description: 'Removed liquidity with 0.297 REWAMEX',
+      description: 'Removed liquidity with 0.297 REWAMOA',
       arguments: {
         transfers: [
           {
             type: 'FungibleDCDT',
-            name: 'REWAMEXLP',
-            ticker: 'REWAMEX',
+            name: 'REWAMOALP',
+            ticker: 'REWAMOA',
             svgUrl:
-              'https://media.dharitri.org/tokens/asset/REWAMEX-0be9e5/logo.svg',
-            token: 'REWAMEX-0be9e5',
+              'https://media.dharitri.org/tokens/asset/REWAMOA-0be9e5/logo.svg',
+            token: 'REWAMOA-0be9e5',
             decimals: 18,
             value: '297000000000000000'
           }
@@ -1008,7 +1008,7 @@ export default [
         functionName: 'removeLiquidity',
         functionArgs: ['09a7b49520052edb', '29f515780f425df36331'],
         receiverAssets: {
-          name: 'xExchange: MEX/WREWA Liquidity Pool',
+          name: 'DharitriX: MOA/WREWA Liquidity Pool',
           tags: ['moa', 'liquiditypool']
         }
       }
@@ -1060,8 +1060,8 @@ export default [
           '00000000000000000500656d0acc53561c5d6f6fd7d7e82bf13247014f615483'
         ],
         receiverAssets: {
-          name: 'xExchange: Proxy',
-          tags: ['maiar', 'exchange', 'proxy'],
+          name: 'DharitriX: Proxy',
+          tags: ['durian', 'exchange', 'proxy'],
           iconPng:
             'https://raw.githubusercontent.com/Dharitri/assets/master/accounts/icons/dharitri.png',
           iconSvg:

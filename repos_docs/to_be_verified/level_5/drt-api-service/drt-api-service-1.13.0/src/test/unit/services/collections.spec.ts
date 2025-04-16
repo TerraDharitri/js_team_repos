@@ -230,9 +230,9 @@ describe('CollectionService', () => {
         description:
           'Test description.',
         status: TokenAssetStatus.active,
-        pngUrl: 'https://media.numbat.com/tokens/asset/XDAY23TEAM-f7a346/logo.png',
+        pngUrl: 'https://media.dharitri.org/tokens/asset/XDAY23TEAM-f7a346/logo.png',
         name: '',
-        svgUrl: 'https://media.numbat.com/tokens/asset/XDAY23TEAM-f7a346/logo.svg',
+        svgUrl: 'https://media.dharitri.org/tokens/asset/XDAY23TEAM-f7a346/logo.svg',
         extraTokens: [''],
         ledgerSignature: '',
         priceSource: undefined,
@@ -344,9 +344,9 @@ describe('CollectionService', () => {
       description:
         'Test description.',
       status: TokenAssetStatus.active,
-      pngUrl: 'https://media.numbat.com/tokens/asset/XDAY23TEAM-f7a346/logo.png',
+      pngUrl: 'https://media.dharitri.org/tokens/asset/XDAY23TEAM-f7a346/logo.png',
       name: '',
-      svgUrl: 'https://media.numbat.com/tokens/asset/XDAY23TEAM-f7a346/logo.svg',
+      svgUrl: 'https://media.dharitri.org/tokens/asset/XDAY23TEAM-f7a346/logo.svg',
       extraTokens: [''],
       ledgerSignature: '',
       priceSource: undefined,
@@ -356,7 +356,7 @@ describe('CollectionService', () => {
 
     it('should return the PNG URL if available', async () => {
       const identifier = 'XDAY23TEAM-f7a346';
-      const mockPngUrl = 'https://media.numbat.com/tokens/asset/XDAY23TEAM-f7a346/logo.png';
+      const mockPngUrl = 'https://media.dharitri.org/tokens/asset/XDAY23TEAM-f7a346/logo.png';
 
       jest.spyOn(assetsService, 'getTokenAssets').mockResolvedValue(assetsTokenMock);
       const result = await service.getLogoPng(identifier);
@@ -366,7 +366,7 @@ describe('CollectionService', () => {
 
     it('should return the SVG URL if available', async () => {
       const identifier = 'XDAY23TEAM-f7a346';
-      const mockSvgUrl = 'https://media.numbat.com/tokens/asset/XDAY23TEAM-f7a346/logo.svg';
+      const mockSvgUrl = 'https://media.dharitri.org/tokens/asset/XDAY23TEAM-f7a346/logo.svg';
 
       jest.spyOn(assetsService, 'getTokenAssets').mockResolvedValue(assetsTokenMock);
       const result = await service.getLogoSvg(identifier);

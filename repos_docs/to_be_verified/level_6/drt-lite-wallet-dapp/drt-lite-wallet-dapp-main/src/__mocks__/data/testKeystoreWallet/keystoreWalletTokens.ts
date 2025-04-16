@@ -65,9 +65,9 @@ export const keystoreWalletTokens = [
         'AshSwap is the first stable-swap DEX built on the DharitrI blockchain that allows users to trade stable assets with high volume and small slippage.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/ASH-e3d1b7/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/ASH-e3d1b7/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/ASH-e3d1b7/logo.svg',
+        'https://devnet-media.dharitri.org/tokens/asset/ASH-e3d1b7/logo.svg',
       lockedAccounts: {
         drt1w280yjym0xc2aw80dvn2a4ew5vzvtshtr8nux8wa5wzqm78y7nvsanpgld:
           'Locked Account #1'
@@ -156,9 +156,9 @@ export const keystoreWalletTokens = [
         'The CRT token is essential for powering in-game utilities like NFT character progression, NFT recruiting, staking, and unlocking in-game assets inside of the Cantina Royale ecosystem.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/CRT-f55762/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/CRT-f55762/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/CRT-f55762/logo.svg',
+        'https://devnet-media.dharitri.org/tokens/asset/CRT-f55762/logo.svg',
       lockedAccounts: {
         drt1s9gcnzgjyzdn205xdy3gy3jtm8yl95k4g3kq54ryprs0h486v7dqnk43qh:
           'Investors',
@@ -292,14 +292,14 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://xexchange.com',
+      website: 'https://dharitrix.com',
       description:
-        'Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/RIDE pool on the xExchange.',
+        'Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/RIDE pool on the DharitriX.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/REWARIDE-9fdd72/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/REWARIDE-9fdd72/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/REWARIDE-9fdd72/logo.svg'
+        'https://devnet-media.dharitri.org/tokens/asset/REWARIDE-9fdd72/logo.svg'
     },
     transactions: 16,
     transactionsLastUpdatedAt: 1718720499,
@@ -329,14 +329,14 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://xexchange.com',
+      website: 'https://dharitrix.com',
       description:
-        'Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/USDC pool on the xExchange.',
+        'Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/USDC pool on the DharitriX.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/REWAUSDC-ac1a30/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/REWAUSDC-ac1a30/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/REWAUSDC-ac1a30/logo.svg'
+        'https://devnet-media.dharitri.org/tokens/asset/REWAUSDC-ac1a30/logo.svg'
     },
     transactions: 18,
     transactionsLastUpdatedAt: 1718720528,
@@ -396,9 +396,9 @@ export const keystoreWalletTokens = [
         'The ITHEUM token forms the foundation for a decentralized web3 data economy, enabling vibrant and personalized metaverse worlds where data is traded with shared value between data creators and data consumers.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/ITHEUM-fce905/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/ITHEUM-fce905/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/ITHEUM-fce905/logo.svg',
+        'https://devnet-media.dharitri.org/tokens/asset/ITHEUM-fce905/logo.svg',
       social: {
         blog: 'https://itheum.medium.com',
         twitter: 'https://twitter.com/itheum',
@@ -582,14 +582,14 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://xexchange.com',
+      website: 'https://dharitrix.com',
       description:
-        'MOA the token used to incentivize liquidity provision to the xExchange.',
+        'MOA the token used to incentivize liquidity provision to the DharitriX.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/MOA-a659d0/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/MOA-a659d0/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/MOA-a659d0/logo.svg',
+        'https://devnet-media.dharitri.org/tokens/asset/MOA-a659d0/logo.svg',
       'name:': 'xMoa',
       ledgerSignature:
         '3045022100923b55fcd42a9c6a4f40027b4ddee1d4f76ee9f9eb2665b12369d7d0d36059b202205ba6c2a50812565022ea305b2fce93904ec531ad681762e3cc83296f2a013807'
@@ -632,9 +632,9 @@ export const keystoreWalletTokens = [
         'The RIDE token is essential for building a vibrant and sustainable economy for the holoride ecosystem, connecting car manufacturers, content creators, brands, and passengers and enabling them to capture value along the way.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/RIDE-05b1bb/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/RIDE-05b1bb/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/RIDE-05b1bb/logo.svg',
+        'https://devnet-media.dharitri.org/tokens/asset/RIDE-05b1bb/logo.svg',
       ledgerSignature:
         '3044022012d2b0996189be93713d5d5a444b1d7fcaeb513d7ab3c79f9146ecab627a486202206e61d878b3c67b72d202af841f0ff8f676e427738086807dce7f255f63c9bef3',
       social: {
@@ -841,9 +841,9 @@ export const keystoreWalletTokens = [
         'USDC stablecoin originating on Ethereum, bridged as an DCDT token on DharitrI. 1 USDC = 1 WrappedUSDC',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/USDC-350c4e/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/USDC-350c4e/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/USDC-350c4e/logo.svg',
+        'https://devnet-media.dharitri.org/tokens/asset/USDC-350c4e/logo.svg',
       ledgerSignature:
         '3045022100c3f395fe6b8dcb7117d859a246ddf177e2152f8618bc2469ae2c10d04b397276022002cbe7d2a39da9cf2d0aa3384b4dd717b8b188d89ce3045971d00c6b6c5a0e80'
     },
@@ -886,9 +886,9 @@ export const keystoreWalletTokens = [
       description: 'Web3 L1 Payments Technology',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/UTK-14d57d/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/UTK-14d57d/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/UTK-14d57d/logo.svg',
+        'https://devnet-media.dharitri.org/tokens/asset/UTK-14d57d/logo.svg',
       extraTokens: [
         'UTKWREWA-c960d1',
         'METAUTKLK-e6a445',
@@ -939,14 +939,14 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://xexchange.com',
+      website: 'https://dharitrix.com',
       description:
         'wREWA is an DCDT token that has the same value as REWA, the native coin of the DharitrI blockchain.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/WREWA-a28c59/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/WREWA-a28c59/logo.png',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/WREWA-a28c59/logo.svg'
+        'https://devnet-media.dharitri.org/tokens/asset/WREWA-a28c59/logo.svg'
     },
     transactions: 51722,
     transactionsLastUpdatedAt: 1718723498,
@@ -1179,14 +1179,14 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://xExchange.com',
+      website: 'https://DharitriX.com',
       description: 'XMOA with Energy. Equal in value to MOA. Not tradeable.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/XMOA-82f2f4/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/XMOA-82f2f4/logo.png',
       name: 'xMOA',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/XMOA-82f2f4/logo.svg'
+        'https://devnet-media.dharitri.org/tokens/asset/XMOA-82f2f4/logo.svg'
     },
     transactions: 26,
     transactionsLastUpdatedAt: 1718723004,
@@ -1217,14 +1217,14 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://xExchange.com',
+      website: 'https://DharitriX.com',
       description: 'XMOA with Energy. Equal in value to MOA. Not tradeable.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/XMOA-82f2f4/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/XMOA-82f2f4/logo.png',
       name: 'xMOA',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/XMOA-82f2f4/logo.svg'
+        'https://devnet-media.dharitri.org/tokens/asset/XMOA-82f2f4/logo.svg'
     },
     transactions: 26,
     transactionsLastUpdatedAt: 1718723004,
@@ -1255,14 +1255,14 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://xExchange.com',
+      website: 'https://DharitriX.com',
       description: 'XMOA with Energy. Equal in value to MOA. Not tradeable.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/XMOA-82f2f4/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/XMOA-82f2f4/logo.png',
       name: 'xMOA',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/XMOA-82f2f4/logo.svg'
+        'https://devnet-media.dharitri.org/tokens/asset/XMOA-82f2f4/logo.svg'
     },
     transactions: 26,
     transactionsLastUpdatedAt: 1718723004,
@@ -1293,14 +1293,14 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://xExchange.com',
+      website: 'https://DharitriX.com',
       description: 'XMOA with Energy. Equal in value to MOA. Not tradeable.',
       status: 'active',
       pngUrl:
-        'https://devnet-media.numbat.com/tokens/asset/XMOA-82f2f4/logo.png',
+        'https://devnet-media.dharitri.org/tokens/asset/XMOA-82f2f4/logo.png',
       name: 'xMOA',
       svgUrl:
-        'https://devnet-media.numbat.com/tokens/asset/XMOA-82f2f4/logo.svg'
+        'https://devnet-media.dharitri.org/tokens/asset/XMOA-82f2f4/logo.svg'
     },
     transactions: 26,
     transactionsLastUpdatedAt: 1718723004,

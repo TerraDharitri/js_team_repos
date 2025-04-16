@@ -91,11 +91,11 @@ describe('MexController', () => {
       const queryPagination = new QueryPagination({ from: 0, size: 5 });
 
       await request(app.getHttpServer())
-        .get(`${path}/pairs?size=${queryPagination.size}&exchange=${MexPairExchange.xexchange}`)
+        .get(`${path}/pairs?size=${queryPagination.size}&exchange=${MexPairExchange.dharitrix}`)
         .expect(200);
 
       expect(mexPairServiceMocks.getMexPairs).toHaveBeenCalledWith(
-        0, 5, new MexPairsFilter({ exchange: MexPairExchange.xexchange, includeFarms: false })
+        0, 5, new MexPairsFilter({ exchange: MexPairExchange.dharitrix, includeFarms: false })
       );
     });
 
@@ -129,14 +129,14 @@ describe('MexController', () => {
     it('should return total mex pairs count from exchange', async () => {
       mexPairServiceMocks.getMexPairsCount.mockReturnValue(5);
       await request(app.getHttpServer())
-        .get(`${path}/pairs/count?exchange=${MexPairExchange.xexchange}`)
+        .get(`${path}/pairs/count?exchange=${MexPairExchange.dharitrix}`)
         .expect(200)
         .expect(response => {
           expect(+response.text).toStrictEqual(5);
         });
 
       expect(mexPairServiceMocks.getMexPairsCount).toHaveBeenCalledWith(
-        new MexPairsFilter({ exchange: MexPairExchange.xexchange, includeFarms: false })
+        new MexPairsFilter({ exchange: MexPairExchange.dharitrix, includeFarms: false })
       );
     });
 
@@ -156,7 +156,7 @@ describe('MexController', () => {
 
     it('should return mex pair based on basId and quoteId', async () => {
       mexPairServiceMocks.getMexPair.mockReturnValue({});
-      const baseId = 'MEX-455c57';
+      const baseId = 'MOA-455c57';
       const quoteId = 'WREWA-bd4d79';
 
       await request(app.getHttpServer())
@@ -179,7 +179,7 @@ describe('MexController', () => {
 
     it('should return mex pair with farms information', async () => {
       mexPairServiceMocks.getMexPair.mockReturnValue({});
-      const baseId = 'MEX-455c57';
+      const baseId = 'MOA-455c57';
       const quoteId = 'WREWA-bd4d79';
 
       await request(app.getHttpServer())
@@ -245,7 +245,7 @@ describe('MexController', () => {
 
     it('should return mex token details for a given token identifier', async () => {
       mexTokensServiceMocks.getMexTokenByIdentifier.mockReturnValue({});
-      const mexTokenIdentifier = 'MEX-455c57';
+      const mexTokenIdentifier = 'MOA-455c57';
 
       await request(app.getHttpServer())
         .get(`${path}/tokens/${mexTokenIdentifier}`)
@@ -256,7 +256,7 @@ describe('MexController', () => {
 
     it('should thorow 400 Bad Request for a given invalid token identifier', async () => {
       mexTokensServiceMocks.getMexTokenByIdentifier.mockReturnValue({});
-      const mexTokenIdentifier = 'MEX-455c57-Invalid';
+      const mexTokenIdentifier = 'MOA-455c57-Invalid';
 
       await request(app.getHttpServer())
         .get(`${path}/tokens/${mexTokenIdentifier}`)

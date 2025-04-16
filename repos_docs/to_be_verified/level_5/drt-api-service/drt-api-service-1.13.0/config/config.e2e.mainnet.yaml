@@ -46,7 +46,7 @@ features:
     serviceUrl: 'https://nfts-graph.dharitri.org/graphql'
   exchange:
     enabled: false
-    serviceUrl: 'https://graph.xexchange.com/graphql'
+    serviceUrl: 'https://graph.dharitrix.com/graphql'
   dataApi:
     enabled: false
     serviceUrl: 'https://data-api.dharitri.org'
@@ -119,7 +119,7 @@ image:
 aws:
   s3KeyId: ''
   s3Secret: ''
-  s3Bucket: 'media.numbat.com'
+  s3Bucket: 'media.dharitri.org'
   s3Region: ''
 urls:
   self: 'http://localhost:3001'
@@ -132,8 +132,8 @@ urls:
   rabbitmq: 'amqp://127.0.0.1:5672'
   providers: 'https://delegation-api.dharitri.org/providers'
   delegation: 'https://delegation-api.dharitri.org'
-  media: 'https://media.numbat.com'
-  nftThumbnails: 'https://media.numbat.com/nfts/thumbnail'
+  media: 'https://media.dharitri.org'
+  nftThumbnails: 'https://media.dharitri.org/nfts/thumbnail'
   tmp: '/tmp'
   ipfs: 'https://ipfs.io/ipfs'
   socket: 'socket-api-fra.dharitri.org'

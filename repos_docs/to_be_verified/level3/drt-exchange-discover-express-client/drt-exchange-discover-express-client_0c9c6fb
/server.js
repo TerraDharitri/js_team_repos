@@ -5,7 +5,7 @@ import { config } from "dotenv";
 config();
 
 const PORT = 3000;
-const PREFIX = 'xexchange-growth';
+const PREFIX = 'dharitrix-growth';
 
 const getCostForWeek = async (week) => {
   // Here you can add any logic you want based on the week parameter

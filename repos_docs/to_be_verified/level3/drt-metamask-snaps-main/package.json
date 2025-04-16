@@ -4,17 +4,17 @@
   "description": "Snap connector to DharitrI chain.",
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/TerraDharitri/mx-metamask-snaps/issues"
+    "url": "https://github.com/TerraDharitri/drt-metamask-snaps/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TerraDharitri/mx-metamask-snaps.git"
+    "url": "https://github.com/TerraDharitri/drt-metamask-snaps.git"
   },
   "license": "MIT",
   "author": {
     "name": "DharitrI",
-    "email": "extensions@terradharitri.com",
-    "url": "https://TerraDharitri.com"
+    "email": "extensions@dharitri.org",
+    "url": "https://dharitri.org"
   },
   "main": "src/index.ts",
   "files": [

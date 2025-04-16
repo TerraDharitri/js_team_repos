@@ -26,7 +26,7 @@ DIRECTIVE_INSERT = f"// {MARKER_INSERT}"
 
 API_URL = "https://dharitri.github.io/drt-sdk-js-core"
 API_DEFAIULT_VERSION = "v13"
-DOCS_URL = "https://docs.dharitri.com"
+DOCS_URL = "https://docs.dharitri.org"
 
 notes: Dict[str, str] = {
     "transactionLegacyVsNext": """:::note

@@ -20,7 +20,7 @@ async function main() {
         throw new Error("Missing parameter 'event'! E.g. --event=deposit");
     }
     if (!apiUrl) {
-        throw new Error("Missing parameter 'api'! E.g. --api=https://testnet-api.dharitri.com");
+        throw new Error("Missing parameter 'api'! E.g. --api=https://testnet-api.dharitri.org");
     }
     if (!transactionHash) {
         throw new Error("Missing parameter 'tx'! E.g. --tx=532087e5021c9ab8be8a4db5ad843cfe0610761f6334d9693b3765992fd05f67");

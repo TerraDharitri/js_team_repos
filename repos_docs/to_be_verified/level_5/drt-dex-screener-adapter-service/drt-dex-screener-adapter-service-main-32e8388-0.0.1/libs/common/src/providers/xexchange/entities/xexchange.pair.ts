@@ -1,4 +1,4 @@
-export interface XExchangePair {
+export interface DharitrixPair {
   address: string;
   firstTokenId: string;
   firstTokenDecimals: number;

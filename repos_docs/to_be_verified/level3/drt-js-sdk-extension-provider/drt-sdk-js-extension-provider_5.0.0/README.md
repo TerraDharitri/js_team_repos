@@ -1,6 +1,6 @@
 # drt-js-sdk-extension-provider
 
-Signing provider for dApps: Maiar DeFi Wallet. 
+Signing provider for dApps: Durian DeFi Wallet. 
 
 Documentation is available on [docs.dharitri.org](https://docs.dharitri.org/sdk-and-tools/drtjs/drtjs-signing-providers/), while an integration example can be found [here](https://github.com/TerraDharitri/drt-js-sdk-examples/tree/main/signing-providers).
 

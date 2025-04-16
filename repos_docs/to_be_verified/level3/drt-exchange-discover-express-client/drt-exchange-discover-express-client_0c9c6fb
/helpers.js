@@ -2,7 +2,7 @@ import { UserSigner } from '@terradharitri/sdk-wallet';
 import { Address } from '@terradharitri/sdk-core';
 import { readFileSync } from 'fs';
 
-const COMPLETTION_PREFIX = 'xExchangeGrowthV1TaskCompleted';
+const COMPLETTION_PREFIX = 'DharitriXGrowthV1TaskCompleted';
 
 export const serializeAndSign = async (responseObj) => {
   const jsonPayload = serializeForSigning(responseObj);

@@ -47,7 +47,7 @@ features:
     serviceUrl: 'https://devnet-old-nfts-graph.dharitri.org/graphql'
   exchange:
     enabled: false
-    serviceUrl: 'https://devnet-old-graph.xexchange.com/graphql'
+    serviceUrl: 'https://devnet-old-graph.dharitrix.com/graphql'
   dataApi:
     enabled: false
     serviceUrl: 'https://devnet-old-data-api.dharitri.org'
@@ -68,7 +68,7 @@ image:
 aws:
   s3KeyId: ''
   s3Secret: ''
-  s3Bucket: 'devnet-old-media.numbat.com'
+  s3Bucket: 'devnet-old-media.dharitri.org'
   s3Region: ''
 urls:
   self: 'https://devnet-old-api.dharitri.org'
@@ -81,8 +81,8 @@ urls:
   rabbitmq: 'amqp://127.0.0.1:5672'
   providers: 'https://devnet-old-delegation-api.dharitri.org/providers'
   delegation: 'https://devnet-old-delegation-api.dharitri.org'
-  media: 'https://devnet-old-media.numbat.com'
-  nftThumbnails: 'https://devnet-old-media.numbat.com/nfts/thumbnail'
+  media: 'https://devnet-old-media.dharitri.org'
+  nftThumbnails: 'https://devnet-old-media.dharitri.org/nfts/thumbnail'
   tmp: '/tmp'
   ipfs: 'https://ipfs.io/ipfs'
   socket: 'devnet-socket-api.dharitri.org'

@@ -19,7 +19,7 @@ export const Footer = () => {
           rel='noopener noreferrer nofollow'
           target='_blank'
           className='d-flex align-items-center text-neutral-400'
-          href='https://dharitri.com/'
+          href='https://dharitri.org/'
         >
           Made with{' '}
           <FontAwesomeIcon icon={faHeart} className='text-danger drt-1' />

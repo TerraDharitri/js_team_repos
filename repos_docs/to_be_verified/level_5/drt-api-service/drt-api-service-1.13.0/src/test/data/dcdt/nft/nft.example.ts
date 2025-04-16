@@ -15,12 +15,12 @@ const nftCollection = [{
     'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1lRHhBTlQzOUs4VWdRbzRGWFF4SkdKWURYTVVYZ2dNVlRNY1VBWnpuTnM2cS80MzEuanNvbg==',
     'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1lRHhBTlQzOUs4VWdRbzRGWFF4SkdKWURYTVVYZ2dNVlRNY1VBWnpuTnM2cS9jb2xsZWN0aW9uLmpzb24=',
   ],
-  url: 'https://media.numbat.com/nfts/asset/QmeDxANT39K8UgQo4FXQxJGJYDXMUXggMVTMcUAZznNs6q/431.png',
+  url: 'https://media.dharitri.org/nfts/asset/QmeDxANT39K8UgQo4FXQxJGJYDXMUXggMVTMcUAZznNs6q/431.png',
   media: [
     {
-      url: 'https://media.numbat.com/nfts/thumbnail/default.png',
-      originalUrl: 'https://media.numbat.com/nfts/thumbnail/default.png',
-      thumbnailUrl: 'https://media.numbat.com/nfts/thumbnail/default.png',
+      url: 'https://media.dharitri.org/nfts/thumbnail/default.png',
+      originalUrl: 'https://media.dharitri.org/nfts/thumbnail/default.png',
+      thumbnailUrl: 'https://media.dharitri.org/nfts/thumbnail/default.png',
       fileType: 'image/png',
       fileSize: 29512,
     },

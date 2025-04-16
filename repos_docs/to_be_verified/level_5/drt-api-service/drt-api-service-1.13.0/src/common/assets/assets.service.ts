@@ -131,8 +131,8 @@ export class AssetsService {
     if (pairs) {
       for (const pair of pairs) {
         allAssets[pair.address] = this.createAccountAsset(
-          `xExchange: ${pair.baseSymbol}/${pair.quoteSymbol} Liquidity Pool`,
-          ['xexchange', 'liquiditypool']
+          `DharitriX: ${pair.baseSymbol}/${pair.quoteSymbol} Liquidity Pool`,
+          ['dharitrix', 'liquiditypool']
         );
       }
     }
@@ -140,8 +140,8 @@ export class AssetsService {
     if (farms) {
       for (const farm of farms) {
         allAssets[farm.address] = this.createAccountAsset(
-          `xExchange: ${farm.name} Farm`,
-          ['xexchange', 'farm']
+          `DharitriX: ${farm.name} Farm`,
+          ['dharitrix', 'farm']
         );
       }
     }
@@ -150,26 +150,26 @@ export class AssetsService {
       for (const [index, wrapContract] of mexSettings.wrapContracts.entries()) {
         allAssets[wrapContract] = this.createAccountAsset(
           `DCDT: WrappedREWA Contract Shard ${index}`,
-          ['xexchange', 'wrewa']
+          ['dharitrix', 'wrewa']
         );
       }
 
       allAssets[mexSettings.lockedAssetContract] = this.createAccountAsset(
-        `xExchange: Locked asset Contract`,
-        ['xexchange', 'lockedasset']
+        `DharitriX: Locked asset Contract`,
+        ['dharitrix', 'lockedasset']
       );
 
       allAssets[mexSettings.distributionContract] = this.createAccountAsset(
-        `xExchange: Distribution Contract`,
-        ['xexchange', 'lockedasset']
+        `DharitriX: Distribution Contract`,
+        ['dharitrix', 'lockedasset']
       );
     }
 
     if (stakingProxies) {
       for (const stakingProxy of stakingProxies) {
         allAssets[stakingProxy.address] = this.createAccountAsset(
-          `xExchange: ${stakingProxy.dualYieldTokenName} Contract`,
-          ['xexchange', 'metastaking']
+          `DharitriX: ${stakingProxy.dualYieldTokenName} Contract`,
+          ['dharitrix', 'metastaking']
         );
       }
     }
@@ -217,8 +217,8 @@ export class AssetsService {
     return new AccountAssets({
       name: name,
       tags: tags,
-      iconSvg: 'https://raw.githubusercontent.com/TerraDharitri/drt-assets/master/accounts/icons/xexchange.svg',
-      iconPng: 'https://raw.githubusercontent.com/TerraDharitri/drt-assets/master/accounts/icons/xexchange.png',
+      iconSvg: 'https://raw.githubusercontent.com/TerraDharitri/drt-assets/master/accounts/icons/dharitrix.svg',
+      iconPng: 'https://raw.githubusercontent.com/TerraDharitri/drt-assets/master/accounts/icons/dharitrix.png',
     });
   }
 }

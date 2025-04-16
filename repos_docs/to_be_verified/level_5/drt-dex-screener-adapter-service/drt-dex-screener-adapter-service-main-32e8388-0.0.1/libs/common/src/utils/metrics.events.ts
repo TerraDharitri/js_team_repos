@@ -1,5 +1,5 @@
 export enum MetricsEvents {
   SetIndexerDuration = "setIndexerDuration",
-  SetXExchangeDuration = "setXExchangeDuration",
+  SetDharitrixDuration = "setDharitrixDuration",
   SetOneDexDuration = "setOneDexDuration",
 }

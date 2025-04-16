@@ -4,11 +4,11 @@
   "description": "Light CLI wrapper over the wallet components",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DharitrI/mx-sdk-js-wallet-cli"
+    "url": "https://github.com/DharitrI/drt-js-sdk-wallet-cli"
   },
   "main": "index.js",
   "bin": {
-    "mxjs-wallet": "./index.js"
+    "drtjs-wallet": "./index.js"
   },
   "scripts": {
     "test": "cd ./tests && . ./test_cli.sh && testAll"

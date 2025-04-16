@@ -6,7 +6,7 @@ Resources:
   BucketMediaProduction:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: nfts-media.numbat.com
+      BucketName: nfts-media.dharitri.org
       AccessControl: PublicRead
       WebsiteConfiguration:
         ErrorDocument: error.html
@@ -24,7 +24,7 @@ Resources:
             Effect: Allow
             Principal: "*"
             Action: "s3:GetObject"
-            Resource: "arn:aws:s3:::nfts-media.numbat.com/*"
+            Resource: "arn:aws:s3:::nfts-media.dharitri.org/*"
 
   CloudFrontMediaProduction:
     Type: AWS::CloudFront::Distribution
@@ -33,10 +33,10 @@ Resources:
         Enabled: true
         PriceClass: PriceClass_100
         Aliases:
-          - nfts-media.numbat.com
+          - nfts-media.dharitri.org
         Origins:
           - Id: s3-static-site
-            DomainName: nfts-media.numbat.com.s3-website.us-east-1.amazonaws.com
+            DomainName: nfts-media.dharitri.org.s3-website.us-east-1.amazonaws.com
             CustomOriginConfig:
               HTTPPort: "80"
               HTTPSPort: "443"
@@ -56,7 +56,7 @@ Resources:
   BucketMediaTestnet:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: testnet-nfts-media.numbat.com
+      BucketName: testnet-nfts-media.dharitri.org
       AccessControl: PublicRead
       WebsiteConfiguration:
         ErrorDocument: error.html
@@ -74,7 +74,7 @@ Resources:
             Effect: Allow
             Principal: "*"
             Action: "s3:GetObject"
-            Resource: "arn:aws:s3:::testnet-nfts-media.numbat.com/*"
+            Resource: "arn:aws:s3:::testnet-nfts-media.dharitri.org/*"
 
   CloudFrontMediaTestnet:
     Type: AWS::CloudFront::Distribution
@@ -83,10 +83,10 @@ Resources:
         Enabled: true
         PriceClass: PriceClass_100
         Aliases:
-          - testnet-nfts-media.numbat.com
+          - testnet-nfts-media.dharitri.org
         Origins:
           - Id: s3-static-site
-            DomainName: testnet-nfts-media.numbat.com.s3-website.us-east-1.amazonaws.com
+            DomainName: testnet-nfts-media.dharitri.org.s3-website.us-east-1.amazonaws.com
             CustomOriginConfig:
               HTTPPort: "80"
               HTTPSPort: "443"
@@ -106,7 +106,7 @@ Resources:
   BucketMediaDevnet:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: devnet-nfts-media.numbat.com
+      BucketName: devnet-nfts-media.dharitri.org
       AccessControl: PublicRead
       WebsiteConfiguration:
         ErrorDocument: error.html
@@ -124,7 +124,7 @@ Resources:
             Effect: Allow
             Principal: "*"
             Action: "s3:GetObject"
-            Resource: "arn:aws:s3:::devnet-nfts-media.numbat.com/*"
+            Resource: "arn:aws:s3:::devnet-nfts-media.dharitri.org/*"
 
   CloudFrontMediaDevnet:
     Type: AWS::CloudFront::Distribution
@@ -133,10 +133,10 @@ Resources:
         Enabled: true
         PriceClass: PriceClass_100
         Aliases:
-          - devnet-nfts-media.numbat.com
+          - devnet-nfts-media.dharitri.org
         Origins:
           - Id: s3-static-site
-            DomainName: devnet-nfts-media.numbat.com.s3-website.us-east-1.amazonaws.com
+            DomainName: devnet-nfts-media.dharitri.org.s3-website.us-east-1.amazonaws.com
             CustomOriginConfig:
               HTTPPort: "80"
               HTTPSPort: "443"

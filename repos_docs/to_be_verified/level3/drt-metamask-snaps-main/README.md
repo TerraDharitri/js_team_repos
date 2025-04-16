@@ -1,1 +1,1 @@
-# mx-metamask-snaps
+# drt-metamask-snaps

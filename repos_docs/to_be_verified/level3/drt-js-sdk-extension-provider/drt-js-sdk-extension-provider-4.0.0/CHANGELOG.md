@@ -7,6 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [[v4.0.0]][(https://github.com/TerraDharitri/mx-sdk-js-extension-provider/pull/24)] - 2024-09-23
-- [Update provider, upgrade sdk-core](https://github.com/TerraDharitri/mx-sdk-js-extension-provider/pull/24)
+## [[v4.0.0]][(https://github.com/TerraDharitri/drt-js-sdk-extension-provider/pull/24)] - 2024-09-23
+- [Update provider, upgrade sdk-core](https://github.com/TerraDharitri/drt-js-sdk-extension-provider/pull/24)
 

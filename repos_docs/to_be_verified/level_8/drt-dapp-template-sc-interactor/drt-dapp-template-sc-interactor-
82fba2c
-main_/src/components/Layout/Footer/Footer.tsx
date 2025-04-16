@@ -13,7 +13,7 @@ export const Footer = () => {
         <a
           target='_blank'
           className='flex items-center text-sm hover:underline'
-          href='https://dharitri.com/'
+          href='https://dharitri.org/'
         >
           Made with <HeartIcon className='drt-1 fill-gray-400' /> by the
           DharitrI team

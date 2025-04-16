@@ -315,7 +315,7 @@ describe("Native Auth", () => {
     it('Wildcard origin is not accepted', async () => {
       const server = new NativeAuthServer({
         ...defaultConfig,
-        acceptedOrigins: ['*.numbat.com'],
+        acceptedOrigins: ['*.dharitri.org'],
       });
 
       onSpecificBlockTimestampGet(mock).reply(200, BLOCK_TIMESTAMP);

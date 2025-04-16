@@ -27,7 +27,7 @@ export const addressOfFirstDevnetDelegator = new Address(
     "drt1s0us936aku52uxyvnhxspcaj4f4sp7d9azuyw7kf32ggm88ynlpsryc8qm"
 );
 
-export const apiNetworkProvider = new ApiNetworkProvider("https://devnet-api.dharitri.com", { clientName: "dharitri-sdk-js-examples" }); // md-ignore
+export const apiNetworkProvider = new ApiNetworkProvider("https://devnet-api.dharitri.org", { clientName: "dharitri-sdk-js-examples" }); // md-ignore
 
 export function getNotYetSignedTx() {
     return new Transaction({

@@ -1,4 +1,4 @@
-A demo Express app for projects participating in xExchange Discover program.
+A demo Express app for projects participating in DharitriX Discover program.
 
 ## Disclaimer
 

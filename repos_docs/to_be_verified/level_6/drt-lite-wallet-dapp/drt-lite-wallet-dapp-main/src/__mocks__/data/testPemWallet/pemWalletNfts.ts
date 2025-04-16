@@ -13,14 +13,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1iZkd4d1dER25VTmNXNHIxRHdQdkU5aFJtMTl2azZQdmtGSG1pQnJjSEsyVw=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmbfGxwWDGnUNcW4r1DwPvE9hRm19vk6PvkFHmiBrcHK2W',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmbfGxwWDGnUNcW4r1DwPvE9hRm19vk6PvkFHmiBrcHK2W',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmbfGxwWDGnUNcW4r1DwPvE9hRm19vk6PvkFHmiBrcHK2W',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmbfGxwWDGnUNcW4r1DwPvE9hRm19vk6PvkFHmiBrcHK2W',
         originalUrl:
           'https://ipfs.io/ipfs/QmbfGxwWDGnUNcW4r1DwPvE9hRm19vk6PvkFHmiBrcHK2W',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/CHRISTMAS-27d3e2-0baaa417',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/CHRISTMAS-27d3e2-0baaa417',
         fileType: 'image/png',
         fileSize: 1066627
       }
@@ -47,14 +47,14 @@ export const pemWalletNfts = [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1ZZmNxQ2ZMVjJXMm5ZdTVKa3JuUDFKSFZzeWRKVG5qcDF0cEx3d1p1REZzTi84Lmpzb24=',
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1ZZmNxQ2ZMVjJXMm5ZdTVKa3JuUDFKSFZzeWRKVG5qcDF0cEx3d1p1REZzTi9jb2xsZWN0aW9uLmpzb24='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/8.mp4',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/8.mp4',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/8.mp4',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/8.mp4',
         originalUrl:
           'https://ipfs.io/ipfs/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/8.mp4',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/NOT-678420-59086e8a',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/NOT-678420-59086e8a',
         fileType: 'video/mp4',
         fileSize: 16075584
       }
@@ -94,14 +94,14 @@ export const pemWalletNfts = [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1ZZmNxQ2ZMVjJXMm5ZdTVKa3JuUDFKSFZzeWRKVG5qcDF0cEx3d1p1REZzTi81Lmpzb24=',
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1ZZmNxQ2ZMVjJXMm5ZdTVKa3JuUDFKSFZzeWRKVG5qcDF0cEx3d1p1REZzTi9jb2xsZWN0aW9uLmpzb24='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/5.mp4',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/5.mp4',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/5.mp4',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/5.mp4',
         originalUrl:
           'https://ipfs.io/ipfs/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/5.mp4',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/NOT-678420-6b46fea8',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/NOT-678420-6b46fea8',
         fileType: 'video/mp4',
         fileSize: 16496385
       }
@@ -142,14 +142,14 @@ export const pemWalletNfts = [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1ZZmNxQ2ZMVjJXMm5ZdTVKa3JuUDFKSFZzeWRKVG5qcDF0cEx3d1p1REZzTi8yLmpzb24=',
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1ZZmNxQ2ZMVjJXMm5ZdTVKa3JuUDFKSFZzeWRKVG5qcDF0cEx3d1p1REZzTi9jb2xsZWN0aW9uLmpzb24='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/2.mp4',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/2.mp4',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/2.mp4',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/2.mp4',
         originalUrl:
           'https://ipfs.io/ipfs/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/2.mp4',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/NOT-678420-e2750322',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/NOT-678420-e2750322',
         fileType: 'video/mp4',
         fileSize: 17851560
       }
@@ -191,14 +191,14 @@ export const pemWalletNfts = [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1ZZmNxQ2ZMVjJXMm5ZdTVKa3JuUDFKSFZzeWRKVG5qcDF0cEx3d1p1REZzTi82Lmpzb24=',
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1ZZmNxQ2ZMVjJXMm5ZdTVKa3JuUDFKSFZzeWRKVG5qcDF0cEx3d1p1REZzTi9jb2xsZWN0aW9uLmpzb24='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/6.mp4',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/6.mp4',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/6.mp4',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/6.mp4',
         originalUrl:
           'https://ipfs.io/ipfs/QmYfcqCfLV2W2nYu5JkrnP1JHVsydJTnjp1tpLwwZuDFsN/6.mp4',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/NOT-678420-a19bac85',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/NOT-678420-a19bac85',
         fileType: 'video/mp4',
         fileSize: 16786744
       }
@@ -237,14 +237,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1TZExucWFWRjdFVWNTaUZmOXppenU5NWZ1RHptakRKd1MxVzJkeVRSU2JRZw=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
         originalUrl:
           'https://ipfs.io/ipfs/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TEST-aba7d4-f33bbd47',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TEST-aba7d4-f33bbd47',
         fileType: 'image/png',
         fileSize: 372780
       }
@@ -270,14 +270,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1WODhtV0VXN3hnVHpqZFRXaEtpMmZHMXFkTW10YkN6eVZxaldwUEhEdmJoUQ=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmV88mWEW7xgTzjdTWhKi2fG1qdMmtbCzyVqjWpPHDvbhQ',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmV88mWEW7xgTzjdTWhKi2fG1qdMmtbCzyVqjWpPHDvbhQ',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmV88mWEW7xgTzjdTWhKi2fG1qdMmtbCzyVqjWpPHDvbhQ',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmV88mWEW7xgTzjdTWhKi2fG1qdMmtbCzyVqjWpPHDvbhQ',
         originalUrl:
           'https://ipfs.io/ipfs/QmV88mWEW7xgTzjdTWhKi2fG1qdMmtbCzyVqjWpPHDvbhQ',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TEST-aba7d4-1a013aaf',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TEST-aba7d4-1a013aaf',
         fileType: 'image/png',
         fileSize: 396456
       }
@@ -303,14 +303,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1kS2pEQ1daQzN2RHZ5amZvQkJYQmd4Z1ZQejNUMzJnNTV6RTlRMjJZcmZmZw=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
         originalUrl:
           'https://ipfs.io/ipfs/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TEST-aba7d4-3a5059ec',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TEST-aba7d4-3a5059ec',
         fileType: 'image/jpeg',
         fileSize: 91636
       }
@@ -336,14 +336,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1RZzJZVVhYemE1Z0xoc3BMR2l2VmN1ODl1TWVyTTNnOFhjcm44ZWo4MVA3UQ=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmQg2YUXXza5gLhspLGivVcu89uMerM3g8Xcrn8ej81P7Q',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmQg2YUXXza5gLhspLGivVcu89uMerM3g8Xcrn8ej81P7Q',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmQg2YUXXza5gLhspLGivVcu89uMerM3g8Xcrn8ej81P7Q',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmQg2YUXXza5gLhspLGivVcu89uMerM3g8Xcrn8ej81P7Q',
         originalUrl:
           'https://ipfs.io/ipfs/QmQg2YUXXza5gLhspLGivVcu89uMerM3g8Xcrn8ej81P7Q',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TEST-aba7d4-ca11a7cf',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TEST-aba7d4-ca11a7cf',
         fileType: 'image/jpeg',
         fileSize: 41805
       }
@@ -369,14 +369,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1kS2pEQ1daQzN2RHZ5amZvQkJYQmd4Z1ZQejNUMzJnNTV6RTlRMjJZcmZmZw=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
         originalUrl:
           'https://ipfs.io/ipfs/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TEST-aba7d4-3a5059ec',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TEST-aba7d4-3a5059ec',
         fileType: 'image/jpeg',
         fileSize: 91636
       }
@@ -402,14 +402,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1kS2pEQ1daQzN2RHZ5amZvQkJYQmd4Z1ZQejNUMzJnNTV6RTlRMjJZcmZmZw=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
         originalUrl:
           'https://ipfs.io/ipfs/QmdKjDCWZC3vDvyjfoBBXBgxgVPz3T32g55zE9Q22Yrffg',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TEST-aba7d4-3a5059ec',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TEST-aba7d4-3a5059ec',
         fileType: 'image/jpeg',
         fileSize: 91636
       }
@@ -435,14 +435,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1TZzREUWVGZXFYdmltUFlxWThTYXBVdlNpSmZVampZUzhoSzYxWWs5OFlkdQ=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmSg4DQeFeqXvimPYqY8SapUvSiJfUjjYS8hK61Yk98Ydu',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmSg4DQeFeqXvimPYqY8SapUvSiJfUjjYS8hK61Yk98Ydu',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmSg4DQeFeqXvimPYqY8SapUvSiJfUjjYS8hK61Yk98Ydu',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmSg4DQeFeqXvimPYqY8SapUvSiJfUjjYS8hK61Yk98Ydu',
         originalUrl:
           'https://ipfs.io/ipfs/QmSg4DQeFeqXvimPYqY8SapUvSiJfUjjYS8hK61Yk98Ydu',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TEST-aba7d4-ee134fb2',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TEST-aba7d4-ee134fb2',
         fileType: 'image/jpeg',
         fileSize: 41440
       }
@@ -466,14 +466,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1TZExucWFWRjdFVWNTaUZmOXppenU5NWZ1RHptakRKd1MxVzJkeVRSU2JRZw=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
         originalUrl:
           'https://ipfs.io/ipfs/QmSdLnqaVF7EUcSiFf9zizu95fuDzmjDJwS1W2dyTRSbQg',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TEST-aba7d4-f33bbd47',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TEST-aba7d4-f33bbd47',
         fileType: 'image/png',
         fileSize: 372780
       }
@@ -498,14 +498,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1iWHZiMmJDNlR1NGlRTEZFOGUyR1RKdUhnTEJmdTRZYVFBRTYzcFFkVHp5Qg=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmbXvb2bC6Tu4iQLFE8e2GTJuHgLBfu4YaQAE63pQdTzyB',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmbXvb2bC6Tu4iQLFE8e2GTJuHgLBfu4YaQAE63pQdTzyB',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmbXvb2bC6Tu4iQLFE8e2GTJuHgLBfu4YaQAE63pQdTzyB',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmbXvb2bC6Tu4iQLFE8e2GTJuHgLBfu4YaQAE63pQdTzyB',
         originalUrl:
           'https://ipfs.io/ipfs/QmbXvb2bC6Tu4iQLFE8e2GTJuHgLBfu4YaQAE63pQdTzyB',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TESTD-37df5c-1b3ae237',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TESTD-37df5c-1b3ae237',
         fileType: 'image/jpeg',
         fileSize: 104286
       }
@@ -530,14 +530,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1TN3E5Q1lxcGg4Q05uU0hQd3h1Q1ZUTk1OQ1lqVENTNDJlUjI0ZTZaZGR5Qw=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
         originalUrl:
           'https://ipfs.io/ipfs/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TESTD-37df5c-eb211aa3',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TESTD-37df5c-eb211aa3',
         fileType: 'image/png',
         fileSize: 252268
       }
@@ -568,12 +568,12 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1hZ1lzOTRNQXVGeFRYOGVSVFVBMmpObjhhRVlWbXZmdTFkTkdrQlM0TE5HVA=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmagYs94MAuFxTX8eRTUA2jNn8aEYVmvfu1dNGkBS4LNGT',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmagYs94MAuFxTX8eRTUA2jNn8aEYVmvfu1dNGkBS4LNGT',
     media: [
       {
-        url: 'https://media.numbat.com/nfts/thumbnail/default.png',
-        originalUrl: 'https://media.numbat.com/nfts/thumbnail/default.png',
-        thumbnailUrl: 'https://media.numbat.com/nfts/thumbnail/default.png',
+        url: 'https://media.dharitri.org/nfts/thumbnail/default.png',
+        originalUrl: 'https://media.dharitri.org/nfts/thumbnail/default.png',
+        thumbnailUrl: 'https://media.dharitri.org/nfts/thumbnail/default.png',
         fileType: 'image/png',
         fileSize: 29512
       }
@@ -603,12 +603,12 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1ZeHFIQ1VtNVNRY29DYjZWemI3bnNWZVhzQm5iR1k5ZkdaTGROdHVFaHl1Wg=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmYxqHCUm5SQcoCb6Vzb7nsVeXsBnbGY9fGZLdNtuEhyuZ',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmYxqHCUm5SQcoCb6Vzb7nsVeXsBnbGY9fGZLdNtuEhyuZ',
     media: [
       {
-        url: 'https://media.numbat.com/nfts/thumbnail/default.png',
-        originalUrl: 'https://media.numbat.com/nfts/thumbnail/default.png',
-        thumbnailUrl: 'https://media.numbat.com/nfts/thumbnail/default.png',
+        url: 'https://media.dharitri.org/nfts/thumbnail/default.png',
+        originalUrl: 'https://media.dharitri.org/nfts/thumbnail/default.png',
+        thumbnailUrl: 'https://media.dharitri.org/nfts/thumbnail/default.png',
         fileType: 'image/png',
         fileSize: 29512
       }
@@ -638,14 +638,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1Tb1NUN3hRbWRzTUFxamFGRHNWVUZjdEM2UHhLcDNUUW9SWTgyS0dmNWFYcA=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmSoST7xQmdsMAqjaFDsVUFctC6PxKp3TQoRY82KGf5aXp',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmSoST7xQmdsMAqjaFDsVUFctC6PxKp3TQoRY82KGf5aXp',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmSoST7xQmdsMAqjaFDsVUFctC6PxKp3TQoRY82KGf5aXp',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmSoST7xQmdsMAqjaFDsVUFctC6PxKp3TQoRY82KGf5aXp',
         originalUrl:
           'https://ipfs.io/ipfs/QmSoST7xQmdsMAqjaFDsVUFctC6PxKp3TQoRY82KGf5aXp',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TESTD-d5e295-6f59fa98',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TESTD-d5e295-6f59fa98',
         fileType: 'video/mp4',
         fileSize: 8009289
       }
@@ -676,14 +676,14 @@ export const pemWalletNfts = [
     uris: [
       'aHR0cHM6Ly9pcGZzLmlvL2lwZnMvUW1TN3E5Q1lxcGg4Q05uU0hQd3h1Q1ZUTk1OQ1lqVENTNDJlUjI0ZTZaZGR5Qw=='
     ],
-    url: 'https://devnet-media.numbat.com/nfts/asset/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
+    url: 'https://devnet-media.dharitri.org/nfts/asset/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
     media: [
       {
-        url: 'https://devnet-media.numbat.com/nfts/asset/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
+        url: 'https://devnet-media.dharitri.org/nfts/asset/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
         originalUrl:
           'https://ipfs.io/ipfs/QmS7q9CYqph8CNnSHPwxuCVTNMNCYjTCS42eR24e6ZddyC',
         thumbnailUrl:
-          'https://devnet-media.numbat.com/nfts/thumbnail/TESTT-51e996-eb211aa3',
+          'https://devnet-media.dharitri.org/nfts/thumbnail/TESTT-51e996-eb211aa3',
         fileType: 'image/png',
         fileSize: 252268
       }

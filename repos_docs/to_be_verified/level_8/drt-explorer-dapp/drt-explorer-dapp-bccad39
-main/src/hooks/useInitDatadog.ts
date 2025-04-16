@@ -3,7 +3,7 @@ import { datadogRum } from '@datadog/browser-rum';
 
 export const useInitDatadog = () => {
   useEffect(() => {
-    if (window.location.origin !== 'https://explorer.dharitri.com') {
+    if (window.location.origin !== 'https://explorer.dharitri.org') {
       return;
     }
 

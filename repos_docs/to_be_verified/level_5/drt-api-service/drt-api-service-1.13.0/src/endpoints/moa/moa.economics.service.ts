@@ -30,7 +30,7 @@ export class MexEconomicsService {
   async getMexEconomicsRaw(): Promise<MexEconomics> {
     const settings = await this.mexSettingService.getSettings();
     if (!settings) {
-      throw new BadRequestException('Could not fetch MEX settings');
+      throw new BadRequestException('Could not fetch MOA settings');
     }
 
     const variables = {
@@ -52,7 +52,7 @@ export class MexEconomicsService {
 
     const response: any = await this.graphQlService.getExchangeServiceData(query, variables);
     if (!response) {
-      throw new BadRequestException('Could not fetch MEX economics data from MEX microservice');
+      throw new BadRequestException('Could not fetch MOA economics data from MOA microservice');
     }
 
     const mexEconomics = MexEconomics.fromQueryResponse(response, settings);

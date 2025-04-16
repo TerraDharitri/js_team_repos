@@ -18,7 +18,7 @@ import { MexTokenChartsService } from './mex.token.charts.service';
 import { MexTokenChart } from './entities/mex.token.chart';
 
 @Controller()
-@ApiTags('xexchange')
+@ApiTags('dharitrix')
 export class MexController {
   constructor(
     private readonly mexEconomicsService: MexEconomicsService,
@@ -31,25 +31,25 @@ export class MexController {
 
   @Get("/mex/settings")
   @ApiExcludeEndpoint()
-  @ApiResponse({ status: 200, description: 'The settings of the xExchange' })
-  @ApiNotFoundResponse({ description: 'MEX settings not found' })
+  @ApiResponse({ status: 200, description: 'The settings of the DharitriX' })
+  @ApiNotFoundResponse({ description: 'MOA settings not found' })
   async getMexSettings(): Promise<MexSettings> {
     const settings = await this.mexSettingsService.getSettings();
     if (!settings) {
-      throw new NotFoundException('MEX settings not found');
+      throw new NotFoundException('MOA settings not found');
     }
     return settings;
   }
 
   @Get("/mex/economics")
-  @ApiOperation({ summary: 'xExchange economics', description: 'Returns economics details of xExchange' })
+  @ApiOperation({ summary: 'DharitriX economics', description: 'Returns economics details of DharitriX' })
   @ApiOkResponse({ type: MexEconomics })
   async getMexEconomics(): Promise<MexEconomics> {
     return await this.mexEconomicsService.getMexEconomics();
   }
 
   @Get("/mex/pairs")
-  @ApiOperation({ summary: 'xExchange pairs', description: 'Returns active liquidity pools available on xExchange' })
+  @ApiOperation({ summary: 'DharitriX pairs', description: 'Returns active liquidity pools available on DharitriX' })
   @ApiOkResponse({ type: [MexPair] })
   @ApiQuery({ name: 'from', description: 'Number of items to skip for the result set', required: false })
   @ApiQuery({ name: 'size', description: 'Number of items to retrieve', required: false })
@@ -66,7 +66,7 @@ export class MexController {
   }
 
   @Get("/mex-pairs")
-  @ApiOperation({ summary: 'xExchange pairs', description: 'Returns active liquidity pools available on xExchange', deprecated: true })
+  @ApiOperation({ summary: 'DharitriX pairs', description: 'Returns active liquidity pools available on DharitriX', deprecated: true })
   @ApiOkResponse({ type: [MexPair] })
   @ApiQuery({ name: 'from', description: 'Number of items to skip for the result set', required: false })
   @ApiQuery({ name: 'size', description: 'Number of items to retrieve', required: false })
@@ -81,7 +81,7 @@ export class MexController {
   }
 
   @Get("/mex/pairs/count")
-  @ApiOperation({ summary: 'Maiar Exchange pairs count', description: 'Returns active liquidity pools count available on Maiar Exchange' })
+  @ApiOperation({ summary: 'Durian Exchange pairs count', description: 'Returns active liquidity pools count available on Durian Exchange' })
   @ApiQuery({ name: 'exchange', description: 'Filter by exchange', required: false, enum: MexPairExchange })
   @ApiQuery({ name: 'includeFarms', description: 'Include farms information in response', required: false, type: Boolean })
   async getMexPairsCount(
@@ -93,7 +93,7 @@ export class MexController {
   }
 
   @Get("/mex/tokens")
-  @ApiOperation({ summary: 'xExchange tokens details', description: 'Returns a list of tokens listed on xExchange' })
+  @ApiOperation({ summary: 'DharitriX tokens details', description: 'Returns a list of tokens listed on DharitriX' })
   @ApiOkResponse({ type: [MexToken] })
   @ApiQuery({ name: 'from', description: 'Number of items to skip for the result set', required: false })
   @ApiQuery({ name: 'size', description: 'Number of items to retrieve', required: false })
@@ -105,14 +105,14 @@ export class MexController {
   }
 
   @Get("/mex/tokens/count")
-  @ApiOperation({ summary: 'Maiar Exchange tokens count', description: 'Returns tokens count available on Maiar Exchange' })
+  @ApiOperation({ summary: 'Durian Exchange tokens count', description: 'Returns tokens count available on Durian Exchange' })
   async getMexTokensCount(
   ): Promise<number> {
     return await this.mexTokensService.getMexTokensCount();
   }
 
   @Get("/mex/tokens/:identifier")
-  @ApiOperation({ summary: 'xExchange token details', description: 'Returns a specific token listed on xExchange' })
+  @ApiOperation({ summary: 'DharitriX token details', description: 'Returns a specific token listed on DharitriX' })
   @ApiOkResponse({ type: MexToken })
   @ApiNotFoundResponse({ description: 'Token not found' })
   async getMexTokenIdentifier(
@@ -127,7 +127,7 @@ export class MexController {
   }
 
   @Get("/mex/farms")
-  @ApiOperation({ summary: 'xExchange farms details', description: 'Returns a list of farms listed on xExchange' })
+  @ApiOperation({ summary: 'DharitriX farms details', description: 'Returns a list of farms listed on DharitriX' })
   @ApiOkResponse({ type: [MexFarm] })
   @ApiQuery({ name: 'from', description: 'Number of items to skip for the result set', required: false })
   @ApiQuery({ name: 'size', description: 'Number of items to retrieve', required: false })
@@ -139,14 +139,14 @@ export class MexController {
   }
 
   @Get("/mex/farms/count")
-  @ApiOperation({ summary: 'Maiar Exchange farms count', description: 'Returns farms count available on Maiar Exchange' })
+  @ApiOperation({ summary: 'Durian Exchange farms count', description: 'Returns farms count available on Durian Exchange' })
   async getMexFarmsCount(
   ): Promise<number> {
     return await this.mexFarmsService.getMexFarmsCount();
   }
 
   @Get("/mex/pairs/:baseId/:quoteId")
-  @ApiOperation({ summary: 'xExchange pairs details', description: 'Returns liquidity pool details by providing a combination of two tokens' })
+  @ApiOperation({ summary: 'DharitriX pairs details', description: 'Returns liquidity pool details by providing a combination of two tokens' })
   @ApiOkResponse({ type: MexPair })
   @ApiNotFoundResponse({ description: 'Pair not found' })
   @ApiQuery({ name: 'includeFarms', description: 'Include farms information in response', required: false, type: Boolean })
@@ -164,7 +164,7 @@ export class MexController {
   }
 
   @Get('mex/tokens/prices/hourly/:identifier')
-  @ApiOperation({ summary: 'xExchange token prices hourly', description: 'Returns token prices hourly' })
+  @ApiOperation({ summary: 'DharitriX token prices hourly', description: 'Returns token prices hourly' })
   @ApiOkResponse({ type: [MexTokenChart] })
   @ApiNotFoundResponse({ description: 'Price not available for given token identifier' })
   async getTokenPricesHourResolution(
@@ -178,7 +178,7 @@ export class MexController {
   }
 
   @Get('mex/tokens/prices/daily/:identifier')
-  @ApiOperation({ summary: 'xExchange token prices daily', description: 'Returns token prices daily' })
+  @ApiOperation({ summary: 'DharitriX token prices daily', description: 'Returns token prices daily' })
   @ApiOkResponse({ type: [MexTokenChart] })
   @ApiNotFoundResponse({ description: 'Price not available for given token identifier' })
   async getTokenPricesDayResolution(

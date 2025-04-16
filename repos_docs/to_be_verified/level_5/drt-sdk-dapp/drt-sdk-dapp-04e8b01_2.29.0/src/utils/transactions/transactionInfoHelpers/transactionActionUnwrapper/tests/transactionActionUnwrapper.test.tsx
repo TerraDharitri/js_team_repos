@@ -185,7 +185,7 @@ describe('Tx Description unwrapper tests', () => {
           transfers: [
             {
               type: 'MetaDCDT',
-              name: 'LockedMEX',
+              name: 'LockedMOA',
               collection: 'LKMOA-aab910',
               identifier: 'LKMOA-aab910-04',
               ticker: 'LKMOA',
@@ -207,14 +207,14 @@ describe('Tx Description unwrapper tests', () => {
         category: 'moa',
         name: TransactionActionsEnum.enterFarmAndLockRewards,
         description:
-          'Enter farm and lock rewards with 61.229451140721546841 REWAMEX',
+          'Enter farm and lock rewards with 61.229451140721546841 REWAMOA',
         arguments: {
           transfers: [
             {
-              name: 'REWAMEXLP',
-              collection: 'REWAMEX-0be9e5',
-              identifier: 'REWAMEX-0be9e5',
-              ticker: 'REWAMEX',
+              name: 'REWAMOALP',
+              collection: 'REWAMOA-0be9e5',
+              identifier: 'REWAMOA-0be9e5',
+              ticker: 'REWAMOA',
               value: '61229451140721546841'
             }
           ]
@@ -310,7 +310,7 @@ describe('Tx Description unwrapper tests', () => {
         category: 'moa',
         name: TransactionActionsEnum.swap,
         description:
-          'Swap 1 WREWA for a minimum of 281066.754391919467235791 MEX',
+          'Swap 1 WREWA for a minimum of 281066.754391919467235791 MOA',
         arguments: {
           token1: {
             name: 'WrappedREWA',
@@ -320,10 +320,10 @@ describe('Tx Description unwrapper tests', () => {
             value: '1000000000000000000'
           },
           token2: {
-            name: 'MEX',
-            collection: 'MEX-455c57',
-            identifier: 'MEX-455c57',
-            ticker: 'MEX',
+            name: 'MOA',
+            collection: 'MOA-455c57',
+            identifier: 'MOA-455c57',
+            ticker: 'MOA',
             value: '281066754391919467235791'
           }
         }
@@ -337,7 +337,7 @@ describe('Tx Description unwrapper tests', () => {
         category: 'moa',
         name: TransactionActionsEnum.addLiquidity,
         description:
-          'Added liquidity for 0.309893556225986569 WREWA and 88246.97734239037166522 MEX',
+          'Added liquidity for 0.309893556225986569 WREWA and 88246.97734239037166522 MOA',
         arguments: {
           transfers: [
             {
@@ -348,10 +348,10 @@ describe('Tx Description unwrapper tests', () => {
               value: '309893556225986569'
             },
             {
-              name: 'MEX',
-              collection: 'MEX-455c57',
-              identifier: 'MEX-455c57',
-              ticker: 'MEX',
+              name: 'MOA',
+              collection: 'MOA-455c57',
+              identifier: 'MOA-455c57',
+              ticker: 'MOA',
               value: '88246977342390371665220'
             }
           ]
@@ -370,13 +370,13 @@ describe('Tx Description unwrapper tests', () => {
       action: {
         category: 'moa',
         name: TransactionActionsEnum.removeLiquidity,
-        description: 'Removed liquidity 0.297 REWAMEX',
+        description: 'Removed liquidity 0.297 REWAMOA',
         arguments: {
           transfers: {
-            name: 'REWAMEXLP',
-            collection: 'REWAMEX-0be9e5',
-            identifier: 'REWAMEX-0be9e5',
-            ticker: 'REWAMEX',
+            name: 'REWAMOALP',
+            collection: 'REWAMOA-0be9e5',
+            identifier: 'REWAMOA-0be9e5',
+            ticker: 'REWAMOA',
             value: '297000000000000000'
           }
         }

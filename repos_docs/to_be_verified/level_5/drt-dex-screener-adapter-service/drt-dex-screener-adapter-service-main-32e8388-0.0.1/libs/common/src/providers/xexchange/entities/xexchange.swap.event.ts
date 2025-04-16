@@ -1,9 +1,9 @@
 import { AddressType, BigUIntType, BinaryCodec, FieldDefinition, StructType, TokenIdentifierType, U64Type } from "@terradharitri/sdk-core/out";
 import { ElasticEvent, ElasticLog } from "@mvx-monorepo/common";
 import { GeneralEvent } from "../../entities/general.event";
-import { XExchangePair } from "./xexchange.pair";
+import { DharitrixPair } from "./dharitrix.pair";
 
-export class XExchangeSwapEvent extends GeneralEvent {
+export class DharitrixSwapEvent extends GeneralEvent {
   caller: string;
   tokenInId: string;
   tokenInAmount: string;
@@ -17,9 +17,9 @@ export class XExchangeSwapEvent extends GeneralEvent {
   txHash: string;
   txOrder: number;
   eventOrder: number;
-  pair: XExchangePair;
+  pair: DharitrixPair;
 
-  constructor(event: ElasticEvent, log: ElasticLog, pair: XExchangePair) {
+  constructor(event: ElasticEvent, log: ElasticLog, pair: DharitrixPair) {
     super(event, 'swap');
 
     const decodedEvent = this.decodeEvent();

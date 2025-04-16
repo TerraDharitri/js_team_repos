@@ -1,8 +1,8 @@
 import { ApiNetworkProvider, ProxyNetworkProvider } from "@terradharitri/sdk-core"; // md-ignore
 import { addressOfAlice, addressOfBob, completedTransactionsHashes, getReadyToBroadcastTx } from "./framework.js"; // md-ignore
 
-const apiNetworkProvider = new ApiNetworkProvider("https://devnet-api.dharitri.com", { clientName: "dharitri-sdk-js-examples" }); // md-ignore
-const proxyNetworkProvider = new ProxyNetworkProvider("https://devnet-gateway.dharitri.com", { clientName: "dharitri-sdk-js-examples" }); // md-ignore
+const apiNetworkProvider = new ApiNetworkProvider("https://devnet-api.dharitri.org", { clientName: "dharitri-sdk-js-examples" }); // md-ignore
+const proxyNetworkProvider = new ProxyNetworkProvider("https://devnet-gateway.dharitri.org", { clientName: "dharitri-sdk-js-examples" }); // md-ignore
 const readyToBroadcastTx = getReadyToBroadcastTx(); // md-ignore
 TransactionWatcher.DefaultPollingInterval = 1; // md-ignore
 
@@ -155,4 +155,4 @@ const watcherWithPatience = new TransactionWatcher(apiNetworkProvider, { patienc
 
 // Alternatively, use `func:TransactionWatcher.awaitAnyEvent()` or `func:TransactionWatcher.awaitOnCondition()` to customize the waiting strategy.
 
-// For a different awaiting strategy, also see [extending sdk-js](https://docs.dharitri.com/sdk-and-tools/sdk-js/extending-sdk-js).
+// For a different awaiting strategy, also see [extending sdk-js](https://docs.dharitri.org/sdk-and-tools/sdk-js/extending-sdk-js).

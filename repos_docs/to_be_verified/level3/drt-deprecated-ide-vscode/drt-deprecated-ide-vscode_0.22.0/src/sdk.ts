@@ -10,14 +10,14 @@ import { FreeTextVersion, Version } from './version';
 import path = require("path");
 import fs = require('fs');
 
-const DefaultMxpyVersion = Version.parse("9.4.1");
-const LatestMxpyReleaseUrl = "https://api.github.com/repos/dharitri/mx-sdk-py-cli/releases/latest";
+const DefaultDrtpyVersion = Version.parse("9.4.1");
+const LatestDrtpyReleaseUrl = "https://api.github.com/repos/TerraDharitri/drt-py-sdk-cli/releases/latest";
 
 export function getPath() {
     return Settings.getSdkPath();
 }
 
-function getMxpyPath() {
+function getDrtpyPath() {
     // If drtpy is installed using pipx or drtpy-up, it should be in the PATH.
     // If drtpy is installed using the extension, it's in ~/dharitri-sdk, which is also added to the PATH - see "environment.ts".
     return "drtpy";
@@ -28,46 +28,46 @@ function getPrettyPrinterPath() {
 }
 
 export async function reinstall() {
-    let latestVersion = await getLatestKnownMxpyVersion();
-    let version = await presenter.askMxpyVersion(latestVersion);
+    let latestVersion = await getLatestKnownDrtpyVersion();
+    let version = await presenter.askDrtpyVersion(latestVersion);
     if (!version) {
         return;
     }
 
-    await reinstallMxpy(version);
+    await reinstallDrtpy(version);
 }
 
 /** 
  * Fetch the latest known version from Github, or fallback to the IDE-configured default version, if the fetch fails.
  */
-async function getLatestKnownMxpyVersion(): Promise<Version> {
+async function getLatestKnownDrtpyVersion(): Promise<Version> {
     try {
-        let response = await axios.get(LatestMxpyReleaseUrl);
+        let response = await axios.get(LatestDrtpyReleaseUrl);
         return Version.parse(response.data.tag_name);
     } catch {
-        return DefaultMxpyVersion;
+        return DefaultDrtpyVersion;
     }
 }
 
 export async function ensureInstalled() {
-    await ensureMxpy();
+    await ensureDrtpy();
 }
 
-async function ensureMxpy() {
-    let isEdpyInstalled = await isMxpyInstalled();
+async function ensureDrtpy() {
+    let isEdpyInstalled = await isDrtpyInstalled();
     if (isEdpyInstalled) {
         return;
     }
 
-    let latestMxpyVersion = await getLatestKnownMxpyVersion();
-    let answer = await presenter.askInstallMxpy(latestMxpyVersion);
+    let latestDrtpyVersion = await getLatestKnownDrtpyVersion();
+    let answer = await presenter.askInstallDrtpy(latestDrtpyVersion);
     if (answer) {
-        await reinstallMxpy(latestMxpyVersion);
+        await reinstallDrtpy(latestDrtpyVersion);
     }
 }
 
-async function isMxpyInstalled(exactVersion?: Version): Promise<boolean> {
-    let [cliVersionString, ok] = await getOneLineStdout(getMxpyPath(), ["--version"]);
+async function isDrtpyInstalled(exactVersion?: Version): Promise<boolean> {
+    let [cliVersionString, ok] = await getOneLineStdout(getDrtpyPath(), ["--version"]);
     if (!cliVersionString || !ok) {
         return false;
     }
@@ -79,7 +79,7 @@ async function isMxpyInstalled(exactVersion?: Version): Promise<boolean> {
     }
 
     // No exact version specified (desired).
-    let latestKnownVersion = await getLatestKnownMxpyVersion();
+    let latestKnownVersion = await getLatestKnownDrtpyVersion();
     return installedVersion.isNewerOrSameAs(latestKnownVersion);
 }
 
@@ -96,9 +96,9 @@ async function getOneLineStdout(program: string, args: string[]): Promise<[strin
     }
 }
 
-export async function reinstallMxpy(version: Version) {
+export async function reinstallDrtpy(version: Version) {
     const drtpyUp = storage.getPathTo("drtpy-up.py");
-    const drtpyUpUrl = getMxpyUpUrl(version);
+    const drtpyUpUrl = getDrtpyUpUrl(version);
     await downloadFile(drtpyUp, drtpyUpUrl);
 
     const drtpyUpCommand = `python3 "${drtpyUp}" --exact-version=${version.value} --not-interactive`;
@@ -115,7 +115,7 @@ export async function reinstallMxpy(version: Version) {
             message: "Waiting for the installer to finish."
         });
         await sleep(5000);
-    } while ((!await isMxpyInstalled(version)));
+    } while ((!await isDrtpyInstalled(version)));
 
     await Feedback.info({
         message: "drtpy has been installed. Please close all Visual Studio Code terminals and then reopen them (as needed).",
@@ -124,14 +124,14 @@ export async function reinstallMxpy(version: Version) {
     });
 }
 
-function getMxpyUpUrl(version: Version) {
-    return `https://raw.githubusercontent.com/dharitri/mx-sdk-py-cli/${version.vValue}/drtpy-up.py`;
+function getDrtpyUpUrl(version: Version) {
+    return `https://raw.githubusercontent.com/dharitri/drt-py-sdk-cli/${version.vValue}/drtpy-up.py`;
 }
 
 export async function newFromTemplate(folder: string, template: string, name: string) {
     try {
         await ProcessFacade.execute({
-            program: getMxpyPath(),
+            program: getDrtpyPath(),
             args: ["contract", "new", "--path", folder, "--template", template, "--name", name],
         });
 
@@ -194,23 +194,23 @@ async function killRunningInTerminal(name: string) {
 
 export async function ensureInstalledBuildchains(languages: string[]) {
     for (let i = 0; i < languages.length; i++) {
-        await ensureInstalledMxpyGroup(languages[i]);
+        await ensureInstalledDrtpyGroup(languages[i]);
     }
 }
 
-async function ensureInstalledMxpyGroup(group: string) {
-    if (await isMxpyGroupInstalled(group)) {
+async function ensureInstalledDrtpyGroup(group: string) {
+    if (await isDrtpyGroupInstalled(group)) {
         return;
     }
 
-    let answer = await presenter.askInstallMxpyGroup(group);
+    let answer = await presenter.askInstallDrtpyGroup(group);
     if (answer) {
-        await reinstallMxpyGroup(group, FreeTextVersion.unspecified());
+        await reinstallDrtpyGroup(group, FreeTextVersion.unspecified());
     }
 }
 
-async function isMxpyGroupInstalled(group: string): Promise<boolean> {
-    let [_, ok] = await getOneLineStdout(getMxpyPath(), ["deps", "check", group]);
+async function isDrtpyGroupInstalled(group: string): Promise<boolean> {
+    let [_, ok] = await getOneLineStdout(getDrtpyPath(), ["deps", "check", group]);
     return ok;
 }
 
@@ -225,17 +225,17 @@ export async function reinstallModule(): Promise<void> {
         return;
     }
 
-    await reinstallMxpyGroup(module, version);
+    await reinstallDrtpyGroup(module, version);
 }
 
-async function reinstallMxpyGroup(group: string, version: FreeTextVersion) {
+async function reinstallDrtpyGroup(group: string, version: FreeTextVersion) {
     Feedback.info({
         message: `Installation of ${group} has been started. Please wait for installation to finish.`,
         display: true
     });
 
     let tagArgument = version.isSpecified() ? `--tag=${version}` : "";
-    await runInTerminal("installer", `${getMxpyPath()} --verbose deps install ${group} --overwrite ${tagArgument}`);
+    await runInTerminal("installer", `${getDrtpyPath()} --verbose deps install ${group} --overwrite ${tagArgument}`);
 
     do {
         Feedback.debug({
@@ -243,7 +243,7 @@ async function reinstallMxpyGroup(group: string, version: FreeTextVersion) {
         });
 
         await sleep(5000);
-    } while ((!await isMxpyGroupInstalled(group)));
+    } while ((!await isDrtpyGroupInstalled(group)));
 
     await Feedback.info({
         message: `${group} has been installed.`,
@@ -254,7 +254,7 @@ async function reinstallMxpyGroup(group: string, version: FreeTextVersion) {
 
 export async function buildContract(folder: string) {
     try {
-        await runInTerminal("build", `${getMxpyPath()} contract build --path "${folder}"`);
+        await runInTerminal("build", `${getDrtpyPath()} contract build --path "${folder}"`);
     } catch (error: any) {
         throw new Error("Could not build Smart Contract", { cause: error });
     }
@@ -262,7 +262,7 @@ export async function buildContract(folder: string) {
 
 export async function cleanContract(folder: string) {
     try {
-        await runInTerminal("build", `${getMxpyPath()} --verbose contract clean --path "${folder}"`);
+        await runInTerminal("build", `${getDrtpyPath()} --verbose contract clean --path "${folder}"`);
     } catch (error: any) {
         throw new Error("Could not clean Smart Contract", { cause: error });
     }
@@ -270,7 +270,7 @@ export async function cleanContract(folder: string) {
 
 export async function runScenarios(folder: string) {
     try {
-        await ensureInstalledMxpyGroup("vmtools");
+        await ensureInstalledDrtpyGroup("vmtools");
         await runInTerminal("scenarios", `run-scenarios "${folder}"`);
     } catch (error: any) {
         throw new Error("Could not run scenarios.", { cause: error });
@@ -281,10 +281,10 @@ export async function runFreshLocalnet(localnetToml: Uri) {
     try {
         let folder = path.dirname(localnetToml.fsPath);
 
-        await ensureInstalledMxpyGroup("golang");
+        await ensureInstalledDrtpyGroup("golang");
         await destroyTerminal("localnet");
-        await runInTerminal("localnet", `${getMxpyPath()} localnet setup`, null, folder);
-        await runInTerminal("localnet", `${getMxpyPath()} localnet start`);
+        await runInTerminal("localnet", `${getDrtpyPath()} localnet setup`, null, folder);
+        await runInTerminal("localnet", `${getDrtpyPath()} localnet start`);
     } catch (error: any) {
         throw new Error("Could not start localnet.", { cause: error });
     }
@@ -295,7 +295,7 @@ export async function resumeExistingLocalnet(localnetToml: Uri) {
         let folder = path.dirname(localnetToml.fsPath);
 
         await destroyTerminal("localnet");
-        await runInTerminal("localnet", `${getMxpyPath()} localnet start`, null, folder);
+        await runInTerminal("localnet", `${getDrtpyPath()} localnet start`, null, folder);
     } catch (error: any) {
         throw Error("Could not start localnet.", { cause: error });
     }
