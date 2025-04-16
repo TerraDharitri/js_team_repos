@@ -1,0 +1,40 @@
+name: Release and publish
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+
+    - name: Create release, attach VSIX file
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        RELEASE_TAG=v$(node -p "require('./package.json').version")
+        gh release create $RELEASE_TAG --title="$RELEASE_TAG" --generate-notes
+
+        sleep 5
+
+        npm run vscode:package
+        gh release upload $RELEASE_TAG $(find . -type f -name "*.vsix")        
+
+    - name: Publish on Marketplace
+      env:
+        VSCE_PAT: ${{ secrets.VSCE_PAT }}
+      run: npm run vscode:publish

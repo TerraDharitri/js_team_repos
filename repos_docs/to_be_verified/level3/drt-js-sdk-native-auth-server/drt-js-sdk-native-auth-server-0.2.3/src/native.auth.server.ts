@@ -7,8 +7,8 @@ import { NativeAuthSignature } from "./native.auth.signature";
 import { NativeAuthResult as NativeAuthValidateResult } from "./entities/native.auth.validate.result";
 import { NativeAuthDecoded } from "./entities/native.auth.decoded";
 import { NativeAuthHostNotAcceptedError } from "./entities/errors/native.auth.host.not.accepted.error";
-import { SignableMessage, Address } from "@dharitri/sdk-core";
-import { UserPublicKey, UserVerifier } from "@dharitri/sdk-wallet";
+import { SignableMessage, Address } from "@terradharitri/sdk-core";
+import { UserPublicKey, UserVerifier } from "@terradharitri/sdk-wallet";
 export class NativeAuthServer {
   config: NativeAuthServerConfig;
 

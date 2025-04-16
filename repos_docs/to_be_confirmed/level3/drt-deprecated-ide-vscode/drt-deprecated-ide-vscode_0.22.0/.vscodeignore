@@ -1,0 +1,11 @@
+.github/**
+.vscode/**
+node_modules
+out/**
+src/**
+**/*.map
+tsconfig.json
+webpack.config.js
+.gitignore
+.eslintrc.json
+.mocharc.json
