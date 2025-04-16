@@ -1,25 +1,20 @@
+dharitri_sc::imports!();
+
 use core::convert::TryFrom;
-use core::ops::Deref;
 
-use dharitri_sc::api::KECCAK256_RESULT_LEN;
-
-use token_manager::constants::{DeployTokenManagerParams, TokenManagerType};
+use token_manager::constants::TokenManagerType;
 
 use crate::abi::AbiEncodeDecode;
+use crate::abi_types::LinkTokenPayload;
 use crate::constants::{
-    InterchainTransferPayload, MetadataVersion, TokenId, TransferAndGasTokens,
-    MESSAGE_TYPE_INTERCHAIN_TRANSFER, PREFIX_INTERCHAIN_TOKEN_ID,
+    Hash, MetadataVersion, TokenId, TransferAndGasTokens, DCDT_REWA_IDENTIFIER,
+    MESSAGE_TYPE_LINK_TOKEN, PREFIX_INTERCHAIN_TOKEN_ID,
 };
-use crate::{
-    address_tracker, events, executable, express_executor_tracker, proxy_gmp, proxy_its, remote,
-};
-
-dharitri_sc::imports!();
+use crate::{address_tracker, events, executable, proxy_gmp, proxy_its, remote};
 
 #[dharitri_sc::module]
 pub trait UserFunctionsModule:
-    express_executor_tracker::ExpressExecutorTracker
-    + proxy_gmp::ProxyGmpModule
+    proxy_gmp::ProxyGmpModule
     + proxy_its::ProxyItsModule
     + address_tracker::AddressTracker
     + events::EventsModule
@@ -27,117 +22,167 @@ pub trait UserFunctionsModule:
     + dharitri_sc_modules::pause::PauseModule
     + executable::ExecutableModule
 {
-    // Payable with REWA for cross chain calls gas
     #[payable("REWA")]
-    #[endpoint(deployTokenManager)]
-    fn deploy_token_manager(
-        &self,
-        salt: ManagedByteArray<KECCAK256_RESULT_LEN>,
-        destination_chain: ManagedBuffer,
-        token_manager_type: TokenManagerType,
-        params: ManagedBuffer,
-    ) -> TokenId<Self::Api> {
-        // Custom token managers can't be deployed with Interchain token mint burn type, which is reserved for interchain tokens
+    #[endpoint(registerTokenMetadata)]
+    fn register_token_metadata(&self, token_identifier: TokenIdentifier) {
         require!(
-            token_manager_type != TokenManagerType::NativeInterchainToken,
-            "Can not deploy"
+            token_identifier.is_valid_dcdt_identifier(),
+            "Invalid token identifier"
         );
-
-        self.require_not_paused();
-
-        let mut deployer = self.blockchain().get_caller();
-
-        if deployer == self.interchain_token_factory().get() {
-            deployer = ManagedAddress::zero();
-        }
-
-        let token_id = self.interchain_token_id(&deployer, &salt);
-
-        self.interchain_token_id_claimed_event(&token_id, &deployer, &salt);
 
         let gas_value = self.call_value().rewa_value().clone_value();
 
-        if destination_chain.is_empty() {
-            require!(
-                gas_value == 0,
-                "Can not accept REWA if not cross chain call"
-            );
+        self.register_token_metadata_async_call(token_identifier, gas_value);
+    }
 
-            self.deploy_token_manager_raw(&token_id, token_manager_type, params);
-        } else {
-            self.deploy_remote_token_manager(
-                &token_id,
-                destination_chain,
-                token_manager_type,
-                params,
-                RewaOrDcdtTokenIdentifier::rewa(),
-                gas_value,
-            );
-        }
+    fn register_custom_token_raw(
+        &self,
+        deploy_salt: Hash<Self::Api>,
+        token_identifier: RewaOrDcdtTokenIdentifier,
+        token_manager_type: TokenManagerType,
+        link_params: ManagedBuffer,
+    ) -> TokenId<Self::Api> {
+        self.require_not_paused();
+
+        // Custom token managers can't be deployed with native interchain token type, which is reserved for interchain tokens
+        require!(
+            token_manager_type != TokenManagerType::NativeInterchainToken,
+            "Can not deploy native interchain token"
+        );
+
+        let token_id = self.interchain_token_id_raw(&deploy_salt);
+
+        self.interchain_token_id_claimed_event(&token_id, &deploy_salt);
+
+        self.deploy_token_manager_raw(
+            &token_id,
+            token_manager_type,
+            Some(token_identifier),
+            link_params,
+        );
 
         token_id
     }
 
-    // Payable with REWA for:
-    // - DCDT token deploy (2nd transaction)
-    // - cross chain calls gas
-    #[payable("REWA")]
-    #[endpoint(deployInterchainToken)]
-    fn deploy_interchain_token(
+    fn link_token_raw(
         &self,
-        salt: ManagedByteArray<KECCAK256_RESULT_LEN>,
+        deploy_salt: Hash<Self::Api>,
+        destination_chain: ManagedBuffer,
+        destination_token_address: ManagedBuffer,
+        token_manager_type: TokenManagerType,
+        link_params: ManagedBuffer,
+        gas_value: BigUint,
+    ) -> TokenId<Self::Api> {
+        self.require_not_paused();
+
+        require!(!destination_token_address.is_empty(), "Empty token address");
+
+        // Custom token managers can't be deployed with Interchain token mint burn type, which is reserved for interchain tokens
+        require!(
+            token_manager_type != TokenManagerType::NativeInterchainToken,
+            "Can not deploy native interchain token"
+        );
+
+        // Cannot deploy to this chain using linkToken anymore
+        require!(!destination_chain.is_empty(), "Not supported");
+
+        // Cannot deploy to this chain using linkToken anymore
+        require!(
+            destination_chain != self.chain_name().get(),
+            "Cannot deploy remotely to self"
+        );
+
+        let token_id = self.interchain_token_id_raw(&deploy_salt);
+
+        self.interchain_token_id_claimed_event(&token_id, &deploy_salt);
+
+        let source_token_address = self.registered_token_identifier(&token_id).into_name();
+
+        self.emit_link_token_started_event(
+            &token_id,
+            &destination_chain,
+            &source_token_address,
+            &destination_token_address,
+            &token_manager_type,
+            &link_params,
+        );
+
+        let data = LinkTokenPayload {
+            message_type: BigUint::from(MESSAGE_TYPE_LINK_TOKEN),
+            token_id: token_id.clone(),
+            token_manager_type,
+            source_token_address,
+            destination_token_address,
+            link_params,
+        };
+        let payload = data.abi_encode();
+
+        self.route_message(
+            destination_chain,
+            payload,
+            MetadataVersion::ContractCall,
+            RewaOrDcdtTokenIdentifier::rewa(),
+            gas_value,
+        );
+
+        token_id
+    }
+
+    fn deploy_interchain_token_raw(
+        &self,
+        deploy_salt: Hash<Self::Api>,
         destination_chain: ManagedBuffer,
         name: ManagedBuffer,
         symbol: ManagedBuffer,
         decimals: u8,
         minter: ManagedBuffer,
+        rewa_value: BigUint,
     ) -> TokenId<Self::Api> {
         self.require_not_paused();
 
-        let mut deployer = self.blockchain().get_caller();
+        let token_id = self.interchain_token_id_raw(&deploy_salt);
 
-        if deployer == self.interchain_token_factory().get() {
-            deployer = ManagedAddress::zero();
-        }
-
-        let token_id = self.interchain_token_id(&deployer, &salt);
+        self.interchain_token_id_claimed_event(&token_id, &deploy_salt);
 
         if destination_chain.is_empty() {
-            let minter_raw = ManagedAddress::try_from(minter);
-            let minter = if minter_raw.is_err() {
-                None
-            } else {
-                Some(minter_raw.unwrap())
-            };
-
             // On first transaction, deploy the token manager and on second transaction deploy DCDT through the token manager
             // This is because we can not deploy token manager and call it to deploy the token in the same transaction
             let token_manager_address_mapper = self.token_manager_address(&token_id);
             if token_manager_address_mapper.is_empty() {
                 require!(
-                    self.call_value().rewa_value().deref() == &BigUint::zero(),
+                    rewa_value == BigUint::zero(),
                     "Can not send REWA payment if not issuing DCDT"
                 );
 
-                let mut params = ManagedBuffer::new();
-
-                DeployTokenManagerParams {
-                    operator: minter,
-                    token_identifier: None,
-                }
-                .top_encode(&mut params)
-                .unwrap();
-
-                self.deploy_token_manager_raw(&token_id, TokenManagerType::NativeInterchainToken, params);
+                self.deploy_token_manager_raw(
+                    &token_id,
+                    TokenManagerType::NativeInterchainToken,
+                    None,
+                    minter,
+                );
 
                 return token_id;
             }
 
+            let minter = if minter.is_empty() {
+                None
+            } else {
+                Some(
+                    ManagedAddress::try_from(minter)
+                        .unwrap_or_else(|_| sc_panic!("Invalid DharitrI address")),
+                )
+            };
+
             self.token_manager_deploy_interchain_token(&token_id, minter, name, symbol, decimals);
         } else {
-            let gas_value = self.call_value().rewa_value().clone_value();
+            let gas_value = rewa_value;
 
-            self.deploy_remote_interchain_token(
+            require!(
+                self.chain_name().get() != destination_chain,
+                "Cannot deploy remotely to self",
+            );
+
+            self.deploy_remote_interchain_token_base(
                 &token_id,
                 name,
                 symbol,
@@ -150,58 +195,6 @@ pub trait UserFunctionsModule:
         }
 
         token_id
-    }
-
-    #[payable("*")]
-    #[endpoint(expressExecute)]
-    fn express_execute_endpoint(
-        &self,
-        source_chain: ManagedBuffer,
-        message_id: ManagedBuffer,
-        source_address: ManagedBuffer,
-        payload: ManagedBuffer,
-    ) {
-        self.require_not_paused();
-
-        let interchain_transfer_payload =
-            InterchainTransferPayload::<Self::Api>::abi_decode(payload.clone());
-
-        require!(
-            interchain_transfer_payload.message_type == MESSAGE_TYPE_INTERCHAIN_TRANSFER,
-            "Invalid express message type"
-        );
-
-        require!(
-            !self.gateway_is_message_executed(&source_chain, &message_id),
-            "Already executed"
-        );
-
-        let express_executor = self.blockchain().get_caller();
-        let payload_hash = self.crypto().keccak256(payload);
-
-        self.express_executed_event(
-            &source_chain,
-            &message_id,
-            &source_address,
-            &payload_hash,
-            &express_executor,
-        );
-
-        let express_hash = self.set_express_executor(
-            &source_chain,
-            &message_id,
-            &source_address,
-            &payload_hash,
-            &express_executor,
-        );
-
-        self.express_execute_raw(
-            source_chain,
-            message_id,
-            interchain_transfer_payload,
-            express_executor,
-            express_hash,
-        );
     }
 
     #[payable("*")]
@@ -272,67 +265,6 @@ pub trait UserFunctionsModule:
 
     /// Private Functions
 
-    fn express_execute_raw(
-        &self,
-        source_chain: ManagedBuffer,
-        message_id: ManagedBuffer,
-        interchain_transfer_payload: InterchainTransferPayload<Self::Api>,
-        express_executor: ManagedAddress,
-        express_hash: ManagedByteArray<KECCAK256_RESULT_LEN>,
-    ) {
-        let destination_address =
-            ManagedAddress::try_from(interchain_transfer_payload.destination_address).unwrap();
-
-        let token_identifier = self.valid_token_identifier(&interchain_transfer_payload.token_id);
-
-        let (sent_token_identifier, sent_amount) = self.call_value().rewa_or_single_fungible_dcdt();
-
-        require!(
-            sent_token_identifier == token_identifier
-                && sent_amount == interchain_transfer_payload.amount,
-            "Wrong token or amount sent"
-        );
-
-        self.interchain_transfer_received_event(
-            &interchain_transfer_payload.token_id,
-            &source_chain,
-            &message_id,
-            &interchain_transfer_payload.source_address,
-            &destination_address,
-            if interchain_transfer_payload.data.is_empty() {
-                ManagedByteArray::from(&[0; KECCAK256_RESULT_LEN])
-            } else {
-                self.crypto().keccak256(&interchain_transfer_payload.data)
-            },
-            &interchain_transfer_payload.amount,
-        );
-
-        if !interchain_transfer_payload.data.is_empty() {
-            self.executable_contract_express_execute_with_interchain_token(
-                destination_address,
-                source_chain,
-                message_id,
-                interchain_transfer_payload.source_address,
-                interchain_transfer_payload.data,
-                interchain_transfer_payload.token_id,
-                token_identifier,
-                interchain_transfer_payload.amount,
-                express_executor,
-                express_hash,
-            );
-
-            // Not technically needed, the async call above will end the execution
-            return;
-        }
-
-        self.send().direct(
-            &destination_address,
-            &token_identifier,
-            0,
-            &interchain_transfer_payload.amount,
-        );
-    }
-
     fn get_transfer_and_gas_tokens(&self, gas_amount: BigUint) -> TransferAndGasTokens<Self::Api> {
         let payments = self.call_value().any_payment();
 
@@ -366,6 +298,7 @@ pub trait UserFunctionsModule:
 
                 let second_payment = dcdts.try_get(1);
 
+                // If only one DCDT is set, substract gas amount from amount sent
                 if second_payment.is_none() {
                     require!(amount > gas_amount, "Invalid gas value");
 
@@ -385,22 +318,26 @@ pub trait UserFunctionsModule:
                 );
                 require!(second_payment.amount == gas_amount, "Invalid gas value");
 
+                // If two DCDTs were sent, check if REWA was sent in MultiDCDT and convert to REWA identifier
+                let gas_token = if second_payment.token_identifier.as_managed_buffer()
+                    == &ManagedBuffer::from(DCDT_REWA_IDENTIFIER)
+                {
+                    RewaOrDcdtTokenIdentifier::rewa()
+                } else {
+                    RewaOrDcdtTokenIdentifier::dcdt(second_payment.token_identifier)
+                };
+
                 return TransferAndGasTokens {
                     transfer_token: token_identifier,
                     transfer_amount: amount,
-                    gas_token: RewaOrDcdtTokenIdentifier::dcdt(second_payment.token_identifier),
+                    gas_token,
                     gas_amount,
                 };
             }
         }
     }
 
-    #[view(interchainTokenId)]
-    fn interchain_token_id(
-        &self,
-        sender: &ManagedAddress,
-        salt: &ManagedByteArray<KECCAK256_RESULT_LEN>,
-    ) -> TokenId<Self::Api> {
+    fn interchain_token_id_raw(&self, salt: &Hash<Self::Api>) -> TokenId<Self::Api> {
         let prefix_interchain_token_id = self
             .crypto()
             .keccak256(ManagedBuffer::new_from_bytes(PREFIX_INTERCHAIN_TOKEN_ID));
@@ -408,13 +345,9 @@ pub trait UserFunctionsModule:
         let mut encoded = ManagedBuffer::new();
 
         encoded.append(prefix_interchain_token_id.as_managed_buffer());
-        encoded.append(sender.as_managed_buffer());
+        encoded.append(ManagedAddress::zero().as_managed_buffer());
         encoded.append(salt.as_managed_buffer());
 
         self.crypto().keccak256(encoded)
     }
-
-    #[view(interchainTokenFactory)]
-    #[storage_mapper("interchain_token_factory")]
-    fn interchain_token_factory(&self) -> SingleValueMapper<ManagedAddress>;
 }

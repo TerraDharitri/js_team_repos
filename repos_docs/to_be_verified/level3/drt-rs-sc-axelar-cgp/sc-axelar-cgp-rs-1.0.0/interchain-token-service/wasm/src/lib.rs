@@ -6,9 +6,10 @@
 
 // Init:                                 1
 // Upgrade:                              1
-// Endpoints:                           36
+// Endpoints:                           46
 // Async Callback:                       1
-// Total number of exported functions:  39
+// Promise callbacks:                    1
+// Total number of exported functions:  50
 
 #![no_std]
 
@@ -20,18 +21,11 @@ dharitri_sc_wasm_adapter::endpoints! {
     (
         init => init
         upgrade => upgrade
-        setInterchainTokenFactory => set_interchain_token_factory
         setFlowLimits => set_flow_limits
         execute => execute
-        contractCallValue => contract_call_value
-        chainNameHash => chain_name_hash
-        deployTokenManager => deploy_token_manager
-        deployInterchainToken => deploy_interchain_token
-        expressExecute => express_execute_endpoint
+        registerTokenMetadata => register_token_metadata
         interchainTransfer => interchain_transfer
         callContractWithInterchainToken => call_contract_with_interchain_token
-        interchainTokenId => interchain_token_id
-        interchainTokenFactory => interchain_token_factory
         transferOperatorship => transfer_operatorship
         proposeOperatorship => propose_operatorship
         acceptOperatorship => accept_operatorship
@@ -42,20 +36,38 @@ dharitri_sc_wasm_adapter::endpoints! {
         removeTrustedAddress => remove_trusted_address
         chainName => chain_name
         trustedAddress => trusted_address
-        trustedAddressHash => trusted_address_hash
         gateway => gateway
         gasService => gas_service
         flowLimit => flow_limit
         flowOutAmount => flow_out_amount
         flowInAmount => flow_in_amount
-        validTokenManagerAddress => valid_token_manager_address
-        validTokenIdentifier => valid_token_identifier
+        deployedTokenManager => deployed_token_manager
+        registeredTokenIdentifier => registered_token_identifier
         invalidTokenManagerAddress => invalid_token_manager_address
         tokenManagerAddress => token_manager_address
+        transferWithDataLock => transfer_with_data_lock
         tokenManagerImplementation => token_manager
+        deployInterchainToken => deploy_interchain_token
+        approveDeployRemoteInterchainToken => approve_deploy_remote_interchain_token
+        revokeDeployRemoteInterchainToken => revoke_deploy_remote_interchain_token
+        deployRemoteInterchainToken => deploy_remote_interchain_token
+        deployRemoteInterchainTokenWithMinter => deploy_remote_interchain_token_with_minter
+        registerCanonicalInterchainToken => register_canonical_interchain_token
+        deployRemoteCanonicalInterchainToken => deploy_remote_canonical_interchain_token
+        registerCustomToken => register_custom_token
+        linkToken => link_token
+        interchainTokenDeploySalt => interchain_token_deploy_salt
+        canonicalInterchainTokenDeploySalt => canonical_interchain_token_deploy_salt
+        linkedTokenDeploySalt => linked_token_deploy_salt
+        interchainTokenId => interchain_token_id
+        canonicalInterchainTokenId => canonical_interchain_token_id
+        linkedTokenId => linked_token_id
+        chainNameHash => chain_name_hash
+        approvedDestinationMinters => approved_destination_minters
         pause => pause_endpoint
         unpause => unpause_endpoint
         isPaused => paused_status
+        execute_with_token_callback => execute_with_token_callback
     )
 }
 

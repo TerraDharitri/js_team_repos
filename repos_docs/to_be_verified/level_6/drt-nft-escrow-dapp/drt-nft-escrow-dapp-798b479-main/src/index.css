@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    @apply text-left block border border-teal-700 rounded py-2 px-4 bg-teal-700 hover:bg-teal-900 text-amber-50;
+}
+
+.dapp-extension-login,
+.dapp-web-wallet-login,
+.dapp-ledger-login,
+.dapp-wallet-connect-login {
+    @apply text-center block border border-teal-700 rounded py-2 px-4 bg-teal-700 hover:bg-teal-900 text-amber-50 w-32 !important;
+}
+
+.dapp-core-component__trim-styles__hidden-text-ref,
+.dapp-core-component__trim-styles__left,
+.dapp-core-component__trim-styles__ellipsis,
+.dapp-core-component__trim-styles__right {
+    @apply flex items-center text-lg font-bold text-gray-900;
+}

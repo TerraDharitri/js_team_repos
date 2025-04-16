@@ -1,8 +1,0 @@
-services:
-  artifacts-builder:
-    build:
-      context: ..
-      dockerfile: ./docker/build.Dockerfile
-    volumes:
-      - ./../artifacts:/terradharitri/artifacts_volume
-    entrypoint: /bin/sh -c "cp -r /terradharitri/artifacts/* /terradharitri/artifacts_volume"

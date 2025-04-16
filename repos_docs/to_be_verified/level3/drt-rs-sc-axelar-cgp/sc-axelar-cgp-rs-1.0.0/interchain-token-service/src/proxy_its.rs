@@ -1,15 +1,21 @@
-use dharitri_sc::api::KECCAK256_RESULT_LEN;
-
+use core::ops::Deref;
+use operatable::ProxyTrait as _;
 use token_manager::flow_limit::ProxyTrait as _;
+use token_manager::mintership::ProxyTrait as _;
 use token_manager::ProxyTrait as _;
 
-use crate::constants::TokenId;
-use crate::{events, express_executor_tracker};
+use crate::abi::AbiEncodeDecode;
+use crate::abi_types::RegisterTokenMetadataPayload;
+use crate::constants::{
+    Hash, ManagedBufferAscii, MetadataVersion, TokenId, EXECUTE_WITH_TOKEN_CALLBACK_GAS,
+    ITS_HUB_CHAIN_NAME, KEEP_EXTRA_GAS, MESSAGE_TYPE_REGISTER_TOKEN_METADATA,
+};
+use crate::{address_tracker, events, proxy_gmp};
 
 dharitri_sc::imports!();
 
 pub mod executable_contract_proxy {
-    use dharitri_sc::api::KECCAK256_RESULT_LEN;
+    use crate::constants::TokenId;
 
     dharitri_sc::imports!();
 
@@ -24,25 +30,18 @@ pub mod executable_contract_proxy {
             message_id: &ManagedBuffer,
             source_address: ManagedBuffer,
             data: ManagedBuffer,
-            token_id: ManagedByteArray<KECCAK256_RESULT_LEN>,
-        );
-
-        #[payable("*")]
-        #[endpoint(expressExecuteWithInterchainToken)]
-        fn express_execute_with_interchain_token(
-            &self,
-            source_chain: &ManagedBuffer,
-            message_id: &ManagedBuffer,
-            source_address: ManagedBuffer,
-            data: ManagedBuffer,
-            token_id: ManagedByteArray<KECCAK256_RESULT_LEN>,
+            token_id: TokenId<Self::Api>,
         );
     }
 }
 
+pub const DCDT_PROPERTIES_TOKEN_NAME_INDEX: usize = 0;
+pub const DCDT_PROPERTIES_TOKEN_TYPE_INDEX: usize = 1;
+pub const DCDT_PROPERTIES_DECIMALS_BUFFER_INDEX: usize = 5;
+
 #[dharitri_sc::module]
 pub trait ProxyItsModule:
-    events::EventsModule + express_executor_tracker::ExpressExecutorTracker
+    events::EventsModule + proxy_gmp::ProxyGmpModule + address_tracker::AddressTracker
 {
     fn token_manager_take_token(
         &self,
@@ -50,7 +49,7 @@ pub trait ProxyItsModule:
         token_identifier: RewaOrDcdtTokenIdentifier,
         amount: BigUint,
     ) {
-        self.token_manager_proxy(self.valid_token_manager_address(token_id))
+        self.token_manager_proxy(self.deployed_token_manager(token_id))
             .take_token()
             .with_rewa_or_single_dcdt_transfer(RewaOrDcdtTokenPayment::new(
                 token_identifier,
@@ -61,7 +60,7 @@ pub trait ProxyItsModule:
     }
 
     fn token_manager_set_flow_limit(&self, token_id: &TokenId<Self::Api>, flow_limit: &BigUint) {
-        self.token_manager_proxy(self.valid_token_manager_address(token_id))
+        self.token_manager_proxy(self.deployed_token_manager(token_id))
             .set_flow_limit(flow_limit)
             .execute_on_dest_context::<()>();
     }
@@ -72,7 +71,7 @@ pub trait ProxyItsModule:
         destination_address: &ManagedAddress,
         amount: &BigUint,
     ) -> (RewaOrDcdtTokenIdentifier, BigUint) {
-        self.token_manager_proxy(self.valid_token_manager_address(token_id))
+        self.token_manager_proxy(self.deployed_token_manager(token_id))
             .give_token(destination_address, amount)
             .execute_on_dest_context::<MultiValue2<RewaOrDcdtTokenIdentifier, BigUint>>()
             .into_tuple()
@@ -86,99 +85,189 @@ pub trait ProxyItsModule:
         symbol: ManagedBuffer,
         decimals: u8,
     ) {
-        self.token_manager_proxy(self.valid_token_manager_address(token_id))
+        self.token_manager_proxy(self.deployed_token_manager(token_id))
             .deploy_interchain_token(minter, name, symbol, decimals)
             .with_rewa_transfer(self.call_value().rewa_value().clone_value())
             .with_gas_limit(100_000_000) // Need to specify gas manually here because the function does an async call. This should be plenty
             .execute_on_dest_context::<()>();
     }
 
+    fn token_manager_invalid_token_identifier(
+        &self,
+        sc_address: ManagedAddress,
+    ) -> Option<RewaOrDcdtTokenIdentifier> {
+        self.token_manager_proxy(sc_address)
+            .invalid_token_identifier()
+            .execute_on_dest_context()
+    }
+
+    fn token_manager_mint(
+        &self,
+        sc_address: ManagedAddress,
+        address: ManagedAddress,
+        amount: BigUint,
+    ) {
+        self.token_manager_proxy(sc_address)
+            .mint(address, amount)
+            .execute_on_dest_context::<()>();
+    }
+
+    fn token_manager_transfer_mintership(
+        &self,
+        sc_address: ManagedAddress,
+        minter: ManagedAddress,
+    ) {
+        self.token_manager_proxy(sc_address)
+            .transfer_mintership(minter)
+            .execute_on_dest_context::<()>();
+    }
+
+    fn token_manager_remove_flow_limiter(
+        &self,
+        sc_address: ManagedAddress,
+        flow_limiter: ManagedAddress,
+    ) {
+        self.token_manager_proxy(sc_address)
+            .remove_flow_limiter(flow_limiter)
+            .execute_on_dest_context::<()>();
+    }
+
+    fn token_manager_add_flow_limiter(
+        &self,
+        sc_address: ManagedAddress,
+        flow_limiter: ManagedAddress,
+    ) {
+        self.token_manager_proxy(sc_address)
+            .add_flow_limiter(flow_limiter)
+            .execute_on_dest_context::<()>();
+    }
+
+    fn token_manager_transfer_operatorship(
+        &self,
+        sc_address: ManagedAddress,
+        operator: ManagedAddress,
+    ) {
+        self.token_manager_proxy(sc_address)
+            .transfer_operatorship(operator)
+            .execute_on_dest_context::<()>();
+    }
+
+    fn token_manager_is_minter(&self, sc_address: ManagedAddress, minter: &ManagedAddress) -> bool {
+        self.token_manager_proxy(sc_address)
+            .is_minter(minter)
+            .execute_on_dest_context()
+    }
+
     fn executable_contract_execute_with_interchain_token(
         &self,
         destination_address: ManagedAddress,
+        original_source_chain: ManagedBuffer,
         source_chain: ManagedBuffer,
         message_id: ManagedBuffer,
         source_address: ManagedBuffer,
+        payload_hash: Hash<Self::Api>,
+        original_source_address: ManagedBuffer,
         data: ManagedBuffer,
         token_id: TokenId<Self::Api>,
         token_identifier: RewaOrDcdtTokenIdentifier,
         amount: BigUint,
     ) {
+        let gas_left = self.blockchain().get_gas_left();
+
+        require!(
+            gas_left > EXECUTE_WITH_TOKEN_CALLBACK_GAS + KEEP_EXTRA_GAS,
+            "Not enough gas left for async call"
+        );
+
+        let gas_limit = gas_left - EXECUTE_WITH_TOKEN_CALLBACK_GAS - KEEP_EXTRA_GAS;
+
+        require!(
+            self.transfer_with_data_lock(&source_chain, &message_id)
+                .is_empty(),
+            "Async call in progress"
+        );
+
+        self.transfer_with_data_lock(&source_chain, &message_id)
+            .set(true);
+
         self.executable_contract_proxy(destination_address)
             .execute_with_interchain_token(
-                &source_chain,
+                &original_source_chain,
                 &message_id,
-                source_address,
+                original_source_address,
                 data,
                 token_id.clone(),
             )
             .with_rewa_or_single_dcdt_transfer((token_identifier.clone(), 0, amount.clone()))
+            .with_gas_limit(gas_limit)
             .with_callback(self.callbacks().execute_with_token_callback(
                 source_chain,
                 message_id,
+                source_address,
+                payload_hash,
                 token_id,
                 token_identifier,
                 amount,
             ))
-            .async_call_and_exit();
+            .with_extra_gas_for_callback(EXECUTE_WITH_TOKEN_CALLBACK_GAS)
+            .register_promise();
     }
 
-    fn executable_contract_express_execute_with_interchain_token(
+    fn register_token_metadata_async_call(
         &self,
-        destination_address: ManagedAddress,
-        source_chain: ManagedBuffer,
-        message_id: ManagedBuffer,
-        source_address: ManagedBuffer,
-        data: ManagedBuffer,
-        token_id: TokenId<Self::Api>,
-        token_identifier: RewaOrDcdtTokenIdentifier,
-        amount: BigUint,
-        express_executor: ManagedAddress,
-        express_hash: ManagedByteArray<KECCAK256_RESULT_LEN>,
+        token_identifier: TokenIdentifier,
+        gas_value: BigUint,
     ) {
-        self.executable_contract_proxy(destination_address)
-            .express_execute_with_interchain_token(
-                &source_chain,
-                &message_id,
-                source_address,
-                data,
-                token_id,
-            )
-            .with_rewa_or_single_dcdt_transfer((token_identifier.clone(), 0, amount.clone()))
-            .with_callback(self.callbacks().exp_execute_with_token_callback(
-                express_executor,
-                source_chain,
-                message_id,
+        self.dcdt_get_token_properties(
+            token_identifier.clone(),
+            self.callbacks().register_token_metadata_callback(
                 token_identifier,
-                amount,
-                express_hash,
-            ))
-            .async_call_and_exit();
+                gas_value,
+                self.blockchain().get_caller(),
+            ),
+        );
+    }
+
+    fn dcdt_get_token_properties(
+        &self,
+        token_identifier: TokenIdentifier,
+        callback: CallbackClosure<Self::Api>,
+    ) {
+        let mut contract_call = self.send().contract_call::<()>(
+            DCDTSystemSCAddress.to_managed_address(),
+            ManagedBuffer::from("getTokenProperties"),
+        );
+        contract_call.push_raw_argument(token_identifier.into_managed_buffer());
+
+        contract_call
+            .async_call()
+            .with_callback(callback)
+            .call_and_exit();
     }
 
     #[view(flowLimit)]
     fn flow_limit(&self, token_id: TokenId<Self::Api>) -> BigUint {
-        self.token_manager_proxy(self.valid_token_manager_address(&token_id))
+        self.token_manager_proxy(self.deployed_token_manager(&token_id))
             .flow_limit()
             .execute_on_dest_context()
     }
 
     #[view(flowOutAmount)]
     fn flow_out_amount(&self, token_id: TokenId<Self::Api>) -> BigUint {
-        self.token_manager_proxy(self.valid_token_manager_address(&token_id))
+        self.token_manager_proxy(self.deployed_token_manager(&token_id))
             .get_flow_out_amount()
             .execute_on_dest_context()
     }
 
     #[view(flowInAmount)]
     fn flow_in_amount(&self, token_id: TokenId<Self::Api>) -> BigUint {
-        self.token_manager_proxy(self.valid_token_manager_address(&token_id))
+        self.token_manager_proxy(self.deployed_token_manager(&token_id))
             .get_flow_in_amount()
             .execute_on_dest_context()
     }
 
-    #[view(validTokenManagerAddress)]
-    fn valid_token_manager_address(&self, token_id: &TokenId<Self::Api>) -> ManagedAddress {
+    #[view(deployedTokenManager)]
+    fn deployed_token_manager(&self, token_id: &TokenId<Self::Api>) -> ManagedAddress {
         let token_manager_address_mapper = self.token_manager_address(token_id);
 
         require!(
@@ -189,9 +278,12 @@ pub trait ProxyItsModule:
         token_manager_address_mapper.get()
     }
 
-    #[view(validTokenIdentifier)]
-    fn valid_token_identifier(&self, token_id: &TokenId<Self::Api>) -> RewaOrDcdtTokenIdentifier {
-        self.token_manager_proxy(self.valid_token_manager_address(token_id))
+    #[view(registeredTokenIdentifier)]
+    fn registered_token_identifier(
+        &self,
+        token_id: &TokenId<Self::Api>,
+    ) -> RewaOrDcdtTokenIdentifier {
+        self.token_manager_proxy(self.deployed_token_manager(token_id))
             .token_identifier()
             .execute_on_dest_context()
     }
@@ -223,12 +315,13 @@ pub trait ProxyItsModule:
         sc_address: ManagedAddress,
     ) -> executable_contract_proxy::Proxy<Self::Api>;
 
-    // This seems to work fine on Devnet
-    #[callback]
+    #[promises_callback]
     fn execute_with_token_callback(
         &self,
         source_chain: ManagedBuffer,
         message_id: ManagedBuffer,
+        source_address: ManagedBuffer,
+        payload_hash: Hash<Self::Api>,
         token_id: TokenId<Self::Api>,
         token_identifier: RewaOrDcdtTokenIdentifier,
         amount: BigUint,
@@ -236,9 +329,23 @@ pub trait ProxyItsModule:
     ) {
         match result {
             ManagedAsyncCallResult::Ok(_) => {
+                self.transfer_with_data_lock(&source_chain, &message_id)
+                    .clear();
+
+                // This will always be true
+                let _ = self.gateway_validate_message(
+                    &source_chain,
+                    &message_id,
+                    &source_address,
+                    &payload_hash,
+                );
+
                 self.execute_with_interchain_token_success_event(source_chain, message_id);
             }
             ManagedAsyncCallResult::Err(_) => {
+                self.transfer_with_data_lock(&source_chain, &message_id)
+                    .clear();
+
                 self.token_manager_take_token(&token_id, token_identifier, amount);
 
                 self.execute_with_interchain_token_failed_event(source_chain, message_id);
@@ -246,38 +353,79 @@ pub trait ProxyItsModule:
         }
     }
 
-    // This seems to work fine on Devnet
-    #[callback]
-    fn exp_execute_with_token_callback(
+    #[view(transferWithDataLock)]
+    #[storage_mapper("transfer_with_data_lock")]
+    fn transfer_with_data_lock(
         &self,
-        express_executor: ManagedAddress,
-        source_chain: ManagedBuffer,
-        message_id: ManagedBuffer,
-        token_identifier: RewaOrDcdtTokenIdentifier,
-        amount: BigUint,
-        express_hash: ManagedByteArray<KECCAK256_RESULT_LEN>,
+        source_chain: &ManagedBuffer,
+        message_id: &ManagedBuffer,
+    ) -> SingleValueMapper<bool>;
+
+    #[callback]
+    fn register_token_metadata_callback(
+        &self,
+        token_identifier: TokenIdentifier,
+        gas_value: BigUint,
+        caller: ManagedAddress,
         #[call_result] result: ManagedAsyncCallResult<MultiValueEncoded<ManagedBuffer>>,
     ) {
         match result {
-            ManagedAsyncCallResult::Ok(_) => {
-                self.express_execute_with_interchain_token_success_event(
-                    source_chain,
-                    message_id,
-                    express_executor,
-                );
+            ManagedAsyncCallResult::Ok(values) => {
+                let vec: ManagedVec<ManagedBuffer> = values.into_vec_of_buffers();
+
+                let token_type = vec.get(DCDT_PROPERTIES_TOKEN_TYPE_INDEX);
+                let decimals_buffer_ref = vec.get(DCDT_PROPERTIES_DECIMALS_BUFFER_INDEX);
+
+                if token_type.deref() != DcdtTokenType::Fungible.as_type_name() {
+                    // Send back paid cross chain gas value to initial caller if token is non fungible
+                    self.send().direct_non_zero_rewa(&caller, &gas_value);
+
+                    return;
+                }
+
+                let decimals_buffer = decimals_buffer_ref.deref();
+                // num decimals is in format string NumDecimals-DECIMALS
+                // skip `NumDecimals-` part and convert to number
+                let token_decimals_buf: ManagedBuffer = decimals_buffer
+                    .copy_slice(12, decimals_buffer.len() - 12)
+                    .unwrap();
+                let token_decimals = token_decimals_buf.ascii_to_u8();
+
+                self.register_token_metadata_raw(token_identifier, token_decimals, gas_value);
             }
             ManagedAsyncCallResult::Err(_) => {
-                self.send()
-                    .direct(&express_executor, &token_identifier, 0, &amount);
-
-                self.express_execute(&express_hash).clear();
-
-                self.express_execute_with_interchain_token_failed_event(
-                    source_chain,
-                    message_id,
-                    express_executor,
-                );
+                // Send back paid gas value to initial caller
+                self.send().direct_non_zero_rewa(&caller, &gas_value);
             }
         }
+    }
+
+    fn register_token_metadata_raw(
+        &self,
+        token_identifier: TokenIdentifier,
+        decimals: u8,
+        gas_value: BigUint,
+    ) {
+        self.token_metadata_registered_event(&token_identifier, decimals);
+
+        let data = RegisterTokenMetadataPayload {
+            message_type: BigUint::from(MESSAGE_TYPE_REGISTER_TOKEN_METADATA),
+            token_identifier: token_identifier.into_managed_buffer(),
+            decimals,
+        };
+
+        let payload = data.abi_encode();
+
+        let its_hub_chain_name = ManagedBuffer::from(ITS_HUB_CHAIN_NAME);
+        let its_hub_address = self.trusted_address(&its_hub_chain_name).get();
+
+        self.call_contract(
+            its_hub_chain_name,
+            its_hub_address,
+            payload,
+            MetadataVersion::ContractCall,
+            RewaOrDcdtTokenIdentifier::rewa(),
+            gas_value,
+        );
     }
 }

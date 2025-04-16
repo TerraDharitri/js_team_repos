@@ -1,0 +1,27 @@
+network: ${NETWORK}
+apps:
+  publicApi:
+    port: ${PUBLIC_API_PORT}
+    prefix: ${PUBLIC_API_PREFIX}
+  privateApi:
+    port: ${PRIVATE_API_PORT}
+  offlineJobs:
+    port: ${OFFLINE_JOBS_PORT}
+urls:
+  api: ${API_URL}
+  redis: ${REDIS_URL}
+  elastic: ${ELASTIC_URL}
+keepAlive:
+  enable: true
+  downstreamTimeout: 61000
+  upstreamTimeout: 60000
+caching:
+  poolLimit: 100
+  processTtl: 60
+xExchange:
+  routerAddress: 'drt1qqqqqqqqqqqqqpgqq66xk9gfr4esuhem3jru86wg5hvp33a62jpsh4nhal'
+onedex:
+  swapAddress: 'drt1qqqqqqqqqqqqqpgqqz6vp9y50ep867vnr296mqf3dduh6guvmvlspd8l3x'
+tokens:
+  WREWA: 'WREWA-bd4d79'
+  WUSDC: 'USDC-c76f1f'

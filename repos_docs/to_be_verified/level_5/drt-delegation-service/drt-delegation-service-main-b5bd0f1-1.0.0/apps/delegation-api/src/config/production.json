@@ -1,0 +1,10 @@
+{
+  "numbat": {
+    "auctionContract" : "drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqplllsphc9lf",
+    "stakingContract" : "drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqyllls4jxmwv",
+    "chainId": "1",
+    "version": 1,
+    "metaChainShardId": 4294967295,
+    "transactionProcessorMaxLookBehind": 1000
+  }
+}

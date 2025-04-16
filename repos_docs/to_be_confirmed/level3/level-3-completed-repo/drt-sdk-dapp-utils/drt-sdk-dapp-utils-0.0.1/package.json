@@ -1,0 +1,24 @@
+{
+  "name": "@terradharitri/sdk-dapp-utils",
+  "version": "0.0.1",
+  "description": "SDK for DApp utilities",
+  "main": "out/index.js",
+  "types": "out/index.d.js",
+  "files": [
+    "out/**/*"
+  ],
+  "scripts": {
+    "compile": "tsc -p tsconfig.json",
+    "pretest": "npm run compile",
+    "prepare": "npm run compile"
+  },
+  "author": "DharitrI",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@terradharitri/sdk-core": "/home/dugong/Documents/js_team_repos-main/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-12.1.0",
+    "typescript": "5.4.3"
+  },
+  "peerDependencies": {
+    "@terradharitri/sdk-core": "/home/dugong/Documents/js_team_repos-main/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-12.1.0"
+  }
+}

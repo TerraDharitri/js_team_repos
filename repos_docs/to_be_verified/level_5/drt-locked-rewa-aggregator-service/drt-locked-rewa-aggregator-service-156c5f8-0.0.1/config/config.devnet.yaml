@@ -1,0 +1,28 @@
+network: devnet
+urls:
+  api: 'https://devnet-api.dharitri.org'
+  gateway: 'https://devnet-gateway.dharitri.org'
+output:
+  elastic:
+    enabled: true
+    url: 'http://localhost:9200'
+    username: ''
+    password: ''
+    indexPrefix: 'accounts-000001'
+  jsonExport:
+    enabled: true
+    filePath: 'lockedRewaSnapshot.json'
+keepAliveTimeout:
+  downstream: 61000
+  upstream: 60000
+api:
+  port: 3000
+  prefix: 'liquid-staking-aggregator'
+flags:
+  useKeepAliveAgent: true
+snapshotsProviders:
+  - dummy
+testConfig:
+  acceptablePercentageDifference: 10
+  apiSleepTime: 10000
+  batchApiRequestSize: 10

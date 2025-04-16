@@ -1,12 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm run build:gateway && npm run build:gas-service && npm run build:its && npm run build:interchain-token-factory && npm run build:token-manager && npm run build:ping-pong && npm run build:governance",
+    "build": "npm run build:gateway && npm run build:gas-service && npm run build:its && npm run build:token-manager && npm run build:ping-pong && npm run build:governance",
     "build:cgp": "npm run build:gateway && npm run build:gas-service",
     "build:gateway": "cd gateway && drtpy contract build",
     "build:gas-service": "cd gas-service && drtpy contract build",
     "build:its": "cd interchain-token-service && drtpy contract build",
-    "build:interchain-token-factory": "cd interchain-token-factory && drtpy contract build",
     "build:token-manager": "cd token-manager && drtpy contract build",
     "build:governance": "cd governance && drtpy contract build",
     "build:ping-pong": "cd ping-pong-interchain && drtpy contract build",
@@ -28,7 +27,9 @@
     "tsx": "^3.12.7",
     "typescript": "^5.0.4",
     "vitest": "^0.33.0",
-    "xsuite": "0.0.59",
-    "keccak": "^3.0.3"
+    "xsuite": "0.0.101",
+    "keccak": "^3.0.3",
+    "@cosmjs/cosmwasm-stargate": "^0.32.4",
+    "prettier": "^3.4.2"
   }
 }

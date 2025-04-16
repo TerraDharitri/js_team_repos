@@ -5,48 +5,77 @@ use dharitri_sc::api::KECCAK256_RESULT_LEN;
 
 use token_manager::constants::{DeployTokenManagerParams, TokenManagerType};
 
-use crate::abi::AbiEncodeDecode;
-use crate::constants::{
-    DeployInterchainTokenPayload, DeployTokenManagerPayload, InterchainTransferPayload, TokenId,
+use crate::abi::{AbiEncodeDecode, ParamType};
+use crate::abi_types::{
+    DeployInterchainTokenPayload, InterchainTransferPayload, LinkTokenPayload, SendToHubPayload,
 };
-use crate::{address_tracker, events, express_executor_tracker, proxy_gmp, proxy_its};
+use crate::constants::{
+    Hash, TokenId, ITS_HUB_CHAIN_NAME, ITS_HUB_ROUTING_IDENTIFIER, MESSAGE_TYPE_RECEIVE_FROM_HUB,
+};
+use crate::{address_tracker, events, proxy_gmp, proxy_its};
 
 dharitri_sc::imports!();
 
 #[dharitri_sc::module]
 pub trait ExecutableModule:
-    express_executor_tracker::ExpressExecutorTracker
-    + dharitri_sc_modules::pause::PauseModule
+    dharitri_sc_modules::pause::PauseModule
     + events::EventsModule
     + proxy_gmp::ProxyGmpModule
     + proxy_its::ProxyItsModule
     + address_tracker::AddressTracker
 {
+    // Returns (message_type, original_source_chain, payload)
+    fn get_execute_params(
+        &self,
+        source_chain: ManagedBuffer,
+        payload: ManagedBuffer,
+    ) -> (u64, ManagedBuffer, ManagedBuffer) {
+        let message_type = self.get_message_type(&payload);
+
+        // Unwrap ITS message if coming from ITS hub
+        if message_type == MESSAGE_TYPE_RECEIVE_FROM_HUB {
+            require!(source_chain == *ITS_HUB_CHAIN_NAME, "Untrusted chain");
+
+            let data = SendToHubPayload::<Self::Api>::abi_decode(payload);
+
+            // Check whether the original source chain is expected to be routed via the ITS Hub
+            require!(
+                self.is_trusted_address(
+                    &data.destination_chain,
+                    &ManagedBuffer::from(ITS_HUB_ROUTING_IDENTIFIER)
+                ),
+                "Untrusted chain"
+            );
+
+            let message_type = self.get_message_type(&data.payload);
+
+            // Return original message type, source chain and payload
+            return (message_type, data.destination_chain, data.payload);
+        }
+
+        // Prevent receiving a direct message from the ITS Hub. This is not supported yet.
+        require!(source_chain != *ITS_HUB_CHAIN_NAME, "Untrusted chain");
+
+        (message_type, source_chain, payload)
+    }
+
     fn process_interchain_transfer_payload(
         &self,
-        express_executor: ManagedAddress,
+        original_source_chain: ManagedBuffer,
         source_chain: ManagedBuffer,
         message_id: ManagedBuffer,
+        source_address: ManagedBuffer,
+        payload_hash: Hash<Self::Api>,
         payload: ManagedBuffer,
     ) {
         let send_token_payload = InterchainTransferPayload::<Self::Api>::abi_decode(payload);
 
-        if !express_executor.is_zero() {
-            self.token_manager_give_token(
-                &send_token_payload.token_id,
-                &express_executor,
-                &send_token_payload.amount,
-            );
-
-            return;
-        }
-
-        let destination_address =
-            ManagedAddress::try_from(send_token_payload.destination_address).unwrap();
+        let destination_address = ManagedAddress::try_from(send_token_payload.destination_address)
+            .unwrap_or_else(|_| sc_panic!("Invalid DharitrI address"));
 
         self.interchain_transfer_received_event(
             &send_token_payload.token_id,
-            &source_chain,
+            &original_source_chain,
             &message_id,
             &send_token_payload.source_address,
             &destination_address,
@@ -59,6 +88,15 @@ pub trait ExecutableModule:
         );
 
         if send_token_payload.data.is_empty() {
+            let valid = self.gateway_validate_message(
+                &source_chain,
+                &message_id,
+                &source_address,
+                &payload_hash,
+            );
+
+            require!(valid, "Not approved by gateway");
+
             let _ = self.token_manager_give_token(
                 &send_token_payload.token_id,
                 &destination_address,
@@ -67,6 +105,16 @@ pub trait ExecutableModule:
 
             return;
         }
+
+        // Only check that the call is valid and only mark it as executed after the async call has finished
+        let valid = self.gateway_is_message_approved(
+            &source_chain,
+            &message_id,
+            &source_address,
+            &payload_hash,
+        );
+
+        require!(valid, "Not approved by gateway");
 
         // Here we give the tokens to this contract and then call the executable contract with the tokens
         // In case of async call error, the token_manager_take_token method is called to revert this
@@ -78,8 +126,11 @@ pub trait ExecutableModule:
 
         self.executable_contract_execute_with_interchain_token(
             destination_address,
+            original_source_chain,
             source_chain,
             message_id,
+            source_address,
+            payload_hash,
             send_token_payload.source_address,
             send_token_payload.data,
             send_token_payload.token_id,
@@ -88,20 +139,27 @@ pub trait ExecutableModule:
         );
     }
 
-    fn process_deploy_token_manager_payload(&self, payload: ManagedBuffer) {
-        let deploy_token_manager_payload =
-            DeployTokenManagerPayload::<Self::Api>::abi_decode(payload);
+    fn process_link_token_payload(&self, payload: ManagedBuffer) {
+        let link_token_payload = LinkTokenPayload::<Self::Api>::abi_decode(payload);
 
         require!(
-            deploy_token_manager_payload.token_manager_type
-                != TokenManagerType::NativeInterchainToken,
-            "Can not deploy"
+            link_token_payload.token_manager_type != TokenManagerType::NativeInterchainToken,
+            "Can not deploy native interchain token"
+        );
+
+        // Support only DCDT tokens for custom linking of tokens
+        let token_identifier = TokenIdentifier::from(link_token_payload.destination_token_address);
+
+        require!(
+            token_identifier.is_valid_dcdt_identifier(),
+            "Invalid token identifier"
         );
 
         self.deploy_token_manager_raw(
-            &deploy_token_manager_payload.token_id,
-            deploy_token_manager_payload.token_manager_type,
-            deploy_token_manager_payload.params,
+            &link_token_payload.token_id,
+            link_token_payload.token_manager_type,
+            Some(RewaOrDcdtTokenIdentifier::dcdt(token_identifier)),
+            link_token_payload.link_params,
         );
     }
 
@@ -110,17 +168,10 @@ pub trait ExecutableModule:
         source_chain: ManagedBuffer,
         message_id: ManagedBuffer,
         source_address: ManagedBuffer,
-        payload_hash: ManagedByteArray<KECCAK256_RESULT_LEN>,
+        payload_hash: Hash<Self::Api>,
         payload: ManagedBuffer,
     ) {
         let data = DeployInterchainTokenPayload::<Self::Api>::abi_decode(payload);
-
-        let minter_raw = ManagedAddress::try_from(data.minter);
-        let minter = if minter_raw.is_err() {
-            None
-        } else {
-            Some(minter_raw.unwrap())
-        };
 
         // On first transaction, deploy the token manager and on second transaction deploy DCDT through the token manager
         // This is because we can not deploy token manager and call it to deploy the token in the same transaction
@@ -141,19 +192,11 @@ pub trait ExecutableModule:
 
             require!(valid, "Not approved by gateway");
 
-            let mut params = ManagedBuffer::new();
-
-            DeployTokenManagerParams {
-                operator: minter,
-                token_identifier: None,
-            }
-            .top_encode(&mut params)
-            .unwrap();
-
             self.deploy_token_manager_raw(
                 &data.token_id,
                 TokenManagerType::NativeInterchainToken,
-                params,
+                None,
+                data.minter,
             );
 
             return;
@@ -169,6 +212,15 @@ pub trait ExecutableModule:
 
         require!(valid, "Not approved by gateway");
 
+        let minter = if data.minter.is_empty() {
+            None
+        } else {
+            Some(
+                ManagedAddress::try_from(data.minter)
+                    .unwrap_or_else(|_| sc_panic!("Invalid DharitrI address")),
+            )
+        };
+
         self.token_manager_deploy_interchain_token(
             &data.token_id,
             minter,
@@ -182,7 +234,8 @@ pub trait ExecutableModule:
         &self,
         token_id: &TokenId<Self::Api>,
         token_manager_type: TokenManagerType,
-        params: ManagedBuffer,
+        token_identifier: Option<RewaOrDcdtTokenIdentifier>,
+        operator: ManagedBuffer,
     ) -> ManagedAddress {
         let token_manager_address_mapper = self.token_manager_address(token_id);
 
@@ -196,6 +249,21 @@ pub trait ExecutableModule:
         arguments.push_arg(self.blockchain().get_sc_address());
         arguments.push_arg(token_manager_type);
         arguments.push_arg(token_id);
+
+        let operator = if operator.is_empty() {
+            None
+        } else {
+            Some(
+                ManagedAddress::try_from(operator)
+                    .unwrap_or_else(|_| sc_panic!("Invalid DharitrI address")),
+            )
+        };
+
+        let params = DeployTokenManagerParams {
+            operator,
+            token_identifier,
+        };
+
         arguments.push_arg(&params);
 
         let (address, _) = self.send_raw().deploy_from_source_contract(
@@ -218,6 +286,15 @@ pub trait ExecutableModule:
         token_manager_address_mapper.set(address.clone());
 
         address
+    }
+
+    fn get_message_type(&self, payload: &ManagedBuffer) -> u64 {
+        ParamType::Uint256
+            .abi_decode(payload, 0)
+            .token
+            .into_biguint()
+            .to_u64()
+            .unwrap()
     }
 
     #[view(tokenManagerImplementation)]

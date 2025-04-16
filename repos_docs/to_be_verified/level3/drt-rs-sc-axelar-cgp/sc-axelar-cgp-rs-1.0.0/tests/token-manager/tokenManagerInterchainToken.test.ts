@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, test } from 'vitest';
-import { assertAccount, e, SWallet, SWorld } from 'xsuite';
+import { assertAccount, e, LSWallet, LSWorld } from 'xsuite';
 import { TOKEN_ID, TOKEN_ID2 } from '../helpers';
 import {
   deployTokenManagerInterchainToken,
@@ -8,14 +8,14 @@ import {
   tokenManager,
 } from '../itsHelpers';
 
-let world: SWorld;
-let deployer: SWallet;
-let user: SWallet;
-let otherUser: SWallet;
+let world: LSWorld;
+let deployer: LSWallet;
+let user: LSWallet;
+let otherUser: LSWallet;
 
 beforeEach(async () => {
-  world = await SWorld.start();
-  world.setCurrentBlockInfo({
+  world = await LSWorld.start();
+  await world.setCurrentBlockInfo({
     nonce: 0,
     epoch: 0,
   });
@@ -53,24 +53,19 @@ describe('Give token mint burn', () => {
       callee: tokenManager,
       funcName: 'giveToken',
       gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(1_000),
-      ],
+      funcArgs: [otherUser, e.U(1_000)],
     });
 
     // Tokens were minted and sent from contract to otherUser
-    const kvs = await tokenManager.getAccountWithKvs();
+    const kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: baseKvs,
     });
 
-    const otherUserKvs = await otherUser.getAccountWithKvs();
+    const otherUserKvs = await otherUser.getAccount();
     assertAccount(otherUserKvs, {
-      kvs: [
-        e.kvs.Dcdts([{ id: TOKEN_ID, amount: 1_000 }]),
-      ],
+      kvs: [e.kvs.Dcdts([{ id: TOKEN_ID, amount: 1_000 }])],
     });
   });
 
@@ -82,23 +77,18 @@ describe('Give token mint burn', () => {
       callee: tokenManager,
       funcName: 'setFlowLimit',
       gasLimit: 5_000_000,
-      funcArgs: [
-        e.U(500),
-      ],
+      funcArgs: [e.U(500)],
     });
 
     await user.callContract({
       callee: tokenManager,
       funcName: 'giveToken',
       gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(500),
-      ],
+      funcArgs: [otherUser, e.U(500)],
     });
 
     // Tokens were minted and sent from contract to otherUser
-    let kvs = await tokenManager.getAccountWithKvs();
+    let kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
@@ -109,26 +99,23 @@ describe('Give token mint burn', () => {
       ],
     });
 
-    let otherUserKvs = await otherUser.getAccountWithKvs();
+    let otherUserKvs = await otherUser.getAccount();
     assertAccount(otherUserKvs, {
-      kvs: [
-        e.kvs.Dcdts([{ id: TOKEN_ID, amount: 500 }]),
-      ],
+      kvs: [e.kvs.Dcdts([{ id: TOKEN_ID, amount: 500 }])],
     });
 
     await world.setCurrentBlockInfo({
       timestamp: 6 * 3600 - 1,
     });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'giveToken',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(500),
-      ],
-    }).assertFail({ code: 4, message: 'Flow limit exceeded' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'giveToken',
+        gasLimit: 20_000_000,
+        funcArgs: [otherUser, e.U(500)],
+      })
+      .assertFail({ code: 4, message: 'Flow limit exceeded' });
 
     await world.setCurrentBlockInfo({
       timestamp: 6 * 3600,
@@ -138,13 +125,10 @@ describe('Give token mint burn', () => {
       callee: tokenManager,
       funcName: 'giveToken',
       gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(500),
-      ],
+      funcArgs: [otherUser, e.U(500)],
     });
 
-    kvs = await tokenManager.getAccountWithKvs();
+    kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
@@ -156,57 +140,50 @@ describe('Give token mint burn', () => {
       ],
     });
 
-    otherUserKvs = await otherUser.getAccountWithKvs();
+    otherUserKvs = await otherUser.getAccount();
     assertAccount(otherUserKvs, {
-      kvs: [
-        e.kvs.Dcdts([{ id: TOKEN_ID, amount: 1_000 }]),
-      ],
+      kvs: [e.kvs.Dcdts([{ id: TOKEN_ID, amount: 1_000 }])],
     });
   });
 
   test('Errors', async () => {
     await deployTokenManagerMintBurn(deployer, deployer, user, TOKEN_ID, false);
 
-    await otherUser.callContract({
-      callee: tokenManager,
-      funcName: 'giveToken',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(1_000),
-      ],
-    }).assertFail({ code: 4, message: 'Not service' });
+    await otherUser
+      .callContract({
+        callee: tokenManager,
+        funcName: 'giveToken',
+        gasLimit: 20_000_000,
+        funcArgs: [otherUser, e.U(1_000)],
+      })
+      .assertFail({ code: 4, message: 'Not service' });
 
     // Test flow limit exceeded
     await deployer.callContract({
       callee: tokenManager,
       funcName: 'setFlowLimit',
       gasLimit: 5_000_000,
-      funcArgs: [
-        e.U(999),
-      ],
+      funcArgs: [e.U(999)],
     });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'giveToken',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(1_000),
-      ],
-    }).assertFail({ code: 4, message: 'Flow limit exceeded' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'giveToken',
+        gasLimit: 20_000_000,
+        funcArgs: [otherUser, e.U(1_000)],
+      })
+      .assertFail({ code: 4, message: 'Flow limit exceeded' });
 
     // Contract can not mint tokens
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'giveToken',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(999),
-      ],
-    }).assertFail({ code: 10, message: 'action is not allowed' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'giveToken',
+        gasLimit: 20_000_000,
+        funcArgs: [otherUser, e.U(999)],
+      })
+      .assertFail({ code: 10, message: 'action is not allowed' });
   });
 });
 
@@ -223,13 +200,13 @@ describe('Take token mint burn', () => {
     });
 
     // Tokens were burned by contract
-    const kvs = await tokenManager.getAccountWithKvs();
+    const kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: baseKvs,
     });
 
-    const userKvs = await user.getAccountWithKvs();
+    const userKvs = await user.getAccount();
     assertAccount(userKvs, {
       balance: 10_000_000_000n,
       kvs: [
@@ -255,9 +232,7 @@ describe('Take token mint burn', () => {
       callee: tokenManager,
       funcName: 'setFlowLimit',
       gasLimit: 5_000_000,
-      funcArgs: [
-        e.U(500),
-      ],
+      funcArgs: [e.U(500)],
     });
 
     await user.callContract({
@@ -269,7 +244,7 @@ describe('Take token mint burn', () => {
     });
 
     // Tokens were burned by contract
-    let kvs = await tokenManager.getAccountWithKvs();
+    let kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
@@ -284,13 +259,15 @@ describe('Take token mint burn', () => {
       timestamp: 6 * 3600 - 1,
     });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'takeToken',
-      gasLimit: 20_000_000,
-      funcArgs: [],
-      dcdts: [{ id: TOKEN_ID, amount: 500 }],
-    }).assertFail({ code: 4, message: 'Flow limit exceeded' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'takeToken',
+        gasLimit: 20_000_000,
+        funcArgs: [],
+        dcdts: [{ id: TOKEN_ID, amount: 500 }],
+      })
+      .assertFail({ code: 4, message: 'Flow limit exceeded' });
 
     await world.setCurrentBlockInfo({
       timestamp: 6 * 3600,
@@ -304,7 +281,7 @@ describe('Take token mint burn', () => {
       dcdts: [{ id: TOKEN_ID, amount: 500 }],
     });
 
-    kvs = await tokenManager.getAccountWithKvs();
+    kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
@@ -316,7 +293,7 @@ describe('Take token mint burn', () => {
       ],
     });
 
-    const userKvs = await user.getAccountWithKvs();
+    const userKvs = await user.getAccount();
     assertAccount(userKvs, {
       balance: 10_000_000_000n,
       kvs: [
@@ -337,48 +314,54 @@ describe('Take token mint burn', () => {
   test('Take token errors', async () => {
     await deployTokenManagerMintBurn(deployer, deployer, user, TOKEN_ID, false);
 
-    await deployer.callContract({
-      callee: tokenManager,
-      funcName: 'takeToken',
-      gasLimit: 20_000_000,
-      funcArgs: [],
-      value: 1_000,
-    }).assertFail({ code: 4, message: 'Not service' });
+    await deployer
+      .callContract({
+        callee: tokenManager,
+        funcName: 'takeToken',
+        gasLimit: 20_000_000,
+        funcArgs: [],
+        value: 1_000,
+      })
+      .assertFail({ code: 4, message: 'Not service' });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'takeToken',
-      gasLimit: 20_000_000,
-      funcArgs: [],
-      value: 1_000,
-    }).assertFail({ code: 4, message: 'Wrong token sent' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'takeToken',
+        gasLimit: 20_000_000,
+        funcArgs: [],
+        value: 1_000,
+      })
+      .assertFail({ code: 4, message: 'Wrong token sent' });
 
     // Test flow limit exceeded
     await deployer.callContract({
       callee: tokenManager,
       funcName: 'setFlowLimit',
       gasLimit: 5_000_000,
-      funcArgs: [
-        e.U(999),
-      ],
+      funcArgs: [e.U(999)],
     });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'takeToken',
-      gasLimit: 20_000_000,
-      funcArgs: [],
-      dcdts: [{ id: TOKEN_ID, amount: 1_000 }],
-    }).assertFail({ code: 4, message: 'Flow limit exceeded' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'takeToken',
+        gasLimit: 20_000_000,
+        funcArgs: [],
+        dcdts: [{ id: TOKEN_ID, amount: 1_000 }],
+      })
+      .assertFail({ code: 4, message: 'Flow limit exceeded' });
 
     // Contract can not burn tokens
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'takeToken',
-      gasLimit: 20_000_000,
-      funcArgs: [],
-      dcdts: [{ id: TOKEN_ID, amount: 999 }],
-    }).assertFail({ code: 10, message: 'action is not allowed' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'takeToken',
+        gasLimit: 20_000_000,
+        funcArgs: [],
+        dcdts: [{ id: TOKEN_ID, amount: 999 }],
+      })
+      .assertFail({ code: 10, message: 'action is not allowed' });
   });
 });
 
@@ -395,27 +378,21 @@ describe('Deploy interchain token', () => {
       funcName: 'deployInterchainToken',
       gasLimit: 200_000_000,
       value: BigInt('50000000000000000'),
-      funcArgs: [
-        e.Option(user),
-        e.Str('Token Name'),
-        e.Str('TOKEN-SYMBOL'),
-        e.U8(18),
-      ],
+      funcArgs: [e.Option(user), e.Str('Token Name'), e.Str('TOKEN-SYMBOL'), e.U8(18)],
     });
 
-    const kvs = await tokenManager.getAccountWithKvs();
+    const kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       hasKvs: [
         ...baseKvs,
 
-        e.kvs.Mapper('account_roles', user).Value(e.U32(0b00000111)), // minter role was added to user
+        e.kvs.Mapper('account_roles', user).Value(e.U32(0b00000111)), // minter role was added to user (ITS)
 
-        // DCDT token deployment was tested on Devnet and it works fine
-        e.kvs.Mapper('CB_CLOSURE................................').Value(e.Tuple(
-          e.Str('deploy_token_callback'),
-          e.TopBuffer('00000000'),
-        )),
+        // Async call tested in itsCrossChainCalls.test.ts file
+        e.kvs
+          .Mapper('CB_CLOSURE................................')
+          .Value(e.Tuple(e.Str('deploy_token_callback'), e.TopBuffer('00000000'))),
       ],
     });
   });
@@ -424,128 +401,102 @@ describe('Deploy interchain token', () => {
     const baseKvs = await deployTokenManagerInterchainToken(deployer, deployer, user);
 
     // Not sent enough REWA funds for DCDT issue
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'deployInterchainToken',
-      gasLimit: 200_000_000,
-      value: BigInt('1'),
-      funcArgs: [
-        e.Option(user),
-        e.Str('Token Name'),
-        e.Str('TOKEN-SYMBOL'),
-        e.U8(18),
-      ],
-    }).assertFail({ code: 7, message: 'failed transfer (insufficient funds)' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'deployInterchainToken',
+        gasLimit: 200_000_000,
+        value: BigInt('1'),
+        funcArgs: [e.Option(user), e.Str('Token Name'), e.Str('TOKEN-SYMBOL'), e.U8(18)],
+      })
+      .assertFail({ code: 7, message: 'failed transfer (insufficient funds)' });
 
-    await deployer.callContract({
-      callee: tokenManager,
-      funcName: 'deployInterchainToken',
-      gasLimit: 200_000_000,
-      funcArgs: [
-        e.Option(user),
-        e.Str('Token Name'),
-        e.Str('TOKEN-SYMBOL'),
-        e.U8(18),
-      ],
-    }).assertFail({ code: 4, message: 'Not service or minter' });
+    await deployer
+      .callContract({
+        callee: tokenManager,
+        funcName: 'deployInterchainToken',
+        gasLimit: 200_000_000,
+        funcArgs: [e.Option(user), e.Str('Token Name'), e.Str('TOKEN-SYMBOL'), e.U8(18)],
+      })
+      .assertFail({ code: 4, message: 'Not service or minter' });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'deployInterchainToken',
-      gasLimit: 200_000_000,
-      funcArgs: [
-        e.Option(user),
-        e.Str(''),
-        e.Str('TOKEN-SYMBOL'),
-        e.U8(18),
-      ],
-    }).assertFail({ code: 4, message: 'Token name empty' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'deployInterchainToken',
+        gasLimit: 200_000_000,
+        funcArgs: [e.Option(user), e.Str(''), e.Str('TOKEN-SYMBOL'), e.U8(18)],
+      })
+      .assertFail({ code: 4, message: 'Empty token name' });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'deployInterchainToken',
-      gasLimit: 200_000_000,
-      funcArgs: [
-        e.Option(user),
-        e.Str('Token Name'),
-        e.Str(''),
-        e.U8(18),
-      ],
-    }).assertFail({ code: 4, message: 'Token symbol empty' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'deployInterchainToken',
+        gasLimit: 200_000_000,
+        funcArgs: [e.Option(user), e.Str('Token Name'), e.Str(''), e.U8(18)],
+      })
+      .assertFail({ code: 4, message: 'Empty token symbol' });
 
     // Manually set token identifier
     await tokenManager.setAccount({
-      ...(await tokenManager.getAccountWithKvs()),
-      kvs: [
-        ...baseKvs,
-
-        e.kvs.Mapper('token_identifier').Value(e.Str(TOKEN_ID)),
-      ],
+      ...(await tokenManager.getAccount()),
+      kvs: [...baseKvs, e.kvs.Mapper('token_identifier').Value(e.Str(TOKEN_ID))],
     });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'deployInterchainToken',
-      gasLimit: 200_000_000,
-      funcArgs: [
-        e.Option(user),
-        e.Str('Token Name'),
-        e.Str('TOKEN-SYMBOL'),
-        e.U8(18),
-      ],
-    }).assertFail({ code: 4, message: 'Token address already exists' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'deployInterchainToken',
+        gasLimit: 200_000_000,
+        funcArgs: [e.Option(user), e.Str('Token Name'), e.Str('TOKEN-SYMBOL'), e.U8(18)],
+      })
+      .assertFail({ code: 4, message: 'Token address already exists' });
   });
 
   test('Error other', async () => {
     await deployTokenManagerMintBurn(deployer, deployer, user);
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'deployInterchainToken',
-      gasLimit: 200_000_000,
-      funcArgs: [
-        e.Option(user),
-        e.Str('Token Name'),
-        e.Str('TOKEN-SYMBOL'),
-        e.U8(18),
-      ],
-    }).assertFail({ code: 4, message: 'Not native interchain token manager' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'deployInterchainToken',
+        gasLimit: 200_000_000,
+        funcArgs: [e.Option(user), e.Str('Token Name'), e.Str('TOKEN-SYMBOL'), e.U8(18)],
+      })
+      .assertFail({ code: 4, message: 'Not native interchain token manager' });
   });
 });
 
 describe('Mint burn', () => {
   test('Mint', async () => {
-    const baseKvs = await deployTokenManagerInterchainToken(deployer, deployer, otherUser, TOKEN_ID, true, user);
+    const baseKvs = await deployTokenManagerInterchainToken(deployer, deployer, deployer, TOKEN_ID, true, user);
 
     // Only minter can call this
-    await otherUser.callContract({
-      callee: tokenManager,
-      funcName: 'mint',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        user,
-        e.U(1_000),
-      ],
-    }).assertFail({ code: 4, message: 'Missing any of roles' });
+    await otherUser
+      .callContract({
+        callee: tokenManager,
+        funcName: 'mint',
+        gasLimit: 20_000_000,
+        funcArgs: [user, e.U(1_000)],
+      })
+      .assertFail({ code: 4, message: 'Missing any of roles' });
 
     await user.callContract({
       callee: tokenManager,
       funcName: 'mint',
       gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(1_000),
-      ],
+      funcArgs: [otherUser, e.U(1_000)],
     });
 
-    const kvs = await tokenManager.getAccountWithKvs();
+    const kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: baseKvs,
     });
 
     // 1_000 tokens were minted and sent to otherUser
-    const userKvs = await otherUser.getAccountWithKvs();
+    const userKvs = await otherUser.getAccount();
     assertAccount(userKvs, {
       kvs: [
         e.kvs.Dcdts([
@@ -559,23 +510,27 @@ describe('Mint burn', () => {
   });
 
   test('Burn', async () => {
-    const baseKvs = await deployTokenManagerInterchainToken(deployer, deployer, otherUser, TOKEN_ID, true, user);
+    const baseKvs = await deployTokenManagerInterchainToken(deployer, deployer, deployer, TOKEN_ID, true, user);
 
     // Only minter can call this
-    await otherUser.callContract({
-      callee: tokenManager,
-      funcName: 'burn',
-      gasLimit: 20_000_000,
-      funcArgs: [],
-    }).assertFail({ code: 4, message: 'Missing any of roles' });
+    await otherUser
+      .callContract({
+        callee: tokenManager,
+        funcName: 'burn',
+        gasLimit: 20_000_000,
+        funcArgs: [],
+      })
+      .assertFail({ code: 4, message: 'Missing any of roles' });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'burn',
-      gasLimit: 20_000_000,
-      funcArgs: [],
-      value: 1_000,
-    }).assertFail({ code: 4, message: 'Wrong token sent' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'burn',
+        gasLimit: 20_000_000,
+        funcArgs: [],
+        value: 1_000,
+      })
+      .assertFail({ code: 4, message: 'Wrong token sent' });
 
     await user.callContract({
       callee: tokenManager,
@@ -585,14 +540,14 @@ describe('Mint burn', () => {
       dcdts: [{ id: TOKEN_ID, amount: 1_000 }],
     });
 
-    const kvs = await tokenManager.getAccountWithKvs();
+    const kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: baseKvs,
     });
 
     // 1_000 tokens were burned
-    const userKvs = await user.getAccountWithKvs();
+    const userKvs = await user.getAccount();
     assertAccount(userKvs, {
       balance: 10_000_000_000n,
       kvs: [
@@ -613,43 +568,45 @@ describe('Mint burn', () => {
   test('Errors', async () => {
     await deployTokenManagerInterchainToken(deployer, deployer, otherUser, null, false, user);
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'mint',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(1_000),
-      ],
-    }).assertFail({ code: 4, message: 'Token address not yet set' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'mint',
+        gasLimit: 20_000_000,
+        funcArgs: [otherUser, e.U(1_000)],
+      })
+      .assertFail({ code: 4, message: 'Token address not yet set' });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'burn',
-      gasLimit: 20_000_000,
-      funcArgs: [],
-    }).assertFail({ code: 4, message: 'Token address not yet set' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'burn',
+        gasLimit: 20_000_000,
+        funcArgs: [],
+      })
+      .assertFail({ code: 4, message: 'Token address not yet set' });
   });
 
   test('Error other', async () => {
     await deployTokenManagerMintBurn(deployer, deployer, user);
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'mint',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        otherUser,
-        e.U(1_000),
-      ],
-    }).assertFail({ code: 4, message: 'Not native interchain token manager' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'mint',
+        gasLimit: 20_000_000,
+        funcArgs: [otherUser, e.U(1_000)],
+      })
+      .assertFail({ code: 4, message: 'Not native interchain token manager' });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'burn',
-      gasLimit: 20_000_000,
-      funcArgs: [],
-    }).assertFail({ code: 4, message: 'Not native interchain token manager' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'burn',
+        gasLimit: 20_000_000,
+        funcArgs: [],
+      })
+      .assertFail({ code: 4, message: 'Not native interchain token manager' });
   });
 });
 
@@ -657,25 +614,23 @@ describe('Mintership', () => {
   test('Transfer', async () => {
     const baseKvs = await deployTokenManagerInterchainToken(deployer, deployer, otherUser, null, false, user);
 
-    await deployer.callContract({
-      callee: tokenManager,
-      funcName: 'transferMintership',
-      gasLimit: 5_000_000,
-      funcArgs: [
-        deployer,
-      ],
-    }).assertFail({ code: 4, message: 'Missing any of roles' });
+    await deployer
+      .callContract({
+        callee: tokenManager,
+        funcName: 'transferMintership',
+        gasLimit: 5_000_000,
+        funcArgs: [deployer],
+      })
+      .assertFail({ code: 4, message: 'Missing any of roles' });
 
     await user.callContract({
       callee: tokenManager,
       funcName: 'transferMintership',
       gasLimit: 5_000_000,
-      funcArgs: [
-        otherUser,
-      ],
+      funcArgs: [otherUser],
     });
 
-    let kvs = await tokenManager.getAccountWithKvs();
+    let kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
@@ -691,64 +646,54 @@ describe('Mintership', () => {
       callee: tokenManager,
       funcName: 'transferMintership',
       gasLimit: 5_000_000,
-      funcArgs: [
-        otherUser,
-      ],
+      funcArgs: [otherUser],
     });
   });
 
   test('Propose', async () => {
     const baseKvs = await deployTokenManagerInterchainToken(deployer, deployer, otherUser, null, false, user);
 
-    await deployer.callContract({
-      callee: tokenManager,
-      funcName: 'proposeMintership',
-      gasLimit: 5_000_000,
-      funcArgs: [
-        otherUser,
-      ],
-    }).assertFail({ code: 4, message: 'Missing any of roles' });
+    await deployer
+      .callContract({
+        callee: tokenManager,
+        funcName: 'proposeMintership',
+        gasLimit: 5_000_000,
+        funcArgs: [otherUser],
+      })
+      .assertFail({ code: 4, message: 'Missing any of roles' });
 
     await user.callContract({
       callee: tokenManager,
       funcName: 'proposeMintership',
       gasLimit: 5_000_000,
-      funcArgs: [
-        otherUser,
-      ],
+      funcArgs: [otherUser],
     });
 
-    let kvs = await tokenManager.getAccountWithKvs();
+    let kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
-      kvs: [
-        ...baseKvs,
-
-        e.kvs.Mapper('proposed_roles', user, otherUser).Value(e.U32(0b00000001)),
-      ],
+      kvs: [...baseKvs, e.kvs.Mapper('proposed_roles', user, otherUser).Value(e.U32(0b00000001))],
     });
 
     // Proposed operator can not call this function
-    await otherUser.callContract({
-      callee: tokenManager,
-      funcName: 'proposeMintership',
-      gasLimit: 5_000_000,
-      funcArgs: [
-        otherUser,
-      ],
-    }).assertFail({ code: 4, message: 'Missing any of roles' });
+    await otherUser
+      .callContract({
+        callee: tokenManager,
+        funcName: 'proposeMintership',
+        gasLimit: 5_000_000,
+        funcArgs: [otherUser],
+      })
+      .assertFail({ code: 4, message: 'Missing any of roles' });
 
     // If called multiple times, multiple entries are added
     await user.callContract({
       callee: tokenManager,
       funcName: 'proposeMintership',
       gasLimit: 5_000_000,
-      funcArgs: [
-        deployer,
-      ],
+      funcArgs: [deployer],
     });
 
-    kvs = await tokenManager.getAccountWithKvs();
+    kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
@@ -763,22 +708,20 @@ describe('Mintership', () => {
   test('Accept', async () => {
     const baseKvs = await deployTokenManagerInterchainToken(deployer, deployer, otherUser, null, false, user);
 
-    await deployer.callContract({
-      callee: tokenManager,
-      funcName: 'acceptMintership',
-      gasLimit: 5_000_000,
-      funcArgs: [
-        user,
-      ],
-    }).assertFail({ code: 4, message: 'Invalid proposed roles' });
+    await deployer
+      .callContract({
+        callee: tokenManager,
+        funcName: 'acceptMintership',
+        gasLimit: 5_000_000,
+        funcArgs: [user],
+      })
+      .assertFail({ code: 4, message: 'Invalid proposed roles' });
 
     await user.callContract({
       callee: tokenManager,
       funcName: 'proposeMintership',
       gasLimit: 5_000_000,
-      funcArgs: [
-        otherUser,
-      ],
+      funcArgs: [otherUser],
     });
 
     // Propose other
@@ -786,30 +729,26 @@ describe('Mintership', () => {
       callee: tokenManager,
       funcName: 'proposeMintership',
       gasLimit: 5_000_000,
-      funcArgs: [
-        deployer,
-      ],
+      funcArgs: [deployer],
     });
 
-    await user.callContract({
-      callee: tokenManager,
-      funcName: 'acceptMintership',
-      gasLimit: 5_000_000,
-      funcArgs: [
-        user,
-      ],
-    }).assertFail({ code: 4, message: 'Invalid proposed roles' });
+    await user
+      .callContract({
+        callee: tokenManager,
+        funcName: 'acceptMintership',
+        gasLimit: 5_000_000,
+        funcArgs: [user],
+      })
+      .assertFail({ code: 4, message: 'Invalid proposed roles' });
 
     await otherUser.callContract({
       callee: tokenManager,
       funcName: 'acceptMintership',
       gasLimit: 5_000_000,
-      funcArgs: [
-        user,
-      ],
+      funcArgs: [user],
     });
 
-    let kvs = await tokenManager.getAccountWithKvs();
+    let kvs = await tokenManager.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
@@ -823,13 +762,13 @@ describe('Mintership', () => {
     });
 
     // deployer can no longer accept because user doesn't have minter role anymore
-    await deployer.callContract({
-      callee: tokenManager,
-      funcName: 'acceptMintership',
-      gasLimit: 5_000_000,
-      funcArgs: [
-        user,
-      ],
-    }).assertFail({ code: 4, message: 'Missing all roles' });
+    await deployer
+      .callContract({
+        callee: tokenManager,
+        funcName: 'acceptMintership',
+        gasLimit: 5_000_000,
+        funcArgs: [user],
+      })
+      .assertFail({ code: 4, message: 'Missing all roles' });
   });
 });

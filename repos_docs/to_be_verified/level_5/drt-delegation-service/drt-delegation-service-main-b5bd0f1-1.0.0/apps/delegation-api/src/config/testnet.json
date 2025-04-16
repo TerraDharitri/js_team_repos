@@ -1,0 +1,10 @@
+{
+  "numbat": {
+    "elastic": "https://testnet-index.numbat.com",
+    "numbatApi": "https://testnet-api.numbat.com",
+    "gateway": "https://testnet-gateway.numbat.com",
+    "explorer": "https://testnet-explorer.numbat.com",
+    "chainID": "T",
+    "transactionProcessorMaxLookBehind": 10
+  }
+}

@@ -31,7 +31,6 @@ It is based on the Axelar ITS Solidity implementation available at the time of w
 
 It consists of the following contracts:
 - [Interchain Token Service](/interchain-token-service) - main contract which handles transferring of tokens, registering & deploying of token managers
-- [Interchain Token Factory](/interchain-token-factory) - a wrapper over the Interchain Token Service which allows easier deployment of interchain tokens
 - [Token Manager](/token-manager) - Token Manager implementation which either locks/unlocks tokens from the contract or mints/burns them directly
 
 There is also a module used by the Token Manager & Interchain Token Service contracts:
@@ -49,13 +48,9 @@ The Axelar Amplifier require multiple CosmWASM contracts to be deployed on Axela
 - **Gateway contract**
 - **Multisig Prover contract**
 
-## Axelar Devnet
-
-- source chain - `dharitri`
-- **Voting Verifier contract** - `axelar1sejw0v7gmw3fv56wqr2gy00v3t23l0hwa4p084ft66e8leap9cqq9qlw4t`
-- **Gateway contract** - `axelar1gzlxntvtkatgnf3shfcgc8alqqljjtmx75vezqrt97cpw5mpeasqlc0j84`
-- **Multisig Prover contract** - `axelar1x3wz8zzretn0dp5qxf0p8qynkpczv6hc2x0r8v2guray3t3573hqflslxd`
-
 ### Testing
 
-**Ethereum Sepolia HelloWorld contract:** - `0x8b77c570ba9edf17d2d24a99602f645adaeb3ff8` ([code](https://github.com/axelarnetwork/axelar-examples/blob/main/examples/dharitri/call-contract/contracts/HelloWorld.sol))
+**Avalanche Fuji HelloWorld contract:** - `0xC993dBcdC94E2115C7C1526D2Dec78B384Bb826D` ([code](https://github.com/axelarnetwork/axelar-examples/blob/main/examples/dharitri/call-contract/contracts/HelloWorld.sol))
+
+`npm run interact:devnet helloWorldSetRemoteValue avalanche-fuji 0xC993dBcdC94E2115C7C1526D2Dec78B384Bb826D "Hello world!"`
+`npm run interact:devnet helloWorldReceivedValue`

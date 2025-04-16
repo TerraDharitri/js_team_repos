@@ -1,0 +1,8 @@
+services:
+  artifacts-builder:
+    build:
+      context: ..
+      dockerfile: ./docker/build.Dockerfile
+    volumes:
+      - ./../artifacts:/dharitri/artifacts_volume
+    entrypoint: /bin/sh -c "cp -r /dharitri/artifacts/* /dharitri/artifacts_volume"

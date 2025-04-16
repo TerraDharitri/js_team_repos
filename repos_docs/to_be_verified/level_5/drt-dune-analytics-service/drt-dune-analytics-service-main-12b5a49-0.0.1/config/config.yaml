@@ -1,0 +1,39 @@
+apps:
+  eventsProcessor:
+    port: 3000
+    privatePort: 4000
+    useCachingInterceptor: true
+  duneSimulator:
+    port: 3001
+    privatePort: 4001
+    useCachingInterceptor: true
+libs:
+  common:
+    network: ${NETWORK}
+    urls:
+      api: ${API_URL}
+      dataApiCex: ${DATA_API_CEX_URL}
+      dataApiXexchange: ${DATA_API_XEXCHANGE_URL}
+      dataApiHatom: ${DATA_API_HATOM_URL}
+      duneApi: ${DUNE_API_URL}
+    database:
+      host: 'localhost'
+      port: 27017
+      # username: 'root'
+      # password: 'root'
+      name: 'example'
+      tlsAllowInvalidCertificates: true
+    redis:
+      host: '127.0.0.1'
+      port: 6379
+    features:
+      dune:
+        namespace: ${DUNE_NAMESPACE}
+        apiKey: ${DUNE_API_KEY}
+    nativeAuth:
+      # maxExpirySeconds:
+      acceptedOrigins:
+        - utils.dharitri.org
+    security:
+      admins: []
+    # rateLimiterSecret:

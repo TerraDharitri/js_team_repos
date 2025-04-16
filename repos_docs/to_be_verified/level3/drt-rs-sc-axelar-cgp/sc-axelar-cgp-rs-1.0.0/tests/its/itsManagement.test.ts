@@ -1,5 +1,5 @@
 import { afterEach, assert, beforeEach, describe, test } from 'vitest';
-import { assertAccount, e, Encodable, SWallet, SWorld } from 'xsuite';
+import { assertAccount, e, Encodable, LSWallet, LSWorld } from 'xsuite';
 import {
   ADDRESS_ZERO,
   CHAIN_NAME,
@@ -7,36 +7,36 @@ import {
   MESSAGE_ID,
   OTHER_CHAIN_ADDRESS,
   OTHER_CHAIN_NAME,
+  OTHER_CHAIN_TOKEN_ADDRESS,
   TOKEN_ID,
   TOKEN_ID2,
   TOKEN_MANAGER_ADDRESS,
-  TOKEN_MANAGER_ADDRESS_2,
+  TOKEN_MANAGER_ADDRESS_2, TOKEN_MANAGER_ADDRESS_3,
   TOKEN_SALT,
+  TOKEN_SALT2,
 } from '../helpers';
 import {
   baseItsKvs,
-  computeInterchainTokenId,
+  computeInterchainTokenIdRaw, computeLinkedTokenId,
   deployContracts,
-  deployInterchainTokenFactory,
   deployIts,
   gasService,
   gateway,
-  interchainTokenFactory,
   its,
   TOKEN_MANAGER_TYPE_LOCK_UNLOCK,
   tokenManager,
 } from '../itsHelpers';
 import createKeccakHash from 'keccak';
 
-let world: SWorld;
-let deployer: SWallet;
-let collector: SWallet;
-let user: SWallet;
-let otherUser: SWallet;
+let world: LSWorld;
+let deployer: LSWallet;
+let collector: LSWallet;
+let user: LSWallet;
+let otherUser: LSWallet;
 
 beforeEach(async () => {
-  world = await SWorld.start();
-  world.setCurrentBlockInfo({
+  world = await LSWorld.start();
+  await world.setCurrentBlockInfo({
     nonce: 0,
     epoch: 0,
   });
@@ -81,162 +81,129 @@ afterEach(async () => {
   await world.terminate();
 });
 
-test('Init errors', async () => {
-  await deployContracts(deployer, collector, false);
+test(
+  'Init errors',
+  async () => {
+    await deployContracts(deployer, collector, false);
 
-  for (let i = 0; i < 4; i++) {
-    const codeArgs: Encodable[] = [
-      gateway,
-      gasService,
-      tokenManager,
-      deployer,
-      e.Str(CHAIN_NAME),
+    for (let i = 0; i < 4; i++) {
+      const codeArgs: Encodable[] = [
+        gateway,
+        gasService,
+        tokenManager,
+        deployer,
+        e.Str(CHAIN_NAME),
 
-      e.U32(1),
-      e.Str(OTHER_CHAIN_NAME),
+        e.U32(1),
+        e.Str(OTHER_CHAIN_NAME),
 
-      e.U32(1),
-      e.Str(OTHER_CHAIN_ADDRESS),
-    ];
+        e.U32(1),
+        e.Str(OTHER_CHAIN_ADDRESS),
+      ];
 
-    codeArgs[i] = e.Addr(ADDRESS_ZERO);
+      codeArgs[i] = e.Addr(ADDRESS_ZERO);
 
-    await deployer.deployContract({
-      code: 'file:interchain-token-service/output/interchain-token-service.wasm',
-      codeMetadata: ['upgradeable'],
-      gasLimit: 100_000_000,
-      codeArgs,
-    }).assertFail({ code: 4, message: 'Zero address' });
-  }
+      await deployer
+        .deployContract({
+          code: 'file:interchain-token-service/output/interchain-token-service.wasm',
+          codeMetadata: ['upgradeable'],
+          gasLimit: 100_000_000,
+          codeArgs,
+        })
+        .assertFail({ code: 4, message: 'Zero address' });
+    }
 
-  await deployer.deployContract({
-    code: 'file:interchain-token-service/output/interchain-token-service.wasm',
-    codeMetadata: ['upgradeable'],
-    gasLimit: 100_000_000,
-    codeArgs: [
-      gateway,
-      gasService,
-      tokenManager,
-      deployer,
-      e.Str(''),
+    await deployer
+      .deployContract({
+        code: 'file:interchain-token-service/output/interchain-token-service.wasm',
+        codeMetadata: ['upgradeable'],
+        gasLimit: 100_000_000,
+        codeArgs: [
+          gateway,
+          gasService,
+          tokenManager,
+          deployer,
+          e.Str(''),
 
-      e.U32(1),
-      e.Str(OTHER_CHAIN_NAME),
+          e.U32(1),
+          e.Str(OTHER_CHAIN_NAME),
 
-      e.U32(1),
-      e.Str(OTHER_CHAIN_ADDRESS),
-    ],
-  }).assertFail({ code: 4, message: 'Invalid chain name' });
+          e.U32(1),
+          e.Str(OTHER_CHAIN_ADDRESS),
+        ],
+      })
+      .assertFail({ code: 4, message: 'Invalid chain name' });
 
-  await deployer.deployContract({
-    code: 'file:interchain-token-service/output/interchain-token-service.wasm',
-    codeMetadata: ['upgradeable'],
-    gasLimit: 100_000_000,
-    codeArgs: [
-      gateway,
-      gasService,
-      tokenManager,
-      deployer,
-      e.Str(CHAIN_NAME),
+    await deployer
+      .deployContract({
+        code: 'file:interchain-token-service/output/interchain-token-service.wasm',
+        codeMetadata: ['upgradeable'],
+        gasLimit: 100_000_000,
+        codeArgs: [
+          gateway,
+          gasService,
+          tokenManager,
+          deployer,
+          e.Str(CHAIN_NAME),
 
-      e.U32(2),
-      e.Str(OTHER_CHAIN_NAME),
-      e.Str(OTHER_CHAIN_NAME),
+          e.U32(2),
+          e.Str(OTHER_CHAIN_NAME),
+          e.Str(OTHER_CHAIN_NAME),
 
-      e.U32(1),
-      e.Str(OTHER_CHAIN_ADDRESS),
-    ],
-  }).assertFail({ code: 4, message: 'Length mismatch' });
+          e.U32(1),
+          e.Str(OTHER_CHAIN_ADDRESS),
+        ],
+      })
+      .assertFail({ code: 4, message: 'Length mismatch' });
 
-  await deployer.deployContract({
-    code: 'file:interchain-token-service/output/interchain-token-service.wasm',
-    codeMetadata: ['upgradeable'],
-    gasLimit: 100_000_000,
-    codeArgs: [
-      gateway,
-      gasService,
-      tokenManager,
-      deployer,
-      e.Str(CHAIN_NAME),
+    await deployer
+      .deployContract({
+        code: 'file:interchain-token-service/output/interchain-token-service.wasm',
+        codeMetadata: ['upgradeable'],
+        gasLimit: 100_000_000,
+        codeArgs: [
+          gateway,
+          gasService,
+          tokenManager,
+          deployer,
+          e.Str(CHAIN_NAME),
 
-      e.U32(1),
-      e.Str(''),
+          e.U32(1),
+          e.Str(''),
 
-      e.U32(1),
-      e.Str(OTHER_CHAIN_ADDRESS),
-    ],
-  }).assertFail({ code: 4, message: 'Zero string length' });
-});
-
-test('Set interchain token factory', async () => {
-  await deployContracts(deployer, collector, false);
-  await deployIts(deployer);
-  await deployInterchainTokenFactory(deployer, false);
-
-  await user.callContract({
-    callee: its,
-    funcName: 'setInterchainTokenFactory',
-    funcArgs: [
-      interchainTokenFactory,
-    ],
-    gasLimit: 10_000_000,
-  }).assertFail({ code: 4, message: 'Endpoint can only be called by owner' });
-
-  await deployer.callContract({
-    callee: its,
-    funcName: 'setInterchainTokenFactory',
-    funcArgs: [
-      interchainTokenFactory,
-    ],
-    gasLimit: 10_000_000,
-  });
-
-  // Calling endpoint again won't change the storage
-  await deployer.callContract({
-    callee: its,
-    funcName: 'setInterchainTokenFactory',
-    funcArgs: [
-      user,
-    ],
-    gasLimit: 10_000_000,
-  });
-
-  const kvs = await its.getAccountWithKvs();
-  assertAccount(kvs, {
-    kvs: [
-      ...baseItsKvs(deployer, interchainTokenFactory),
-    ],
-  });
-});
+          e.U32(1),
+          e.Str(OTHER_CHAIN_ADDRESS),
+        ],
+      })
+      .assertFail({ code: 4, message: 'Zero string length' });
+  },
+  { timeout: 30_000 }
+);
 
 describe('Operatorship', () => {
   test('Transfer', async () => {
     await deployContracts(deployer, collector);
 
-    await user.callContract({
-      callee: its,
-      funcName: 'transferOperatorship',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        user,
-      ],
-    }).assertFail({ code: 4, message: 'Missing any of roles' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'transferOperatorship',
+        gasLimit: 10_000_000,
+        funcArgs: [user],
+      })
+      .assertFail({ code: 4, message: 'Missing any of roles' });
 
     await deployer.callContract({
       callee: its,
       funcName: 'transferOperatorship',
       gasLimit: 10_000_000,
-      funcArgs: [
-        user,
-      ],
+      funcArgs: [user],
     });
 
-    let kvs = await its.getAccountWithKvs();
+    let kvs = await its.getAccount();
     assertAccount(kvs, {
       balance: 0n,
-      kvs: [
-        ...baseItsKvs(user, interchainTokenFactory),
-      ],
+      kvs: [...baseItsKvs(user)],
     });
 
     // Check that operator was changed
@@ -244,68 +211,62 @@ describe('Operatorship', () => {
       callee: its,
       funcName: 'transferOperatorship',
       gasLimit: 10_000_000,
-      funcArgs: [
-        user,
-      ],
+      funcArgs: [user],
     });
   });
 
   test('Propose', async () => {
     await deployContracts(deployer, collector);
 
-    await user.callContract({
-      callee: its,
-      funcName: 'proposeOperatorship',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        user,
-      ],
-    }).assertFail({ code: 4, message: 'Missing any of roles' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'proposeOperatorship',
+        gasLimit: 10_000_000,
+        funcArgs: [user],
+      })
+      .assertFail({ code: 4, message: 'Missing any of roles' });
 
     await deployer.callContract({
       callee: its,
       funcName: 'proposeOperatorship',
       gasLimit: 10_000_000,
-      funcArgs: [
-        user,
-      ],
+      funcArgs: [user],
     });
 
-    let kvs = await its.getAccountWithKvs();
+    let kvs = await its.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
-        ...baseItsKvs(deployer, interchainTokenFactory),
+        ...baseItsKvs(deployer),
 
         e.kvs.Mapper('proposed_roles', deployer, user).Value(e.U32(0b00000010)),
       ],
     });
 
     // Proposed operator can not call this function
-    await user.callContract({
-      callee: its,
-      funcName: 'proposeOperatorship',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        user,
-      ],
-    }).assertFail({ code: 4, message: 'Missing any of roles' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'proposeOperatorship',
+        gasLimit: 10_000_000,
+        funcArgs: [user],
+      })
+      .assertFail({ code: 4, message: 'Missing any of roles' });
 
     // If called multiple times, multiple entries are added
     await deployer.callContract({
       callee: its,
       funcName: 'proposeOperatorship',
       gasLimit: 10_000_000,
-      funcArgs: [
-        otherUser,
-      ],
+      funcArgs: [otherUser],
     });
 
-    kvs = await its.getAccountWithKvs();
+    kvs = await its.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
-        ...baseItsKvs(deployer, interchainTokenFactory),
+        ...baseItsKvs(deployer),
 
         e.kvs.Mapper('proposed_roles', deployer, user).Value(e.U32(0b00000010)),
         e.kvs.Mapper('proposed_roles', deployer, otherUser).Value(e.U32(0b00000010)),
@@ -316,22 +277,20 @@ describe('Operatorship', () => {
   test('Accept', async () => {
     await deployContracts(deployer, collector);
 
-    await user.callContract({
-      callee: its,
-      funcName: 'acceptOperatorship',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        deployer,
-      ],
-    }).assertFail({ code: 4, message: 'Invalid proposed roles' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'acceptOperatorship',
+        gasLimit: 10_000_000,
+        funcArgs: [deployer],
+      })
+      .assertFail({ code: 4, message: 'Invalid proposed roles' });
 
     await deployer.callContract({
       callee: its,
       funcName: 'proposeOperatorship',
       gasLimit: 10_000_000,
-      funcArgs: [
-        user,
-      ],
+      funcArgs: [user],
     });
 
     // Propose other
@@ -339,48 +298,44 @@ describe('Operatorship', () => {
       callee: its,
       funcName: 'proposeOperatorship',
       gasLimit: 10_000_000,
-      funcArgs: [
-        otherUser,
-      ],
+      funcArgs: [otherUser],
     });
 
-    await deployer.callContract({
-      callee: its,
-      funcName: 'acceptOperatorship',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        user,
-      ],
-    }).assertFail({ code: 4, message: 'Invalid proposed roles' });
+    await deployer
+      .callContract({
+        callee: its,
+        funcName: 'acceptOperatorship',
+        gasLimit: 10_000_000,
+        funcArgs: [user],
+      })
+      .assertFail({ code: 4, message: 'Invalid proposed roles' });
 
     await user.callContract({
       callee: its,
       funcName: 'acceptOperatorship',
       gasLimit: 10_000_000,
-      funcArgs: [
-        deployer,
-      ],
+      funcArgs: [deployer],
     });
 
-    let kvs = await its.getAccountWithKvs();
+    let kvs = await its.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
-        ...baseItsKvs(user, interchainTokenFactory),
+        ...baseItsKvs(user),
 
         e.kvs.Mapper('proposed_roles', deployer, otherUser).Value(e.U32(0b00000010)),
       ],
     });
 
     // otherUser can no longer accept because user doesn't have operator role anymore
-    await otherUser.callContract({
-      callee: its,
-      funcName: 'acceptOperatorship',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        deployer,
-      ],
-    }).assertFail({ code: 4, message: 'Missing all roles' });
+    await otherUser
+      .callContract({
+        callee: its,
+        funcName: 'acceptOperatorship',
+        gasLimit: 10_000_000,
+        funcArgs: [deployer],
+      })
+      .assertFail({ code: 4, message: 'Missing all roles' });
   });
 });
 
@@ -388,12 +343,14 @@ describe('Pause unpause', () => {
   test('Pause', async () => {
     await deployContracts(deployer, collector);
 
-    await user.callContract({
-      callee: its,
-      funcName: 'pause',
-      gasLimit: 10_000_000,
-      funcArgs: [],
-    }).assertFail({ code: 4, message: 'Endpoint can only be called by owner' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'pause',
+        gasLimit: 10_000_000,
+        funcArgs: [],
+      })
+      .assertFail({ code: 4, message: 'Endpoint can only be called by owner' });
 
     await deployer.callContract({
       callee: its,
@@ -402,126 +359,110 @@ describe('Pause unpause', () => {
       funcArgs: [],
     });
 
-    const kvs = await its.getAccountWithKvs();
+    const kvs = await its.getAccount();
     assertAccount(kvs, {
       balance: 0n,
-      kvs: [
-        ...baseItsKvs(deployer, interchainTokenFactory),
-
-        e.kvs.Mapper('pause_module:paused').Value(e.Bool(true)),
-      ],
+      kvs: [...baseItsKvs(deployer), e.kvs.Mapper('pause_module:paused').Value(e.Bool(true))],
     });
 
-    await user.callContract({
-      callee: its,
-      funcName: 'deployTokenManager',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        e.TopBuffer(TOKEN_SALT),
-        e.Str(''), // destination chain empty
-        e.U8(2), // Lock/unlock
-        e.Buffer(e.Tuple(
-          e.Option(user),
-          e.Option(e.Str(TOKEN_ID2)),
-        ).toTopU8A()),
-      ],
-    }).assertFail({ code: 4, message: 'Contract is paused' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'registerCustomToken',
+        gasLimit: 20_000_000,
+        funcArgs: [e.TopBuffer(TOKEN_SALT), e.Str(TOKEN_ID2), e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK), e.Addr(ADDRESS_ZERO)],
+      })
+      .assertFail({ code: 4, message: 'Contract is paused' });
 
-    await user.callContract({
-      callee: its,
-      funcName: 'deployInterchainToken',
-      gasLimit: 100_000_000,
-      value: 0,
-      funcArgs: [
-        e.TopBuffer(TOKEN_SALT),
-        e.Str(''),
-        e.Str('Token Name'),
-        e.Str('TOKEN-SYMBOL'),
-        e.U8(18),
-        e.TopBuffer(user.toTopU8A()), // minter
-      ],
-    }).assertFail({ code: 4, message: 'Contract is paused' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'linkToken',
+        gasLimit: 20_000_000,
+        funcArgs: [
+          e.TopBuffer(TOKEN_SALT),
+          e.Str(OTHER_CHAIN_NAME),
+          e.Str(OTHER_CHAIN_TOKEN_ADDRESS),
+          e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK),
+          e.Buffer(''),
+        ],
+      })
+      .assertFail({ code: 4, message: 'Contract is paused' });
 
-    await world.query({
-      callee: its,
-      funcName: 'contractCallValue',
-      funcArgs: [
-        e.Str(OTHER_CHAIN_NAME),
-        e.Str(OTHER_CHAIN_ADDRESS),
-        e.Buffer(''),
-      ],
-    }).assertFail({ code: 4, message: 'Contract is paused' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'deployInterchainToken',
+        gasLimit: 100_000_000,
+        value: 0,
+        funcArgs: [
+          e.TopBuffer(TOKEN_SALT),
+          e.Str('Token Name'),
+          e.Str('TOKEN-SYMBOL'),
+          e.U8(18),
+          e.U(0),
+          e.TopBuffer(user.toTopU8A()), // minter
+        ],
+      })
+      .assertFail({ code: 4, message: 'Contract is paused' });
 
-    await user.callContract({
-      callee: its,
-      funcName: 'expressExecute',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        e.Str(OTHER_CHAIN_NAME),
-        e.Str(MESSAGE_ID),
-        e.Str(OTHER_CHAIN_ADDRESS),
-        e.Buffer(''),
-      ],
-    }).assertFail({ code: 4, message: 'Contract is paused' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'interchainTransfer',
+        gasLimit: 20_000_000,
+        funcArgs: [
+          e.TopBuffer(INTERCHAIN_TOKEN_ID),
+          e.Str(OTHER_CHAIN_NAME),
+          e.Str(OTHER_CHAIN_ADDRESS),
+          e.Buffer(''),
+          e.U(0),
+        ],
+      })
+      .assertFail({ code: 4, message: 'Contract is paused' });
 
-    await user.callContract({
-      callee: its,
-      funcName: 'interchainTransfer',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        e.TopBuffer(INTERCHAIN_TOKEN_ID),
-        e.Str(OTHER_CHAIN_NAME),
-        e.Str(OTHER_CHAIN_ADDRESS),
-        e.Buffer(''),
-        e.U(0),
-      ],
-    }).assertFail({ code: 4, message: 'Contract is paused' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'callContractWithInterchainToken',
+        gasLimit: 20_000_000,
+        funcArgs: [
+          e.TopBuffer(INTERCHAIN_TOKEN_ID),
+          e.Str(OTHER_CHAIN_NAME),
+          e.Str(OTHER_CHAIN_ADDRESS),
+          e.Buffer(''),
+          e.U(0),
+        ],
+      })
+      .assertFail({ code: 4, message: 'Contract is paused' });
 
-    await user.callContract({
-      callee: its,
-      funcName: 'callContractWithInterchainToken',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        e.TopBuffer(INTERCHAIN_TOKEN_ID),
-        e.Str(OTHER_CHAIN_NAME),
-        e.Str(OTHER_CHAIN_ADDRESS),
-        e.Buffer(''),
-        e.U(0),
-      ],
-    }).assertFail({ code: 4, message: 'Contract is paused' });
-
-    await user.callContract({
-      callee: its,
-      funcName: 'execute',
-      gasLimit: 50_000_000,
-      funcArgs: [
-        e.Str(OTHER_CHAIN_NAME),
-        e.Str(MESSAGE_ID),
-        e.Str(OTHER_CHAIN_ADDRESS),
-        e.Buffer(''),
-      ],
-    }).assertFail({ code: 4, message: 'Contract is paused' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'execute',
+        gasLimit: 50_000_000,
+        funcArgs: [e.Str(OTHER_CHAIN_NAME), e.Str(MESSAGE_ID), e.Str(OTHER_CHAIN_ADDRESS), e.Buffer('')],
+      })
+      .assertFail({ code: 4, message: 'Contract is paused' });
   });
 
   test('Unpause', async () => {
     await deployContracts(deployer, collector);
 
-    // mock paused
+    // Mock paused
     await its.setAccount({
-      ...await its.getAccountWithKvs(),
-      kvs: [
-        ...baseItsKvs(deployer, interchainTokenFactory),
-
-        e.kvs.Mapper('pause_module:paused').Value(e.Bool(true)),
-      ],
+      ...(await its.getAccount()),
+      kvs: [...baseItsKvs(deployer), e.kvs.Mapper('pause_module:paused').Value(e.Bool(true))],
     });
 
-    await user.callContract({
-      callee: its,
-      funcName: 'unpause',
-      gasLimit: 10_000_000,
-      funcArgs: [],
-    }).assertFail({ code: 4, message: 'Endpoint can only be called by owner' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'unpause',
+        gasLimit: 10_000_000,
+        funcArgs: [],
+      })
+      .assertFail({ code: 4, message: 'Endpoint can only be called by owner' });
 
     await deployer.callContract({
       callee: its,
@@ -530,30 +471,18 @@ describe('Pause unpause', () => {
       funcArgs: [],
     });
 
-    const kvs = await its.getAccountWithKvs();
+    const kvs = await its.getAccount();
     assertAccount(kvs, {
       balance: 0n,
-      kvs: [
-        ...baseItsKvs(deployer, interchainTokenFactory),
-
-        e.kvs.Mapper('pause_module:paused').Value(e.Bool(false)),
-      ],
+      kvs: [...baseItsKvs(deployer), e.kvs.Mapper('pause_module:paused').Value(e.Bool(false))],
     });
 
     // Call works
     await user.callContract({
       callee: its,
-      funcName: 'deployTokenManager',
+      funcName: 'registerCustomToken',
       gasLimit: 20_000_000,
-      funcArgs: [
-        e.TopBuffer(TOKEN_SALT),
-        e.Str(''), // destination chain empty
-        e.U8(2), // Lock/unlock
-        e.Buffer(e.Tuple(
-          e.Option(user),
-          e.Option(e.Str(TOKEN_ID2)),
-        ).toTopU8A()),
-      ],
+      funcArgs: [e.TopBuffer(TOKEN_SALT), e.Str(TOKEN_ID2), e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK), e.Addr(ADDRESS_ZERO)],
     });
   });
 });
@@ -565,44 +494,38 @@ describe('Address tracker', () => {
     const someChainName = 'SomeChain';
     const someChainAddress = 'SomeAddress';
 
-    await user.callContract({
-      callee: its,
-      funcName: 'setTrustedAddress',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        e.Str(someChainName),
-        e.Str(someChainAddress),
-      ],
-    }).assertFail({ code: 4, message: 'Endpoint can only be called by owner' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'setTrustedAddress',
+        gasLimit: 10_000_000,
+        funcArgs: [e.Str(someChainName), e.Str(someChainAddress)],
+      })
+      .assertFail({ code: 4, message: 'Endpoint can only be called by owner' });
+
+    await deployer
+      .callContract({
+        callee: its,
+        funcName: 'setTrustedAddress',
+        gasLimit: 10_000_000,
+        funcArgs: [e.Str(''), e.Str('')],
+      })
+      .assertFail({ code: 4, message: 'Zero string length' });
 
     await deployer.callContract({
       callee: its,
       funcName: 'setTrustedAddress',
       gasLimit: 10_000_000,
-      funcArgs: [
-        e.Str(''),
-        e.Str(''),
-      ],
-    }).assertFail({ code: 4, message: 'Zero string length' });
-
-    await deployer.callContract({
-      callee: its,
-      funcName: 'setTrustedAddress',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        e.Str(someChainName),
-        e.Str(someChainAddress),
-      ],
+      funcArgs: [e.Str(someChainName), e.Str(someChainAddress)],
     });
     const someChainAddressHash = createKeccakHash('keccak256').update(someChainAddress).digest('hex');
 
-    const kvs = await its.getAccountWithKvs();
+    const kvs = await its.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
-        ...baseItsKvs(deployer, interchainTokenFactory),
+        ...baseItsKvs(deployer),
 
-        e.kvs.Mapper('trusted_address_hash', e.Str(someChainName)).Value(e.TopBuffer(someChainAddressHash)),
         e.kvs.Mapper('trusted_address', e.Str(someChainName)).Value(e.Str(someChainAddress)),
       ],
     });
@@ -611,43 +534,40 @@ describe('Address tracker', () => {
   test('Remove trusted address', async () => {
     await deployContracts(deployer, collector);
 
-    await user.callContract({
-      callee: its,
-      funcName: 'removeTrustedAddress',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        e.Str(OTHER_CHAIN_NAME),
-      ],
-    }).assertFail({ code: 4, message: 'Endpoint can only be called by owner' });
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'removeTrustedAddress',
+        gasLimit: 10_000_000,
+        funcArgs: [e.Str(OTHER_CHAIN_NAME)],
+      })
+      .assertFail({ code: 4, message: 'Endpoint can only be called by owner' });
+
+    await deployer
+      .callContract({
+        callee: its,
+        funcName: 'removeTrustedAddress',
+        gasLimit: 10_000_000,
+        funcArgs: [e.Str('')],
+      })
+      .assertFail({ code: 4, message: 'Zero string length' });
 
     await deployer.callContract({
       callee: its,
       funcName: 'removeTrustedAddress',
       gasLimit: 10_000_000,
-      funcArgs: [
-        e.Str(''),
-      ],
-    }).assertFail({ code: 4, message: 'Zero string length' });
-
-    await deployer.callContract({
-      callee: its,
-      funcName: 'removeTrustedAddress',
-      gasLimit: 10_000_000,
-      funcArgs: [
-        e.Str(OTHER_CHAIN_NAME),
-      ],
+      funcArgs: [e.Str(OTHER_CHAIN_NAME)],
     });
 
-    const kvs = await its.getAccountWithKvs();
+    const kvs = await its.getAccount();
     assertAccount(kvs, {
       balance: 0n,
       kvs: [
-        ...baseItsKvs(deployer, interchainTokenFactory),
+        ...baseItsKvs(deployer),
 
         e.kvs.Mapper('chain_name').Value(e.Str(CHAIN_NAME)),
 
         // OTHER_CHAIN_NAME was deleted
-        e.kvs.Mapper('trusted_address_hash', e.Str(OTHER_CHAIN_NAME)).Value(e.Buffer('')),
         e.kvs.Mapper('trusted_address', e.Str(OTHER_CHAIN_NAME)).Value(e.Buffer('')),
       ],
     });
@@ -667,24 +587,10 @@ describe('Address tracker', () => {
     result = await world.query({
       callee: its,
       funcName: 'trustedAddress',
-      funcArgs: [
-        e.Str(OTHER_CHAIN_NAME),
-      ],
+      funcArgs: [e.Str(OTHER_CHAIN_NAME)],
     });
 
     assert(result.returnData[0] === e.Str(OTHER_CHAIN_ADDRESS).toTopHex());
-
-    result = await world.query({
-      callee: its,
-      funcName: 'trustedAddressHash',
-      funcArgs: [
-        e.Str(OTHER_CHAIN_NAME),
-      ],
-    });
-
-    const otherChainAddressHash = createKeccakHash('keccak256').update(OTHER_CHAIN_ADDRESS).digest('hex');
-
-    assert(result.returnData[0] === otherChainAddressHash);
   });
 });
 
@@ -692,65 +598,40 @@ describe('Set flow limits', () => {
   test('Set', async () => {
     await deployContracts(deployer, collector);
 
-    const computedTokenId = computeInterchainTokenId(user);
+    await user.callContract({
+      callee: its,
+      funcName: 'registerCustomToken',
+      gasLimit: 20_000_000,
+      funcArgs: [e.TopBuffer(TOKEN_SALT), e.Str(TOKEN_ID), e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK), e.Addr(ADDRESS_ZERO)],
+    });
 
     await user.callContract({
       callee: its,
-      funcName: 'deployTokenManager',
+      funcName: 'registerCustomToken',
       gasLimit: 20_000_000,
-      funcArgs: [
-        e.TopBuffer(TOKEN_SALT),
-        e.Str(''), // destination chain empty
-        e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK),
-        e.Buffer(e.Tuple(
-          e.Option(user),
-          e.Option(e.Str(TOKEN_ID2)),
-        ).toTopU8A()),
-      ],
+      funcArgs: [e.TopBuffer(TOKEN_SALT2), e.Str(TOKEN_ID2), e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK), e.Addr(ADDRESS_ZERO)],
     });
 
-    await otherUser.callContract({
-      callee: its,
-      funcName: 'deployTokenManager',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        e.TopBuffer(TOKEN_SALT),
-        e.Str(''), // destination chain empty
-        e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK),
-        e.Buffer(e.Tuple(
-          e.Option(otherUser),
-          e.Option(e.Str(TOKEN_ID2)),
-        ).toTopU8A()),
-      ],
-    });
-
-    const computedTokenId2 = computeInterchainTokenId(otherUser);
+    const computedTokenId = computeLinkedTokenId(user);
+    const computedTokenId2 = computeLinkedTokenId(user, TOKEN_SALT2);
 
     await deployer.callContract({
       callee: its,
       funcName: 'setFlowLimits',
       gasLimit: 20_000_000,
-      funcArgs: [
-        e.U32(2),
-        e.TopBuffer(computedTokenId),
-        e.TopBuffer(computedTokenId2),
-
-        e.U32(2),
-        e.U(99),
-        e.U(100),
-      ],
+      funcArgs: [e.U32(2), e.TopBuffer(computedTokenId), e.TopBuffer(computedTokenId2), e.U32(2), e.U(99), e.U(100)],
     });
 
     let tokenManager = await world.newContract(TOKEN_MANAGER_ADDRESS);
-    let tokenManagerKvs = await tokenManager.getAccountWithKvs();
+    let tokenManagerKvs = await tokenManager.getAccount();
     assertAccount(tokenManagerKvs, {
       balance: 0n,
       kvs: [
         e.kvs.Mapper('interchain_token_service').Value(its),
         e.kvs.Mapper('implementation_type').Value(e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK)),
         e.kvs.Mapper('interchain_token_id').Value(e.TopBuffer(computedTokenId)),
-        e.kvs.Mapper('token_identifier').Value(e.Str(TOKEN_ID2)),
-        e.kvs.Mapper('account_roles', user).Value(e.U32(0b00000110)), // flow limit & operator roles
+        e.kvs.Mapper('token_identifier').Value(e.Str(TOKEN_ID)),
+        e.kvs.Mapper('account_roles', e.Addr(ADDRESS_ZERO)).Value(e.U32(0b00000110)), // flow limit & operator roles
         e.kvs.Mapper('account_roles', its).Value(e.U32(0b00000110)),
 
         e.kvs.Mapper('flow_limit').Value(e.U(99)),
@@ -758,7 +639,7 @@ describe('Set flow limits', () => {
     });
 
     tokenManager = await world.newContract(TOKEN_MANAGER_ADDRESS_2);
-    tokenManagerKvs = await tokenManager.getAccountWithKvs();
+    tokenManagerKvs = await tokenManager.getAccount();
     assertAccount(tokenManagerKvs, {
       balance: 0n,
       kvs: [
@@ -766,7 +647,7 @@ describe('Set flow limits', () => {
         e.kvs.Mapper('implementation_type').Value(e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK)),
         e.kvs.Mapper('interchain_token_id').Value(e.TopBuffer(computedTokenId2)),
         e.kvs.Mapper('token_identifier').Value(e.Str(TOKEN_ID2)),
-        e.kvs.Mapper('account_roles', otherUser).Value(e.U32(0b00000110)), // flow limit & operator roles
+        e.kvs.Mapper('account_roles', e.Addr(ADDRESS_ZERO)).Value(e.U32(0b00000110)), // flow limit & operator roles
         e.kvs.Mapper('account_roles', its).Value(e.U32(0b00000110)),
 
         e.kvs.Mapper('flow_limit').Value(e.U(100)),
@@ -777,86 +658,64 @@ describe('Set flow limits', () => {
   test('Errors', async () => {
     await deployContracts(deployer, collector);
 
-    const computedTokenId = computeInterchainTokenId(user);
+    const computedTokenId = computeLinkedTokenId(user);
+
+    await user
+      .callContract({
+        callee: its,
+        funcName: 'setFlowLimits',
+        gasLimit: 20_000_000,
+        funcArgs: [e.U32(1), e.TopBuffer(computedTokenId), e.U32(1), e.U(99)],
+      })
+      .assertFail({ code: 4, message: 'Missing any of roles' });
+
+    await deployer
+      .callContract({
+        callee: its,
+        funcName: 'setFlowLimits',
+        gasLimit: 20_000_000,
+        funcArgs: [e.U32(1), e.TopBuffer(computedTokenId), e.U32(2), e.U(99), e.U(100)],
+      })
+      .assertFail({ code: 4, message: 'Length mismatch' });
+
+    await deployer
+      .callContract({
+        callee: its,
+        funcName: 'setFlowLimits',
+        gasLimit: 20_000_000,
+        funcArgs: [e.U32(1), e.TopBuffer(computedTokenId), e.U32(1), e.U(100)],
+      })
+      .assertFail({ code: 4, message: 'Token manager does not exist' });
 
     await user.callContract({
       callee: its,
-      funcName: 'setFlowLimits',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        e.U32(1),
-        e.TopBuffer(computedTokenId),
-
-        e.U32(1),
-        e.U(99),
-      ],
-    }).assertFail({ code: 4, message: 'Missing any of roles' });
-
-    await deployer.callContract({
-      callee: its,
-      funcName: 'setFlowLimits',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        e.U32(1),
-        e.TopBuffer(computedTokenId),
-
-        e.U32(2),
-        e.U(99),
-        e.U(100),
-      ],
-    }).assertFail({ code: 4, message: 'Length mismatch' });
-
-    await deployer.callContract({
-      callee: its,
-      funcName: 'setFlowLimits',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        e.U32(1),
-        e.TopBuffer(computedTokenId),
-
-        e.U32(1),
-        e.U(100),
-      ],
-    }).assertFail({ code: 4, message: 'Token manager does not exist' });
-
-    await user.callContract({
-      callee: its,
-      funcName: 'deployTokenManager',
+      funcName: 'registerCustomToken',
       gasLimit: 20_000_000,
       funcArgs: [
         e.TopBuffer(TOKEN_SALT),
-        e.Str(''), // destination chain empty
-        e.U8(2), // Lock/unlock
-        e.Buffer(e.Tuple(
-          e.Option(user),
-          e.Option(e.Str(TOKEN_ID2)),
-        ).toTopU8A()),
+        e.Str(TOKEN_ID),
+        e.U8(TOKEN_MANAGER_TYPE_LOCK_UNLOCK),
+        e.Buffer(user.toTopU8A()),
       ],
     });
 
     // Remove its as flow limiter for token manager
-    let tokenManager = await world.newContract(TOKEN_MANAGER_ADDRESS);
+    let tokenManager = world.newContract(TOKEN_MANAGER_ADDRESS);
     await user.callContract({
       callee: tokenManager,
       funcName: 'removeFlowLimiter',
       gasLimit: 5_000_000,
-      funcArgs: [
-        its,
-      ],
+      funcArgs: [its],
     });
 
     // ITS not flow limiter of token manager
-    await deployer.callContract({
-      callee: its,
-      funcName: 'setFlowLimits',
-      gasLimit: 20_000_000,
-      funcArgs: [
-        e.U32(1),
-        e.TopBuffer(computedTokenId),
-
-        e.U32(1),
-        e.U(100),
-      ],
-    }).assertFail({ code: 10, message: 'error signalled by smartcontract' });
+    await deployer
+      .callContract({
+        callee: its,
+        funcName: 'setFlowLimits',
+        gasLimit: 20_000_000,
+        funcArgs: [e.U32(1), e.TopBuffer(computedTokenId), e.U32(1), e.U(100)],
+      })
+      .assertFail({ code: 10, message: 'error signalled by smartcontract' });
   });
 });
