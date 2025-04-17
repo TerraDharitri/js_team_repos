@@ -1,15 +1,15 @@
-import { Address, Message, Transaction } from '@terradharitri /sdk-core';
-import { responseTypeMap } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/constants/windowProviderConstants';
+import { Address, Message, Transaction } from '@terradharitri/sdk-core';
+import { responseTypeMap } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/constants/windowProviderConstants';
 import {
   SignMessageStatusEnum,
   WindowProviderRequestEnums,
   WindowProviderResponseEnums
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/enums';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/enums';
 import {
   PostMessageParamsType,
   PostMessageReturnType,
   ReplyWithPostMessagePayloadType
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/types';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/types';
 import { getSafeDocument } from './helpers/getSafeDocument';
 import { getSafeWindow } from './helpers/getSafeWindow';
 import { getTargetOrigin } from './helpers/getTargetOrigin';

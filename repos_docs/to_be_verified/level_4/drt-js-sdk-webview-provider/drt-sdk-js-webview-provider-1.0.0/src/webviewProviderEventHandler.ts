@@ -1,6 +1,6 @@
 import { getTargetOrigin } from './helpers/getTargetOrigin';
-import { WindowProviderResponseEnums } from '@terradharitri /sdk-dapp-utils/out/enums/windowProviderEnums';
-import { ReplyWithPostMessagePayloadType } from '@terradharitri /sdk-dapp-utils/out/types/windowProviderTypes';
+import { WindowProviderResponseEnums } from '@terradharitri/sdk-dapp-utils/out/enums/windowProviderEnums';
+import { ReplyWithPostMessagePayloadType } from '@terradharitri/sdk-dapp-utils/out/types/windowProviderTypes';
 import { isMobileWebview } from './helpers/isMobileWebview';
 import { getSafeWindow } from './helpers/getSafeWindow';
 import { getSafeDocument } from './helpers/getSafeDocument';

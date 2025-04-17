@@ -1,21 +1,21 @@
-import { SignableMessage } from '@terradharitri /sdk-core/out/signableMessage';
-import { Transaction } from '@terradharitri /sdk-core/out/transaction';
+import { SignableMessage } from '@terradharitri/sdk-core/out/signableMessage';
+import { Transaction } from '@terradharitri/sdk-core/out/transaction';
 import { webviewProviderEventHandler } from './webviewProviderEventHandler';
 import {
   WindowProviderRequestEnums,
   WindowProviderResponseEnums,
   SignMessageStatusEnum
-} from '@terradharitri /sdk-dapp-utils/out/enums';
+} from '@terradharitri/sdk-dapp-utils/out/enums';
 import {
   PostMessageParamsType,
   PostMessageReturnType,
   ReplyWithPostMessagePayloadType
-} from '@terradharitri /sdk-dapp-utils/out/types';
-import { responseTypeMap } from '@terradharitri /sdk-dapp-utils/out/constants/windowProviderConstants';
+} from '@terradharitri/sdk-dapp-utils/out/types';
+import { responseTypeMap } from '@terradharitri/sdk-dapp-utils/out/constants/windowProviderConstants';
 import { getTargetOrigin } from './helpers/getTargetOrigin';
 import { getSafeWindow } from './helpers/getSafeWindow';
 import { getSafeDocument } from './helpers/getSafeDocument';
-import type { IDAppProviderBase } from '@terradharitri /sdk-dapp-utils/out/models/dappProviderBase';
+import type { IDAppProviderBase } from '@terradharitri/sdk-dapp-utils/out/models/dappProviderBase';
 
 interface IWebviewProviderOptions {
   resetStateCallback?: () => void;

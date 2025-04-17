@@ -77,7 +77,7 @@ export class AddressUtils {
   private static isAddressOfMetachain(pubKey: Buffer) {
     // prettier-ignore
     const metachainPrefix = Buffer.from([
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+      35, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 51, 48, 0, 0, 0, 0, 0,
     ]);
     const pubKeyPrefix = pubKey.slice(0, metachainPrefix.length);
 

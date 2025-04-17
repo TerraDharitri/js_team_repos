@@ -636,9 +636,9 @@
   resolved "https://registry.yarnpkg.com/@lit/react/-/react-1.0.7.tgz#2ffb7f7b6955a53b7eb53f3557e0dda91d7420ff"
   integrity sha512-cencnwwLXQKiKxjfFzSgZRngcWJzUDZi/04E0fSaF86wZgchMdvTyu+lE36DrUfvuus3bH8+xLPrhM1cTjwpzw==
 
-"@terradharitri /sdk-dapp-utils@>= 1.0.4":
+"@terradharitri/sdk-dapp-utils@>= 1.0.4":
   version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@terradharitri /sdk-dapp-utils/-/sdk-dapp-utils-1.0.6.tgz#620ad9dce56f0c7d1074ea6df4c35c5e67200bf4"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-dapp-utils/-/sdk-dapp-utils-1.0.6.tgz#620ad9dce56f0c7d1074ea6df4c35c5e67200bf4"
   integrity sha512-JvHAxGaBQOx9p8nvWs2sQrmsHFgJSHhF2tZUHkbesfElFfe1Jk0hz1ZFTJlohdWlUCO6l/X+qCXvC7QhDMVHMw==
 
 "@nodelib/fs.scandir@2.1.5":

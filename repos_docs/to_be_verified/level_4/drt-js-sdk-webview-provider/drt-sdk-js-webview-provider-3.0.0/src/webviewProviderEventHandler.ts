@@ -2,8 +2,8 @@ import { getTargetOrigin } from './helpers/getTargetOrigin';
 import { isMobileWebview } from './helpers/isMobileWebview';
 import { getSafeWindow } from './helpers/getSafeWindow';
 import { getSafeDocument } from './helpers/getSafeDocument';
-import { WindowProviderResponseEnums } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/enums/windowProviderEnums';
-import { ReplyWithPostMessagePayloadType } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/types/windowProviderTypes';
+import { WindowProviderResponseEnums } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/enums/windowProviderEnums';
+import { ReplyWithPostMessagePayloadType } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/types/windowProviderTypes';
 
 export type WebviewProviderEventDataType<
   T extends WindowProviderResponseEnums

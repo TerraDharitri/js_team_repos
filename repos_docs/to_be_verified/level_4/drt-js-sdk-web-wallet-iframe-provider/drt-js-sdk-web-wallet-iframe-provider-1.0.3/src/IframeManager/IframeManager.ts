@@ -1,11 +1,11 @@
-import { WindowProviderResponseEnums } from '@terradharitri /sdk-dapp-utils/out';
-import { responseTypeMap } from '@terradharitri /sdk-dapp-utils/out/constants/windowProviderConstants';
-import { WindowProviderRequestEnums } from '@terradharitri /sdk-dapp-utils/out/enums/windowProviderEnums';
+import { WindowProviderResponseEnums } from '@terradharitri/sdk-dapp-utils/out';
+import { responseTypeMap } from '@terradharitri/sdk-dapp-utils/out/constants/windowProviderConstants';
+import { WindowProviderRequestEnums } from '@terradharitri/sdk-dapp-utils/out/enums/windowProviderEnums';
 import {
   PostMessageParamsType,
   PostMessageReturnType
-} from '@terradharitri /sdk-dapp-utils/out/types';
-import { WindowManager } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/WindowManager';
+} from '@terradharitri/sdk-dapp-utils/out/types';
+import { WindowManager } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/WindowManager';
 import { IframeLoginTypes, iframeWindowReadyEvent, safeDocument, safeWindow } from '../constants';
 import { IframeProviderEventDataType } from '../IframeProvider';
 import { IframeProviderContentWindowModel } from './IframeProviderContentWindow.model';

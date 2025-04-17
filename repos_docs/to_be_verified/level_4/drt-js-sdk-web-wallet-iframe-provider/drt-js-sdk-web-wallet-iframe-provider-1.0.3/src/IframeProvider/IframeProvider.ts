@@ -1,19 +1,19 @@
-import type { SignableMessage } from '@terradharitri /sdk-core/out';
-import type { Transaction } from '@terradharitri /sdk-core/out/transaction';
+import type { SignableMessage } from '@terradharitri/sdk-core/out';
+import type { Transaction } from '@terradharitri/sdk-core/out/transaction';
 import {
   WindowProviderResponseEnums,
   ReplyWithPostMessagePayloadType
-} from '@terradharitri /sdk-dapp-utils/out';
+} from '@terradharitri/sdk-dapp-utils/out';
 import {
   CrossWindowProvider,
   ICrossWindowWalletAccount
   // !!! IMPORTANT !!! It is necessary to import explicitly from the file because the module exports (can export) some classes
   // that are using window API and will break the build process on the SSR environments (e.g. PopupConsent)
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/CrossWindowProvider/CrossWindowProvider';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/CrossWindowProvider/CrossWindowProvider';
 import {
   ErrCouldNotLogin,
   ErrProviderNotInitialized
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/errors';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/errors';
 import { IframeLoginTypes } from '../constants';
 import { IframeManager } from '../IframeManager/IframeManager';
 

@@ -1,11 +1,11 @@
-import { responseTypeMap } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/constants/windowProviderConstants';
-import { WindowProviderResponseEnums } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/enums';
-import { WindowProviderRequestEnums } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/enums/windowProviderEnums';
+import { responseTypeMap } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/constants/windowProviderConstants';
+import { WindowProviderResponseEnums } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/enums';
+import { WindowProviderRequestEnums } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/enums/windowProviderEnums';
 import {
   PostMessageParamsType,
   PostMessageReturnType
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/types';
-import { WindowManager } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/WindowManager';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/types';
+import { WindowManager } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/WindowManager';
 import {
   IframeLoginTypes,
   iframeWindowReadyEvent,

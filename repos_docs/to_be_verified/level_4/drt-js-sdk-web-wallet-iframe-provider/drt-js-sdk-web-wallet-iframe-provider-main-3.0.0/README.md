@@ -8,14 +8,14 @@ Note that **we recommend using [sdk-dapp](https://github.com/TerraDharitri/drt-s
 
 ## Distribution
 
-[npm](https://www.npmjs.com/package/@terradharitri /drt-js-sdk-web-wallet-iframe-provider)
+[npm](https://www.npmjs.com/package/@terradharitri/drt-js-sdk-web-wallet-iframe-provider)
 
 ## Installation
 
-`sdk-web-wallet-iframe-provider` is delivered via [npm](https://www.npmjs.com/package/@terradharitri /sdk-web-wallet-iframe-provider), therefore it can be installed as follows:
+`sdk-web-wallet-iframe-provider` is delivered via [npm](https://www.npmjs.com/package/@terradharitri/sdk-web-wallet-iframe-provider), therefore it can be installed as follows:
 
 ```
-npm install @terradharitri /sdk-web-wallet-iframe-provider
+npm install @terradharitri/sdk-web-wallet-iframe-provider
 ```
 
 ### Building the library

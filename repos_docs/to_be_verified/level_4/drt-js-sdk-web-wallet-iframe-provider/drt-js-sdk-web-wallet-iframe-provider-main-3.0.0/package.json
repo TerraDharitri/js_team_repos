@@ -1,5 +1,5 @@
 {
-  "name": "@terradharitri /sdk-web-wallet-iframe-provider",
+  "name": "@terradharitri/sdk-web-wallet-iframe-provider",
   "version": "3.0.0",
   "description": "Signing provider for dApps: Web Wallet Iframe Provider",
   "main": "out/index.js",
@@ -11,7 +11,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "unpublish-verdaccio": "npm unpublish @terradharitri /sdk-web-wallet-iframe-provider@2.0.0-alpha.0 --registry http://localhost:4873",
+    "unpublish-verdaccio": "npm unpublish @terradharitri/sdk-web-wallet-iframe-provider@2.0.0-alpha.0 --registry http://localhost:4873",
     "publish-verdaccio": "npm run unpublish-verdaccio && npm run compile && npm publish --registry http://localhost:4873/",
     "compile": "tsc -p tsconfig.json",
     "pretest": "npm run compile",
@@ -22,8 +22,8 @@
   "author": "DharitrI",
   "license": "MIT",
   "devDependencies": {
-    "@terradharitri /sdk-core": "^14.x",
-    "@terradharitri /sdk-web-wallet-cross-window-provider": "^3.x",
+    "@terradharitri/sdk-core": "^14.x",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "^3.x",
     "@types/node": "18.19.0",
     "@typescript-eslint/eslint-plugin": "5.0.0",
     "@typescript-eslint/parser": "5.14.0",
@@ -43,8 +43,8 @@
     "typescript": "5.0.4"
   },
   "peerDependencies": {
-    "@terradharitri /sdk-core": "^14.x",
-    "@terradharitri /sdk-web-wallet-cross-window-provider": "^3.x"
+    "@terradharitri/sdk-core": "^14.x",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "^3.x"
   },
   "dependencies": {
     "@types/jest": "^29.5.11",

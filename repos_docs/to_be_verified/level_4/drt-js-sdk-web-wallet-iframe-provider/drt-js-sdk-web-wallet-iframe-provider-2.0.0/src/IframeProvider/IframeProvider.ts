@@ -1,22 +1,22 @@
-import { Message } from '@terradharitri /sdk-core/out';
-import { Transaction } from '@terradharitri /sdk-core/out/transaction';
+import { Message } from '@terradharitri/sdk-core/out';
+import { Transaction } from '@terradharitri/sdk-core/out/transaction';
 import {
   CrossWindowProvider,
   IProviderAccount
   // !!! IMPORTANT !!! It is necessary to import explicitly from the file because the module exports (can export) some classes
   // that are using window API and will break the build process on the SSR environments (e.g. PopupConsent)
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/CrossWindowProvider/CrossWindowProvider';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/CrossWindowProvider/CrossWindowProvider';
 import {
   WindowProviderRequestEnums,
   WindowProviderResponseEnums
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/enums';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/enums';
 import {
   ErrCouldNotLogin,
   ErrCouldNotSignTransactions,
   ErrProviderNotInitialized,
   ErrTransactionCancelled
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/errors';
-import { ReplyWithPostMessagePayloadType } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/types';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/errors';
+import { ReplyWithPostMessagePayloadType } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/types';
 import { IframeLoginTypes } from '../constants';
 import { IframeManager } from '../IframeManager/IframeManager';
 

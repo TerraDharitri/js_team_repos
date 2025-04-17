@@ -1,4 +1,4 @@
-import { isWindowAvailable } from "@terradharitri /sdk-dapp-utils/out/helpers/isWindowAvailable";
+import { isWindowAvailable } from "@terradharitri/sdk-dapp-utils/out/helpers/isWindowAvailable";
 
 export const getTargetOrigin = () => {
   if (isWindowAvailable()) {

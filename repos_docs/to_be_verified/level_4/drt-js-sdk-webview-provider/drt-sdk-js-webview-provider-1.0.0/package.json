@@ -1,5 +1,5 @@
 {
-  "name": "@terradharitri /sdk-webview-provider",
+  "name": "@terradharitri/sdk-webview-provider",
   "version": "1.0.0",
   "description": "SDK Webview Provider",
   "main": "out/index.js",
@@ -15,13 +15,13 @@
   "author": "DharitrI",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@terradharitri /sdk-core": ">= 12.1.0",
-    "@terradharitri /sdk-dapp-utils": ">= 0.1.0",
+    "@terradharitri/sdk-core": ">= 12.1.0",
+    "@terradharitri/sdk-dapp-utils": ">= 0.1.0",
     "prettier": "3.2.5",
     "typescript": "5.4.5"
   },
   "peerDependencies": {
-    "@terradharitri /sdk-core": ">= 12.1.0",
-    "@terradharitri /sdk-dapp-utils": ">= 0.1.0"
+    "@terradharitri/sdk-core": ">= 12.1.0",
+    "@terradharitri/sdk-dapp-utils": ">= 0.1.0"
   }
 }

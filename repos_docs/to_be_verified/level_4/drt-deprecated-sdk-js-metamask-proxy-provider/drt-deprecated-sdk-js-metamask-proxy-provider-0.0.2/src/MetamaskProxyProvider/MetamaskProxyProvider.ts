@@ -1,8 +1,8 @@
 import {
   CrossWindowProvider,
   ICrossWindowWalletAccount
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/CrossWindowProvider';
-import { ErrProviderNotInitialized } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/errors';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/CrossWindowProvider';
+import { ErrProviderNotInitialized } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/errors';
 import { MetamaskProxyManager } from '../MetamaskProxyManager/MetamaskProxyManager';
 
 export class MetamaskProxyProvider extends CrossWindowProvider {

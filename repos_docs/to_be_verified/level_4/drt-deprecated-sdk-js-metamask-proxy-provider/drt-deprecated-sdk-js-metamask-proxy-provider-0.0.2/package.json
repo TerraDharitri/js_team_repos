@@ -1,5 +1,5 @@
 {
-  "name": "@terradharitri /sdk-metamask-proxy-provider",
+  "name": "@terradharitri/sdk-metamask-proxy-provider",
   "version": "0.2.0",
   "description": "Signing provider for dApps: Metamask Proxy Provider",
   "main": "out/index.js",
@@ -20,9 +20,9 @@
   "author": "DharitrI",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@terradharitri /sdk-core": ">= 12.18.0",
-    "@terradharitri /sdk-dapp-utils": ">= 0.0.1",
-    "@terradharitri /sdk-web-wallet-cross-window-provider": ">= 0.4.0",
+    "@terradharitri/sdk-core": ">= 12.18.0",
+    "@terradharitri/sdk-dapp-utils": ">= 0.0.1",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": ">= 0.4.0",
     "@types/node": "18.19.0",
     "@typescript-eslint/eslint-plugin": "5.0.0",
     "@typescript-eslint/parser": "5.14.0",
@@ -42,8 +42,8 @@
     "typescript": "5.0.4"
   },
   "peerDependencies": {
-    "@terradharitri /sdk-core": ">= 12.18.0",
-    "@terradharitri /sdk-dapp-utils": ">= 0.0.1"
+    "@terradharitri/sdk-core": ">= 12.18.0",
+    "@terradharitri/sdk-dapp-utils": ">= 0.0.1"
   },
   "dependencies": {
     "@types/jest": "^29.5.11",

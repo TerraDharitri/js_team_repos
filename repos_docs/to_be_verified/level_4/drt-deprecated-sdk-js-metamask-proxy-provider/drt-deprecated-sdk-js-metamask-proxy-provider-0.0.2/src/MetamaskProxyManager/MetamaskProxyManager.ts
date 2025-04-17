@@ -1,10 +1,10 @@
-import { responseTypeMap } from '@terradharitri /sdk-dapp-utils/out/constants/crossWindowProviderConstants';
-import { CrossWindowProviderRequestEnums } from '@terradharitri /sdk-dapp-utils/out/enums/crossWindowProviderEnums';
+import { responseTypeMap } from '@terradharitri/sdk-dapp-utils/out/constants/crossWindowProviderConstants';
+import { CrossWindowProviderRequestEnums } from '@terradharitri/sdk-dapp-utils/out/enums/crossWindowProviderEnums';
 import {
   PostMessageParamsType,
   PostMessageReturnType
-} from '@terradharitri /sdk-dapp-utils/out/types/crossWindowProviderTypes';
-import { WindowManager } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/WindowManager';
+} from '@terradharitri/sdk-dapp-utils/out/types/crossWindowProviderTypes';
+import { WindowManager } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/WindowManager';
 import { safeDocument } from '../constants';
 import { MetamaskProxyProviderContentWindow } from './MetamaskProxyProviderContentWindow';
 

@@ -1,5 +1,5 @@
 {
-  "name": "@terradharitri /sdk-dapp-core-ui",
+  "name": "@terradharitri/sdk-dapp-core-ui",
   "version": "0.0.0-alpha.10",
   "description": "A library to hold UI components for a dApp on the DharitrI blockchain",
   "author": "DharitrI",
@@ -48,7 +48,7 @@
     "test": "npm run build:css && stencil test --spec --e2e",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "unpublish-verdaccio": "npm unpublish @terradharitri /sdk-dapp-core-ui --force --registry http://localhost:4873",
+    "unpublish-verdaccio": "npm unpublish @terradharitri/sdk-dapp-core-ui --force --registry http://localhost:4873",
     "publish-verdaccio": "npm run unpublish-verdaccio && npm run build && npm publish --registry http://localhost:4873/",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
@@ -59,7 +59,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": ">= 6.7.2",
     "@fortawesome/free-solid-svg-icons": ">= 6.7.2",
-    "@terradharitri /sdk-dapp-utils": ">= 1.0.4",
+    "@terradharitri/sdk-dapp-utils": ">= 1.0.4",
     "@stencil/react-output-target": "0.8.2",
     "classnames": ">= 2.5.1",
     "qrcode": ">= 1.5.4",

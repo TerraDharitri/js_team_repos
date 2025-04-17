@@ -1,21 +1,21 @@
-import { Transaction } from '@terradharitri /sdk-core/out/transaction';
+import { Transaction } from '@terradharitri/sdk-core/out/transaction';
 import { webviewProviderEventHandler } from './webviewProviderEventHandler';
 import {
   WindowProviderRequestEnums,
   WindowProviderResponseEnums,
   SignMessageStatusEnum
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/enums';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/enums';
 import {
   PostMessageParamsType,
   PostMessageReturnType,
   ReplyWithPostMessagePayloadType
-} from '@terradharitri /sdk-web-wallet-cross-window-provider/out/types';
-import { responseTypeMap } from '@terradharitri /sdk-web-wallet-cross-window-provider/out/constants/windowProviderConstants';
+} from '@terradharitri/sdk-web-wallet-cross-window-provider/out/types';
+import { responseTypeMap } from '@terradharitri/sdk-web-wallet-cross-window-provider/out/constants/windowProviderConstants';
 import { getTargetOrigin } from './helpers/getTargetOrigin';
 import { getSafeWindow } from './helpers/getSafeWindow';
 import { getSafeDocument } from './helpers/getSafeDocument';
-import { Message } from '@terradharitri /sdk-core';
-import { Address } from '@terradharitri /sdk-core/out';
+import { Message } from '@terradharitri/sdk-core';
+import { Address } from '@terradharitri/sdk-core/out';
 
 interface IWebviewProviderOptions {
   resetStateCallback?: () => void;
