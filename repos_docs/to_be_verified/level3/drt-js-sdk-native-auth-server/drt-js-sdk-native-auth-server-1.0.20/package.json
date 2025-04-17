@@ -1,5 +1,5 @@
 {
-  "name": "@terradharitri-native-auth-server",
+  "name": "@terradharitri/sdk-native-auth-server",
   "version": "1.0.20",
   "description": "Native authentication server-side",
   "main": "lib/src/index.js",
@@ -40,11 +40,11 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@terradharitri-wallet": "^4.5.0",
+    "@terradharitri/sdk-wallet": "^4.5.0",
     "axios": "^1.7.4",
     "bech32": "^2.0.0"
   },
   "peerDependencies": {
-    "@terradharitri-core": "^13.x"
+    "@terradharitri/sdk-core": "^13.x"
   }
 }

@@ -1,5 +1,5 @@
 import { NativeAuthCacheInterface } from "../native.auth.cache.interface";
-import { Address } from "@terradharitri-core";
+import { Address } from "@terradharitri/sdk-core";
 
 export class NativeAuthServerConfig {
   /** The endpoint from where the current block information will be fetched upon validation.
