@@ -1,0 +1,49 @@
+{
+  "name": "@terradharitri/sdk-nestjs-http",
+  "version": "3.7.8",
+  "description": "Dharitri SDK Nestjs http package",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "test": "jest --config=../../jest.config.json --passWithNoTests http/*",
+    "build": "tsc",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TerraDharitri/drt-nestjs-sdk.git"
+  },
+  "keywords": [
+    "dharitri",
+    "nestjs",
+    "http"
+  ],
+  "author": "DharitrI",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "axios-mock-adapter": "^1.20.0",
+    "eslint": "^8.9.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@terradharitri/sdk-native-auth-client": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-native-auth-client/drt-js-sdk-native-auth-client-1.0.9",
+    "agentkeepalive": "^4.3.0",
+    "axios": "^1.7.4"
+  },
+  "peerDependencies": {
+    "@terradharitri/sdk-nestjs-common": "../common",
+    "@terradharitri/sdk-nestjs-monitoring": "../monitoring",
+    "@nestjs/common": "^10.x",
+    "@nestjs/core": "^10.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
