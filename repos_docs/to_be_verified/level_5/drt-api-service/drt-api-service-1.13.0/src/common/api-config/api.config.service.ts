@@ -646,7 +646,7 @@ export class ApiConfigService {
   }
 
   private getExchangeServiceUrlLegacy(): string | undefined {
-    return this.configService.get<string>('transaction-action.mex.microServiceUrl') ?? this.configService.get<string>('plugins.transaction-action.mex.microServiceUrl');
+    return this.configService.get<string>('transaction-action.moa.microServiceUrl') ?? this.configService.get<string>('plugins.transaction-action.moa.microServiceUrl');
   }
 
   isExchangeEnabled(): boolean {

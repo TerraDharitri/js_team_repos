@@ -6,7 +6,7 @@ import {
   TransactionActionsEnum
 } from 'types/serverTransactions.types';
 
-export const mexUnwrapper = (
+export const moaUnwrapper = (
   action: TransactionActionType
 ): Array<string | UnwrapperType> => {
   switch (action.name) {

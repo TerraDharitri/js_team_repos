@@ -1,6 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
-export class MexToken {
-  constructor(init?: Partial<MexToken>) {
+export class MoaToken {
+  constructor(init?: Partial<MoaToken>) {
     Object.assign(this, init);
   }
 

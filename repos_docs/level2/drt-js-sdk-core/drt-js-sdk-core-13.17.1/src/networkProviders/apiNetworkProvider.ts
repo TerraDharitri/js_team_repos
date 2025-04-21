@@ -123,7 +123,7 @@ export class ApiNetworkProvider implements INetworkProvider {
         return tokenData;
     }
 
-    async getMexPairs(pagination?: IPagination): Promise<PairOnNetwork[]> {
+    async getMoaPairs(pagination?: IPagination): Promise<PairOnNetwork[]> {
         let url = `moa/pairs`;
         if (pagination) {
             url = `${url}?from=${pagination.from}&size=${pagination.size}`;

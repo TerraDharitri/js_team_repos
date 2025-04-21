@@ -75,5 +75,5 @@ test:
   mockTokens: true
   mockPath: './src/test/mocks/'
 transaction-action:
-  mex:
+  moa:
     microServiceUrl: 'https://graph.dharitrix.com/graphql'

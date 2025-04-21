@@ -3,13 +3,13 @@ import { CacheInfo } from "src/utils/cache.info";
 import { TokenAssets } from "src/common/assets/entities/token.assets";
 import { AccountAssets } from "./entities/account.assets";
 import { CacheService } from "@terradharitri/sdk-nestjs-cache";
-import { MexPair } from "src/endpoints/mex/entities/mex.pair";
+import { MoaPair } from "src/endpoints/moa/entities/moa.pair";
 import { Identity } from "src/endpoints/identities/entities/identity";
-import { MexFarm } from "src/endpoints/mex/entities/mex.farm";
-import { MexSettings } from "src/endpoints/mex/entities/mex.settings";
+import { MoaFarm } from "src/endpoints/moa/entities/moa.farm";
+import { MoaSettings } from "src/endpoints/moa/entities/moa.settings";
 import { DnsContracts } from "src/utils/dns.contracts";
 import { NftRank } from "./entities/nft.rank";
-import { MexStakingProxy } from "src/endpoints/mex/entities/mex.staking.proxy";
+import { MoaStakingProxy } from "src/endpoints/moa/entities/moa.staking.proxy";
 import { Provider } from "src/endpoints/providers/entities/provider";
 import { ApiService } from "@terradharitri/sdk-nestjs-http";
 import { ApiConfigService } from "../api-config/api.config.service";
@@ -95,7 +95,7 @@ export class AssetsService {
     );
   }
 
-  async getAllAccountAssetsRaw(providers?: Provider[], identities?: Identity[], pairs?: MexPair[], farms?: MexFarm[], mexSettings?: MexSettings, stakingProxies?: MexStakingProxy[]): Promise<{ [key: string]: AccountAssets }> {
+  async getAllAccountAssetsRaw(providers?: Provider[], identities?: Identity[], pairs?: MoaPair[], farms?: MoaFarm[], moaSettings?: MoaSettings, stakingProxies?: MoaStakingProxy[]): Promise<{ [key: string]: AccountAssets }> {
     if (!this.apiConfigService.isAssetsCdnFeatureEnabled()) {
       return {};
     }
@@ -146,20 +146,20 @@ export class AssetsService {
       }
     }
 
-    if (mexSettings) {
-      for (const [index, wrapContract] of mexSettings.wrapContracts.entries()) {
+    if (moaSettings) {
+      for (const [index, wrapContract] of moaSettings.wrapContracts.entries()) {
         allAssets[wrapContract] = this.createAccountAsset(
           `DCDT: WrappedREWA Contract Shard ${index}`,
           ['dharitrix', 'wrewa']
         );
       }
 
-      allAssets[mexSettings.lockedAssetContract] = this.createAccountAsset(
+      allAssets[moaSettings.lockedAssetContract] = this.createAccountAsset(
         `DharitriX: Locked asset Contract`,
         ['dharitrix', 'lockedasset']
       );
 
-      allAssets[mexSettings.distributionContract] = this.createAccountAsset(
+      allAssets[moaSettings.distributionContract] = this.createAccountAsset(
         `DharitriX: Distribution Contract`,
         ['dharitrix', 'lockedasset']
       );

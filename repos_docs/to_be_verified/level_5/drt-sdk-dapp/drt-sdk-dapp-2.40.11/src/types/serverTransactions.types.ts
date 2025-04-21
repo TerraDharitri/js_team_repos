@@ -37,7 +37,7 @@ export enum TransactionActionsEnum {
   stakeClaimRewards = 'claimRewards',
   reDelegateRewards = 'reDelegateRewards',
   withdraw = 'withdraw',
-  // mex category
+  // moa category
   claimLockedAssets = 'claimLockedAssets',
   swapTokensFixedInput = 'swapTokensFixedInput',
   swapTokensFixedOutput = 'swapTokensFixedOutput',
@@ -78,7 +78,7 @@ export enum TransactionActionsEnum {
 
 export enum TransactionActionCategoryEnum {
   dcdtNft = 'dcdtNft',
-  mex = 'mex',
+  moa = 'moa',
   stake = 'stake',
   scCall = 'scCall'
 }

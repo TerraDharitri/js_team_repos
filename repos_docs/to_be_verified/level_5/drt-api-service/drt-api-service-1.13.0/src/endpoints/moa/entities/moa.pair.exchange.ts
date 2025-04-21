@@ -1,13 +1,13 @@
 import { registerEnumType } from "@nestjs/graphql";
 
-export enum MexPairExchange {
+export enum MoaPairExchange {
   dharitrix = 'dharitrix',
   unknown = 'unknown'
 }
 
-registerEnumType(MexPairExchange, {
-  name: 'MexPairExchange',
-  description: 'MexPairExchange object type.',
+registerEnumType(MoaPairExchange, {
+  name: 'MoaPairExchange',
+  description: 'MoaPairExchange object type.',
   valuesMap: {
     dharitrix: {
       description: 'dharitrix',

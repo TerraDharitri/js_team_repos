@@ -8,7 +8,7 @@ import { IndexerService } from "src/common/indexer/indexer.service";
 import { CollectionService } from "src/endpoints/collections/collection.service";
 import { DcdtAddressService } from "src/endpoints/dcdt/dcdt.address.service";
 import { DcdtService } from "src/endpoints/dcdt/dcdt.service";
-import { MexTokenService } from "src/endpoints/mex/mex.token.service";
+import { MoaTokenService } from "src/endpoints/moa/moa.token.service";
 import { TokenFilter } from "src/endpoints/tokens/entities/token.filter";
 import { TokenService } from "src/endpoints/tokens/token.service";
 import { TransactionService } from "src/endpoints/transactions/transaction.service";
@@ -22,7 +22,7 @@ import { TokenProperties } from "src/endpoints/tokens/entities/token.properties"
 import { DcdtType } from "src/endpoints/dcdt/entities/dcdt.type";
 import { AccountAssets } from "src/common/assets/entities/account.assets";
 import { TransferService } from "src/endpoints/transfers/transfer.service";
-import { MexPairService } from "src/endpoints/mex/mex.pair.service";
+import { MoaPairService } from "src/endpoints/moa/moa.pair.service";
 import * as fs from 'fs';
 import * as path from 'path';
 import { ApiService, ApiUtils } from "@terradharitri/sdk-nestjs-http";
@@ -118,9 +118,9 @@ describe('Token Service', () => {
           },
         },
         {
-          provide: MexTokenService,
+          provide: MoaTokenService,
           useValue: {
-            getMexPricesRaw: jest.fn(),
+            getMoaPricesRaw: jest.fn(),
           },
         },
         {
@@ -144,9 +144,9 @@ describe('Token Service', () => {
           },
         },
         {
-          provide: MexPairService,
+          provide: MoaPairService,
           useValue: {
-            getAllMexPairs: jest.fn(),
+            getAllMoaPairs: jest.fn(),
           },
         },
         {
@@ -685,10 +685,10 @@ describe('Token Service', () => {
         jest.spyOn(collectionService, 'getNftCollections').mockResolvedValue(mockNftCollections as NftCollection[]);
 
         jest.spyOn(tokenService as any, 'batchProcessTokens').mockImplementation(() => Promise.resolve());
-        jest.spyOn(tokenService as any, 'applyMexLiquidity').mockImplementation(() => Promise.resolve());
-        jest.spyOn(tokenService as any, 'applyMexPrices').mockImplementation(() => Promise.resolve());
-        jest.spyOn(tokenService as any, 'applyMexPairType').mockImplementation(() => Promise.resolve());
-        jest.spyOn(tokenService as any, 'applyMexPairTradesCount').mockImplementation(() => Promise.resolve());
+        jest.spyOn(tokenService as any, 'applyMoaLiquidity').mockImplementation(() => Promise.resolve());
+        jest.spyOn(tokenService as any, 'applyMoaPrices').mockImplementation(() => Promise.resolve());
+        jest.spyOn(tokenService as any, 'applyMoaPairType').mockImplementation(() => Promise.resolve());
+        jest.spyOn(tokenService as any, 'applyMoaPairTradesCount').mockImplementation(() => Promise.resolve());
         jest.spyOn(cacheService as any, 'batchApplyAll').mockImplementation(() => Promise.resolve());
         jest.spyOn(dataApiService, 'getDcdtTokenPrice').mockResolvedValue(100);
         jest.spyOn(dataApiService, 'getRewaPrice').mockResolvedValue(100);
@@ -736,10 +736,10 @@ describe('Token Service', () => {
         });
 
         expect((tokenService as any).batchProcessTokens).toHaveBeenCalledWith(mockTokens);
-        expect((tokenService as any).applyMexLiquidity).toHaveBeenCalledWith(mockTokens.filter(x => x.type !== TokenType.MetaDCDT));
-        expect((tokenService as any).applyMexPrices).toHaveBeenCalledWith(mockTokens.filter(x => x.type !== TokenType.MetaDCDT));
-        expect((tokenService as any).applyMexPairType).toHaveBeenCalledWith(mockTokens.filter(x => x.type !== TokenType.MetaDCDT));
-        expect((tokenService as any).applyMexPairTradesCount).toHaveBeenCalledWith(mockTokens.filter(x => x.type !== TokenType.MetaDCDT));
+        expect((tokenService as any).applyMoaLiquidity).toHaveBeenCalledWith(mockTokens.filter(x => x.type !== TokenType.MetaDCDT));
+        expect((tokenService as any).applyMoaPrices).toHaveBeenCalledWith(mockTokens.filter(x => x.type !== TokenType.MetaDCDT));
+        expect((tokenService as any).applyMoaPairType).toHaveBeenCalledWith(mockTokens.filter(x => x.type !== TokenType.MetaDCDT));
+        expect((tokenService as any).applyMoaPairTradesCount).toHaveBeenCalledWith(mockTokens.filter(x => x.type !== TokenType.MetaDCDT));
         expect((cacheService as any).batchApplyAll).toHaveBeenCalled();
         mockTokens.forEach(mockToken => {
           const priceSourcetype = mockToken.assets?.priceSource?.type;

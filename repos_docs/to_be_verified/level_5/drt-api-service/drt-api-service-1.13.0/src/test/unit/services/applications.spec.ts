@@ -96,7 +96,7 @@ describe('ApplicationService', () => {
             website: 'https://dharitrix.com',
             twitter: 'https://twitter.com/DharitriXApp',
             telegram: 'https://t.me/DharitriXApp',
-            blog: 'https://dharitri.org/blog/durian-exchange-mex-tokenomics',
+            blog: 'https://dharitri.org/blog/durian-exchange-moa-tokenomics',
           }),
           tags: ['dns'],
           icon: 'dharitri',
