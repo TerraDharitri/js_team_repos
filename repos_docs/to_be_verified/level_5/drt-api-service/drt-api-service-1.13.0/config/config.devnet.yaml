@@ -45,7 +45,7 @@ features:
     serviceUrl: 'https://devnet-nfts-graph.dharitri.org/graphql'
   exchange:
     enabled: false
-    serviceUrl: 'https://devnet-graph.dharitrix.com/graphql'
+    serviceUrl: 'https://devnet-graph.dharitrix.org/graphql'
   dataApi:
     enabled: false
     serviceUrl: 'https://devnet-data-api.dharitri.org'

@@ -46,7 +46,7 @@ features:
     serviceUrl: 'https://nfts-graph.dharitri.org/graphql'
   exchange:
     enabled: false
-    serviceUrl: 'https://graph.dharitrix.com/graphql'
+    serviceUrl: 'https://graph.dharitrix.org/graphql'
   dataApi:
     enabled: false
     serviceUrl: 'https://data-api.dharitri.org'

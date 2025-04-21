@@ -1325,10 +1325,10 @@ describe('API Config', () => {
     it("should return Durian Exchange Url", () => {
       jest
         .spyOn(ConfigService.prototype, "get")
-        .mockImplementation(jest.fn(() => 'https://graph.dharitrix.com/graphql'));
+        .mockImplementation(jest.fn(() => 'https://graph.dharitrix.org/graphql'));
 
       const results = apiConfigService.getExchangeServiceUrlMandatory();
-      expect(results).toEqual('https://graph.dharitrix.com/graphql');
+      expect(results).toEqual('https://graph.dharitrix.org/graphql');
     });
 
     it("should throw new error because test simulates that Durian Exchange Url is not defined", () => {

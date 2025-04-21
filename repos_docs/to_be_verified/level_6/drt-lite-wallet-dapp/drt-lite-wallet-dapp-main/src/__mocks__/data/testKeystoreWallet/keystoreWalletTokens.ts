@@ -292,7 +292,7 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://dharitrix.com',
+      website: 'https://dharitrix.org',
       description:
         'Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/RIDE pool on the DharitriX.',
       status: 'active',
@@ -329,7 +329,7 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://dharitrix.com',
+      website: 'https://dharitrix.org',
       description:
         'Liquidity Provider (LP) Token obtained by adding liquidity in the REWA/USDC pool on the DharitriX.',
       status: 'active',
@@ -582,7 +582,7 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://dharitrix.com',
+      website: 'https://dharitrix.org',
       description:
         'MOA the token used to incentivize liquidity provision to the DharitriX.',
       status: 'active',
@@ -939,7 +939,7 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://dharitrix.com',
+      website: 'https://dharitrix.org',
       description:
         'wREWA is an DCDT token that has the same value as REWA, the native coin of the DharitrI blockchain.',
       status: 'active',
@@ -1179,7 +1179,7 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://DharitriX.com',
+      website: 'https://DharitriX.org',
       description: 'XMOA with Energy. Equal in value to MOA. Not tradeable.',
       status: 'active',
       pngUrl:
@@ -1217,7 +1217,7 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://DharitriX.com',
+      website: 'https://DharitriX.org',
       description: 'XMOA with Energy. Equal in value to MOA. Not tradeable.',
       status: 'active',
       pngUrl:
@@ -1255,7 +1255,7 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://DharitriX.com',
+      website: 'https://DharitriX.org',
       description: 'XMOA with Energy. Equal in value to MOA. Not tradeable.',
       status: 'active',
       pngUrl:
@@ -1293,7 +1293,7 @@ export const keystoreWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://DharitriX.com',
+      website: 'https://DharitriX.org',
       description: 'XMOA with Energy. Equal in value to MOA. Not tradeable.',
       status: 'active',
       pngUrl:

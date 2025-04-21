@@ -74,7 +74,7 @@ export const pemWalletTokens = [
     decimals: 18,
     isPaused: false,
     assets: {
-      website: 'https://dharitrix.com',
+      website: 'https://dharitrix.org',
       description:
         'wREWA is an DCDT token that has the same value as REWA, the native coin of the DharitrI blockchain.',
       status: 'active',

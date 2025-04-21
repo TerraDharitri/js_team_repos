@@ -1,5 +1,5 @@
 
-# Contributing to graph.DharitriX.com
+# Contributing to graph.DharitriX.org
 
 If you are unfamiliar with the workflow of contributing to github, you can refer to this [this article](https://github.com/firstcontributions/first-contributions/blob/main/README.md)
 

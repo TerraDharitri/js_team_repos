@@ -8,7 +8,7 @@
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://dharitrix.com",
+      "website": "https://dharitrix.org",
       "description": "wREWA is an DCDT token that has the same value as REWA, the native coin of the  blockchain.",
       "status": "active",
       "pngUrl": "https://media.dharitri.org/tokens/asset/WREWA-bd4d79/logo.png",
@@ -39,7 +39,7 @@
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://dharitrix.com",
+      "website": "https://dharitrix.org",
       "description": "MOA is the utility token of the DharitriX.",
       "status": "active",
       "pngUrl": "https://media.dharitri.org/tokens/asset/MOA-455c57/logo.png",
@@ -212,7 +212,7 @@
     "decimals": 6,
     "isPaused": false,
     "assets": {
-      "website": "https://dharitrix.com",
+      "website": "https://dharitrix.org",
       "description": "USDC stablecoin originating on Ethereum, bridged as an DCDT token on . 1 USDC = 1 WrappedUSDC",
       "status": "active",
       "pngUrl": "https://media.dharitri.org/tokens/asset/USDC-c76f1f/logo.png",
@@ -1062,7 +1062,7 @@
     "decimals": 18,
     "isPaused": false,
     "assets": {
-      "website": "https://dharitrix.com",
+      "website": "https://dharitrix.org",
       "description": "This token tracks your LKMOA stake in the MOA farm on the DharitriX.",
       "status": "active",
       "pngUrl": "https://media.dharitri.org/tokens/asset/LKFARM-9d1ea8/logo.png",

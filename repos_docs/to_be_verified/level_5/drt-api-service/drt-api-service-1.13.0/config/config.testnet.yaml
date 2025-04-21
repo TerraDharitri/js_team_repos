@@ -45,7 +45,7 @@ features:
     serviceUrl: 'https://testnet-nfts-graph.dharitri.org/graphql'
   exchange:
     enabled: false
-    serviceUrl: 'https://testnet-graph.dharitrix.com/graphql'
+    serviceUrl: 'https://testnet-graph.dharitrix.org/graphql'
   dataApi:
     enabled: false
     serviceUrl: 'https://testnet-data-api.dharitri.org'

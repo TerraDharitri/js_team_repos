@@ -8,7 +8,7 @@ import { loginWithKeystore, sleep } from 'utils/testUtils/puppeteer';
 describe('Login hook without token test', () => {
   it('should login without token and redirect to the callbackUrl', async () => {
     await page.goto(
-      `${WALLET_SOURCE_ORIGIN}/hook/login?callbackUrl=https://devnet.dharitrix.com/dashboard`,
+      `${WALLET_SOURCE_ORIGIN}/hook/login?callbackUrl=https://devnet.dharitrix.org/dashboard`,
       {
         waitUntil: 'domcontentloaded'
       }
@@ -18,7 +18,7 @@ describe('Login hook without token test', () => {
     await sleep(DEFAULT_PAGE_LOAD_DELAY_MS);
 
     expect(page.url()).toMatch(
-      `https://devnet.dharitrix.com/dashboard?address=${keystoreAccount.address}`
+      `https://devnet.dharitrix.org/dashboard?address=${keystoreAccount.address}`
     );
   });
 });

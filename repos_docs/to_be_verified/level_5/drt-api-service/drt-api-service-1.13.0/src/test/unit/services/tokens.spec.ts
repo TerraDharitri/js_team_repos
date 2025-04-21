@@ -605,7 +605,7 @@ describe('Token Service', () => {
         decimals: 18,
         isPaused: false,
         assets: {
-          website: "https://dharitrix.com",
+          website: "https://dharitrix.org",
           description: "wREWA is an DCDT token that has the same value as REWA, the native coin of the  blockchain.",
           status: TokenAssetStatus.active,
           pngUrl: "https://media.dharitri.org/tokens/asset/WREWA-bd4d79/logo.png",
@@ -634,7 +634,7 @@ describe('Token Service', () => {
         decimals: 18,
         isPaused: false,
         assets: {
-          website: "https://dharitrix.com",
+          website: "https://dharitrix.org",
           description: "wREWA is an DCDT token that has the same value as REWA, the native coin of the  blockchain.",
           status: "active",
           pngUrl: "https://media.dharitri.org/tokens/asset/WREWA-bd4d79/logo.png",
