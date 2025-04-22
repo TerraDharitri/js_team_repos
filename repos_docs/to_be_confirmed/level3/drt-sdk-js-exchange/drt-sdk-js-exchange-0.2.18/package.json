@@ -32,7 +32,7 @@
         "typescript": "4.6.4"
     },
     "dependencies": {
-        "@terradharitri/sdk-core": "/home/dugong/Documents/js_team_repos-main/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-11.2.0",
+        "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-11.2.0",
         "bignumber.js": "9.0.1"
     }
 }
