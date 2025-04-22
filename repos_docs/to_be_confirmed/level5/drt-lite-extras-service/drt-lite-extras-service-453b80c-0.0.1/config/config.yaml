@@ -1,0 +1,45 @@
+apps:
+  faucet:
+    port: 3000
+    useCachingInterceptor: true
+    gatewayUrl: ${GATEWAY_URL}
+    jwtSecret: ''
+    recaptchaSecret: ''
+    hrp: 'drt'
+    faucetPrivateKeyMode: 'mnemonic' # 'mnemonic' or 'pem'
+    faucetMnemonic: 'find filter man earth citizen student grit limit intact unlock soon sell glass arm join mutual burger horror ghost vapor phrase build artefact alley'
+    faucetPemPath: ''
+    faucetPemIndex: 0
+    faucetAmount: '1000000000000000000'
+    faucetToken: ''
+    faucetTokenAmount: ''
+    faucetRecaptchaSecret: ''
+    faucetRecaptchaBypass: true
+    faucetCooldownSameAddressInSec: 600
+libs:
+  common:
+    network: ${NETWORK}
+    urls:
+      api: ${API_URL}
+    database:
+      host: 'localhost'
+      port: 27017
+      # username: 'root'
+      # password: 'root'
+      name: 'example'
+      tlsAllowInvalidCertificates: true
+    redis:
+      host: '127.0.0.1'
+      port: 6379
+    nativeAuth:
+      # maxExpirySeconds:
+      acceptedOrigins:
+        - '*'
+    security:
+      admins: []
+      #rateLimiterSecret:
+    keepAliveAgent:
+      enabled: true
+    keepAliveTimeout:
+      downstream: 61000
+      upstream: 60000
