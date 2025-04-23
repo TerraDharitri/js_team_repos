@@ -200,6 +200,7 @@ export class Address {
     }
 
     isContractAddress(): boolean {
-        return this.hex().startsWith(SMART_CONTRACT_HEX_PUBKEY_PREFIX);
+        const hex = this.hex();
+        return hex.startsWith(SMART_CONTRACT_HEX_PUBKEY_PREFIX) || hex.startsWith("2333000000000000");
     }
 }
