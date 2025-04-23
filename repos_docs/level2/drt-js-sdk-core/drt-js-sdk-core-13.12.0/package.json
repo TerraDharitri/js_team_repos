@@ -37,7 +37,7 @@
     "prepare": "npm run compile"
   },
   "dependencies": {
-    "@terradharitri/sdk-transaction-decoder": "../../../../js_team_repos_test/repos_docs/level1/drt-js-sdk-transaction-decoder/drt-js-sdk-transaction-decoder-1.0.2/",
+    "@terradharitri/sdk-transaction-decoder": "../../../level1/drt-js-sdk-transaction-decoder/drt-js-sdk-transaction-decoder-1.0.2/",
     "json-bigint": "1.0.0",
     "bech32": "1.1.4",
     "blake2b": "2.1.3",
@@ -78,7 +78,7 @@
   },
   "optionalDependencies": {
     "axios": "^1.7.4",
-   "@terradharitri/sdk-bls-wasm": "../../../../js_team_repos_test/repos_docs/level1/bls-wasm/bls-wasm-0.3.5/",
+   "@terradharitri/sdk-bls-wasm": "../../../level1/bls-wasm/bls-wasm-0.3.5/",
     "bip39": "3.1.0"
   }
 }
