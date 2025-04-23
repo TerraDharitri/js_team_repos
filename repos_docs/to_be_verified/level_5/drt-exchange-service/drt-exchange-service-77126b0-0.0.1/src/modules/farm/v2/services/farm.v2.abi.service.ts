@@ -24,7 +24,7 @@ import { farmType } from 'src/utils/farm.utils';
 import { BoostedYieldsFactors } from '../../models/farm.v2.model';
 import { DRTProxyService } from '../../../../services/TerraDharitri-communication/drt.proxy.service';
 import { DRTGatewayService } from '../../../../services/TerraDharitri-communication/drt.gateway.service';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { ErrorLoggerAsync } from '@terradharitri/sdk-nestjs-common';
 import { GetOrSetCache } from 'src/helpers/decorators/caching.decorator';
 import { CacheTtlInfo } from 'src/services/caching/cache.ttl.info';
@@ -39,7 +39,7 @@ export class FarmAbiServiceV2
     constructor(
         protected readonly drtProxy: DRTProxyService,
         protected readonly gatewayService: DRTGatewayService,
-        protected readonly drtApi: MXApiService,
+        protected readonly drtApi: DRTApiService,
         protected readonly cacheService: CacheService,
     ) {
         super(drtProxy, gatewayService, drtApi, cacheService);

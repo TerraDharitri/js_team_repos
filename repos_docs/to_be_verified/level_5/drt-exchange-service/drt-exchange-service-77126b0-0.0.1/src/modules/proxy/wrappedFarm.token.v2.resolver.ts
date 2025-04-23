@@ -1,6 +1,6 @@
 import { Args, Query, ResolveField, Resolver } from '@nestjs/graphql';
 import { scAddress } from 'src/config';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { tokenIdentifier } from 'src/utils/token.converters';
 import { FarmTokenAttributesUnion } from '../farm/models/farmTokenAttributes.model';
 import { DecodeAttributesArgs } from './models/proxy.args';
@@ -12,7 +12,7 @@ import { ProxyService } from './services/proxy.service';
 export class WrappedFarmTokenResolverV2 {
     constructor(
         private readonly proxyService: ProxyService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
     ) {}
 
     @ResolveField()

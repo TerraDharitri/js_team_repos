@@ -1,6 +1,6 @@
 import { forwardRef, Module } from '@nestjs/common';
 import { WeeklyRewardsSplittingAbiService } from './services/weekly-rewards-splitting.abi.service';
-import { MXCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
 import { ApiConfigService } from '../../helpers/api.config.service';
 import { WeeklyRewardsSplittingComputeService } from './services/weekly-rewards-splitting.compute.service';
 import { WeekTimekeepingModule } from '../week-timekeeping/week-timekeeping.module';
@@ -18,7 +18,7 @@ import { RemoteConfigModule } from 'src/modules/remote-config/remote-config.modu
 
 @Module({
     imports: [
-        MXCommunicationModule,
+        DRTCommunicationModule,
         EnergyModule,
         forwardRef(() => RouterModule),
         forwardRef(() => PairModule),

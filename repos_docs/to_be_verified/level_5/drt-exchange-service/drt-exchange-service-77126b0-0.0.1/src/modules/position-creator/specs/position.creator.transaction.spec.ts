@@ -34,7 +34,7 @@ import { ProxyFarmAbiServiceProvider } from 'src/modules/proxy/mocks/proxy.abi.s
 import { EnergyAbiServiceProvider } from 'src/modules/energy/mocks/energy.abi.service.mock';
 import { constantsConfig, gasConfig, scAddress } from 'src/config';
 import { StakingAbiService } from 'src/modules/staking/services/staking.abi.service';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { SwapRouteModel } from 'src/modules/auto-router/models/auto-route.model';
 import { PairFilteringService } from 'src/modules/pair/services/pair.filtering.service';
 import { FarmVersion } from 'src/modules/farm/models/farm.model';
@@ -84,7 +84,7 @@ describe('PositionCreatorTransaction', () => {
                 ConfigService,
                 ApiConfigService,
                 ContextGetterServiceProvider,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
             ],
         }).compile();
     });

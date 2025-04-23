@@ -17,7 +17,7 @@ import { ErrorLoggerAsync } from '@terradharitri/sdk-nestjs-common';
 import { GetOrSetCache } from 'src/helpers/decorators/caching.decorator';
 import { CacheTtlInfo } from 'src/services/caching/cache.ttl.info';
 import { NftCollection } from '../models/nftCollection.model';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { CacheService } from 'src/services/caching/cache.service';
 import { CollectionType } from 'src/modules/common/collection.type';
 import { TokenComputeService } from './token.compute.service';
@@ -36,7 +36,7 @@ export class TokenService {
         @Inject(forwardRef(() => PairService))
         private readonly pairService: PairService,
         private readonly routerAbi: RouterAbiService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
         protected readonly cachingService: CacheService,
         @Inject(forwardRef(() => TokenComputeService))
         private readonly tokenCompute: TokenComputeService,

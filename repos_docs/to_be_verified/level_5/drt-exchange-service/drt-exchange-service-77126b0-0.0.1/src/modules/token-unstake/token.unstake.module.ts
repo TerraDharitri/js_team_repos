@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { TokenUnstakeAbiService } from './services/token.unstake.abi.service';
 import { TokenUnstakeSetterService } from './services/token.unstake.setter.service';
 import { TokenUnstakeTransactionService } from './services/token.unstake.transaction.service';
 import { TokenUnstakeResolver } from './token.unstake.resolver';
 
 @Module({
-    imports: [MXCommunicationModule],
+    imports: [DRTCommunicationModule],
     providers: [
         TokenUnstakeAbiService,
         TokenUnstakeSetterService,

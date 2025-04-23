@@ -3,7 +3,7 @@ import { PairService } from '../../pair/services/pair.service';
 import { ProxyService } from '../../proxy/services/proxy.service';
 import { UserMetaDcdtService } from '../services/user.metaDcdt.service';
 import { LockedAssetService } from '../../locked-asset-factory/services/locked-asset.service';
-import { MXApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
 import { UserMetaDcdtComputeService } from '../services/metaDcdt.compute.service';
 import { LockedAssetGetterService } from '../../locked-asset-factory/services/locked.asset.getter.service';
 import { AbiLockedAssetServiceProvider } from '../../locked-asset-factory/mocks/abi.locked.asset.service.mock';
@@ -25,7 +25,7 @@ import { FarmComputeServiceV2 } from 'src/modules/farm/v2/services/farm.v2.compu
 import { FarmAbiServiceV2 } from 'src/modules/farm/v2/services/farm.v2.abi.service';
 import { WeekTimekeepingComputeService } from '../../../submodules/week-timekeeping/services/week-timekeeping.compute.service';
 import { LockedTokenWrapperService } from '../../locked-token-wrapper/services/locked-token-wrapper.service';
-import { MXDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
 import { EnergyAbiServiceProvider } from 'src/modules/energy/mocks/energy.abi.service.mock';
 import { WrapAbiServiceProvider } from 'src/modules/wrapping/mocks/wrap.abi.service.mock';
 import { WeekTimekeepingAbiServiceProvider } from 'src/submodules/week-timekeeping/mocks/week.timekeeping.abi.service.mock';
@@ -135,8 +135,8 @@ describe('UserEnergyComputeService', () => {
                 ProxyFarmAbiServiceProvider,
                 UserMetaDcdtComputeService,
                 WrapAbiServiceProvider,
-                MXDataApiServiceProvider,
-                MXApiServiceProvider,
+                DRTDataApiServiceProvider,
+                DRTApiServiceProvider,
                 DRTProxyServiceProvider,
                 LockedAssetGetterService,
                 MetabondingAbiServiceMockProvider,

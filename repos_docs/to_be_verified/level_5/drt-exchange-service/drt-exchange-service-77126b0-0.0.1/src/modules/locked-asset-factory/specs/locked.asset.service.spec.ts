@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ContextGetterService } from 'src/services/context/context.getter.service';
 import { ContextGetterServiceMock } from 'src/services/context/mocks/context.getter.service.mock';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { AbiLockedAssetService } from '../services/abi-locked-asset.service';
 import { AbiLockedAssetServiceMock } from '../mocks/abi.locked.asset.service.mock';
 import { LockedAssetService } from '../services/locked-asset.service';
@@ -34,7 +34,7 @@ describe('LockedAssetService', () => {
     beforeAll(async () => {
         const module: TestingModule = await Test.createTestingModule({
             imports: [
-                MXCommunicationModule,
+                DRTCommunicationModule,
                 WinstonModule.forRoot({
                     transports: [new winston.transports.Console({})],
                 }),

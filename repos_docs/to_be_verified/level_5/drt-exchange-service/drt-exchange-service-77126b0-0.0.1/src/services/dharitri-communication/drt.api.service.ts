@@ -28,7 +28,7 @@ type GenericGetArgs = {
 };
 
 @Injectable()
-export class MXApiService {
+export class DRTApiService {
     private readonly apiProvider: ApiNetworkProvider;
     private genericGetExecutor: PendingExecutor<GenericGetArgs, any>;
 
@@ -114,7 +114,7 @@ export class MXApiService {
                 return await this.doGetGeneric(name, resourceUrl, retries + 1);
             }
             this.logger.error(`${error.message} after ${retries} retries`, {
-                path: `${MXApiService.name}.${name}`,
+                path: `${DRTApiService.name}.${name}`,
                 resourceUrl,
             });
             throw new Error(error);
@@ -122,7 +122,7 @@ export class MXApiService {
             profiler.stop();
 
             MetricsCollector.setExternalCall(
-                MXApiService.name,
+                DRTApiService.name,
                 name,
                 profiler.duration,
             );

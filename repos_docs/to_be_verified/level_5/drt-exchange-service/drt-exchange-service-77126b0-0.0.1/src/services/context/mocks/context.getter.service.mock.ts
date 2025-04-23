@@ -1,11 +1,11 @@
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { ContextGetterService } from '../context.getter.service';
 import { Injectable } from '@nestjs/common';
 import { NftToken } from 'src/modules/tokens/models/nftToken.model';
 
 @Injectable()
 export class ContextGetterServiceMock {
-    constructor(private readonly drtApi: MXApiService) {}
+    constructor(private readonly drtApi: DRTApiService) {}
 
     async getCurrentEpoch(): Promise<number> {
         return 1;

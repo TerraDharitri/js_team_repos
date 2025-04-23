@@ -8,7 +8,7 @@ import { InputTokenModel } from 'src/models/inputToken.model';
 import { TransactionModel } from 'src/models/transaction.model';
 import { FarmFactoryService } from 'src/modules/farm/farm.factory';
 import { PairService } from 'src/modules/pair/services/pair.service';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { DRTProxyService } from 'src/services/TerraDharitri-communication/drt.proxy.service';
 import { generateLogMessage } from 'src/utils/generate-log-message';
 import { tokenIdentifier } from 'src/utils/token.converters';
@@ -35,7 +35,7 @@ export class StakingProxyTransactionService {
         private readonly farmAbiV2: FarmAbiServiceV2,
         private readonly stakingAbi: StakingAbiService,
         private readonly drtProxy: DRTProxyService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
         private readonly contextGetter: ContextGetterService,
         @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger,
     ) {}

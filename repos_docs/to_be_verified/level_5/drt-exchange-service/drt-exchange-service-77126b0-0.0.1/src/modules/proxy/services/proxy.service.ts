@@ -12,7 +12,7 @@ import {
     DecodeAttributesArgs,
     DecodeAttributesModel,
 } from '../models/proxy.args';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import {
     FarmTokenAttributesV1_2,
     FarmTokenAttributesV1_3,
@@ -55,7 +55,7 @@ export class ProxyService {
         private readonly proxyPairAbi: ProxyPairAbiService,
         private readonly proxyFarmAbi: ProxyFarmAbiService,
         private readonly farmAbi: FarmAbiFactory,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
         private readonly lockedAssetService: LockedAssetService,
         private readonly cacheService: CacheService,
         private readonly tokenService: TokenService,

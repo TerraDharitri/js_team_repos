@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ContextModule } from 'src/services/context/context.module';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { PairModule } from '../pair/pair.module';
 import { TokenModule } from '../tokens/token.module';
 import { WrappingModule } from '../wrapping/wrap.module';
@@ -18,7 +18,7 @@ import { FarmModule } from '../farm/farm.module';
 @Module({
     imports: [
         CommonAppModule,
-        MXCommunicationModule,
+        DRTCommunicationModule,
         ContextModule,
         PairModule,
         FarmModule,

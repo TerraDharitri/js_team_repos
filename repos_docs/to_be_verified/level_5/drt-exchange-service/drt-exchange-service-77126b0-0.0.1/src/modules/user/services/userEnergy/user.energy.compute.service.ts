@@ -31,7 +31,7 @@ import { Constants, ErrorLoggerAsync } from '@terradharitri/sdk-nestjs-common';
 import { EnergyAbiService } from 'src/modules/energy/services/energy.abi.service';
 import { RemoteConfigGetterService } from 'src/modules/remote-config/remote-config.getter.service';
 import { StakingService } from 'src/modules/staking/services/staking.service';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { tokenIdentifier } from 'src/utils/token.converters';
 import { ProxyPairAbiService } from 'src/modules/proxy/services/proxy-pair/proxy.pair.abi.service';
 import { ProxyFarmAbiService } from 'src/modules/proxy/services/proxy-farm/proxy.farm.abi.service';
@@ -58,7 +58,7 @@ export class UserEnergyComputeService {
         private readonly proxyPairAbi: ProxyPairAbiService,
         private readonly proxyFarmAbi: ProxyFarmAbiService,
         private readonly metabondingAbi: MetabondingAbiService,
-        private readonly drtApi: MXApiService,
+        private readonly drtApi: DRTApiService,
         private readonly remoteConfig: RemoteConfigGetterService,
         private readonly userMetaDcdtService: UserMetaDcdtService,
     ) {}

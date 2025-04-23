@@ -1,6 +1,6 @@
 import { forwardRef, Module } from '@nestjs/common';
 import { ContextModule } from 'src/services/context/context.module';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { PairModule } from '../pair/pair.module';
 import { RouterModule } from '../router/router.module';
 import { AnalyticsResolver } from './analytics.resolver';
@@ -30,7 +30,7 @@ import { AnalyticsPairSetterService } from './services/analytics.pair.setter.ser
 @Module({
     imports: [
         AnalyticsServicesModule,
-        MXCommunicationModule,
+        DRTCommunicationModule,
         ContextModule,
         forwardRef(() => RouterModule),
         PairModule,

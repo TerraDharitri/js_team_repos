@@ -3,7 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { FarmComputeServiceV2 } from '../v2/services/farm.v2.compute.service';
 import { FarmAbiServiceProviderV2 } from '../mocks/farm.v2.abi.service.mock';
 import { FarmServiceV2 } from '../v2/services/farm.v2.service';
-import { MXDataApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.data.api.service.mock';
 import { WrapAbiServiceProvider } from '../../wrapping/mocks/wrap.abi.service.mock';
 import { RouterAbiServiceProvider } from '../../router/mocks/router.abi.service.mock';
 import { TokenComputeService } from '../../tokens/services/token.compute.service';
@@ -12,7 +12,7 @@ import { PairComputeServiceProvider } from '../../pair/mocks/pair.compute.servic
 import { PairAbiServiceProvider } from '../../pair/mocks/pair.abi.service.mock';
 import { PairService } from '../../pair/services/pair.service';
 import { ContextGetterServiceProvider } from '../../../services/context/mocks/context.getter.service.mock';
-import { MXApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
 import { WeekTimekeepingAbiServiceProvider } from '../../../submodules/week-timekeeping/mocks/week.timekeeping.abi.service.mock';
 import { WeekTimekeepingComputeService } from '../../../submodules/week-timekeeping/services/week-timekeeping.compute.service';
 import { WeeklyRewardsSplittingAbiServiceProvider } from '../../../submodules/weekly-rewards-splitting/mocks/weekly.rewards.splitting.abi.mock';
@@ -45,7 +45,7 @@ describe('FarmServiceV2', () => {
                 ElasticSearchModule,
             ],
             providers: [
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 ContextGetterServiceProvider,
                 PairService,
                 PairAbiServiceProvider,
@@ -54,7 +54,7 @@ describe('FarmServiceV2', () => {
                 TokenComputeService,
                 RouterAbiServiceProvider,
                 WrapAbiServiceProvider,
-                MXDataApiServiceProvider,
+                DRTDataApiServiceProvider,
                 WeekTimekeepingAbiServiceProvider,
                 WeekTimekeepingComputeService,
                 WeeklyRewardsSplittingAbiServiceProvider,

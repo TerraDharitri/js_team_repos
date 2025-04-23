@@ -10,8 +10,8 @@ import { WinstonModule } from 'nest-winston';
 import { ApiConfigService } from 'src/helpers/api.config.service';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { ContextGetterServiceProvider } from 'src/services/context/mocks/context.getter.service.mock';
 import { DRTGatewayServiceProvider } from 'src/services/TerraDharitri-communication/drt.gateway.service.mock';
 import { EscrowSetterService } from '../services/escrow.setter.service';
@@ -37,7 +37,7 @@ describe('EscrowTransactionService', () => {
                 EscrowAbiServiceProvider,
                 EscrowSetterService,
                 DRTProxyServiceProvider,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 DRTGatewayServiceProvider,
                 ContextGetterServiceProvider,
                 ApiConfigService,
@@ -109,7 +109,7 @@ describe('EscrowTransactionService', () => {
         const service = module.get<EscrowTransactionService>(
             EscrowTransactionService,
         );
-        const drtApi = module.get<MXApiService>(MXApiService);
+        const drtApi = module.get<DRTApiService>(DRTApiService);
         jest.spyOn(
             drtApi,
             'getNftAttributesByTokenIdentifier',

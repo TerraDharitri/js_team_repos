@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { ComposableTasksTransactionService } from './services/composable.tasks.transaction';
 import { ComposableTasksResolver } from './composable.tasks.resolver';
 import { WrappingModule } from '../wrapping/wrap.module';
 
 @Module({
-    imports: [MXCommunicationModule, WrappingModule],
+    imports: [DRTCommunicationModule, WrappingModule],
     providers: [ComposableTasksTransactionService, ComposableTasksResolver],
     exports: [ComposableTasksTransactionService],
 })

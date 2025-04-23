@@ -1,7 +1,7 @@
 import { Module, forwardRef } from '@nestjs/common';
 import { CommonAppModule } from 'src/common.app.module';
 import { ContextModule } from 'src/services/context/context.module';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { FarmModule } from '../farm/farm.module';
 import { PairModule } from '../pair/pair.module';
 import { RemoteConfigModule } from '../remote-config/remote-config.module';
@@ -19,7 +19,7 @@ import { StakingProxyFilteringService } from './services/staking.proxy.filtering
     imports: [
         CommonAppModule,
         ContextModule,
-        MXCommunicationModule,
+        DRTCommunicationModule,
         forwardRef(() => PairModule),
         FarmModule,
         FarmModuleV2,

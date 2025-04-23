@@ -3,7 +3,7 @@ import { StakingProxyTransactionService } from '../services/staking.proxy.transa
 import { StakingProxyService } from '../services/staking.proxy.service';
 import { PairService } from 'src/modules/pair/services/pair.service';
 import { DRTProxyServiceProvider } from 'src/services/TerraDharitri-communication/drt.proxy.service.mock';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { WrapAbiServiceProvider } from 'src/modules/wrapping/mocks/wrap.abi.service.mock';
 import { StakingProxyAbiServiceProvider } from '../mocks/staking.proxy.abi.service.mock';
 import { FarmFactoryService } from 'src/modules/farm/farm.factory';
@@ -18,7 +18,7 @@ import { WeekTimekeepingAbiServiceProvider } from 'src/submodules/week-timekeepi
 import { WeeklyRewardsSplittingAbiServiceProvider } from 'src/submodules/weekly-rewards-splitting/mocks/weekly.rewards.splitting.abi.mock';
 import { TokenServiceProvider } from 'src/modules/tokens/mocks/token.service.mock';
 import { TokenComputeService } from 'src/modules/tokens/services/token.compute.service';
-import { MXDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
 import { WeekTimekeepingComputeService } from 'src/submodules/week-timekeeping/services/week-timekeeping.compute.service';
 import { StakingService } from 'src/modules/staking/services/staking.service';
 import { RemoteConfigGetterServiceProvider } from 'src/modules/remote-config/mocks/remote-config.getter.mock';
@@ -39,7 +39,7 @@ import { WinstonModule } from 'nest-winston';
 import { ApiConfigService } from 'src/helpers/api.config.service';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { FarmAbiServiceProviderV2 } from 'src/modules/farm/mocks/farm.v2.abi.service.mock';
 import { StakingAbiServiceProvider } from 'src/modules/staking/mocks/staking.abi.service.mock';
 import { AnalyticsQueryServiceProvider } from 'src/services/analytics/mocks/analytics.query.service.mock';
@@ -93,8 +93,8 @@ describe('StakingProxyTransactionService', () => {
                 TokenServiceProvider,
                 TokenComputeService,
                 DRTProxyServiceProvider,
-                MXApiServiceProvider,
-                MXDataApiServiceProvider,
+                DRTApiServiceProvider,
+                DRTDataApiServiceProvider,
                 RemoteConfigGetterServiceProvider,
                 AnalyticsQueryServiceProvider,
                 ApiConfigService,
@@ -268,7 +268,7 @@ describe('StakingProxyTransactionService', () => {
             const service = module.get<StakingProxyTransactionService>(
                 StakingProxyTransactionService,
             );
-            const drtApi = module.get<MXApiService>(MXApiService);
+            const drtApi = module.get<DRTApiService>(DRTApiService);
             jest.spyOn(drtApi, 'getNftsForUser').mockResolvedValue([
                 {
                     identifier: 'METASTAKE-123456-01',
@@ -298,7 +298,7 @@ describe('StakingProxyTransactionService', () => {
             const service = module.get<StakingProxyTransactionService>(
                 StakingProxyTransactionService,
             );
-            const drtApi = module.get<MXApiService>(MXApiService);
+            const drtApi = module.get<DRTApiService>(DRTApiService);
             jest.spyOn(drtApi, 'getNftsForUser').mockResolvedValue([
                 {
                     identifier: 'METASTAKE-123456-01',
@@ -328,7 +328,7 @@ describe('StakingProxyTransactionService', () => {
             const service = module.get<StakingProxyTransactionService>(
                 StakingProxyTransactionService,
             );
-            const drtApi = module.get<MXApiService>(MXApiService);
+            const drtApi = module.get<DRTApiService>(DRTApiService);
             jest.spyOn(drtApi, 'getNftsForUser').mockResolvedValue([
                 {
                     identifier: 'METASTAKE-123456-01',

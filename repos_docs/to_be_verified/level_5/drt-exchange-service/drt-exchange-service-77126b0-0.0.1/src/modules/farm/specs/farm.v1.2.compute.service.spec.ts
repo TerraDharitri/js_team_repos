@@ -1,10 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { PairService } from '../../pair/services/pair.service';
-import { MXApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
 import { TokenComputeService } from 'src/modules/tokens/services/token.compute.service';
 import { TokenServiceProvider } from 'src/modules/tokens/mocks/token.service.mock';
 import { FarmComputeServiceV1_2 } from '../v1.2/services/farm.v1.2.compute.service';
-import { MXDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
 import { WrapAbiServiceProvider } from 'src/modules/wrapping/mocks/wrap.abi.service.mock';
 import { ContextGetterServiceProvider } from 'src/services/context/mocks/context.getter.service.mock';
 import { PairAbiServiceProvider } from 'src/modules/pair/mocks/pair.abi.service.mock';
@@ -38,7 +38,7 @@ describe('FarmService', () => {
                 FarmAbiServiceProviderV1_2,
                 FarmServiceV1_2,
                 FarmComputeServiceV1_2,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 ContextGetterServiceProvider,
                 PairService,
                 PairAbiServiceProvider,
@@ -47,7 +47,7 @@ describe('FarmService', () => {
                 TokenComputeService,
                 RouterAbiServiceProvider,
                 WrapAbiServiceProvider,
-                MXDataApiServiceProvider,
+                DRTDataApiServiceProvider,
                 AnalyticsQueryServiceProvider,
                 ApiConfigService,
             ],

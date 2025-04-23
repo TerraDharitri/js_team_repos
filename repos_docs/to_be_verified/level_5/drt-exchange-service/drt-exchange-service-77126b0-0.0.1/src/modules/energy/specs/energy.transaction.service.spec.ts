@@ -8,7 +8,7 @@ import { WinstonModule } from 'nest-winston';
 import { ApiConfigService } from 'src/helpers/api.config.service';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { ContextGetterServiceProvider } from 'src/services/context/mocks/context.getter.service.mock';
 import { DRTGatewayServiceProvider } from 'src/services/TerraDharitri-communication/drt.gateway.service.mock';
 import { InputTokenModel } from 'src/models/inputToken.model';
@@ -34,7 +34,7 @@ describe('EnergyTransactionService', () => {
             providers: [
                 EnergyTransactionService,
                 DRTProxyServiceProvider,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 DRTGatewayServiceProvider,
                 ContextGetterServiceProvider,
                 ApiConfigService,

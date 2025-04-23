@@ -17,7 +17,7 @@ Some of it's key features are:
 We recommend installing `drtpy` using the `drtpy-up` installation script. All you need to do is run the following commands in the terminal:
 
 ```sh
-wget -O drtpy-up.py https://raw.githubusercontent.com/dharitri/drt-sdk-py-cli/main/drtpy-up.py
+wget -O drtpy-up.py https://raw.githubusercontent.com/dharitri/drt-py-sdk-cli/main/drtpy-up.py
 python3 drtpy-up.py
 ```
 
@@ -49,7 +49,7 @@ drtpy contract --help
 You can upgrade to a newer `drtpy` version by typing the same commands that were used to install `drtpy`.
 
 ```sh
-wget -O drtpy-up.py https://raw.githubusercontent.com/dharitri/drt-sdk-py-cli/main/drtpy-up.py
+wget -O drtpy-up.py https://raw.githubusercontent.com/dharitri/drt-py-sdk-cli/main/drtpy-up.py
 python3 drtpy-up.py
 ```
 

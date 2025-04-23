@@ -1,5 +1,5 @@
 import { forwardRef, Module } from '@nestjs/common';
-import { MXCommunicationModule } from '../../../../services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../../../../services/TerraDharitri-communication/drt.communication.module';
 import { ContextModule } from '../../../../services/context/context.module';
 import { ProxyFarmAbiService } from './proxy.farm.abi.service';
 import { ProxyFarmTransactionsService } from './proxy.farm.transactions.service';
@@ -12,7 +12,7 @@ import { FarmModuleV2 } from 'src/modules/farm/v2/farm.v2.module';
 
 @Module({
     imports: [
-        MXCommunicationModule,
+        DRTCommunicationModule,
         ContextModule,
         ProxyPairModule,
         forwardRef(() => ProxyModule),

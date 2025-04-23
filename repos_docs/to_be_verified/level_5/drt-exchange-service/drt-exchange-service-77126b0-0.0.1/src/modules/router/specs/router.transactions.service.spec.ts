@@ -22,7 +22,7 @@ import { WinstonModule } from 'nest-winston';
 import { ConfigModule } from '@nestjs/config';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { PairFilteringService } from 'src/modules/pair/services/pair.filtering.service';
 
 describe('RouterService', () => {
@@ -59,7 +59,7 @@ describe('RouterService', () => {
                 RouterTransactionService,
                 TokenServiceProvider,
                 RouterService,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 PairFilteringService,
             ],
         }).compile();

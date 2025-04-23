@@ -20,7 +20,7 @@ import { WinstonModule } from 'nest-winston';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
 import { ComposableTasksTransactionService } from 'src/modules/composable-tasks/services/composable.tasks.transaction';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 
 describe('TransactionPairService', () => {
     let module: TestingModule;
@@ -52,7 +52,7 @@ describe('TransactionPairService', () => {
                 TokenServiceProvider,
                 ComposableTasksTransactionService,
                 PairTransactionService,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
             ],
         }).compile();
     });

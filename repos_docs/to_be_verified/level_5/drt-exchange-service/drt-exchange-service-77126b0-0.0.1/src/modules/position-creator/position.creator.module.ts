@@ -4,7 +4,7 @@ import { PairModule } from '../pair/pair.module';
 import { RouterModule } from '../router/router.module';
 import { PositionCreatorComputeService } from './services/position.creator.compute';
 import { PositionCreatorTransactionService } from './services/position.creator.transaction';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { AutoRouterModule } from '../auto-router/auto-router.module';
 import { FarmModuleV2 } from '../farm/v2/farm.v2.module';
 import { StakingProxyModule } from '../staking-proxy/staking.proxy.module';
@@ -34,7 +34,7 @@ import { EnergyModule } from '../energy/energy.module';
         WrappingModule,
         ProxyFarmModule,
         EnergyModule,
-        MXCommunicationModule,
+        DRTCommunicationModule,
     ],
     providers: [
         PositionCreatorComputeService,

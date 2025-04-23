@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { PairService } from '../../pair/services/pair.service';
 import { FarmAbiServiceMock } from '../mocks/farm.abi.service.mock';
-import { MXApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
 import { TokenServiceProvider } from 'src/modules/tokens/mocks/token.service.mock';
 import { TokenComputeService } from 'src/modules/tokens/services/token.compute.service';
 import { Address } from '@terradharitri/sdk-core';
@@ -16,7 +16,7 @@ import { FarmComputeServiceV2 } from '../v2/services/farm.v2.compute.service';
 import { RewardsModel } from '../models/farm.model';
 import { WeekTimekeepingComputeService } from '../../../submodules/week-timekeeping/services/week-timekeeping.compute.service';
 import { ProgressComputeService } from '../../../submodules/weekly-rewards-splitting/services/progress.compute.service';
-import { MXDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
 import { WrapAbiServiceProvider } from 'src/modules/wrapping/mocks/wrap.abi.service.mock';
 import { WeekTimekeepingAbiServiceProvider } from 'src/submodules/week-timekeeping/mocks/week.timekeeping.abi.service.mock';
 import { EnergyAbiServiceProvider } from 'src/modules/energy/mocks/energy.abi.service.mock';
@@ -80,7 +80,7 @@ describe('FarmService', () => {
                 FarmComputeServiceV1_2,
                 FarmComputeServiceV1_3,
                 FarmComputeServiceV2,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 ContextGetterServiceProvider,
                 RouterAbiServiceProvider,
                 TokenComputeService,
@@ -96,7 +96,7 @@ describe('FarmService', () => {
                 ProgressComputeService,
                 EnergyAbiServiceProvider,
                 EnergyComputeService,
-                MXDataApiServiceProvider,
+                DRTDataApiServiceProvider,
                 AnalyticsQueryServiceProvider,
                 ApiConfigService,
             ],

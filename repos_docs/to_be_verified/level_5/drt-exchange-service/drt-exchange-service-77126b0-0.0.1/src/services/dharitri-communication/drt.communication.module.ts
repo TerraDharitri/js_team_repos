@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ApiConfigService } from 'src/helpers/api.config.service';
-import { MXApiService } from './drt.api.service';
-import { MXDataApiService } from './drt.data.api.service';
+import { DRTApiService } from './drt.api.service';
+import { DRTDataApiService } from './drt.data.api.service';
 import { DRTGatewayService } from './drt.gateway.service';
 import { DRTProxyService } from './drt.proxy.service';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
@@ -10,17 +10,17 @@ import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
     imports: [DynamicModuleUtils.getCacheModule()],
     providers: [
         DRTProxyService,
-        MXApiService,
+        DRTApiService,
         DRTGatewayService,
-        MXDataApiService,
+        DRTDataApiService,
         ApiConfigService,
     ],
     exports: [
         DRTProxyService,
-        MXApiService,
+        DRTApiService,
         DRTGatewayService,
-        MXDataApiService,
+        DRTDataApiService,
         ApiConfigService,
     ],
 })
-export class MXCommunicationModule {}
+export class DRTCommunicationModule {}

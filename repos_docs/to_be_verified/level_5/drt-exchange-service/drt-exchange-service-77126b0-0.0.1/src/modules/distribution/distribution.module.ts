@@ -3,10 +3,10 @@ import { ContextModule } from '../../services/context/context.module';
 import { DistributionAbiService } from './services/distribution.abi.service';
 import { DistributionResolver } from './distribution.resolver';
 import { DistributionTransactionsService } from './services/distribution.transactions.service';
-import { MXCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
 
 @Module({
-    imports: [ContextModule, MXCommunicationModule],
+    imports: [ContextModule, DRTCommunicationModule],
     providers: [
         DistributionAbiService,
         DistributionTransactionsService,

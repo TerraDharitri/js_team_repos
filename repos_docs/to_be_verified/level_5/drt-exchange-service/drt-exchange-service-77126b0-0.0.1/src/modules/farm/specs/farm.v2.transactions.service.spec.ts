@@ -10,12 +10,12 @@ import { PairService } from 'src/modules/pair/services/pair.service';
 import { PairAbiServiceProvider } from 'src/modules/pair/mocks/pair.abi.service.mock';
 import { PairComputeServiceProvider } from 'src/modules/pair/mocks/pair.compute.service.mock';
 import { RouterAbiServiceProvider } from 'src/modules/router/mocks/router.abi.service.mock';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { WrapAbiServiceProvider } from 'src/modules/wrapping/mocks/wrap.abi.service.mock';
 import { ApiConfigService } from 'src/helpers/api.config.service';
 import { TokenServiceProvider } from 'src/modules/tokens/mocks/token.service.mock';
 import { ContextGetterServiceProvider } from 'src/services/context/mocks/context.getter.service.mock';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { Address } from '@terradharitri/sdk-core/out';
 import { encodeTransactionData } from 'src/helpers/helpers';
 
@@ -34,7 +34,7 @@ describe('FarmTransactionsServiceV2', () => {
             providers: [
                 ApiConfigService,
                 DRTProxyServiceProvider,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 FarmAbiServiceProviderV2,
                 PairService,
                 PairAbiServiceProvider,
@@ -59,7 +59,7 @@ describe('FarmTransactionsServiceV2', () => {
         const service = module.get<FarmTransactionServiceV2>(
             FarmTransactionServiceV2,
         );
-        const drtApi = module.get<MXApiService>(MXApiService);
+        const drtApi = module.get<DRTApiService>(DRTApiService);
         jest.spyOn(drtApi, 'getNftsForUser').mockResolvedValue([
             {
                 identifier: 'rewaMOAFL-ghijkl-0a',
@@ -91,7 +91,7 @@ describe('FarmTransactionsServiceV2', () => {
         const service = module.get<FarmTransactionServiceV2>(
             FarmTransactionServiceV2,
         );
-        const drtApi = module.get<MXApiService>(MXApiService);
+        const drtApi = module.get<DRTApiService>(DRTApiService);
         jest.spyOn(drtApi, 'getNftsForUser').mockResolvedValue([
             {
                 identifier: 'rewaMOAFL-ghijkl-01',

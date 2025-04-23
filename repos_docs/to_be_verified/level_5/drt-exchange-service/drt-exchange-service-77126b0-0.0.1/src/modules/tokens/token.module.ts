@@ -9,7 +9,7 @@ import { TokensResolver } from './token.resolver';
 import { DatabaseModule } from 'src/services/database/database.module';
 import { TokenComputeService } from './services/token.compute.service';
 import { TokenSetterService } from './services/token.setter.service';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { NftTokenResolver } from './nftToken.resolver';
 import { AnalyticsModule } from 'src/services/analytics/analytics.module';
 import { TokenFilteringService } from './services/token.filtering.service';
@@ -18,7 +18,7 @@ import { TokenLoader } from './services/token.loader';
 
 @Module({
     imports: [
-        MXCommunicationModule,
+        DRTCommunicationModule,
         forwardRef(() => PairModule),
         forwardRef(() => RouterModule),
         DatabaseModule,

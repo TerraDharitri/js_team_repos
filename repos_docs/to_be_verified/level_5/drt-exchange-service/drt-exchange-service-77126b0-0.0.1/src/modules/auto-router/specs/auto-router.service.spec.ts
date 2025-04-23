@@ -30,7 +30,7 @@ import { ApiConfigService } from 'src/helpers/api.config.service';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
 import { ComposableTasksTransactionService } from 'src/modules/composable-tasks/services/composable.tasks.transaction';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { PairFilteringService } from 'src/modules/pair/services/pair.filtering.service';
 import { gasConfig, scAddress } from 'src/config';
 import { TokenComputeServiceProvider } from 'src/modules/tokens/mocks/token.compute.service.mock';
@@ -87,7 +87,7 @@ describe('AutoRouterService', () => {
                 AutoRouterTransactionService,
                 ComposableTasksTransactionService,
                 ApiConfigService,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 PairFilteringService,
             ],
             exports: [],

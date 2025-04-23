@@ -8,7 +8,7 @@ import {
 import { PairAbiService } from './services/pair.abi.service';
 import { PairTransactionService } from './services/pair.transactions.service';
 import { ContextModule } from '../../services/context/context.module';
-import { MXCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
 import { WrappingModule } from '../wrapping/wrap.module';
 import { PairComputeService } from './services/pair.compute.service';
 import { PairSetterService } from './services/pair.setter.service';
@@ -30,7 +30,7 @@ import { ElasticSearchModule } from 'src/services/elastic-search/elastic.search.
 @Module({
     imports: [
         CommonAppModule,
-        MXCommunicationModule,
+        DRTCommunicationModule,
         ContextModule,
         WrappingModule,
         AnalyticsServicesModule,

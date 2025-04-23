@@ -14,8 +14,8 @@ import { ConfigModule } from '@nestjs/config';
 import { WinstonModule } from 'nest-winston';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 
 describe('StakingTransactionService', () => {
     let module: TestingModule;
@@ -38,9 +38,9 @@ describe('StakingTransactionService', () => {
                 ContextGetterServiceProvider,
                 DRTProxyServiceProvider,
                 DRTGatewayService,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 ApiConfigService,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
             ],
         }).compile();
     });
@@ -245,7 +245,7 @@ describe('StakingTransactionService', () => {
         const service = module.get<StakingTransactionService>(
             StakingTransactionService,
         );
-        const drtApi = module.get<MXApiService>(MXApiService);
+        const drtApi = module.get<DRTApiService>(DRTApiService);
         jest.spyOn(drtApi, 'getNftsForUser').mockResolvedValue([
             {
                 identifier: 'STAKETOK-111111-01',

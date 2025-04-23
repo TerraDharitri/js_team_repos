@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { MXCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
 import { TokenModule } from '../tokens/token.module';
 import { WrapAbiService } from './services/wrap.abi.service';
 import { WrapTransactionsService } from './services/wrap.transactions.service';
@@ -7,7 +7,7 @@ import { WrapResolver } from './wrap.resolver';
 import { WrapService } from './services/wrap.service';
 
 @Module({
-    imports: [MXCommunicationModule, TokenModule],
+    imports: [DRTCommunicationModule, TokenModule],
     providers: [
         WrapService,
         WrapAbiService,

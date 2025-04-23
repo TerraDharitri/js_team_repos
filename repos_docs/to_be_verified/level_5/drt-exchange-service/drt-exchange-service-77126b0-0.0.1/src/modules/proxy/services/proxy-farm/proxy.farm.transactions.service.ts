@@ -28,7 +28,7 @@ import { proxyVersion } from 'src/utils/proxy.utils';
 import { PairAbiService } from 'src/modules/pair/services/pair.abi.service';
 import { FarmAbiFactory } from 'src/modules/farm/farm.abi.factory';
 import { ProxyFarmAbiService } from './proxy.farm.abi.service';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import {
     WrappedFarmTokenAttributes,
     WrappedFarmTokenAttributesV2,
@@ -41,7 +41,7 @@ import { TransactionOptions } from 'src/modules/common/transaction.options';
 export class ProxyFarmTransactionsService {
     constructor(
         private readonly drtProxy: DRTProxyService,
-        private readonly drtApi: MXApiService,
+        private readonly drtApi: DRTApiService,
         private readonly farmAbi: FarmAbiFactory,
         private readonly farmAbiV2: FarmAbiServiceV2,
         private readonly pairService: PairService,

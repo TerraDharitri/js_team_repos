@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { MXCommunicationModule } from '../TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../TerraDharitri-communication/drt.communication.module';
 import { ContextGetterService } from './context.getter.service';
 import { ContextSetterService } from './context.setter.service';
 
 @Module({
-    imports: [MXCommunicationModule],
+    imports: [DRTCommunicationModule],
     providers: [ContextGetterService, ContextSetterService],
     exports: [ContextGetterService, ContextSetterService],
 })

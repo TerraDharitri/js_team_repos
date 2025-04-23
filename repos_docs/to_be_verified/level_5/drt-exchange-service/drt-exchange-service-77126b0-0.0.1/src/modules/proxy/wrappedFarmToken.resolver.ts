@@ -1,6 +1,6 @@
 import { UseGuards } from '@nestjs/common';
 import { Args, Query, ResolveField, Resolver } from '@nestjs/graphql';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { tokenCollection, tokenIdentifier } from 'src/utils/token.converters';
 import { JwtOrNativeAuthGuard } from '../auth/jwt.or.native.auth.guard';
 import { FarmTokenAttributesUnion } from '../farm/models/farmTokenAttributes.model';
@@ -18,7 +18,7 @@ export class WrappedFarmTokenResolver {
         private readonly proxyService: ProxyService,
         private readonly proxyAbi: ProxyAbiService,
         private readonly proxyPairAbi: ProxyPairAbiService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
     ) {}
 
     @ResolveField()

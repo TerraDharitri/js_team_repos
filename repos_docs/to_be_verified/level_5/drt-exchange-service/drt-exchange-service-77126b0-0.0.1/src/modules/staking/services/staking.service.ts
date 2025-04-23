@@ -8,7 +8,7 @@ import { CalculateRewardsArgs } from 'src/modules/farm/models/farm.args';
 import { DecodeAttributesArgs } from 'src/modules/proxy/models/proxy.args';
 import { RemoteConfigGetterService } from 'src/modules/remote-config/remote-config.getter.service';
 import { ContextGetterService } from 'src/services/context/context.getter.service';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import {
     StakingBoostedRewardsModel,
     StakingModel,
@@ -48,7 +48,7 @@ export class StakingService {
         private readonly stakingCompute: StakingComputeService,
         private readonly contextGetter: ContextGetterService,
         private readonly tokenService: TokenService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
         private readonly remoteConfigGetter: RemoteConfigGetterService,
         private readonly weekTimekeepingAbi: WeekTimekeepingAbiService,
         private readonly weeklyRewardsSplittingAbi: WeeklyRewardsSplittingAbiService,

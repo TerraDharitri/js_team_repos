@@ -1,6 +1,6 @@
 import { forwardRef, Module } from '@nestjs/common';
 import { ContextModule } from '../../services/context/context.module';
-import { MXCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
 import { ProxyAbiService } from './services/proxy.abi.service';
 import { ProxyFarmModule } from './services/proxy-farm/proxy.farm.module';
 import { ProxyPairModule } from './services/proxy-pair/proxy.pair.module';
@@ -20,7 +20,7 @@ import { EnergyModule } from '../energy/energy.module';
 
 @Module({
     imports: [
-        MXCommunicationModule,
+        DRTCommunicationModule,
         ContextModule,
         LockedAssetModule,
         TokenModule,

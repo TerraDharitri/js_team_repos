@@ -10,9 +10,9 @@ import { ConfigModule } from '@nestjs/config';
 import { ApiConfigService } from 'src/helpers/api.config.service';
 import winston from 'winston';
 import { EnergyAbiServiceProvider } from 'src/modules/energy/mocks/energy.abi.service.mock';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { ContextGetterServiceProvider } from 'src/services/context/mocks/context.getter.service.mock';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 
 describe('LockedTokenWrapperTransactionService', () => {
     let module: TestingModule;
@@ -29,7 +29,7 @@ describe('LockedTokenWrapperTransactionService', () => {
                 LockedTokenWrapperTransactionService,
                 EnergyAbiServiceProvider,
                 DRTProxyServiceProvider,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 ContextGetterServiceProvider,
                 ApiConfigService,
             ],
@@ -47,7 +47,7 @@ describe('LockedTokenWrapperTransactionService', () => {
         const service = module.get<LockedTokenWrapperTransactionService>(
             LockedTokenWrapperTransactionService,
         );
-        const drtApi = module.get<MXApiService>(MXApiService);
+        const drtApi = module.get<DRTApiService>(DRTApiService);
         jest.spyOn(
             drtApi,
             'getNftAttributesByTokenIdentifier',
@@ -74,7 +74,7 @@ describe('LockedTokenWrapperTransactionService', () => {
         const service = module.get<LockedTokenWrapperTransactionService>(
             LockedTokenWrapperTransactionService,
         );
-        const drtApi = module.get<MXApiService>(MXApiService);
+        const drtApi = module.get<DRTApiService>(DRTApiService);
         jest.spyOn(
             drtApi,
             'getNftAttributesByTokenIdentifier',

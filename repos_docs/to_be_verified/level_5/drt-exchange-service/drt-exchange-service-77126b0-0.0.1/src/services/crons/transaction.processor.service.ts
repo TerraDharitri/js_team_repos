@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { CacheService } from 'src/services/caching/cache.service';
 import { Address } from '@terradharitri/sdk-core';
-import { MXApiService } from '../TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from '../TerraDharitri-communication/drt.api.service';
 import { cacheConfig, constantsConfig } from 'src/config';
 import { MetricsCollector } from 'src/utils/metrics.collector';
 
@@ -12,7 +12,7 @@ export class TransactionProcessorService {
 
     constructor(
         private readonly cachingService: CacheService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
     ) {}
 
     @Cron(CronExpression.EVERY_10_SECONDS)

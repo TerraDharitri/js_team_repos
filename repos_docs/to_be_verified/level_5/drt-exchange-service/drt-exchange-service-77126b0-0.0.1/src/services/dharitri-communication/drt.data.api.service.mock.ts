@@ -1,12 +1,12 @@
-import { MXDataApiService } from './drt.data.api.service';
+import { DRTDataApiService } from './drt.data.api.service';
 
-export class MXDataApiServiceMock {
+export class DRTDataApiServiceMock {
     async getTokenPrice(tokenTicker: string): Promise<number> {
         return 1;
     }
 }
 
-export const MXDataApiServiceProvider = {
-    provide: MXDataApiService,
-    useClass: MXDataApiServiceMock,
+export const DRTDataApiServiceProvider = {
+    provide: DRTDataApiService,
+    useClass: DRTDataApiServiceMock,
 };

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ContextModule } from '../../services/context/context.module';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { PairModule } from '../pair/pair.module';
 import { ProxyFarmModule } from '../proxy/services/proxy-farm/proxy.farm.module';
 import { ProxyPairModule } from '../proxy/services/proxy-pair/proxy.pair.module';
@@ -37,7 +37,7 @@ import { MetabondingModule } from '../metabonding/metabonding.module';
 
 @Module({
     imports: [
-        MXCommunicationModule,
+        DRTCommunicationModule,
         ContextModule,
         RouterModule,
         PairModule,

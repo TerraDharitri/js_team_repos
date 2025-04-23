@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CommonAppModule } from 'src/common.app.module';
 import { ContextModule } from 'src/services/context/context.module';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { TokenModule } from '../tokens/token.module';
 import { EnergyModule } from '../energy/energy.module';
 import {
@@ -33,7 +33,7 @@ import { ElasticSearchModule } from 'src/services/elastic-search/elastic.search.
 @Module({
     imports: [
         CommonAppModule,
-        MXCommunicationModule,
+        DRTCommunicationModule,
         ContextModule,
         TokenModule,
         EnergyModule,

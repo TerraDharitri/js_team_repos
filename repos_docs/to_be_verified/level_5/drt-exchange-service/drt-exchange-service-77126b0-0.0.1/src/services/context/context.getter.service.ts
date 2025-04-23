@@ -3,7 +3,7 @@ import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
 import { Constants } from '@terradharitri/sdk-nestjs-common';
 import { Logger } from 'winston';
 import { CacheService } from 'src/services/caching/cache.service';
-import { MXApiService } from '../TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from '../TerraDharitri-communication/drt.api.service';
 import { GenericGetterService } from '../generics/generic.getter.service';
 import { NftToken } from 'src/modules/tokens/models/nftToken.model';
 
@@ -12,7 +12,7 @@ export class ContextGetterService extends GenericGetterService {
     constructor(
         protected readonly cachingService: CacheService,
         @Inject(WINSTON_MODULE_PROVIDER) protected readonly logger: Logger,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
     ) {
         super(cachingService, logger);
         this.baseKey = 'context';

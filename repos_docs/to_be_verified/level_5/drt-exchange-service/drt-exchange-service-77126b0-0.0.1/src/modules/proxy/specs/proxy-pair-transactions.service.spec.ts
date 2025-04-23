@@ -25,7 +25,7 @@ import { encodeTransactionData } from 'src/helpers/helpers';
 import { WinstonModule } from 'nest-winston';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 
 describe('TransactionProxyPairService', () => {
     let module: TestingModule;
@@ -58,7 +58,7 @@ describe('TransactionProxyPairService', () => {
                 },
                 RouterAbiServiceProvider,
                 ContextGetterServiceProvider,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
             ],
         }).compile();
     });

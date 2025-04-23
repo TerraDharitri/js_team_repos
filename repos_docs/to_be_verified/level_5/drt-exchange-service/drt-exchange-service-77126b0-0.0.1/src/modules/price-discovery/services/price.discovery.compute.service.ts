@@ -10,7 +10,7 @@ import { CacheTtlInfo } from 'src/services/caching/cache.ttl.info';
 import { IPriceDiscoveryComputeService } from './interfaces';
 import { AnalyticsQueryService } from 'src/services/analytics/services/analytics.query.service';
 import { HistoricDataModel } from 'src/modules/analytics/models/analytics.model';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import moment from 'moment';
 
 @Injectable()
@@ -22,7 +22,7 @@ export class PriceDiscoveryComputeService
         private readonly priceDiscoveryAbi: PriceDiscoveryAbiService,
         private readonly priceDiscoveryService: PriceDiscoveryService,
         private readonly analyticsQuery: AnalyticsQueryService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
     ) {}
 
     @ErrorLoggerAsync({

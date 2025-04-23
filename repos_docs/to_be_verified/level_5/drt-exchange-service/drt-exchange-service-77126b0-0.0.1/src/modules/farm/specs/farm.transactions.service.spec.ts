@@ -3,13 +3,13 @@ import { PairService } from '../../pair/services/pair.service';
 import { Address } from '@terradharitri/sdk-core';
 import { ApiConfigService } from '../../../helpers/api.config.service';
 import { DRTProxyServiceProvider } from '../../../services/TerraDharitri-communication/drt.proxy.service.mock';
-import { MXApiService } from '../../../services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from '../../../services/TerraDharitri-communication/drt.api.service';
 import { encodeTransactionData } from '../../../helpers/helpers';
 import { drtConfig, gasConfig } from '../../../config';
 import { TokenComputeService } from 'src/modules/tokens/services/token.compute.service';
 import { TokenServiceProvider } from 'src/modules/tokens/mocks/token.service.mock';
 import { FarmTransactionServiceV1_2 } from '../v1.2/services/farm.v1.2.transaction.service';
-import { MXDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
 import { WrapAbiServiceProvider } from 'src/modules/wrapping/mocks/wrap.abi.service.mock';
 import { ContextGetterServiceProvider } from 'src/services/context/mocks/context.getter.service.mock';
 import { PairAbiServiceProvider } from 'src/modules/pair/mocks/pair.abi.service.mock';
@@ -41,7 +41,7 @@ describe('FarmService', () => {
             ],
             providers: [
                 ApiConfigService,
-                MXApiService,
+                DRTApiService,
                 ContextGetterServiceProvider,
                 PairService,
                 PairAbiServiceProvider,
@@ -53,7 +53,7 @@ describe('FarmService', () => {
                 DRTProxyServiceProvider,
                 FarmTransactionServiceV1_2,
                 FarmAbiServiceProviderV1_2,
-                MXDataApiServiceProvider,
+                DRTDataApiServiceProvider,
                 AnalyticsQueryServiceProvider,
                 ApiConfigService,
             ],

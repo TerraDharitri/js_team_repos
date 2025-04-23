@@ -7,7 +7,7 @@ import {
     tokenProviderUSD,
 } from 'src/config';
 import { PairMetadata } from 'src/modules/router/models/pair.metadata.model';
-import { MXDataApiService } from 'src/services/TerraDharitri-communication/drt.data.api.service';
+import { DRTDataApiService } from 'src/services/TerraDharitri-communication/drt.data.api.service';
 import { ITokenComputeService } from '../interfaces';
 import { PairAbiService } from 'src/modules/pair/services/pair.abi.service';
 import { PairComputeService } from 'src/modules/pair/services/pair.compute.service';
@@ -49,7 +49,7 @@ export class TokenComputeService implements ITokenComputeService {
         @Inject(forwardRef(() => PairService))
         private readonly pairService: PairService,
         private readonly routerAbi: RouterAbiService,
-        private readonly dataApi: MXDataApiService,
+        private readonly dataApi: DRTDataApiService,
         private readonly analyticsQuery: AnalyticsQueryService,
         private readonly elasticService: ElasticService,
         private readonly cachingService: CacheService,

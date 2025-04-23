@@ -12,7 +12,7 @@ import {
 } from '@terradharitri/sdk-exchange';
 import { PairHandler } from './pair.handler.service';
 import { RouterComputeService } from 'src/modules/router/services/router.compute.service';
-import { MXDataApiService } from 'src/services/TerraDharitri-communication/drt.data.api.service';
+import { DRTDataApiService } from 'src/services/TerraDharitri-communication/drt.data.api.service';
 import { PairService } from 'src/modules/pair/services/pair.service';
 import { PairAbiService } from 'src/modules/pair/services/pair.abi.service';
 import { TokenComputeService } from 'src/modules/tokens/services/token.compute.service';
@@ -40,7 +40,7 @@ export class SwapEventHandler {
         private readonly tokenCompute: TokenComputeService,
         private readonly tokenSetter: TokenSetterService,
         private readonly pairHandler: PairHandler,
-        private readonly dataApi: MXDataApiService,
+        private readonly dataApi: DRTDataApiService,
         @Inject(PUB_SUB) private pubSub: RedisPubSub,
     ) {}
 

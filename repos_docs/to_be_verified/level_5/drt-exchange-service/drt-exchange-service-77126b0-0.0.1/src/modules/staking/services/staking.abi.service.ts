@@ -19,7 +19,7 @@ import { Constants } from '@terradharitri/sdk-nestjs-common';
 import { CacheTtlInfo } from 'src/services/caching/cache.ttl.info';
 import { IStakingAbiService } from './interfaces';
 import { BoostedYieldsFactors } from 'src/modules/farm/models/farm.v2.model';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { CacheService } from 'src/services/caching/cache.service';
 import { getAllKeys } from 'src/utils/get.many.utils';
 
@@ -31,7 +31,7 @@ export class StakingAbiService
     constructor(
         protected readonly drtProxy: DRTProxyService,
         private readonly gatewayService: DRTGatewayService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
         private readonly cachingService: CacheService,
     ) {
         super(drtProxy);

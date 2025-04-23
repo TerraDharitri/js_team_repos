@@ -1,7 +1,7 @@
 import { forwardRef, Module } from '@nestjs/common';
 import { WeekTimekeepingAbiService } from './services/week-timekeeping.abi.service';
 import { WeekTimekeepingComputeService } from './services/week-timekeeping.compute.service';
-import { MXCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
 import { ApiConfigService } from '../../helpers/api.config.service';
 import { WeekTimekeepingResolver } from './week-timekeeping.resolver';
 import { FarmModuleV2 } from 'src/modules/farm/v2/farm.v2.module';
@@ -12,7 +12,7 @@ import { WeekTimekeepingSetterService } from './services/week-timekeeping.setter
 
 @Module({
     imports: [
-        MXCommunicationModule,
+        DRTCommunicationModule,
         ContextModule,
         forwardRef(() => FarmModuleV2),
         forwardRef(() => FeesCollectorModule),

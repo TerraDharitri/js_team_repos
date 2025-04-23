@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CommonAppModule } from 'src/common.app.module';
 import { ContextModule } from 'src/services/context/context.module';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { TokenModule } from '../tokens/token.module';
 import { EnergyResolver, UserEnergyResolver } from './energy.resolver';
 import { EnergyAbiService } from './services/energy.abi.service';
@@ -14,7 +14,7 @@ import { EnergyUpdateResolver } from './energy.update.resolver';
 @Module({
     imports: [
         CommonAppModule,
-        MXCommunicationModule,
+        DRTCommunicationModule,
         ContextModule,
         TokenModule,
     ],

@@ -1,10 +1,10 @@
 import { DcdtToken } from 'src/modules/tokens/models/dcdtToken.model';
 import { NftToken } from 'src/modules/tokens/models/nftToken.model';
 import { Tokens } from 'src/modules/pair/mocks/pair.constants';
-import { MXApiService } from './drt.api.service';
+import { DRTApiService } from './drt.api.service';
 import { Address } from '@terradharitri/sdk-core/out';
 
-export class MXApiServiceMock {
+export class DRTApiServiceMock {
     async getCurrentEpoch(): Promise<number> {
         return 1;
     }
@@ -69,7 +69,7 @@ export class MXApiServiceMock {
     }
 }
 
-export const MXApiServiceProvider = {
-    provide: MXApiService,
-    useClass: MXApiServiceMock,
+export const DRTApiServiceProvider = {
+    provide: DRTApiService,
+    useClass: DRTApiServiceMock,
 };

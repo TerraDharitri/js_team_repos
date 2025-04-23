@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { MXCommunicationModule } from '../../../services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../../../services/TerraDharitri-communication/drt.communication.module';
 import { FeesCollectorService } from '../services/fees-collector.service';
 import { WeekTimekeepingAbiServiceProvider } from 'src/submodules/week-timekeeping/mocks/week.timekeeping.abi.service.mock';
 import { WeeklyRewardsSplittingAbiServiceProvider } from 'src/submodules/weekly-rewards-splitting/mocks/weekly.rewards.splitting.abi.mock';
@@ -12,7 +12,7 @@ import { WeekTimekeepingComputeService } from 'src/submodules/week-timekeeping/s
 import { WeeklyRewardsSplittingComputeService } from 'src/submodules/weekly-rewards-splitting/services/weekly-rewards-splitting.compute.service';
 import { EnergyAbiServiceProvider } from 'src/modules/energy/mocks/energy.abi.service.mock';
 import { TokenComputeService } from 'src/modules/tokens/services/token.compute.service';
-import { MXDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
 import { ContextGetterService } from 'src/services/context/context.getter.service';
 import { ContextGetterServiceMock } from 'src/services/context/mocks/context.getter.service.mock';
 import { RouterAbiServiceProvider } from 'src/modules/router/mocks/router.abi.service.mock';
@@ -37,7 +37,7 @@ describe('FeesCollectorService', () => {
     beforeAll(async () => {
         module = await Test.createTestingModule({
             imports: [
-                MXCommunicationModule,
+                DRTCommunicationModule,
                 WinstonModule.forRoot({
                     transports: [new winston.transports.Console({})],
                 }),
@@ -63,7 +63,7 @@ describe('FeesCollectorService', () => {
                 PairService,
                 WrapAbiServiceProvider,
                 RouterAbiServiceProvider,
-                MXDataApiServiceProvider,
+                DRTDataApiServiceProvider,
                 {
                     provide: ContextGetterService,
                     useClass: ContextGetterServiceMock,

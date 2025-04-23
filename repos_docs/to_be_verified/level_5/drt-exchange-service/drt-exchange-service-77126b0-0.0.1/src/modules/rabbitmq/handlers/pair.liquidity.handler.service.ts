@@ -4,7 +4,7 @@ import { RedisPubSub } from 'graphql-redis-subscriptions';
 import { PairSetterService } from 'src/modules/pair/services/pair.setter.service';
 import { RouterComputeService } from 'src/modules/router/services/router.compute.service';
 import { RouterSetterService } from 'src/modules/router/services/router.setter.service';
-import { MXDataApiService } from 'src/services/TerraDharitri-communication/drt.data.api.service';
+import { DRTDataApiService } from 'src/services/TerraDharitri-communication/drt.data.api.service';
 import { PUB_SUB } from 'src/services/redis.pubSub.module';
 import { computeValueUSD } from 'src/utils/token.converters';
 import { PairHandler } from './pair.handler.service';
@@ -20,7 +20,7 @@ export class LiquidityHandler {
         private readonly tokenService: TokenService,
         private readonly tokenCompute: TokenComputeService,
         private readonly pairHandler: PairHandler,
-        private readonly dataApi: MXDataApiService,
+        private readonly dataApi: DRTDataApiService,
         @Inject(PUB_SUB) private pubSub: RedisPubSub,
     ) {}
 

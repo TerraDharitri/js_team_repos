@@ -4,7 +4,7 @@ import {
     FeesCollectorResolver,
     UserEntryFeesCollectorResolver,
 } from './fees-collector.resolver';
-import { MXCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from '../../services/TerraDharitri-communication/drt.communication.module';
 import { FeesCollectorService } from './services/fees-collector.service';
 import { WeeklyRewardsSplittingModule } from '../../submodules/weekly-rewards-splitting/weekly-rewards-splitting.module';
 import { WeekTimekeepingModule } from '../../submodules/week-timekeeping/week-timekeeping.module';
@@ -17,7 +17,7 @@ import { TokenModule } from '../tokens/token.module';
 
 @Module({
     imports: [
-        MXCommunicationModule,
+        DRTCommunicationModule,
         forwardRef(() => WeekTimekeepingModule),
         forwardRef(() => WeeklyRewardsSplittingModule),
         ContextModule,

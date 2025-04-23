@@ -5,7 +5,7 @@ import { StakingService } from '../services/staking.service';
 import { StakingComputeService } from '../services/staking.compute.service';
 import { DRTProxyServiceProvider } from 'src/services/TerraDharitri-communication/drt.proxy.service.mock';
 import { DRTGatewayService } from 'src/services/TerraDharitri-communication/drt.gateway.service';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { RemoteConfigGetterServiceProvider } from 'src/modules/remote-config/mocks/remote-config.getter.mock';
 import { Address } from '@terradharitri/sdk-core';
 import { TokenServiceProvider } from '../../tokens/mocks/token.service.mock';
@@ -46,7 +46,7 @@ describe('StakingService', () => {
                 WeeklyRewardsSplittingComputeService,
                 RemoteConfigGetterServiceProvider,
                 DRTProxyServiceProvider,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 DRTGatewayService,
                 TokenServiceProvider,
                 TokenComputeServiceProvider,

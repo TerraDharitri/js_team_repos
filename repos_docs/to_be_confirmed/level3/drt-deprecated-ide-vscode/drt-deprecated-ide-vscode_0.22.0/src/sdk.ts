@@ -11,7 +11,7 @@ import path = require("path");
 import fs = require('fs');
 
 const DefaultDrtpyVersion = Version.parse("9.4.1");
-const LatestDrtpyReleaseUrl = "https://api.github.com/repos/dharitri/mx-sdk-py-cli/releases/latest";
+const LatestDrtpyReleaseUrl = "https://api.github.com/repos/dharitri/drt-py-sdk-cli/releases/latest";
 
 export function getPath() {
     return Settings.getSdkPath();
@@ -125,7 +125,7 @@ export async function reinstallDrtpy(version: Version) {
 }
 
 function getDrtpyUpUrl(version: Version) {
-    return `https://raw.githubusercontent.com/dharitri/mx-sdk-py-cli/${version.vValue}/drtpy-up.py`;
+    return `https://raw.githubusercontent.com/dharitri/drt-py-sdk-cli/${version.vValue}/drtpy-up.py`;
 }
 
 export async function newFromTemplate(folder: string, template: string, name: string) {

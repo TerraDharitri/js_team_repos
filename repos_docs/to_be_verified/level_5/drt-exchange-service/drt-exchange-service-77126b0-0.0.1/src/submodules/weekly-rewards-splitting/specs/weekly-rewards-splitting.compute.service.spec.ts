@@ -6,7 +6,7 @@ import { EnergyModel } from 'src/modules/energy/models/energy.model';
 import { WeeklyRewardsSplittingAbiServiceProvider } from '../mocks/weekly.rewards.splitting.abi.mock';
 import { EnergyAbiServiceProvider } from 'src/modules/energy/mocks/energy.abi.service.mock';
 import { TokenComputeService } from 'src/modules/tokens/services/token.compute.service';
-import { MXDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
 import { WeeklyRewardsSplittingAbiService } from '../services/weekly-rewards-splitting.abi.service';
 import { Address } from '@terradharitri/sdk-core/out';
 import { PairComputeServiceProvider } from 'src/modules/pair/mocks/pair.compute.service.mock';
@@ -22,7 +22,7 @@ import { ApiConfigService } from 'src/helpers/api.config.service';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
 import { AnalyticsQueryServiceProvider } from 'src/services/analytics/mocks/analytics.query.service.mock';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { ElasticSearchModule } from 'src/services/elastic-search/elastic.search.module';
 
 describe('WeeklyRewardsSplittingComputeService', () => {
@@ -49,11 +49,11 @@ describe('WeeklyRewardsSplittingComputeService', () => {
                 PairComputeServiceProvider,
                 WrapAbiServiceProvider,
                 RouterAbiServiceProvider,
-                MXDataApiServiceProvider,
+                DRTDataApiServiceProvider,
                 ContextGetterServiceProvider,
                 AnalyticsQueryServiceProvider,
                 ApiConfigService,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
             ],
         }).compile();
     });

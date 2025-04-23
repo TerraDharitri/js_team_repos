@@ -15,7 +15,7 @@ import { TransactionModel } from 'src/models/transaction.model';
 import { DRTProxyService } from 'src/services/TerraDharitri-communication/drt.proxy.service';
 import { StakingAbiService } from './staking.abi.service';
 import { ErrorLoggerAsync } from '@terradharitri/sdk-nestjs-common';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { ContextGetterService } from 'src/services/context/context.getter.service';
 import { TransactionOptions } from 'src/modules/common/transaction.options';
 
@@ -24,7 +24,7 @@ export class StakingTransactionService {
     constructor(
         private readonly stakingAbi: StakingAbiService,
         private readonly drtProxy: DRTProxyService,
-        private readonly drtApi: MXApiService,
+        private readonly drtApi: DRTApiService,
         private readonly contextGetter: ContextGetterService,
     ) {}
 

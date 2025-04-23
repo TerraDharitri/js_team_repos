@@ -1,12 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { PairService } from '../../pair/services/pair.service';
-import { MXApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from '../../../services/TerraDharitri-communication/drt.api.service.mock';
 import { ContextGetterServiceProvider } from '../../../services/context/mocks/context.getter.service.mock';
 import { TokenComputeService } from 'src/modules/tokens/services/token.compute.service';
 import { TokenServiceProvider } from 'src/modules/tokens/mocks/token.service.mock';
 import { FarmComputeServiceV1_2 } from '../v1.2/services/farm.v1.2.compute.service';
 import { CalculateRewardsArgs } from '../models/farm.args';
-import { MXDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
 import { WrapAbiServiceProvider } from 'src/modules/wrapping/mocks/wrap.abi.service.mock';
 import { PairAbiServiceProvider } from 'src/modules/pair/mocks/pair.abi.service.mock';
 import { PairComputeServiceProvider } from 'src/modules/pair/mocks/pair.compute.service.mock';
@@ -37,7 +37,7 @@ describe('FarmService', () => {
                 ElasticSearchModule,
             ],
             providers: [
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 ContextGetterServiceProvider,
                 PairService,
                 PairAbiServiceProvider,
@@ -46,7 +46,7 @@ describe('FarmService', () => {
                 TokenComputeService,
                 RouterAbiServiceProvider,
                 WrapAbiServiceProvider,
-                MXDataApiServiceProvider,
+                DRTDataApiServiceProvider,
                 FarmComputeServiceV1_2,
                 FarmAbiServiceProviderV1_2,
                 FarmServiceV1_2,

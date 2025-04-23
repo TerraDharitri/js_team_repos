@@ -14,7 +14,7 @@ import { LockOption } from '../models/simple.lock.energy.model';
 import { GetOrSetCache } from 'src/helpers/decorators/caching.decorator';
 import { Constants } from '@terradharitri/sdk-nestjs-common';
 import { CacheTtlInfo } from 'src/services/caching/cache.ttl.info';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { scAddress } from 'src/config';
 import { IEnergyAbiService } from './interfaces';
 import { ErrorLoggerAsync } from '@terradharitri/sdk-nestjs-common';
@@ -26,7 +26,7 @@ export class EnergyAbiService
 {
     constructor(
         protected readonly drtProxy: DRTProxyService,
-        private readonly drtAPI: MXApiService,
+        private readonly drtAPI: DRTApiService,
     ) {
         super(drtProxy);
     }

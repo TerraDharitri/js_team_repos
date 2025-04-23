@@ -254,7 +254,7 @@ export class ApiConfigService {
         return impersonateUrl;
     }
 
-    getMXDataApiURL(): string {
+    getDRTDataApiURL(): string {
         const url = this.configService.get<string>('DRT_DATA_API_URL');
         if (!url) {
             throw new Error('No DRT Data API url present');

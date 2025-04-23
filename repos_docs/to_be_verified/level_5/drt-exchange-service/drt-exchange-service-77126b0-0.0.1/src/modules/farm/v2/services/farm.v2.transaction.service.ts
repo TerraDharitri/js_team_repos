@@ -17,7 +17,7 @@ import { DRTProxyService } from 'src/services/TerraDharitri-communication/drt.pr
 import { FarmAbiServiceV2 } from './farm.v2.abi.service';
 import { PairService } from 'src/modules/pair/services/pair.service';
 import { PairAbiService } from 'src/modules/pair/services/pair.abi.service';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { ContextGetterService } from 'src/services/context/context.getter.service';
 import { TransactionOptions } from 'src/modules/common/transaction.options';
 
@@ -28,7 +28,7 @@ export class FarmTransactionServiceV2 extends TransactionsFarmService {
         protected readonly farmAbi: FarmAbiServiceV2,
         protected readonly pairService: PairService,
         protected readonly pairAbi: PairAbiService,
-        private readonly drtApi: MXApiService,
+        private readonly drtApi: DRTApiService,
         private readonly contextGetter: ContextGetterService,
     ) {
         super(drtProxy, farmAbi, pairService, pairAbi);

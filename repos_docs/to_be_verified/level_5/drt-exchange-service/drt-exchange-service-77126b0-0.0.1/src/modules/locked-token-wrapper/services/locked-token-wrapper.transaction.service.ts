@@ -4,7 +4,7 @@ import { TransactionModel } from '../../../models/transaction.model';
 import { Token, TokenTransfer } from '@terradharitri/sdk-core';
 import { gasConfig, scAddress } from '../../../config';
 import { InputTokenModel } from '../../../models/inputToken.model';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { ContextGetterService } from 'src/services/context/context.getter.service';
 import { tokenIdentifier } from 'src/utils/token.converters';
 import {
@@ -19,7 +19,7 @@ export class LockedTokenWrapperTransactionService {
     constructor(
         private readonly energyAbi: EnergyAbiService,
         private readonly drtProxy: DRTProxyService,
-        private readonly drtApi: MXApiService,
+        private readonly drtApi: DRTApiService,
         private readonly contextGetter: ContextGetterService,
     ) {}
 

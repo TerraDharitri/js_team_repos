@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { CacheService } from 'src/services/caching/cache.service';
-import { MXApiService } from '../TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from '../TerraDharitri-communication/drt.api.service';
 import { cacheConfig, constantsConfig } from 'src/config';
 import BigNumber from 'bignumber.js';
 import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
@@ -34,7 +34,7 @@ export class EventsProcessorService {
 
     constructor(
         private readonly cachingService: CacheService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
         private readonly elasticEventsService: ElasticSearchEventsService,
         private readonly analyticsWrite: AnalyticsWriteService,
         private readonly apiConfig: ApiConfigService,

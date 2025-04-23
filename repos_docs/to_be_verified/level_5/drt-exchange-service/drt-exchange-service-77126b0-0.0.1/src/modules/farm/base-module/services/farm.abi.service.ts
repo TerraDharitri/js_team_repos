@@ -12,7 +12,7 @@ import { ErrorLoggerAsync } from '@terradharitri/sdk-nestjs-common';
 import { GetOrSetCache } from 'src/helpers/decorators/caching.decorator';
 import { CacheTtlInfo } from 'src/services/caching/cache.ttl.info';
 import { Constants } from '@terradharitri/sdk-nestjs-common';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { IFarmAbiService } from './interfaces';
 import { CacheService } from 'src/services/caching/cache.service';
 import { getAllKeys } from 'src/utils/get.many.utils';
@@ -24,7 +24,7 @@ export class FarmAbiService
     constructor(
         protected readonly drtProxy: DRTProxyService,
         protected readonly gatewayService: DRTGatewayService,
-        protected readonly apiService: MXApiService,
+        protected readonly apiService: DRTApiService,
         protected readonly cacheService: CacheService,
     ) {
         super(drtProxy);

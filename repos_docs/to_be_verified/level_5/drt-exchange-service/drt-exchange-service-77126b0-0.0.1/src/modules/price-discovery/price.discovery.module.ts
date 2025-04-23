@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { PairModule } from '../pair/pair.module';
 import { TokenModule } from '../tokens/token.module';
 import { WrappingModule } from '../wrapping/wrap.module';
@@ -11,7 +11,7 @@ import { PriceDiscoverySetterService } from './services/price.discovery.setter.s
 import { PriceDiscoveryTransactionService } from './services/price.discovery.transactions.service';
 
 @Module({
-    imports: [MXCommunicationModule, PairModule, WrappingModule, TokenModule],
+    imports: [DRTCommunicationModule, PairModule, WrappingModule, TokenModule],
     providers: [
         PriceDiscoveryService,
         PriceDiscoveryAbiService,

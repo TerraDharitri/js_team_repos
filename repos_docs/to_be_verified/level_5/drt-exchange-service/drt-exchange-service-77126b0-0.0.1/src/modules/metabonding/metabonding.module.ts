@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { TokenModule } from '../tokens/token.module';
 import { MetabondingResolver } from './metabonding.resolver';
 import { MetabondingAbiService } from './services/metabonding.abi.service';
@@ -8,7 +8,7 @@ import { MetabondingSetterService } from './services/metabonding.setter.service'
 import { MetabondingTransactionService } from './services/metabonding.transactions.service';
 
 @Module({
-    imports: [MXCommunicationModule, TokenModule],
+    imports: [DRTCommunicationModule, TokenModule],
     providers: [
         MetabondingService,
         MetabondingAbiService,

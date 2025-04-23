@@ -16,7 +16,7 @@ import {
     DecodeAttributesArgs,
     DecodeAttributesModel,
 } from 'src/modules/proxy/models/proxy.args';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { tokenIdentifier } from 'src/utils/token.converters';
 import {
     FarmProxyTokenAttributesModel,
@@ -40,7 +40,7 @@ export class SimpleLockService {
         private readonly farmFactory: FarmFactoryService,
         private readonly farmAbi: FarmAbiFactory,
         private readonly tokenService: TokenService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
         private readonly cacheService: CacheService,
     ) {}
 

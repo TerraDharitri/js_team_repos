@@ -10,7 +10,7 @@ import { DecodeAttributesArgs } from 'src/modules/proxy/models/proxy.args';
 import { RemoteConfigGetterService } from 'src/modules/remote-config/remote-config.getter.service';
 import { StakingService } from 'src/modules/staking/services/staking.service';
 import { CacheService } from 'src/services/caching/cache.service';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { tokenIdentifier } from 'src/utils/token.converters';
 import { Logger } from 'winston';
 import { DualYieldTokenAttributesModel } from '../models/dualYieldTokenAttributes.model';
@@ -39,7 +39,7 @@ export class StakingProxyService {
         private readonly farmFactory: FarmFactoryService,
         private readonly pairService: PairService,
         private readonly tokenService: TokenService,
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
         private readonly remoteConfigGetterService: RemoteConfigGetterService,
         private readonly cachingService: CacheService,
         @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger,

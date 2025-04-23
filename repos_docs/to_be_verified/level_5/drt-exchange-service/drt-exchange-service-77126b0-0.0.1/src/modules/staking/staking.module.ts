@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { CommonAppModule } from 'src/common.app.module';
 import { ContextModule } from 'src/services/context/context.module';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { RemoteConfigModule } from '../remote-config/remote-config.module';
 import { TokenModule } from '../tokens/token.module';
 import { StakingAbiService } from './services/staking.abi.service';
@@ -21,7 +21,7 @@ import { StakingFilteringService } from './services/staking.filtering.service';
     imports: [
         CommonAppModule,
         ContextModule,
-        MXCommunicationModule,
+        DRTCommunicationModule,
         RemoteConfigModule,
         TokenModule,
         WeekTimekeepingModule,

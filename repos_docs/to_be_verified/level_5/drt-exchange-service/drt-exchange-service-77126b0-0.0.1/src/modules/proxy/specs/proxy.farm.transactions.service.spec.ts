@@ -5,7 +5,7 @@ import winston from 'winston';
 import { ConfigModule } from '@nestjs/config';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
 import { DRTProxyServiceProvider } from 'src/services/TerraDharitri-communication/drt.proxy.service.mock';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { FarmAbiServiceProviderV1_2 } from 'src/modules/farm/mocks/farm.v1.2.abi.service.mock';
 import { FarmAbiServiceProviderV1_3 } from 'src/modules/farm/mocks/farm.v1.3.abi.service.mock';
 import { FarmAbiServiceProviderV2 } from 'src/modules/farm/mocks/farm.v2.abi.service.mock';
@@ -20,7 +20,7 @@ import { ContextGetterServiceProvider } from 'src/services/context/mocks/context
 import { FarmAbiFactory } from 'src/modules/farm/farm.abi.factory';
 import { ApiConfigService } from 'src/helpers/api.config.service';
 import { Address } from '@terradharitri/sdk-core/out';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { encodeTransactionData } from 'src/helpers/helpers';
 
 describe('ProxyFarmTransactionsService', () => {
@@ -38,7 +38,7 @@ describe('ProxyFarmTransactionsService', () => {
             providers: [
                 ProxyFarmTransactionsService,
                 DRTProxyServiceProvider,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 FarmAbiFactory,
                 FarmAbiServiceProviderV1_2,
                 FarmAbiServiceProviderV1_3,
@@ -69,7 +69,7 @@ describe('ProxyFarmTransactionsService', () => {
             module.get<ProxyFarmTransactionsService>(
                 ProxyFarmTransactionsService,
             );
-        const drtApi = module.get<MXApiService>(MXApiService);
+        const drtApi = module.get<DRTApiService>(DRTApiService);
         jest.spyOn(drtApi, 'getNftsCountForUser').mockResolvedValue(1);
         jest.spyOn(drtApi, 'getNftsForUser').mockResolvedValue([
             {
@@ -101,7 +101,7 @@ describe('ProxyFarmTransactionsService', () => {
             module.get<ProxyFarmTransactionsService>(
                 ProxyFarmTransactionsService,
             );
-        const drtApi = module.get<MXApiService>(MXApiService);
+        const drtApi = module.get<DRTApiService>(DRTApiService);
         jest.spyOn(drtApi, 'getNftsCountForUser').mockResolvedValue(1);
         jest.spyOn(drtApi, 'getNftsForUser').mockResolvedValue([
             {

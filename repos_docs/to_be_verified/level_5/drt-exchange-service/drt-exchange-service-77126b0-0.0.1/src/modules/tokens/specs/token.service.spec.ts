@@ -6,9 +6,9 @@ import { ConfigModule } from '@nestjs/config';
 import { ApiConfigService } from 'src/helpers/api.config.service';
 import { PairAbiServiceProvider } from 'src/modules/pair/mocks/pair.abi.service.mock';
 import { RouterAbiServiceProvider } from 'src/modules/router/mocks/router.abi.service.mock';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import { TokenRepositoryServiceProvider } from '../mocks/token.repository.service.mock';
-import { MXApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from 'src/services/TerraDharitri-communication/drt.api.service';
 import { Tokens } from 'src/modules/pair/mocks/pair.constants';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
 import { CacheService } from 'src/services/caching/cache.service';
@@ -38,7 +38,7 @@ describe('TokenService', () => {
                 RouterAbiServiceProvider,
                 WrapAbiServiceProvider,
                 TokenRepositoryServiceProvider,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 TokenService,
                 ApiConfigService,
                 TokenComputeServiceProvider,
@@ -55,7 +55,7 @@ describe('TokenService', () => {
 
     it('should get token metadata', async () => {
         const service: TokenService = module.get<TokenService>(TokenService);
-        const apiService = module.get<MXApiService>(MXApiService);
+        const apiService = module.get<DRTApiService>(DRTApiService);
         const cachingService = module.get<CacheService>(CacheService);
 
         const tokenID = 'Wrewa-123456';

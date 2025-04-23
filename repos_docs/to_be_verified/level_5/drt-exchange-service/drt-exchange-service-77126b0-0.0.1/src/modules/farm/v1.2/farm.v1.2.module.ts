@@ -2,7 +2,7 @@ import { Module, forwardRef } from '@nestjs/common';
 import { PairModule } from 'src/modules/pair/pair.module';
 import { TokenModule } from 'src/modules/tokens/token.module';
 import { ContextModule } from 'src/services/context/context.module';
-import { MXCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
+import { DRTCommunicationModule } from 'src/services/TerraDharitri-communication/drt.communication.module';
 import { FarmAbiServiceV1_2 } from './services/farm.v1.2.abi.service';
 import { FarmComputeServiceV1_2 } from './services/farm.v1.2.compute.service';
 import { FarmResolverV1_2 } from './farm.v1.2.resolver';
@@ -16,7 +16,7 @@ import { FarmComputeLoaderV1_2 } from './services/farm.v1.2.compute.loader';
 @Module({
     imports: [
         ContextModule,
-        MXCommunicationModule,
+        DRTCommunicationModule,
         TokenModule,
         forwardRef(() => PairModule),
     ],

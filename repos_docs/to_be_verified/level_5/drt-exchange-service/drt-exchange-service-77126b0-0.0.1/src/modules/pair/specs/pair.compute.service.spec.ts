@@ -3,7 +3,7 @@ import { PairComputeService } from '../services/pair.compute.service';
 import { PairService } from '../services/pair.service';
 import { TokenServiceProvider } from 'src/modules/tokens/mocks/token.service.mock';
 import { TokenComputeService } from 'src/modules/tokens/services/token.compute.service';
-import { MXDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
+import { DRTDataApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.data.api.service.mock';
 import { WrapAbiServiceProvider } from 'src/modules/wrapping/mocks/wrap.abi.service.mock';
 import { PairAbiServiceProvider } from '../mocks/pair.abi.service.mock';
 import { AnalyticsQueryServiceProvider } from 'src/services/analytics/mocks/analytics.query.service.mock';
@@ -17,7 +17,7 @@ import { WinstonModule } from 'nest-winston';
 import { ApiConfigService } from 'src/helpers/api.config.service';
 import winston from 'winston';
 import { DynamicModuleUtils } from 'src/utils/dynamic.module.utils';
-import { MXApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
+import { DRTApiServiceProvider } from 'src/services/TerraDharitri-communication/drt.api.service.mock';
 import BigNumber from 'bignumber.js';
 import { DcdtToken } from 'src/modules/tokens/models/dcdtToken.model';
 import { AssetsModel } from 'src/modules/tokens/models/assets.model';
@@ -59,12 +59,12 @@ describe('PairService', () => {
                 WrapAbiServiceProvider,
                 TokenServiceProvider,
                 RouterAbiServiceProvider,
-                MXDataApiServiceProvider,
+                DRTDataApiServiceProvider,
                 TokenComputeService,
                 AnalyticsQueryServiceProvider,
                 ContextGetterServiceProvider,
                 ApiConfigService,
-                MXApiServiceProvider,
+                DRTApiServiceProvider,
                 FarmAbiServiceProviderV2,
                 RemoteConfigGetterServiceProvider,
                 StakingProxyAbiServiceProvider,

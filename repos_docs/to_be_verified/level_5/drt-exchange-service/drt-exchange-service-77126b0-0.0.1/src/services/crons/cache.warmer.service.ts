@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
 import { CacheService } from 'src/services/caching/cache.service';
 import { generateCacheKeyFromParams } from 'src/utils/generate-cache-key';
-import { MXApiService } from '../TerraDharitri-communication/drt.api.service';
+import { DRTApiService } from '../TerraDharitri-communication/drt.api.service';
 import { PUB_SUB } from '../redis.pubSub.module';
 import { RedisPubSub } from 'graphql-redis-subscriptions';
 import { Constants } from '@terradharitri/sdk-nestjs-common';
@@ -10,7 +10,7 @@ import axios from 'axios';
 import moment from 'moment';
 import { MetricsCollector } from 'src/utils/metrics.collector';
 import { PerformanceProfiler } from 'src/utils/performance.profiler';
-import { MXDataApiService } from '../TerraDharitri-communication/drt.data.api.service';
+import { DRTDataApiService } from '../TerraDharitri-communication/drt.data.api.service';
 import { Locker } from '@terradharitri/sdk-nestjs-common';
 import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
 import { Logger } from 'winston';
@@ -18,9 +18,9 @@ import { Logger } from 'winston';
 @Injectable()
 export class CacheWarmerService {
     constructor(
-        private readonly apiService: MXApiService,
+        private readonly apiService: DRTApiService,
         private readonly cachingService: CacheService,
-        private readonly dataApi: MXDataApiService,
+        private readonly dataApi: DRTDataApiService,
         @Inject(PUB_SUB) private pubSub: RedisPubSub,
         @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger,
     ) {}
