@@ -48,6 +48,25 @@ This should resolve the `TS2688` error and allow TypeScript to automatically use
 ### Error Message (Hypothetical)
 ```bash
 Cannot resolve module '@nestjs/common' or '@nestjs/core' from the given path.
+apps/events-processor/src/main.ts:71:32 - error TS2345: Argument of type 'import("/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_verified/level_5/drt-dune-analytics-service/drt-dune-analytics-service-main-12b5a49-0.0.1/node_modules/@nestjs/common/services/logger.service").Logger' is not assignable to parameter of type 'import("/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level4/drt-sdk-nestjs/drt-nestjs-sdk-3.7.1/node_modules/@nestjs/common/services/logger.service").Logger'.
+  Property 'context' is protected but type 'Logger' is not a class derived from 'Logger'.
+
+71   LoggerInitializer.initialize(logger);
+                                  ~~~~~~
+libs/services/src/events/liquidity.events.service.ts:70:7 - error TS2322: Type 'BigNumber | BigNumber' is not assignable to type 'BigNumber'.
+  Type 'import("/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-network-providers/drt-js-sdk-network-providers-2.4.3/node_modules/bignumber.js/bignumber").default' is not assignable to type 'import("/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_verified/level_5/drt-dune-analytics-service/drt-dune-analytics-service-main-12b5a49-0.0.1/node_modules/bignumber.js/bignumber").BigNumber'.
+    Types have separate declarations of a private property '_isBigNumber'.
+
+70       this.lastFirstTokenReserves[csvFileName] = currentEvent.getFirstTokenReserves() ?? new BigNumber(0);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libs/services/src/events/liquidity.events.service.ts:71:7 - error TS2322: Type 'BigNumber | BigNumber' is not assignable to type 'BigNumber'.
+  Type 'import("/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-network-providers/drt-js-sdk-network-providers-2.4.3/node_modules/bignumber.js/bignumber").default' is not assignable to type 'import("/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_verified/level_5/drt-dune-analytics-service/drt-dune-analytics-service-main-12b5a49-0.0.1/node_modules/bignumber.js/bignumber").BigNumber'.
+    Types have separate declarations of a private property '_isBigNumber'.
+
+71       this.lastSecondTokenReserves[csvFileName] = currentEvent.getSecondTokenReserves() ?? new BigNumber(0);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Found 3 error(s).
 ```
 
 ### Cause
