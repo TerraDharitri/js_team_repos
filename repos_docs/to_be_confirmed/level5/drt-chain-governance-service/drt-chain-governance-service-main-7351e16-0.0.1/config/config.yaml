@@ -1,0 +1,29 @@
+apps:
+  api:
+    port: 3000
+    privatePort: 4000
+    useCachingInterceptor: true
+libs:
+  common:
+    governance:
+      contractAddress: 'drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqrlllsf45f4t'
+    network: ${NETWORK}
+    urls:
+      api: ${API_URL}
+      gateway: ${GATEWAY_URL}
+    redis:
+      host: '127.0.0.1'
+      port: 6379
+    features:
+      keepAliveAgent:
+        enabled: true
+    keepAliveTimeout:
+      downstream: 61000
+      upstream: 60000
+    nativeAuth:
+      # maxExpirySeconds:
+      acceptedOrigins:
+        - utils.dharitri.org
+    security:
+      admins: []
+    # rateLimiterSecret:
