@@ -29,12 +29,12 @@ describe('Transaction Utils', () => {
     expect(tryExtractSftChange.extract(transaction)).toBeUndefined();
 
     transaction = new ShardTransaction();
-    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRVNEVA==';
+    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRENEVA==';
     tryExtractSftChange = new SftChangeTransactionExtractor;
     expect(tryExtractSftChange.extract(transaction)).toBeUndefined();
 
     transaction = new ShardTransaction();
-    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRVNEVEA0NTQ3NGM0NDRkNDU1ODQ2MmQzNjM3NjE2MzM0MzlAMTJAOWFhNjNj';
+    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRENEVEA1MjQ1NTc0MTRkNGY0MTQ2MmQzNjM3NjE2MzM0MzlAMTJAOWFhNjNj';
     tryExtractSftChange = new SftChangeTransactionExtractor();
     expect(tryExtractSftChange.extract(transaction)).toEqual('REWAMOAF-67ac49');
   });
@@ -51,11 +51,11 @@ describe('Transaction Utils', () => {
     expect(extractor.extract(transaction)).toBeUndefined();
 
     transaction = new ShardTransaction();
-    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRVNEVA==';
+    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRENEVA==';
     expect(extractor.extract(transaction)).toBeUndefined();
 
     transaction = new ShardTransaction();
-    transaction.data = 'RVNEVE5GVENyZWF0ZUA0ZTQ2NTQyZDM4MzEzMTM4Mzc2NkAwMUA0NDY1NjE2Y0BANTE2ZDU5NDc2MTZkNDE0YjMxNWE2MjU2NmE2ZDRjMzk1NTM5NDc3ODY2Nzg2MjU0NDg2YTQ3NzMzNzc0MzUzNTY0NDY3MTRhNWE0YTQyNGE3MTUzNmY2NTZiNjFANzQ2MTY3NzMzYTYxNzI3MjZmNzcyYzc3NzI2ZjZlNjcyYzczNjk2NzZlNjE2YzJjNzA2NTcyNjM2NTZlNzQyYzZjNjk2NTNiNmQ2NTc0NjE2NDYxNzQ2MTNhNTE2ZDYxNzI3MDZlNDQzNjZiNDY0NTRhNjg0NzQxNWEzNzZiNGQ1OTc5MzE3NzQ4NjI0MzczNTA1MTc5NjQ3MTYyNjE1OTMzNDE1ODZkNTczMTQ4Mzk2YTYyNjJANjg3NDc0NzA3MzNhMmYyZjY5NzA2NjczMmU2OTZmMmY2OTcwNjY3MzJmNTE2ZDU5NDc2MTZkNDE0YjMxNWE2MjU2NmE2ZDRjMzk1NTM5NDc3ODY2Nzg2MjU0NDg2YTQ3NzMzNzc0MzUzNTY0NDY3MTRhNWE0YTQyNGE3MTUzNmY2NTZiNjE=';
+    transaction.data = 'RENEVE5GVENyZWF0ZUA0ZTQ2NTQyZDM4MzEzMTM4Mzc2NkAwMUA0NDY1NjE2Y0BANTE2ZDU5NDc2MTZkNDE0YjMxNWE2MjU2NmE2ZDRjMzk1NTM5NDc3ODY2Nzg2MjU0NDg2YTQ3NzMzNzc0MzUzNTY0NDY3MTRhNWE0YTQyNGE3MTUzNmY2NTZiNjFANzQ2MTY3NzMzYTYxNzI3MjZmNzcyYzc3NzI2ZjZlNjcyYzczNjk2NzZlNjE2YzJjNzA2NTcyNjM2NTZlNzQyYzZjNjk2NTNiNmQ2NTc0NjE2NDYxNzQ2MTNhNTE2ZDYxNzI3MDZlNDQzNjZiNDY0NTRhNjg0NzQxNWEzNzZiNGQ1OTc5MzE3NzQ4NjI0MzczNTA1MTc5NjQ3MTYyNjE1OTMzNDE1ODZkNTczMTQ4Mzk2YTYyNjJANjg3NDc0NzA3MzNhMmYyZjY5NzA2NjczMmU2OTZmMmY2OTcwNjY3MzJmNTE2ZDU5NDc2MTZkNDE0YjMxNWE2MjU2NmE2ZDRjMzk1NTM5NDc3ODY2Nzg2MjU0NDg2YTQ3NzMzNzc0MzUzNTY0NDY3MTRhNWE0YTQyNGE3MTUzNmY2NTZiNjE=';
     expect(extractor.extract(transaction)).toMatchObject({ collection: 'NFT-81187f' });
   });
 
@@ -113,7 +113,7 @@ describe('Transaction Utils', () => {
     expect(extractor.canDetectNftCreateTransactionFromLogs(transaction)).toBe(false);
 
     transaction = new ShardTransaction();
-    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRVNEVA==';
+    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRENEVA==';
     transaction.sender = 'drt13wtw8k3vch93g5w74a7x35kld2hqm73kcn644l49669qr425wyfqpcpvfr';
     transaction.receiver = 'drt1qqqqqqqqqqqqqpgq95786n3gs5ddqxvwhtdyjepep740xqrkys5snh5ft9';
     expect(extractor.canDetectNftCreateTransactionFromLogs(transaction)).toBe(false);
@@ -137,11 +137,11 @@ describe('Transaction Utils', () => {
     expect(extractor.extract(transaction)).toBeUndefined();
 
     transaction = new ShardTransaction();
-    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRVNEVA==';
+    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRENEVA==';
     expect(extractor.extract(transaction)).toBeUndefined();
 
     transaction = new ShardTransaction();
-    transaction.data = 'RVNEVE5GVFVwZGF0ZUF0dHJpYnV0ZXNANTQ0NTUzNTQ0MzRmNGMyZDYxNjI2MzY0QDAxQHRlc3RhdHRyaWJ1dGVz';
+    transaction.data = 'RENEVE5GVFVwZGF0ZUF0dHJpYnV0ZXNANTQ0NTUzNTQ0MzRmNGMyZDYxNjI2MzY0QDAxQHRlc3RhdHRyaWJ1dGVz';
     expect(extractor.extract(transaction)).toMatchObject({ identifier: 'TESTCOL-abcd-01' });
   });
 
@@ -159,12 +159,12 @@ describe('Transaction Utils', () => {
     expect(tryExtractTransferOwnership.extract(transaction)).toBeUndefined();
 
     transaction = new ShardTransaction();
-    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRVNEVA==';
+    transaction.data = 'Y2hhbmdlU0ZUVG9NZXRhRENEVA==';
     tryExtractTransferOwnership = new TransferOwnershipExtractor();
     expect(tryExtractTransferOwnership.extract(transaction)).toBeUndefined();
 
     transaction = new ShardTransaction();
-    transaction.data = 'RVNEVE5GVFVwZGF0ZUF0dHJpYnV0ZXNANTQ0NTUzNTQ0MzRmNGMyZDYxNjI2MzY0QDAxQHRlc3RhdHRyaWJ1dGVz';
+    transaction.data = 'RENEVE5GVFVwZGF0ZUF0dHJpYnV0ZXNANTQ0NTUzNTQ0MzRmNGMyZDYxNjI2MzY0QDAxQHRlc3RhdHRyaWJ1dGVz';
     tryExtractTransferOwnership = new TransferOwnershipExtractor();
     expect(tryExtractTransferOwnership.extract(transaction)).toBeUndefined();
 

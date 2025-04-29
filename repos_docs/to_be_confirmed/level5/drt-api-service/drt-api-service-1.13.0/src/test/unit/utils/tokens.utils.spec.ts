@@ -10,14 +10,14 @@ describe('Token Utils', () => {
 
   describe('getUrlHash', () => {
     it('Check function getUrlHash', () => {
-      expect(TokenHelpers.getUrlHash('https://media.dharitri.org/nfts/asset/QmUUhAmBQKGkSqN775NZAAYUaqd8ssMadFg2UYSECSERz6/914.png')).toStrictEqual('947a3912');
+      expect(TokenHelpers.getUrlHash('https://media.dharitri.org/nfts/asset/QmUUhAmBQKGkSqN775NZAAYUaqd8ssMadFg2UYSECSERz6/914.png')).toStrictEqual('dde8c4e1');
     });
   });
 
   describe('getThumbnailUrlIdentifier', () => {
     it('Check function getThumbnailUrlIdentifier', () => {
       expect(TokenHelpers.getThumbnailUrlIdentifier('MOS-b9b4b2-2710', 'https://media.dharitri.org/nfts/asset/QmUUhAmBQKGkSqN775NZAAYUaqd8ssMadFg2UYSECSERz6/914.png'))
-        .toStrictEqual('MOS-b9b4b2-947a3912');
+        .toStrictEqual('MOS-b9b4b2-dde8c4e1');
     });
   });
 });

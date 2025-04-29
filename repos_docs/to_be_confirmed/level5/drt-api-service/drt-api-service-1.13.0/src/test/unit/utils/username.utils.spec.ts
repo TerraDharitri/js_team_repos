@@ -15,8 +15,8 @@ describe('Username Utils', () => {
   });
   describe('getContractAddress', () => {
     it('Get Contract Address from normalized userName', () => {
-      expect(UsernameUtils.getContractAddress('alice')).toStrictEqual('drt1qqqqqqqqqqqqqpgqf97pgqdy0tstwauxu09kszz020hp5kgqqzzsdyhgds');
-      expect(UsernameUtils.getContractAddress('alice@google.com')).toStrictEqual('drt1qqqqqqqqqqqqqpgqexv860na2t9cwgrvmrydgre23uc5g0ptqqtsghtn6j');
+      expect(UsernameUtils.getContractAddress('alice')).toStrictEqual('drt1qqqqqqqqqqqqqpgq2leexk6fwaxlxggzrnkxzruwsjzfcq2mqzgq7hwwcs');
+      expect(UsernameUtils.getContractAddress('alice@google.com')).toStrictEqual('drt1qqqqqqqqqqqqqpgqf4pw79l5s9xkslyf5p06egwcnjul95ksqzxqvw9760');
     });
   });
   describe('extractUsernameFromRawBase64', () => {
@@ -26,7 +26,7 @@ describe('Username Utils', () => {
     });
     it('should work', () => {
       expect(UsernameUtils.extractUsernameFromRawBase64("YWxpY2U=")).toStrictEqual("alice");
-      expect(UsernameUtils.extractUsernameFromRawBase64("YWxpY2UuZWxyb25k")).toStrictEqual("alice.numbat");
+      expect(UsernameUtils.extractUsernameFromRawBase64("YWxpY2UubnVtYmF0")).toStrictEqual("alice.numbat");
       expect(UsernameUtils.extractUsernameFromRawBase64("YWxpY2UyLnN1ZmZpeA==")).toStrictEqual("alice2.suffix");
       expect(UsernameUtils.extractUsernameFromRawBase64("dGVzdC4=")).toStrictEqual("test.");
       expect(UsernameUtils.extractUsernameFromRawBase64("YWxpY2UubXZ4")).toStrictEqual("alice.mvx");

@@ -202,8 +202,8 @@ describe('ProviderService', () => {
   describe('getProviderAddresses', () => {
     it('should return all contract addresses from delegation manager contract address', async () => {
       const base64Providers = [
-        'AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAL///8=',
-        'AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAP///8=',
+        'IzMAAAAAAAAAAAAAAAAAAAACMzAAAAAAAAAAAAL///8=',
+        'IzMAAAAAAAAAAAAAAAAAAAACMzAAAAAAAAAAAAP///8=',
       ];
 
       const expectedBech32Encoded = [
