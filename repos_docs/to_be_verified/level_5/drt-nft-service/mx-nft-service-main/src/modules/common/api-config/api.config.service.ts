@@ -59,11 +59,11 @@ export class ApiConfigService {
   }
 
   getPublicDataApi(): string {
-    return this.getGenericConfig<string>('MX_PUBLIC_DATA_API');
+    return this.getGenericConfig<string>('DRT_PUBLIC_DATA_API');
   }
 
   getDataUrl(): string {
-    return this.getGenericConfig<string>('MX_EXTRAS_API');
+    return this.getGenericConfig<string>('DRT_EXTRAS_API');
   }
 
   getDataToolsApiKey(): string {
@@ -100,7 +100,7 @@ export class ApiConfigService {
   }
 
   getExtrasApiUrl(): string {
-    return this.getGenericConfig<string>('MX_EXTRAS_API');
+    return this.getGenericConfig<string>('DRT_EXTRAS_API');
   }
 
   getRateLimiterSecret(): string | undefined {

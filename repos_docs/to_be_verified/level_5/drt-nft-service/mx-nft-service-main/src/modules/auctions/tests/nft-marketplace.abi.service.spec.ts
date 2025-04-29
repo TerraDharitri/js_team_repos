@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { NftMarketplaceAbiService } from '../nft-marketplace.abi.service';
-import { MxApiService, MxProxyService } from 'src/common';
+import { DrtApiService, DrtProxyService } from 'src/common';
 import { RedisCacheService } from '@terradharitri/sdk-nestjs-cache';
 import { Logger } from '@nestjs/common';
 import { OffersService } from 'src/modules/offers/offers.service';
@@ -21,22 +21,22 @@ describe('Nft Marketplace Abi Service', () => {
   const auctionWithDcdtPaymentToken = new AuctionEntity({
     marketplaceAuctionId: 1,
     paymentToken: 'DCDT',
-    ownerAddress: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+    ownerAddress: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
   });
   const auctionWithREWAPaymentToken = new AuctionEntity({
     marketplaceAuctionId: 1,
     paymentToken: 'REWA',
-    ownerAddress: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+    ownerAddress: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
   });
   const marketplace = new Marketplace({
-    address: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
+    address: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
     name: 'name',
     key: 'xoxno',
   });
 
-  const ownerAddress = 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha';
+  const ownerAddress = 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r';
   const marketplaceWithDCDTPaymentTokens = new Marketplace({
-    address: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
+    address: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
     name: 'name',
     key: 'xoxno',
     acceptedPaymentIdentifiers: ['DCDT'],
@@ -47,11 +47,11 @@ describe('Nft Marketplace Abi Service', () => {
       providers: [
         NftMarketplaceAbiService,
         {
-          provide: MxProxyService,
+          provide: DrtProxyService,
           useValue: {},
         },
         {
-          provide: MxApiService,
+          provide: DrtApiService,
           useValue: {},
         },
         {
@@ -102,8 +102,8 @@ describe('Nft Marketplace Abi Service', () => {
       gasPrice: 1000000000,
       nonce: 0,
       options: undefined,
-      receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-      sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+      receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+      sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
       signature: undefined,
       value: '0',
       version: 2,
@@ -143,8 +143,8 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -197,8 +197,8 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '111111111111111',
         version: 2,
@@ -222,8 +222,8 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -260,14 +260,14 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
       };
 
-      const result = await service.withdraw('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', 1);
+      const result = await service.withdraw('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', 1);
 
       expect(result).toMatchObject(expectedResult);
     });
@@ -314,8 +314,8 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '111111111111111',
         version: 2,
@@ -339,8 +339,8 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -369,7 +369,7 @@ describe('Nft Marketplace Abi Service', () => {
       const offersService = module.get<OffersService>(OffersService);
       jest.spyOn(offersService, 'getOfferById').mockResolvedValueOnce(new OfferEntity({ collection: 'GEN-8984e7', marketplaceOfferId: 1 }));
 
-      const result = service.withdrawOffer('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', 1);
+      const result = service.withdrawOffer('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', 1);
 
       await expect(result).rejects.toThrowError(new BadRequestError('No marketplace available for this collection'));
     });
@@ -388,14 +388,14 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
       };
 
-      const result = await service.withdrawOffer('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', 1);
+      const result = await service.withdrawOffer('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', 1);
 
       expect(result).toMatchObject(expectedResult);
     });
@@ -413,7 +413,7 @@ describe('Nft Marketplace Abi Service', () => {
     it('without active auction and no whitelisted marketplace throw expected error', async () => {
       const marketplaceService = module.get<MarketplacesService>(MarketplacesService);
       marketplaceService.getMarketplaceByKey = jest.fn().mockReturnValueOnce(null);
-      const apiService = module.get<MxApiService>(MxApiService);
+      const apiService = module.get<DrtApiService>(DrtApiService);
       apiService.getNftByIdentifierAndAddress = jest.fn().mockReturnValueOnce({
         type: NftTypeEnum.SemiFungibleDCDT,
         balance: 10,
@@ -430,7 +430,7 @@ describe('Nft Marketplace Abi Service', () => {
     it('without active auction and user not owner of nft throw expected error', async () => {
       const marketplaceService = module.get<MarketplacesService>(MarketplacesService);
       marketplaceService.getMarketplaceByKey = jest.fn().mockReturnValueOnce(marketplace);
-      const apiService = module.get<MxApiService>(MxApiService);
+      const apiService = module.get<DrtApiService>(DrtApiService);
       apiService.getNftByIdentifierAndAddress = jest.fn().mockReturnValueOnce(null);
       const offersService = module.get<OffersService>(OffersService);
       jest.spyOn(offersService, 'getOfferById').mockResolvedValueOnce(offerResponse);
@@ -443,7 +443,7 @@ describe('Nft Marketplace Abi Service', () => {
     it('without active auction and not enouth balance throw expected error', async () => {
       const marketplaceService = module.get<MarketplacesService>(MarketplacesService);
       marketplaceService.getMarketplaceByKey = jest.fn().mockReturnValueOnce(marketplace);
-      const apiService = module.get<MxApiService>(MxApiService);
+      const apiService = module.get<DrtApiService>(DrtApiService);
       apiService.getNftByIdentifierAndAddress = jest
         .fn()
         .mockReturnValueOnce({ type: NftTypeEnum.SemiFungibleDCDT, balance: 1, identifier: 'GEN-8984e7-01' });
@@ -458,7 +458,7 @@ describe('Nft Marketplace Abi Service', () => {
       const marketplaceService = module.get<MarketplacesService>(MarketplacesService);
       marketplaceService.getMarketplaceByKey = jest.fn().mockReturnValueOnce(marketplace);
 
-      const apiService = module.get<MxApiService>(MxApiService);
+      const apiService = module.get<DrtApiService>(DrtApiService);
       apiService.getNftByIdentifierAndAddress = jest.fn().mockReturnValueOnce({
         type: NftTypeEnum.SemiFungibleDCDT,
         balance: 10,
@@ -474,8 +474,8 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -509,7 +509,7 @@ describe('Nft Marketplace Abi Service', () => {
       jest.spyOn(offersService, 'getOfferById').mockResolvedValueOnce(null);
 
       const result = service.acceptOffer(
-        'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         new AcceptOfferRequest({ offerId: 2, auctionId: 1 }),
       );
 
@@ -537,7 +537,7 @@ describe('Nft Marketplace Abi Service', () => {
       const offersService = module.get<OffersService>(OffersService);
       jest.spyOn(offersService, 'getOfferById').mockResolvedValueOnce(offerResponse);
 
-      const result = service.acceptOffer('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndghb', acceptOfferWithAuctionId);
+      const result = service.acceptOffer('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndghb', acceptOfferWithAuctionId);
       await expect(result).rejects.toThrowError(new BadRequestError('No offer/auction available'));
     });
 
@@ -556,8 +556,8 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -584,14 +584,14 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
       };
 
-      const result = await service.endAuction('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', 1);
+      const result = await service.endAuction('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', 1);
 
       expect(result).toMatchObject(expectedResult);
     });
@@ -631,8 +631,8 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '1111111',
         version: 2,
@@ -657,8 +657,8 @@ describe('Nft Marketplace Abi Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltq9t9kam',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1qqqqqqqqqqqqqpgqut6lamz9dn480ytj8cmcwvydcu3lj55epltqchj479',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,

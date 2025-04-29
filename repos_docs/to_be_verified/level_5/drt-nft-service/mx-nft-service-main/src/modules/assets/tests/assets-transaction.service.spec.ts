@@ -1,19 +1,19 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { MxApiService } from 'src/common';
+import { DrtApiService } from 'src/common';
 import { RedisCacheService } from '@terradharitri/sdk-nestjs-cache';
 import { Logger, NotFoundException } from '@nestjs/common';
 import { Attribute, CreateNftRequest, TransferNftRequest, UpdateQuantityRequest } from '../models/requests';
 import { AssetsTransactionService } from '../assets-transaction.service';
 import { PinataService } from 'src/modules/ipfs/pinata.service';
 import { S3Service } from 'src/modules/s3/s3.service';
-import { MxStats } from 'src/common/services/drt-communication/models/drt-stats.model';
+import { DrtStats } from 'src/common/services/drt-communication/models/drt-stats.model';
 import { NftTypeEnum } from '../models';
 import { UploadToIpfsResult } from 'src/modules/ipfs/ipfs.model';
 
 describe('Assets Transaction Service', () => {
   let service: AssetsTransactionService;
   let module: TestingModule;
-  const ownerAddress = 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha';
+  const ownerAddress = 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r';
 
   beforeEach(async () => {
     module = await Test.createTestingModule({
@@ -28,7 +28,7 @@ describe('Assets Transaction Service', () => {
           useValue: {},
         },
         {
-          provide: MxApiService,
+          provide: DrtApiService,
           useValue: {},
         },
         {
@@ -57,8 +57,8 @@ describe('Assets Transaction Service', () => {
       gasPrice: 1000000000,
       nonce: 0,
       options: undefined,
-      receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-      sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+      receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+      sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
       signature: undefined,
       value: '0',
       version: 2,
@@ -71,7 +71,7 @@ describe('Assets Transaction Service', () => {
           functionName: 'DCDTNFTAddQuantity',
           identifier: 'GEN-eff51c-03',
           quantity: '10',
-          updateQuantityRoleAddress: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+          updateQuantityRoleAddress: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         }),
       );
       expect(result).toMatchObject(expectedResult);
@@ -83,11 +83,11 @@ describe('Assets Transaction Service', () => {
       functionName: 'DCDTNFTBurn',
       identifier: 'GEN-eff51c-03',
       quantity: '10',
-      updateQuantityRoleAddress: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+      updateQuantityRoleAddress: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
     });
 
     it('returns built transaction with right arguments', async () => {
-      const apiService = module.get<MxApiService>(MxApiService);
+      const apiService = module.get<DrtApiService>(DrtApiService);
       apiService.getNftByIdentifier = jest.fn().mockReturnValueOnce({
         type: NftTypeEnum.SemiFungibleDCDT,
         balance: 10,
@@ -95,7 +95,7 @@ describe('Assets Transaction Service', () => {
       });
 
       const redisCacheService = module.get<RedisCacheService>(RedisCacheService);
-      redisCacheService.getOrSet = jest.fn().mockReturnValueOnce(new MxStats({}));
+      redisCacheService.getOrSet = jest.fn().mockReturnValueOnce(new DrtStats({}));
       const expectedResult = {
         chainID: 'T',
         data: 'RVNEVE5GVFRyYW5zZmVyQDQ3NDU0ZTJkNjU2NjY2MzUzMTYzQDAzQDBhQDZlN2FkNmU3YWQ2ZTdhZDZlN2FkNmU3YWQ2ZTdhZDZlN2FkNmU3YWQ2ZTdhZDZlN2FkNmU3YWQ2ZTdhZDZlN2E=',
@@ -103,8 +103,8 @@ describe('Assets Transaction Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -115,18 +115,18 @@ describe('Assets Transaction Service', () => {
     });
 
     it('if no nft for identifier throws expected error', async () => {
-      const apiService = module.get<MxApiService>(MxApiService);
+      const apiService = module.get<DrtApiService>(DrtApiService);
       apiService.getNftByIdentifier = jest.fn().mockReturnValueOnce(null);
 
       const redisCacheService = module.get<RedisCacheService>(RedisCacheService);
-      redisCacheService.getOrSet = jest.fn().mockReturnValueOnce(new MxStats({}));
+      redisCacheService.getOrSet = jest.fn().mockReturnValueOnce(new DrtStats({}));
 
       const result = service.burnQuantity(ownerAddress, burnRequest);
       await expect(result).rejects.toThrowError(new NotFoundException('NFT not found'));
     });
 
     it('returns burn transaction if after activation epoch', async () => {
-      const apiService = module.get<MxApiService>(MxApiService);
+      const apiService = module.get<DrtApiService>(DrtApiService);
       apiService.getNftByIdentifier = jest.fn().mockReturnValueOnce({
         type: NftTypeEnum.SemiFungibleDCDT,
         balance: 10,
@@ -137,7 +137,7 @@ describe('Assets Transaction Service', () => {
       const redisCacheService = module.get<RedisCacheService>(RedisCacheService);
       redisCacheService.getOrSet = jest
         .fn()
-        .mockReturnValueOnce(new MxStats({ epoch: 5957, roundsPassed: 496, roundsPerEpoch: 1200, refreshRate: 6000 }));
+        .mockReturnValueOnce(new DrtStats({ epoch: 5957, roundsPassed: 496, roundsPerEpoch: 1200, refreshRate: 6000 }));
       const expectedResult = {
         chainID: 'T',
         data: 'RVNEVE5GVEJ1cm5ANDc0NTRlMmQ2NTY2NjYzNTMxNjNAMDNAMGE=',
@@ -145,8 +145,8 @@ describe('Assets Transaction Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -166,8 +166,8 @@ describe('Assets Transaction Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -177,7 +177,7 @@ describe('Assets Transaction Service', () => {
         ownerAddress,
         new TransferNftRequest({
           identifier: 'GEN-eff51c-03',
-          destinationAddress: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+          destinationAddress: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         }),
       );
       expect(result).toMatchObject(expectedResult);
@@ -191,8 +191,8 @@ describe('Assets Transaction Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -203,7 +203,7 @@ describe('Assets Transaction Service', () => {
         new TransferNftRequest({
           identifier: 'GEN-eff51c-03',
           quantity: '10',
-          destinationAddress: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+          destinationAddress: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         }),
       );
       expect(result).toMatchObject(expectedResult);
@@ -227,8 +227,8 @@ describe('Assets Transaction Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,

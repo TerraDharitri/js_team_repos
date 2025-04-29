@@ -4,7 +4,7 @@ import { MarketplaceUtils } from '../auctions/marketplaceUtils';
 import { TransactionNode } from '../common/transaction';
 import { DeployMinterRequest, UpgradeMinterRequest } from './models/requests/DeployMinterRequest';
 import { drtConfig, gas } from 'src/config';
-import { MxProxyService } from 'src/common';
+import { DrtProxyService } from 'src/common';
 import { ContractLoader } from '../auctions/contractLoader';
 
 @Injectable()
@@ -12,7 +12,7 @@ export class ProxyDeployerAbiService {
   private readonly parser: ResultsParser;
   private contract = new ContractLoader(MarketplaceUtils.proxyDeployerMintersAbiPath);
 
-  constructor(private drtProxyService: MxProxyService) {
+  constructor(private drtProxyService: DrtProxyService) {
     this.parser = new ResultsParser();
   }
 

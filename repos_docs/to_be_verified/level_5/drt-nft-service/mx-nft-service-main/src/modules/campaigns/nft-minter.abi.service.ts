@@ -19,7 +19,7 @@ import {
   TokenTransfer,
 } from '@terradharitri/sdk-core';
 import { drtConfig, gas } from '../../config';
-import { MxProxyService } from 'src/common';
+import { DrtProxyService } from 'src/common';
 import { TransactionNode } from '../common/transaction';
 import { BuyRequest, IssueCampaignRequest } from './models/requests';
 import { nominateVal } from 'src/utils';
@@ -34,7 +34,7 @@ export class NftMinterAbiService {
   private readonly abiPath: string = './src/abis/nft-minter.abi.json';
   private readonly contract = new ContractLoader(this.abiPath);
 
-  constructor(private drtProxyService: MxProxyService) {
+  constructor(private drtProxyService: DrtProxyService) {
     this.parser = new ResultsParser();
   }
 

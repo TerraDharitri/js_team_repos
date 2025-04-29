@@ -4,7 +4,7 @@ import { Address } from '@terradharitri/sdk-core';
 import { constants, genericDescriptions } from 'src/config';
 import { Collection, CollectionAsset } from './models';
 import { CollectionQuery } from './collection-query';
-import { MxApiService, MxElasticService, MxIdentityService } from 'src/common';
+import { DrtApiService, DrtElasticService, DrtIdentityService } from 'src/common';
 import { CacheInfo } from 'src/common/services/caching/entities/cache.info';
 import { CollectionsNftsCountRedisHandler } from './collection-nfts-count.redis-handler';
 import { CollectionsNftsRedisHandler } from './collection-nfts.redis-handler';
@@ -25,8 +25,8 @@ import { CollectionElastic } from 'src/common/services/drt-communication/elastic
 @Injectable()
 export class CollectionsGetterService {
   constructor(
-    private apiService: MxApiService,
-    private idService: MxIdentityService,
+    private apiService: DrtApiService,
+    private idService: DrtIdentityService,
     private smartContractArtistService: SmartContractArtistsService,
     private persistenceService: PersistenceService,
     private collectionNftsCountRedis: CollectionsNftsCountRedisHandler,
@@ -35,7 +35,7 @@ export class CollectionsGetterService {
     private analyticsService: TrendingCollectionsService,
     private documentDbService: DocumentDbService,
     private blacklistedCollectionsService: BlacklistedCollectionsService,
-    private elasticService: MxElasticService,
+    private elasticService: DrtElasticService,
   ) {}
 
   async getCollections(

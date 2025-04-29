@@ -1,4 +1,4 @@
-import { MxApiService } from 'src/common';
+import { DrtApiService } from 'src/common';
 import { Injectable } from '@nestjs/common';
 import { NftEventEnum, NftTypeEnum } from 'src/modules/assets/models';
 import { CacheEventsPublisherService } from '../cache-invalidation/cache-invalidation-publisher/change-events-publisher.service';
@@ -12,7 +12,7 @@ import { BurnEvent } from '../entities/auction/burn.event';
 export class NftEventsService {
   constructor(
     private feedEventsSenderService: FeedEventsSenderService,
-    private drtApiService: MxApiService,
+    private drtApiService: DrtApiService,
     private readonly cacheEventsPublisherService: CacheEventsPublisherService,
   ) {}
 

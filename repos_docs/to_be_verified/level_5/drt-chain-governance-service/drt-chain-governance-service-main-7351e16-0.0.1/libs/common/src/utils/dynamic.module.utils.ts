@@ -1,4 +1,4 @@
-import { ERDNEST_CONFIG_SERVICE } from "@terradharitri/sdk-nestjs-common";
+import { DRTNEST_CONFIG_SERVICE } from "@terradharitri/sdk-nestjs-common";
 import { CacheModule, RedisCacheModuleOptions } from "@terradharitri/sdk-nestjs-cache";
 import { DynamicModule, Provider } from "@nestjs/common";
 import { ClientOptions, ClientProxyFactory, Transport } from "@nestjs/microservices";
@@ -22,7 +22,7 @@ export class DynamicModuleUtils {
 
   static getNestJsApiConfigService(): Provider {
     return {
-      provide: ERDNEST_CONFIG_SERVICE,
+      provide: DRTNEST_CONFIG_SERVICE,
       useClass: SdkNestjsConfigServiceImpl,
     };
   }

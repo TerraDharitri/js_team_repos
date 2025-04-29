@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { CollectionApi } from 'src/common';
-import { MxFeedService } from 'src/common/services/drt-communication/drt-feed.service';
+import { DrtFeedService } from 'src/common/services/drt-communication/drt-feed.service';
 import { EventEnum, Feed } from 'src/common/services/drt-communication/models/feed.dto';
 import { AuctionEntity } from 'src/db/auctions';
 import { OrderEntity } from 'src/db/orders';
@@ -15,7 +15,7 @@ import { Token } from 'src/modules/usdPrice/Token.model';
 @Injectable()
 export class FeedEventsSenderService {
   constructor(
-    private accountFeedService: MxFeedService,
+    private accountFeedService: DrtFeedService,
     private assetByIdentifierService: AssetByIdentifierService,
     private readonly usdPriceService: UsdPriceService,
   ) {}

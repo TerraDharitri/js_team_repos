@@ -1,6 +1,6 @@
 import { AccountsStatsService } from '../accounts-stats.service';
 import { Test, TestingModule } from '@nestjs/testing';
-import { MxApiService } from 'src/common';
+import { DrtApiService } from 'src/common';
 import { AccountStatsEntity } from 'src/db/account-stats/account-stats';
 import { PersistenceService } from 'src/common/persistence/persistence.service';
 import { Logger } from '@nestjs/common';
@@ -29,7 +29,7 @@ describe('AccountsStatsService', () => {
           useFactory: () => ({}),
         },
         {
-          provide: MxApiService,
+          provide: DrtApiService,
           useValue: {
             getNftsCountForCollection: jest.fn(),
           },
@@ -91,7 +91,7 @@ describe('AccountsStatsService', () => {
       const stub = jest.spyOn(accountsStatsCachingService, 'getPublicStats').mockImplementation(() =>
         Promise.resolve(
           new AccountStatsEntity({
-            address: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+            address: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
             auctions: '2',
             biddingBalance: '0',
             orders: '0',
@@ -99,14 +99,14 @@ describe('AccountsStatsService', () => {
         ),
       );
       const expected = new AccountStatsEntity({
-        address: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        address: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         auctions: '2',
         biddingBalance: '0',
         orders: '0',
       });
-      const results = await service.getStats('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', false);
+      const results = await service.getStats('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', false);
 
-      expect(stub).toBeCalledWith('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', expect.anything());
+      expect(stub).toBeCalledWith('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', expect.anything());
       expect(results).toMatchObject(expected);
     });
 
@@ -115,7 +115,7 @@ describe('AccountsStatsService', () => {
       const stub = jest.spyOn(accountsStatsCachingService, 'getStatsForOwner').mockImplementation(() =>
         Promise.resolve(
           new AccountStatsEntity({
-            address: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+            address: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
             auctions: '3',
             biddingBalance: '0',
             orders: '0',
@@ -123,13 +123,13 @@ describe('AccountsStatsService', () => {
         ),
       );
       const expected = new AccountStatsEntity({
-        address: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        address: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         auctions: '3',
         biddingBalance: '0',
         orders: '0',
       });
-      const results = await service.getStats('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', true);
-      expect(stub).toBeCalledWith('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', expect.anything());
+      const results = await service.getStats('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', true);
+      expect(stub).toBeCalledWith('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', expect.anything());
       expect(results).toMatchObject(expected);
     });
 
@@ -139,7 +139,7 @@ describe('AccountsStatsService', () => {
         throw new Error();
       });
 
-      const results = await service.getStats('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', true);
+      const results = await service.getStats('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', true);
       expect(results).toMatchObject(new AccountStatsEntity());
     });
 
@@ -149,7 +149,7 @@ describe('AccountsStatsService', () => {
         throw new Error();
       });
 
-      const results = await service.getStats('erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha', false);
+      const results = await service.getStats('drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r', false);
       expect(results).toMatchObject(new AccountStatsEntity());
     });
   });

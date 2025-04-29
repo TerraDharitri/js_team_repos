@@ -5,14 +5,14 @@ import { ClientProxy } from '@nestjs/microservices';
 import { Constants, Locker } from '@terradharitri/sdk-nestjs-common';
 import { CacheService } from '@terradharitri/sdk-nestjs-cache';
 
-import { MxApiService } from 'src/common';
+import { DrtApiService } from 'src/common';
 import { XOXNO_MINTING_MANAGER } from 'src/utils/constants';
 
 @Injectable()
 export class XoxnoArtistsWarmerService {
   constructor(
     @Inject('PUBSUB_SERVICE') private clientProxy: ClientProxy,
-    private drtApiService: MxApiService,
+    private drtApiService: DrtApiService,
     private cacheService: CacheService,
   ) {}
 

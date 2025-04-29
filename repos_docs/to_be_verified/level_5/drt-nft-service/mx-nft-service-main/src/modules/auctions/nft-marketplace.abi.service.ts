@@ -20,7 +20,7 @@ import {
   TokenTransfer,
 } from '@terradharitri/sdk-core';
 import { drtConfig, gas } from '../../config';
-import { MxProxyService, getSmartContract, MxApiService } from 'src/common';
+import { DrtProxyService, getSmartContract, DrtApiService } from 'src/common';
 import { getCollectionAndNonceFromIdentifier } from 'src/utils/helpers';
 import { generateCacheKeyFromParams } from 'src/utils/generate-cache-key';
 import { TransactionNode } from '../common/transaction';
@@ -44,8 +44,8 @@ export class NftMarketplaceAbiService {
   private contractLoader = new ContractLoader(MarketplaceUtils.commonMarketplaceAbiPath);
 
   constructor(
-    private readonly drtProxyService: MxProxyService,
-    private readonly apiService: MxApiService,
+    private readonly drtProxyService: DrtProxyService,
+    private readonly apiService: DrtApiService,
     private readonly auctionsService: AuctionsGetterService,
     private readonly offersService: OffersService,
     private readonly logger: Logger,

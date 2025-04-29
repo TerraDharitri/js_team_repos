@@ -5,7 +5,7 @@ import { CollectionsTransactionsService } from '../collections-transactions.serv
 describe('Collections Transactions Service', () => {
   let service: CollectionsTransactionsService;
   let module: TestingModule;
-  const ownerAddress = 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha';
+  const ownerAddress = 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r';
 
   beforeEach(async () => {
     module = await Test.createTestingModule({
@@ -28,8 +28,8 @@ describe('Collections Transactions Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqzllls8a5w6u',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqzlllsd5j0s2',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '50000000000000000',
         version: 2,
@@ -57,8 +57,8 @@ describe('Collections Transactions Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqzllls8a5w6u',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqzlllsd5j0s2',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '50000000000000000',
         version: 2,
@@ -88,8 +88,8 @@ describe('Collections Transactions Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -115,8 +115,8 @@ describe('Collections Transactions Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -127,7 +127,7 @@ describe('Collections Transactions Service', () => {
         new TransferNftCreateRoleRequest({
           ownerAddress: ownerAddress,
           collection: 'collection',
-          addressToTransferList: ['erd1l86wtsmm3wrz385zq6vstyxxvxz2a3nkje3fgtqmkm0ydrt426q4s93gyd9'],
+          addressToTransferList: ['drt1l86wtsmm3wrz385zq6vstyxxvxz2a3nkje3fgtqmkm0ydrt426q4s93gyd9'],
         }),
       );
       expect(result).toMatchObject(expectedResult);
@@ -143,8 +143,8 @@ describe('Collections Transactions Service', () => {
         gasPrice: 1000000000,
         nonce: 0,
         options: undefined,
-        receiver: 'erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqzllls8a5w6u',
-        sender: 'erd1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltq7ndgha',
+        receiver: 'drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqzlllsd5j0s2',
+        sender: 'drt1dc3yzxxeq69wvf583gw0h67td226gu2ahpk3k50qdgzzym8npltqr06t5r',
         signature: undefined,
         value: '0',
         version: 2,
@@ -154,7 +154,7 @@ describe('Collections Transactions Service', () => {
         ownerAddress,
         new SetNftRolesRequest({
           collection: 'collection',
-          addressToTransfer: 'erd1l86wtsmm3wrz385zq6vstyxxvxz2a3nkje3fgtqmkm0ydrt426q4s93gyd9',
+          addressToTransfer: 'drt1l86wtsmm3wrz385zq6vstyxxvxz2a3nkje3fgtqmkm0ydrt426q4s93gyd9',
           roles: ['Test'],
         }),
       );
