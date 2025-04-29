@@ -1,0 +1,6 @@
+{
+  "numbat": {
+    "chainID": "D",
+    "transactionProcessorMaxLookBehind": 1000
+  }
+}
