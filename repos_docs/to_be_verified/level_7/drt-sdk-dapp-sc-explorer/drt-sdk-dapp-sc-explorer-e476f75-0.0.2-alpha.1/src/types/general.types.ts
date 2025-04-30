@@ -1,8 +1,8 @@
-import { TypedValue, AbiRegistry, Code } from '@terradharitrisdk-core/out';
+import { TypedValue, AbiRegistry, Code } from '@terradharitri/sdk-core/out';
 import {
   DcdtEnumType,
   NftEnumType
-} from '@terradharitrisdk-dapp/types/tokens.types';
+} from '@terradharitri/sdk-dapp/types/tokens.types';
 import { MetadataFieldsInitialValuesType } from 'types';
 
 export interface DocumentedTypesExampleType {

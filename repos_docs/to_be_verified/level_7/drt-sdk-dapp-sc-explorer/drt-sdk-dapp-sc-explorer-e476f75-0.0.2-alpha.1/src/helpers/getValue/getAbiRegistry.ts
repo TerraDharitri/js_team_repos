@@ -1,4 +1,4 @@
-import { AbiRegistry } from '@terradharitrisdk-core/out';
+import { AbiRegistry } from '@terradharitri/sdk-core/out';
 import {
   INTERFACE_NAME_PLACEHOLDER,
   OperationCompletionStatus

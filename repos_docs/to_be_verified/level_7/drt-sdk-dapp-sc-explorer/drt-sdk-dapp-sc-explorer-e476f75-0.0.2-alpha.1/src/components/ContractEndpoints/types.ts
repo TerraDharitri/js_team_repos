@@ -1,4 +1,4 @@
-import { EndpointDefinition } from '@terradharitrisdk-core/out';
+import { EndpointDefinition } from '@terradharitri/sdk-core/out';
 import { UserInterfaceType, ContractEndpointMutabilityEnum } from 'types';
 
 export interface ContractEndpointsUIType extends UserInterfaceType {

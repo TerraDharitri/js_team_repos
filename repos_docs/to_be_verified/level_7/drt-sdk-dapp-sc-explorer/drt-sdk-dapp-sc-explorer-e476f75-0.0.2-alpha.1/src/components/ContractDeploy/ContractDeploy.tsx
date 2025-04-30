@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NativeSerializer, Code } from '@terradharitrisdk-core/out';
+import { NativeSerializer, Code } from '@terradharitri/sdk-core/out';
 import classNames from 'classnames';
 
 import {

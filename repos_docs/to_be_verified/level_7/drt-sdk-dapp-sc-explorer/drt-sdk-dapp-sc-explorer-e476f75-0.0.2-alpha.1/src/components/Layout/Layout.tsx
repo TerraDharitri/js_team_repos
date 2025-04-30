@@ -1,5 +1,5 @@
 import React, { memo, useEffect, useState } from 'react';
-import { Loader } from '@terradharitrisdk-dapp/UI/Loader';
+import { Loader } from '@terradharitri/sdk-dapp/UI/Loader';
 import classNames from 'classnames';
 import { Tab } from 'react-bootstrap';
 

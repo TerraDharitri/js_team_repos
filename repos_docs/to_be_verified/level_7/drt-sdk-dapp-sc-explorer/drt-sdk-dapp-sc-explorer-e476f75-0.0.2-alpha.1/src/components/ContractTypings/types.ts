@@ -1,4 +1,4 @@
-import { CustomType } from '@terradharitrisdk-core/out';
+import { CustomType } from '@terradharitri/sdk-core/out';
 import { UserInterfaceType } from 'types';
 
 export interface ContractTypingsUIType extends UserInterfaceType {}

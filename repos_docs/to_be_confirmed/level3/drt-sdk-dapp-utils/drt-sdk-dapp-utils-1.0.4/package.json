@@ -17,9 +17,9 @@
   "author": "DharitrI",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@terradharitri/sdk-core": ">= 13.12.0",
     "@swc/core": "^1.4.17",
     "@swc/jest": "^0.2.36",
+    "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.12.0",
     "@types/jest": "29.5.13",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
@@ -27,6 +27,9 @@
     "typescript": "5.4.3"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-core": ">= 13.12.0"
+    "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.12.0"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.1.2"
   }
 }

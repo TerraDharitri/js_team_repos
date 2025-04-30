@@ -4,12 +4,12 @@ import {
   Interaction,
   ContractFunction,
   TokenTransfer
-} from '@terradharitrisdk-core/out';
+} from '@terradharitri/sdk-core/out';
 import {
   DcdtEnumType,
   NftEnumType
-} from '@terradharitrisdk-dapp/types/tokens.types';
-import { getChainID } from '@terradharitrisdk-dapp/utils/network';
+} from '@terradharitri/sdk-dapp/types/tokens.types';
+import { getChainID } from '@terradharitri/sdk-dapp/utils/network';
 
 import { SC_GAS_LIMIT } from 'constants/general';
 import { GetCallContractTransactionType, ProcessedFormTokenType } from 'types';

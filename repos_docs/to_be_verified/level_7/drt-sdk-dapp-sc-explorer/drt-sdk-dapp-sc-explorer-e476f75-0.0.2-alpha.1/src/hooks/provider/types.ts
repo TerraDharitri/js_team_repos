@@ -1,5 +1,5 @@
-import { TypedOutcomeBundle } from '@terradharitrisdk-core/out';
-import { ContractQueryResponse } from '@terradharitrisdk-network-providers/out/contractQueryResponse';
+import { TypedOutcomeBundle } from '@terradharitri/sdk-core/out';
+import { ContractQueryResponse } from '@terradharitri/sdk-network-providers/out/contractQueryResponse';
 
 export interface BasicPropsType {
   baseUrl?: ProviderPropsType['baseUrl'];

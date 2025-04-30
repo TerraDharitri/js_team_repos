@@ -1,7 +1,7 @@
 import {
   EndpointDefinition,
   EndpointParameterDefinition
-} from '@terradharitrisdk-core/out';
+} from '@terradharitri/sdk-core/out';
 import { FormikProps } from 'formik';
 import {
   UserInterfaceType,

@@ -1,4 +1,4 @@
-import { Type, StructType } from '@terradharitrisdk-core/out';
+import { Type, StructType } from '@terradharitri/sdk-core/out';
 
 import { CUSTOM_TYPE_PREFIX } from 'constants/general';
 import { FormikAbiType } from 'types';

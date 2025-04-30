@@ -1,5 +1,5 @@
-import { fallbackNetworkConfigurations } from '@terradharitrisdk-dapp/constants/index';
-import { EnvironmentsEnum } from '@terradharitrisdk-dapp/types/enums.types';
+import { fallbackNetworkConfigurations } from '@terradharitri/sdk-dapp/constants/index';
+import { EnvironmentsEnum } from '@terradharitri/sdk-dapp/types/enums.types';
 
 export const testNetwork =
   fallbackNetworkConfigurations[EnvironmentsEnum.devnet];

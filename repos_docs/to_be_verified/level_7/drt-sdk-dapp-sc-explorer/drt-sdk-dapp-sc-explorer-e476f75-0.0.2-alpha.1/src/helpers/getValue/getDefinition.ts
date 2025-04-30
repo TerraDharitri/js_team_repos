@@ -1,4 +1,4 @@
-import { AbiRegistry } from '@terradharitrisdk-core/out';
+import { AbiRegistry } from '@terradharitri/sdk-core/out';
 
 export const getDefinition = ({
   abiRegistry,

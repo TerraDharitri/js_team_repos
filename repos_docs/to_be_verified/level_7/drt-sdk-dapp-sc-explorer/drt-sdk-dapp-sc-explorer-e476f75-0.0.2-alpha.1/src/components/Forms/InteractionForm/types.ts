@@ -1,4 +1,4 @@
-import { EndpointDefinition, TypedValue, Code } from '@terradharitrisdk-core/out';
+import { EndpointDefinition, TypedValue, Code } from '@terradharitri/sdk-core/out';
 import { FormikProps } from 'formik';
 import {
   UserInterfaceType,

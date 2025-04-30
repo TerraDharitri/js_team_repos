@@ -979,17 +979,17 @@
     strict-event-emitter "^0.2.4"
     web-encoding "^1.1.5"
 
-"@terradharitrisdk-bls-wasm@0.3.5":
+"@terradharitri/sdk-bls-wasm@0.3.5":
   version "0.3.5"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-bls-wasm/-/sdk-bls-wasm-0.3.5.tgz#2e83308fdc7a0928c6d5a7f910d796fd8eb2d90b"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-bls-wasm/-/sdk-bls-wasm-0.3.5.tgz#2e83308fdc7a0928c6d5a7f910d796fd8eb2d90b"
   integrity sha512-c0tIdQUnbBLSt6NYU+OpeGPYdL0+GV547HeHT8Xc0BKQ7Cj0v82QUoA2QRtWrR1G4MNZmLsIacZSsf6DrIS2Bw==
 
-"@terradharitrisdk-core@12.18.0":
+"@terradharitri/sdk-core@12.18.0":
   version "12.18.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-core/-/sdk-core-12.18.0.tgz#ae99665f9afb2bd4f1e325cb7daabb1dbcc55ca6"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-core/-/sdk-core-12.18.0.tgz#ae99665f9afb2bd4f1e325cb7daabb1dbcc55ca6"
   integrity sha512-F+xGslPMkkZ0S/Q8UJZsMYl0mgHIuK/GdVsNFPiMKxQsKkxA2LTjNdPxVxjwgvRmN7WfdsTtQvmlsA5O1NYhBg==
   dependencies:
-    "@terradharitrisdk-transaction-decoder" "1.0.2"
+    "@terradharitri/sdk-transaction-decoder" "1.0.2"
     bech32 "1.1.4"
     bignumber.js "9.0.1"
     blake2b "2.1.3"
@@ -998,21 +998,21 @@
     keccak "3.0.2"
     protobufjs "7.2.4"
 
-"@terradharitrisdk-core@13.5.0":
+"@terradharitri/sdk-core@13.5.0":
   version "13.5.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-core/-/sdk-core-13.5.0.tgz#e3d97fd92e3da534095ead2164a263e8d8a48482"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-core/-/sdk-core-13.5.0.tgz#e3d97fd92e3da534095ead2164a263e8d8a48482"
   integrity sha512-J20WHxN7muUDrnGRbDhfgGJJEP1f27gdnSNx/7pa5urY/5z5Zh+a9XedUtJ/OXBcSuTp88ZelUpYFNEdenrJXA==
   dependencies:
-    "@terradharitrisdk-transaction-decoder" "1.0.2"
+    "@terradharitri/sdk-transaction-decoder" "1.0.2"
     bech32 "1.1.4"
     blake2b "2.1.3"
     buffer "6.0.3"
     json-bigint "1.0.0"
     keccak "3.0.2"
 
-"@terradharitrisdk-dapp-form@0.11.0-alpha.7":
+"@terradharitri/sdk-dapp-form@0.11.0-alpha.7":
   version "0.11.0-alpha.7"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-dapp-form/-/sdk-dapp-form-0.11.0-alpha.7.tgz#e31361fdf0e11b802e49ad352a2c4c3a7420a8d7"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-dapp-form/-/sdk-dapp-form-0.11.0-alpha.7.tgz#e31361fdf0e11b802e49ad352a2c4c3a7420a8d7"
   integrity sha512-4C6qjeR8RbqMwaC0zwP2JSqzx7swg0nxk2VVAJv1wy6NlFaI1BOoFCOK8PbqPJM6BuNgoDUAjkp8Ng9hXvUgXw==
   dependencies:
     anchorme "2.1.2"
@@ -1031,31 +1031,31 @@
     classnames "2.3.2"
     react-select "5.4.0"
 
-"@terradharitrisdk-dapp-utils@0.1.0":
+"@terradharitri/sdk-dapp-utils@0.1.0":
   version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-dapp-utils/-/sdk-dapp-utils-0.1.0.tgz#3103c2ffc648703e75f96acd229af299cb0840ab"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-dapp-utils/-/sdk-dapp-utils-0.1.0.tgz#3103c2ffc648703e75f96acd229af299cb0840ab"
   integrity sha512-EFvktZ/S1WQ1ie02nnKZHARC4r23JZWwoTFd5py1qi/Z/UoLHIzJ394HLjXFb6gBTsp4wnvNwIXBA/DNrd2Yeg==
 
-"@terradharitrisdk-dapp@2.40.0":
+"@terradharitri/sdk-dapp@2.40.0":
   version "2.40.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-dapp/-/sdk-dapp-2.40.0.tgz#6bec086f4555e0280d9be1d5290dbeac20da146a"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-dapp/-/sdk-dapp-2.40.0.tgz#6bec086f4555e0280d9be1d5290dbeac20da146a"
   integrity sha512-SRoDbecp/Z7RTePs6GG8KC+X8VguS4nKSwGc681XQaxV7TEVWKUw+tNWfFmfT4iUg5/NwwTf+pnoh9pYibg1yw==
   dependencies:
     "@lifeomic/axios-fetch" "3.0.1"
     "@metamask/providers" "16.0.0"
-    "@terradharitrisdk-dapp-utils" "0.1.0"
-    "@terradharitrisdk-extension-provider" "3.0.0"
-    "@terradharitrisdk-hw-provider" "6.4.0"
-    "@terradharitrisdk-metamask-provider" "0.0.5"
-    "@terradharitrisdk-native-auth-client" "1.0.7"
-    "@terradharitrisdk-opera-provider" "1.0.0-alpha.1"
-    "@terradharitrisdk-passkey-provider" "1.0.0"
-    "@terradharitrisdk-wallet" "4.2.0"
-    "@terradharitrisdk-wallet-connect-provider" "4.1.3"
-    "@terradharitrisdk-web-wallet-cross-window-provider" "1.0.0"
-    "@terradharitrisdk-web-wallet-iframe-provider" "1.0.2"
-    "@terradharitrisdk-web-wallet-provider" "3.2.1"
-    "@terradharitrisdk-webview-provider" "1.0.0"
+    "@terradharitri/sdk-dapp-utils" "0.1.0"
+    "@terradharitri/sdk-extension-provider" "3.0.0"
+    "@terradharitri/sdk-hw-provider" "6.4.0"
+    "@terradharitri/sdk-metamask-provider" "0.0.5"
+    "@terradharitri/sdk-native-auth-client" "1.0.7"
+    "@terradharitri/sdk-opera-provider" "1.0.0-alpha.1"
+    "@terradharitri/sdk-passkey-provider" "1.0.0"
+    "@terradharitri/sdk-wallet" "4.2.0"
+    "@terradharitri/sdk-wallet-connect-provider" "4.1.3"
+    "@terradharitri/sdk-web-wallet-cross-window-provider" "1.0.0"
+    "@terradharitri/sdk-web-wallet-iframe-provider" "1.0.2"
+    "@terradharitri/sdk-web-wallet-provider" "3.2.1"
+    "@terradharitri/sdk-webview-provider" "1.0.0"
     "@reduxjs/toolkit" "1.8.2"
     bignumber.js "9.x"
     linkify-react "4.0.2"
@@ -1082,14 +1082,14 @@
     qrcode "1.5.0"
     swr "2.2.0"
 
-"@terradharitrisdk-extension-provider@3.0.0":
+"@terradharitri/sdk-extension-provider@3.0.0":
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-extension-provider/-/sdk-extension-provider-3.0.0.tgz#e0e178ee5555f9440457547759621f5c3152c5fa"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-extension-provider/-/sdk-extension-provider-3.0.0.tgz#e0e178ee5555f9440457547759621f5c3152c5fa"
   integrity sha512-xNHLShzimYbMXqEJoiNyB4fNOXQUwSJCzt9FiOA4GdxucJnCgIM25mXtSj2I93cz+KD39QgRjEYep+li/lykOw==
 
-"@terradharitrisdk-hw-provider@6.4.0":
+"@terradharitri/sdk-hw-provider@6.4.0":
   version "6.4.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-hw-provider/-/sdk-hw-provider-6.4.0.tgz#a9afda37a23b2950c8b9a4c1f1ddbf1e513b0fda"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-hw-provider/-/sdk-hw-provider-6.4.0.tgz#a9afda37a23b2950c8b9a4c1f1ddbf1e513b0fda"
   integrity sha512-o+iO64U7gi3oqQHIaCNWoOCarrOQyjXEq7kEsWg/HXJOANpc+lq4GiXPtBkN5mOwPoj/UlEk1HfxA+54mTCFNQ==
   dependencies:
     "@ledgerhq/devices" "8.0.3"
@@ -1101,24 +1101,24 @@
     buffer "6.0.3"
     platform "1.3.6"
 
-"@terradharitrisdk-metamask-provider@0.0.5":
+"@terradharitri/sdk-metamask-provider@0.0.5":
   version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-metamask-provider/-/sdk-metamask-provider-0.0.5.tgz#9f07ec8b9d1d2b2d88e8a9bccc149f01f144be37"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-metamask-provider/-/sdk-metamask-provider-0.0.5.tgz#9f07ec8b9d1d2b2d88e8a9bccc149f01f144be37"
   integrity sha512-IicSD/0G6/ZyU5j1Q6YXcXqILZu54ZjvoN1iunffYCDYeBSt1RZrUUdvBAfzjx47ubvX8Ic0iVbfgykjBCLfCQ==
   dependencies:
     "@metamask/providers" "16.0.0"
-    "@terradharitrisdk-core" "12.18.0"
+    "@terradharitri/sdk-core" "12.18.0"
 
-"@terradharitrisdk-native-auth-client@1.0.7":
+"@terradharitri/sdk-native-auth-client@1.0.7":
   version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-native-auth-client/-/sdk-native-auth-client-1.0.7.tgz#ae3c4afbd88349059c606e47c9515825ed4047ac"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-native-auth-client/-/sdk-native-auth-client-1.0.7.tgz#ae3c4afbd88349059c606e47c9515825ed4047ac"
   integrity sha512-Fl/4DcM8tJ4dULIu03lMfi875qatGMe8DLg6HglQRB+2s5YoW3NrWkqKNrIbG0CbYCaCH9Sk5nOZkZse8FwNQg==
   dependencies:
     axios "^1.6.5"
 
-"@terradharitrisdk-network-providers@2.7.1":
+"@terradharitri/sdk-network-providers@2.7.1":
   version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-network-providers/-/sdk-network-providers-2.7.1.tgz#ff344d9bd54382629f15c93de49d9c3ac923cf9d"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-network-providers/-/sdk-network-providers-2.7.1.tgz#ff344d9bd54382629f15c93de49d9c3ac923cf9d"
   integrity sha512-pjKD16aadMP2APhLs5cfqYhh5D5tzhHSnFfm2eAhA3g8b13ML5Vjh1amWx0w2L+1lYc8QjRsMysa5ocputvHEg==
   dependencies:
     bech32 "1.1.4"
@@ -1126,40 +1126,40 @@
     buffer "6.0.3"
     json-bigint "1.0.0"
 
-"@terradharitrisdk-opera-provider@1.0.0-alpha.1":
+"@terradharitri/sdk-opera-provider@1.0.0-alpha.1":
   version "1.0.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-opera-provider/-/sdk-opera-provider-1.0.0-alpha.1.tgz#2beebd5423fdc2e667b33660f17cbff325449097"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-opera-provider/-/sdk-opera-provider-1.0.0-alpha.1.tgz#2beebd5423fdc2e667b33660f17cbff325449097"
   integrity sha512-5hrqn+kNpuy/S6eV5wh5mE4lvQo0PduZ7fLsh/2Srcaz3K5kM5lE1VyQmWk4DTxToZSldrGbgWz/olezoC6fPg==
 
-"@terradharitrisdk-passkey-provider@1.0.0":
+"@terradharitri/sdk-passkey-provider@1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-passkey-provider/-/sdk-passkey-provider-1.0.0.tgz#f96d9956f3e9376eea86e8556219d4e88ff00bb9"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-passkey-provider/-/sdk-passkey-provider-1.0.0.tgz#f96d9956f3e9376eea86e8556219d4e88ff00bb9"
   integrity sha512-lUY2ZSWNPN6X3RIMtSXjQFL5Owh+zxPZoiIQkkbBG+IUepk3MzPpASvgPfcEMSEM755Ud9hJb13Jr1HtCtmazg==
   dependencies:
     "@types/jest" "^29.5.11"
 
-"@terradharitrisdk-transaction-decoder@1.0.2":
+"@terradharitri/sdk-transaction-decoder@1.0.2":
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-transaction-decoder/-/sdk-transaction-decoder-1.0.2.tgz#83ded4f6d4b877b4421234856eb19709be2af31b"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-transaction-decoder/-/sdk-transaction-decoder-1.0.2.tgz#83ded4f6d4b877b4421234856eb19709be2af31b"
   integrity sha512-j43QsKquu8N51WLmVlJ7dV2P3A1448R7/ktvl8r3i6wRMpfdtzDPNofTdHmMRT7DdQdvs4+RNgz8hVKL11Etsw==
   dependencies:
     bech32 "^2.0.0"
 
-"@terradharitrisdk-wallet-connect-provider@4.1.3":
+"@terradharitri/sdk-wallet-connect-provider@4.1.3":
   version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-wallet-connect-provider/-/sdk-wallet-connect-provider-4.1.3.tgz#406b8bec5536e5745f18d475c91b3c005d933b65"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-wallet-connect-provider/-/sdk-wallet-connect-provider-4.1.3.tgz#406b8bec5536e5745f18d475c91b3c005d933b65"
   integrity sha512-HOsbP3f5uV7+JOBcLuNxLLwL0fBFRUe09Pi+4Hpjd8k5FiZFWfDBXmIzcQ/6vkINFnPkMfzDtKlPdZT/VquBPg==
   dependencies:
     "@walletconnect/sign-client" "2.13.3"
     "@walletconnect/utils" "2.13.3"
     bech32 "1.1.4"
 
-"@terradharitrisdk-wallet@4.2.0":
+"@terradharitri/sdk-wallet@4.2.0":
   version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-wallet/-/sdk-wallet-4.2.0.tgz#00311338564abf0702b2063176f71db9585ecd06"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-wallet/-/sdk-wallet-4.2.0.tgz#00311338564abf0702b2063176f71db9585ecd06"
   integrity sha512-EjSb9AnqMcpmDjZ7ebkUpOzpTfxj1plTuVXwZ6AaqJsdpxMfrE2izbPy18+bg5xFlr8V27wYZcW8zOhkBR50BA==
   dependencies:
-    "@terradharitrisdk-bls-wasm" "0.3.5"
+    "@terradharitri/sdk-bls-wasm" "0.3.5"
     "@noble/ed25519" "1.7.3"
     "@noble/hashes" "1.3.0"
     bech32 "1.1.4"
@@ -1172,34 +1172,34 @@
     tweetnacl "1.0.3"
     uuid "8.3.2"
 
-"@terradharitrisdk-web-wallet-cross-window-provider@1.0.0":
+"@terradharitri/sdk-web-wallet-cross-window-provider@1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-web-wallet-cross-window-provider/-/sdk-web-wallet-cross-window-provider-1.0.0.tgz#14ea0eb110de78a7e5dfbb1cb237cc8f86006b40"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-web-wallet-cross-window-provider/-/sdk-web-wallet-cross-window-provider-1.0.0.tgz#14ea0eb110de78a7e5dfbb1cb237cc8f86006b40"
   integrity sha512-xqdKCFpBCxNcp4aSwC2FLbks2Ii2uy5YpHnqR8qnqCnjH6TqdGZ1xKzQauZsiYqseVueVTmynK28w9pTOZ0Oqg==
   dependencies:
     "@types/jest" "^29.5.11"
     "@types/qs" "6.9.10"
     qs "6.11.2"
 
-"@terradharitrisdk-web-wallet-iframe-provider@1.0.2":
+"@terradharitri/sdk-web-wallet-iframe-provider@1.0.2":
   version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-web-wallet-iframe-provider/-/sdk-web-wallet-iframe-provider-1.0.2.tgz#968a3038b778d85e86724e2759cb1646672c3915"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-web-wallet-iframe-provider/-/sdk-web-wallet-iframe-provider-1.0.2.tgz#968a3038b778d85e86724e2759cb1646672c3915"
   integrity sha512-2WpmhjfOaZySf1NOFV2L5yjfRiukaOLU3+zkmwg106oMNJq7+mP7ZM7rMe7y95xYPFgMW+1Ivtdc1DTKycIn+g==
   dependencies:
     "@types/jest" "^29.5.11"
     "@types/qs" "6.9.10"
     qs "6.11.2"
 
-"@terradharitrisdk-web-wallet-provider@3.2.1":
+"@terradharitri/sdk-web-wallet-provider@3.2.1":
   version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-web-wallet-provider/-/sdk-web-wallet-provider-3.2.1.tgz#94ba12140f4f9f35f30b8e13186baa78db4ddaae"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-web-wallet-provider/-/sdk-web-wallet-provider-3.2.1.tgz#94ba12140f4f9f35f30b8e13186baa78db4ddaae"
   integrity sha512-f0CHVsBephFhoQtCAx9y2WhiIZEaNgn0oVa+sZNkgILcXU53Gm8Rj8wMfM0SDimHBYcXCcBDedyLCU3MioOjoQ==
   dependencies:
     qs "6.10.3"
 
-"@terradharitrisdk-webview-provider@1.0.0":
+"@terradharitri/sdk-webview-provider@1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@terradharitrisdk-webview-provider/-/sdk-webview-provider-1.0.0.tgz#23fcdc68b8f2ebd9dd9d23b4159315fa8ae9ac61"
+  resolved "https://registry.yarnpkg.com/@terradharitri/sdk-webview-provider/-/sdk-webview-provider-1.0.0.tgz#23fcdc68b8f2ebd9dd9d23b4159315fa8ae9ac61"
   integrity sha512-nxC1BaP319ApbJb51QNi7W9BwUrS7V311H7lVwIUgOgVFrCwdttc/rlvVDrmieQIupqSSCWWKf1/cvbzt621aw==
 
 "@noble/curves@1.4.2", "@noble/curves@~1.4.0":

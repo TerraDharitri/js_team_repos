@@ -1,4 +1,4 @@
-import { FieldDefinition } from '@terradharitrisdk-core/out/smartcontracts';
+import { FieldDefinition } from '@terradharitri/sdk-core/out/smartcontracts';
 
 export const formatDefinitionsForDisplay = (definitions: FieldDefinition[]) => {
   if (definitions.length === 0) {

@@ -28,8 +28,8 @@ import {
   U8Type,
   U8Value,
   TypeMapper
-} from '@terradharitrisdk-core/out';
-import { addressIsValid } from '@terradharitrisdk-dapp/utils/account/addressIsValid';
+} from '@terradharitri/sdk-core/out';
+import { addressIsValid } from '@terradharitri/sdk-dapp/utils/account/addressIsValid';
 
 // based on NativeSerializer, keep basic validation/error details before passing through to the NativeSerializer handler
 // keep them split for now for easier error message maintenance

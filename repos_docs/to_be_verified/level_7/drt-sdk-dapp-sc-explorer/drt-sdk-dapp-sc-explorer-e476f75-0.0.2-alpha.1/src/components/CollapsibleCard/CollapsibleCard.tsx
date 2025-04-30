@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { isWindowAvailable } from '@terradharitrisdk-dapp/utils/isWindowAvailable';
+import { isWindowAvailable } from '@terradharitri/sdk-dapp/utils/isWindowAvailable';
 import classNames from 'classnames';
 import { Collapse } from 'react-bootstrap';
 

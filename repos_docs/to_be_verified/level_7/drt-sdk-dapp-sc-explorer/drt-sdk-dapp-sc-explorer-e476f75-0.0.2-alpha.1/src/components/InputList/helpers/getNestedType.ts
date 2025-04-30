@@ -1,4 +1,4 @@
-import { Type } from '@terradharitrisdk-core/out';
+import { Type } from '@terradharitri/sdk-core/out';
 
 function cleanName(inputString: string) {
   const regex = /\w*dharitri:types:.*/;

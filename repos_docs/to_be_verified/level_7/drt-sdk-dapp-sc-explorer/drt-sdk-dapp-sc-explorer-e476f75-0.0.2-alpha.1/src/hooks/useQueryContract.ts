@@ -3,9 +3,9 @@ import {
   SmartContract,
   QueryArguments,
   ResultsParser
-} from '@terradharitrisdk-core/out';
-import { ContractQueryRequest } from '@terradharitrisdk-network-providers/out/contractQueryRequest';
-import { ContractQueryResponse } from '@terradharitrisdk-network-providers/out/contractQueryResponse';
+} from '@terradharitri/sdk-core/out';
+import { ContractQueryRequest } from '@terradharitri/sdk-network-providers/out/contractQueryRequest';
+import { ContractQueryResponse } from '@terradharitri/sdk-network-providers/out/contractQueryResponse';
 
 import { useSCExplorerContext } from 'contexts';
 import { useNetworkProvider } from 'hooks';

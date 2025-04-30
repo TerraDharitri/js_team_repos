@@ -1,4 +1,4 @@
-import { Code } from '@terradharitrisdk-core/out';
+import { Code } from '@terradharitri/sdk-core/out';
 import { UserInterfaceType } from 'types';
 
 export interface DeployUpgradeFileFormUIType extends UserInterfaceType {

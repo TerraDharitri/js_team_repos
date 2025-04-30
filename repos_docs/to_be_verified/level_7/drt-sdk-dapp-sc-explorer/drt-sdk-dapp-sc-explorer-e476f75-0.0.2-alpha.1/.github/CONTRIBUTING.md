@@ -1,4 +1,4 @@
-# Contributing to @terradharitrisdk-dapp-sc-explorer
+# Contributing to @terradharitri/sdk-dapp-sc-explorer
 
 If you are unfamiliar with the workflow of contributing to github, you can refer to this [this article](https://github.com/firstcontributions/first-contributions/blob/master/README.md)
 

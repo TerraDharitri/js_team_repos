@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 import { faDocker, faRust } from '@fortawesome/free-brands-svg-icons';
 import { faCogs, faCopy } from '@fortawesome/free-solid-svg-icons';
-import { CopyButton } from '@terradharitrisdk-dapp/UI/CopyButton';
-import { Trim } from '@terradharitrisdk-dapp/UI/Trim';
+import { CopyButton } from '@terradharitri/sdk-dapp/UI/CopyButton';
+import { Trim } from '@terradharitri/sdk-dapp/UI/Trim';
 import classNames from 'classnames';
 
 import { CardItem, PanelHeader } from 'components';

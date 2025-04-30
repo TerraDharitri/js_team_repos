@@ -3,7 +3,7 @@ import {
   Code,
   Transaction,
   TypedValue
-} from '@terradharitrisdk-core/out';
+} from '@terradharitri/sdk-core/out';
 import {
   SC_GAS_LIMIT,
   SC_DEPLOY_GAS_LIMIT,

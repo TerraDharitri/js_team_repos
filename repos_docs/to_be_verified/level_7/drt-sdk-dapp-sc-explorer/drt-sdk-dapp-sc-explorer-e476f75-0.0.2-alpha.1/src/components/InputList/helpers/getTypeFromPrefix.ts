@@ -1,4 +1,4 @@
-import { TypeExpressionParser, Type } from '@terradharitrisdk-core/out';
+import { TypeExpressionParser, Type } from '@terradharitri/sdk-core/out';
 import { TYPE_REGEX } from 'constants/general';
 
 export const getTypeFromPrefix = (

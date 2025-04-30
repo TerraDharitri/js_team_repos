@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Code } from '@terradharitrisdk-core/out/smartcontracts/code';
+import { Code } from '@terradharitri/sdk-core/out/smartcontracts/code';
 import { getIn } from 'formik';
 
 import { Dropzone } from 'components';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NativeSerializer } from '@terradharitrisdk-core/out';
+import { NativeSerializer } from '@terradharitri/sdk-core/out';
 
 import { EndpointForm } from 'components';
 import { useSCExplorerContext } from 'contexts';

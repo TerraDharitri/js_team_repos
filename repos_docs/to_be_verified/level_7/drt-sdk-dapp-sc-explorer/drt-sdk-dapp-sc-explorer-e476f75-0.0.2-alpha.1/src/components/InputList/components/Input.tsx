@@ -1,5 +1,5 @@
 import React from 'react';
-import { Type } from '@terradharitrisdk-core/out';
+import { Type } from '@terradharitri/sdk-core/out';
 import classNames from 'classnames';
 import { Field, getIn } from 'formik';
 

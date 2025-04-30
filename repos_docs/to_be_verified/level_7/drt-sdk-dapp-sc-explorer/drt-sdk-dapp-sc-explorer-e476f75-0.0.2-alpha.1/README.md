@@ -2,7 +2,7 @@
 
 > A library to hold the main logic for Smart Contract Interactions on the DharitrI blockchain
 
-[![NPM](https://img.shields.io/npm/v/@terradharitrisdk-dapp-sc-explorer.svg)](https://www.npmjs.com/package/@terradharitrisdk-dapp-sc-explorer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@terradharitri/sdk-dapp-sc-explorer.svg)](https://www.npmjs.com/package/@terradharitri/sdk-dapp-sc-explorer) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ![sdk-dapp-sc-explorer](https://github.com/terradharitri/drt-sdk-dapp-sc-explorer/blob/main/preview.jpg)
 
@@ -11,13 +11,13 @@
 The library can be installed via `npm` or `yarn`.
 
 ```bash
-npm install @terradharitrisdk-dapp-sc-explorer
+npm install @terradharitri/sdk-dapp-sc-explorer
 ```
 
 or
 
 ```bash
-yarn add @terradharitrisdk-dapp-sc-explorer
+yarn add @terradharitri/sdk-dapp-sc-explorer
 ```
 
 # Usage
@@ -38,7 +38,7 @@ The ABI interaction functionality is built upon [https://github.com/terradharitr
 
 The Smart Contract Explorer BETA offers an easy way to understand the functionality behind a Smart Contract and to interact with it.
 
-The [`@terradharitrisdk-dapp-sc-explorer`](https://www.npmjs.com/package/@terradharitrisdk-dapp-sc-explorer) package is already implemented on the [DharitrI Explorer](https://devnet-explorer.dharitrI.org/accounts/drt1qqqqqqqqqqqqqpgq2ddn0gave73udf0rrwaepu2gafzlr56n396qc0hz9q/code/details) where the user can preview and interact with the Verified Smart Contracts and on the [DharitrI Utils](https://utils.dharitrI.org/smart-contract?network=devnet) where one can Load the data from an ABI file and interact with an already deployed SC or Deploy/Upgrade a new SC.
+The [`@terradharitri/sdk-dapp-sc-explorer`](https://www.npmjs.com/package/@terradharitri/sdk-dapp-sc-explorer) package is already implemented on the [DharitrI Explorer](https://devnet-explorer.dharitrI.org/accounts/drt1qqqqqqqqqqqqqpgq2ddn0gave73udf0rrwaepu2gafzlr56n396qc0hz9q/code/details) where the user can preview and interact with the Verified Smart Contracts and on the [DharitrI Utils](https://utils.dharitrI.org/smart-contract?network=devnet) where one can Load the data from an ABI file and interact with an already deployed SC or Deploy/Upgrade a new SC.
 
 ### Read SC State
 
@@ -92,7 +92,7 @@ The **`<ScExplorerContainer />`** component, which is exported by the library, i
 - import the Container:
 
 ```typescript
-import { ScExplorerContainer } from '@terradharitrisdk-dapp-sc-explorer/containers/ScExplorerContainer';
+import { ScExplorerContainer } from '@terradharitri/sdk-dapp-sc-explorer/containers/ScExplorerContainer';
 ```
 
 ```jsx

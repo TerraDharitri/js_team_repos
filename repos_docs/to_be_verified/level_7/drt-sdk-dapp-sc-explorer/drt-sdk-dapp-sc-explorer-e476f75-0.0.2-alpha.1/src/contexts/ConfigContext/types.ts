@@ -1,4 +1,4 @@
-import { OnProviderLoginType } from '@terradharitrisdk-dapp/types/login.types';
+import { OnProviderLoginType } from '@terradharitri/sdk-dapp/types/login.types';
 
 export interface ConfigStateType {
   canMutate: boolean | undefined;

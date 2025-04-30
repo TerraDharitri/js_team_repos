@@ -1,4 +1,4 @@
-import { TransactionOnNetwork } from '@terradharitrisdk-network-providers/out/transactions';
+import { TransactionOnNetwork } from '@terradharitri/sdk-network-providers/out/transactions';
 
 import { useNetworkProvider } from 'hooks';
 

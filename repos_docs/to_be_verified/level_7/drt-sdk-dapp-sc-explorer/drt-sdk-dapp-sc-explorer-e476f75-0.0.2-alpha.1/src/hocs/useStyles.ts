@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { isSSR } from '@terradharitrisdk-dapp/utils/isSSR';
+import { isSSR } from '@terradharitri/sdk-dapp/utils/isSSR';
 
 type StylesType = typeof import('*.scss');
 

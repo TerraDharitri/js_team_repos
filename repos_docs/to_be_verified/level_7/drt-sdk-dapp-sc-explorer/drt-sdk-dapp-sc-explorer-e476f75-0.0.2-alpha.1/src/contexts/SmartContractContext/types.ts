@@ -1,5 +1,5 @@
-import { AbiRegistry } from '@terradharitrisdk-core/out';
-import { AccountType } from '@terradharitrisdk-dapp/types/account.types';
+import { AbiRegistry } from '@terradharitri/sdk-core/out';
+import { AccountType } from '@terradharitri/sdk-dapp/types/account.types';
 import { RawAbiType, VerifiedContractType } from 'types';
 
 export interface SmartContractStateType {
