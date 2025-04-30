@@ -1,7 +1,7 @@
 import esbuild from 'rollup-plugin-esbuild';
-import { defineConfig } from 'rollup';
 import commonjs from '@rollup/plugin-commonjs';
-import nodeResolve from '@rollup/plugin-node-resolve';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import { defineConfig } from 'rollup';
 
 export default defineConfig([
   {

@@ -1,4 +1,4 @@
-import { run } from "probot";
-import { robot } from "./bot.js";
+// import { run } from "probot";
+import { robot } from "./bot";
 
-run(robot)
+export default robot; // ✅ add default export

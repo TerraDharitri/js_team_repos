@@ -3,7 +3,7 @@
 
 import nock from "nock";
 // Requiring our app implementation
-import { myProbotApp } from "../src";
+import myProbotApp from "../src";
 import { Probot, ProbotOctokit } from "probot";
 // Requiring our fixtures
 import payload from "./fixtures/issues.opened.json";
@@ -53,7 +53,7 @@ describe("My Probot app", () => {
       .reply(200);
 
     // Receive a webhook event
-    await probot.receive({ name: "issues", payload });
+    await probot.receive({ name: "issue_comment", payload });
 
     expect(mock.pendingMocks()).toStrictEqual([]);
   });
