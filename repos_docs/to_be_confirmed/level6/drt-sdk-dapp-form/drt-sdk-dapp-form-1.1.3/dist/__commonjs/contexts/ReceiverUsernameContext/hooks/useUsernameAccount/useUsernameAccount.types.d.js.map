@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/__commonjs/contexts/ReceiverUsernameContext/hooks/useUsernameAccount/useUsernameAccount.types.d.ts"],
+  "sourcesContent": ["import { UsernameAccountsType } from '../useFetchUsernameAddress';\nexport interface UseUsernameAddressReturnType {\n    fetchingUsernameAccount: boolean;\n    usernameAccounts: UsernameAccountsType;\n}\nexport interface UseUsernameAccountType {\n    searchPatternToLookFor: string;\n    shouldSkipSearch: boolean;\n}\n//# sourceMappingURL=useUsernameAccount.types.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

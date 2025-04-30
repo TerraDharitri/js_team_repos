@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/__commonjs/contexts/ReceiverContext/hooks/useFetchKnownAddresses/useFetchKnownAddresses.d.ts"],
+  "sourcesContent": ["import { KnowAddressType } from 'contexts/ReceiverContext/ReceiverContext';\nexport declare function useFetchKnownAddresses(): KnowAddressType[] | null;\n//# sourceMappingURL=useFetchKnownAddresses.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/UI/Fields/AmountSelect/components/AmountInput/helpers/hasLeadingZeroes.d.ts"],
+  "sourcesContent": ["export declare const hasLeadingZeroes: (value: string) => boolean;\n//# sourceMappingURL=hasLeadingZeroes.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

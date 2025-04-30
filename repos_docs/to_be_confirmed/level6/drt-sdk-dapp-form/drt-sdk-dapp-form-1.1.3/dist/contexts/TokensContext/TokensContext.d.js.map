@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/contexts/TokensContext/TokensContext.d.ts"],
+  "sourcesContent": ["import React, { JSXElementConstructor } from 'react';\nimport { PartialNftType, PartialTokenType } from 'types';\nexport interface TokensContextInitializationPropsType {\n    RewaIcon?: JSXElementConstructor<any>;\n    initialNft?: PartialNftType;\n    initialTokens?: PartialTokenType[] | null;\n}\nexport interface TokensContextPropsType {\n    tokenId: string;\n    isTokenIdInvalid: boolean;\n    digits: number;\n    rewaLabel: string;\n    RewaIcon?: JSXElementConstructor<any>;\n    rewaPriceInUsd: number;\n    tokenIdError?: string;\n    areTokensLoading: boolean;\n    tokenDetails: PartialTokenType;\n    tokens: PartialTokenType[];\n    allAvailableTokens: PartialTokenType[];\n    nft?: PartialNftType;\n    getTokens: (showLoading?: boolean) => void;\n    onChangeTokenId: (value: string) => void;\n}\ninterface TokensContextProviderPropsType {\n    children: any;\n    value?: TokensContextInitializationPropsType;\n}\nexport declare const TokensContext: React.Context<TokensContextPropsType>;\nexport declare function TokensContextProvider({ children, value }: TokensContextProviderPropsType): React.JSX.Element;\nexport declare function useTokensContext(): TokensContextPropsType;\nexport {};\n//# sourceMappingURL=TokensContext.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

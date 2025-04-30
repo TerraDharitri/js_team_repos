@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-7SQCLJ6V.js"],
+  "sourcesContent": ["import{i as t}from\"./chunk-SVQK3TVL.js\";t();import{useState as f,useEffect as s}from\"react\";function u(e,n){let[o,r]=f(e);return s(()=>{let c=setTimeout(()=>r(e),n);return()=>clearTimeout(c)},[e]),o}var d=u;export{d as a};\n//# sourceMappingURL=chunk-7SQCLJ6V.js.map\n"],
+  "mappings": "gFAAA,IAA4C,gDAAJ,EAAE,EAAkD,WAAW,EAAE,EAAE,CAAC,GAAG,CAAC,EAAE,GAAG,EAAE,CAAC,EAAE,MAAO,GAAE,IAAI,CAAC,GAAI,GAAE,WAAW,IAAI,EAAE,CAAC,EAAE,CAAC,EAAE,MAAM,IAAI,aAAa,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,GAAI,GAAE",
+  "names": []
+}

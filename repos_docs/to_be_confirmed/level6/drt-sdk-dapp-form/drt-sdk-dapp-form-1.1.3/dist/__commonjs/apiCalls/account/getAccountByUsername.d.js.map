@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/apiCalls/account/getAccountByUsername.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls/apiConfig';\nimport { AccountContextPropsType } from 'contexts/AccountContext';\nexport declare function getAccountByUsername(username: string, apiConfig?: ApiConfigType): Promise<AccountContextPropsType | null>;\n//# sourceMappingURL=getAccountByUsername.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/UI/Fields/Receiver/helpers/formatOptions.d.ts"],
+  "sourcesContent": ["import { KnowAddressType } from 'contexts';\nexport declare const formatOptions: (knownAddresses: KnowAddressType[] | null) => {\n    value: string;\n    label: string;\n}[];\n//# sourceMappingURL=formatOptions.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../../src/UI/Fields/AmountSelect/components/TokenSelect/components/ReactSelectComponents/Input.d.ts"],
+  "sourcesContent": ["import { components } from 'react-select';\nexport declare const Input: typeof components.Input;\n//# sourceMappingURL=Input.d.ts.map"],
+  "mappings": "mFAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/__commonjs/UI/Fields/AmountSelect/components/MaxButton/progressiveFormatAmount.d.ts"],
+  "sourcesContent": ["export declare const progressiveFormatAmount: ({ amount, decimals, digits, addCommas, showLastNonZeroDecimal }: {\n    amount?: string | null | undefined;\n    decimals?: number | undefined;\n    digits?: number | undefined;\n    addCommas?: boolean | undefined;\n    showLastNonZeroDecimal?: boolean | undefined;\n}) => string;\n//# sourceMappingURL=progressiveFormatAmount.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

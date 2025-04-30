@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/validateSignTransactions/getTxWithReceiver.d.ts"],
+  "sourcesContent": ["import { IPlainTransactionObject } from '@terradharitri/sdk-core/out';\nexport declare function getTxWithReceiver({ address, tx }: {\n    address: string;\n    tx: IPlainTransactionObject;\n}): {\n    receiver: string;\n    nonce: number;\n    value: string;\n    sender: string;\n    receiverUsername?: string | undefined;\n    senderUsername?: string | undefined;\n    guardian?: string | undefined;\n    gasPrice: number;\n    gasLimit: number;\n    data?: string | undefined;\n    chainID: string;\n    version: number;\n    options?: number | undefined;\n    signature?: string | undefined;\n    guardianSignature?: string | undefined;\n};\nexport default getTxWithReceiver;\n//# sourceMappingURL=getTxWithReceiver.d.ts.map"],
+  "mappings": "iEAAA,IAqBA,GAAO,GAAQ",
+  "names": []
+}

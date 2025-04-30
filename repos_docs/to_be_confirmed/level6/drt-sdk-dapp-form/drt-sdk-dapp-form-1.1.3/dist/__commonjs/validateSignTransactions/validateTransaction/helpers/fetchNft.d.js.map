@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/validateSignTransactions/validateTransaction/helpers/fetchNft.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls';\ninterface FetchNftType {\n    type: string;\n    nonce: string;\n    tokenId: string;\n    amount: string;\n    address: string;\n    data: string;\n    receiver: string;\n}\nexport declare function fetchNft(props: FetchNftType, apiConfig: ApiConfigType): Promise<import(\"hooks\").ComputedNftType | null>;\nexport {};\n//# sourceMappingURL=fetchNft.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

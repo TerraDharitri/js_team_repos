@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/UI/HighlightText/HighlightText.d.ts"],
+  "sourcesContent": ["import React from 'react';\nexport interface HighlightTextPropsType {\n    text?: string;\n    highlight: string;\n}\nexport declare const HighlightText: ({ highlight, text }: HighlightTextPropsType) => React.JSX.Element;\n//# sourceMappingURL=HighlightText.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

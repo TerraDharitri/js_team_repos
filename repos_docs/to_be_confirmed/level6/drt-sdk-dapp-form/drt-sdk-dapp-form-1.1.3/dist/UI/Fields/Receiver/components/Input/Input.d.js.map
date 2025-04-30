@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/Receiver/components/Input/Input.d.ts"],
+  "sourcesContent": ["import { MutableRefObject } from 'react';\nimport { components } from 'react-select';\nimport { ReceiverSelectReferenceType } from '../../Receiver.types';\nexport declare const renderInput: (receiverSelectReference: MutableRefObject<ReceiverSelectReferenceType>) => typeof components.Input;\n//# sourceMappingURL=Input.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

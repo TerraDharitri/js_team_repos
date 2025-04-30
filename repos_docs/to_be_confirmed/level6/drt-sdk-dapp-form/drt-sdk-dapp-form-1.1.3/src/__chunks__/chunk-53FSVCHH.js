@@ -1,0 +1,2 @@
+import{i as r}from"./chunk-SVQK3TVL.js";r();import n from"react";import{faSpinner as e}from"@fortawesome/free-solid-svg-icons";import{FontAwesomeIcon as m}from"@fortawesome/react-fontawesome";var c=({show:i,color:o})=>i?n.createElement("div",{className:"d-flex"},n.createElement(m,{icon:e,className:`fa-spin fast-spin ${o||"text-primary"}`})):null;export{c as a};
+//# sourceMappingURL=chunk-53FSVCHH.js.map

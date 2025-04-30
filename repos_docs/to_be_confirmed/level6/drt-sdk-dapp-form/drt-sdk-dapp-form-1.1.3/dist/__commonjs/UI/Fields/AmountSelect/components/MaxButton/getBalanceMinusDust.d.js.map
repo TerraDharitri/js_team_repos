@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/__commonjs/UI/Fields/AmountSelect/components/MaxButton/getBalanceMinusDust.d.ts"],
+  "sourcesContent": ["export declare const getBalanceMinusDust: (balance?: string) => string;\n//# sourceMappingURL=getBalanceMinusDust.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

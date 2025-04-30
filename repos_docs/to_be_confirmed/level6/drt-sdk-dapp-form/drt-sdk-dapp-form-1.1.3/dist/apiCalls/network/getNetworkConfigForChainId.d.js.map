@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/apiCalls/network/getNetworkConfigForChainId.d.ts"],
+  "sourcesContent": ["import { NetworkType } from '@terradharitri/sdk-dapp/types/network.types';\nexport declare function getNetworkConfigForChainId(chainId: string): Promise<NetworkType>;\n//# sourceMappingURL=getNetworkConfigForChainId.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

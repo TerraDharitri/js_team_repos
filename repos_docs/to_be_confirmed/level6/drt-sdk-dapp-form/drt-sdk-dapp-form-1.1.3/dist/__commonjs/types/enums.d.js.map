@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/types/enums.d.ts"],
+  "sourcesContent": ["import { NftEnumType } from '@terradharitri/sdk-dapp/types/tokens.types';\nexport { NftEnumType };\nexport declare enum TransactionTypeEnum {\n    REWA = \"REWA\",\n    DCDT = \"DCDT\",\n    MetaDCDT = \"MetaDCDT\",\n    NonFungibleDCDT = \"NonFungibleDCDT\",\n    SemiFungibleDCDT = \"SemiFungibleDCDT\"\n}\nexport declare enum TransferDataEnum {\n    DCDTNFTTransfer = \"DCDTNFTTransfer\",\n    DCDTNFTCreate = \"DCDTNFTCreate\",\n    DCDTNFTBurn = \"DCDTNFTBurn\",\n    MultiDCDTNFTTransfer = \"MultiDCDTNFTTransfer\"\n}\n//# sourceMappingURL=enums.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

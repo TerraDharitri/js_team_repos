@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/hooks/useFetchGasLimit/prepareTransaction.d.ts"],
+  "sourcesContent": ["import { Transaction } from '@terradharitri/sdk-core';\ninterface PrepareTransactionType {\n    balance: string;\n    amount: string;\n    receiver: string;\n    sender: string;\n    senderUsername?: string;\n    receiverUsername?: string;\n    data: string;\n    gasPrice: string;\n    gasLimit: string;\n    nonce: number;\n    chainId: string;\n}\nexport declare function prepareTransaction({ amount, data, nonce, receiver, receiverUsername, sender, senderUsername, gasPrice, gasLimit, chainId }: PrepareTransactionType): Transaction;\nexport {};\n//# sourceMappingURL=prepareTransaction.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

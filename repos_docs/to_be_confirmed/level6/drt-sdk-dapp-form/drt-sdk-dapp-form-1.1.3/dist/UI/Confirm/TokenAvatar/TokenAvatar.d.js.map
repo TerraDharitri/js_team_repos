@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Confirm/TokenAvatar/TokenAvatar.d.ts"],
+  "sourcesContent": ["import React, { JSXElementConstructor } from 'react';\nimport { TransactionTypeEnum } from 'types';\nexport interface TokenAvatarPropsType {\n    RewaIcon?: JSXElementConstructor<any>;\n    avatar?: string;\n    type: TransactionTypeEnum;\n}\nexport declare const TokenAvatar: (props: TokenAvatarPropsType) => React.JSX.Element;\n//# sourceMappingURL=TokenAvatar.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

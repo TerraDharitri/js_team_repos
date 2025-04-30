@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-FSQY7PXI.js"],
+  "sourcesContent": ["import{b as e}from\"./chunk-UN52NNL6.js\";import{a as s,b as n,i as c}from\"./chunk-SVQK3TVL.js\";c();import p from\"react\";import i from\"classnames\";import{components as l}from\"react-select\";var y=o=>{let{selectProps:m,isFocused:r,className:a}=o,{menuIsOpen:t}=m;return p.createElement(l.SelectContainer,n(s({},o),{className:i(a,{[e.expanded]:t,[e.focused]:r&&t})}))};export{y as a};\n//# sourceMappingURL=chunk-FSQY7PXI.js.map\n"],
+  "mappings": "sIAAA,IAAkG,qBAAqB,0BAA0B,0CAAnD,EAAE,EAA2F,GAAI,GAAE,GAAG,CAAC,GAAG,CAAC,YAAY,EAAE,UAAU,EAAE,UAAU,GAAG,EAAE,CAAC,WAAW,GAAG,EAAE,MAAO,GAAE,cAAc,EAAE,gBAAgB,EAAE,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,UAAU,EAAE,EAAE,CAAC,CAAC,EAAE,UAAU,EAAE,CAAC,EAAE,SAAS,GAAG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC",
+  "names": []
+}

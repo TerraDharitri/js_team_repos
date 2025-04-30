@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Fields/Receiver/Receiver.types.d.ts"],
+  "sourcesContent": ["import { GroupBase, SelectInstance } from 'react-select';\nexport interface GenericOptionType {\n    label: string;\n    value: string;\n    data?: unknown;\n}\nexport type ReceiverSelectReferenceType = SelectInstance<GenericOptionType, false, GroupBase<GenericOptionType>> | null;\n//# sourceMappingURL=Receiver.types.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

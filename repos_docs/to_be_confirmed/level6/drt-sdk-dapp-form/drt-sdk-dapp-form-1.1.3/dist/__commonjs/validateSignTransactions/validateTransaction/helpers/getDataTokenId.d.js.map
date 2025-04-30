@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/validateSignTransactions/validateTransaction/helpers/getDataTokenId.d.ts"],
+  "sourcesContent": ["export declare function getDataTokenId(props: {\n    type?: string;\n    rewaLabel: string;\n    tokenId: string;\n    nftFound?: boolean;\n}): string;\nexport default getDataTokenId;\n//# sourceMappingURL=getDataTokenId.d.ts.map"],
+  "mappings": "0EAAA,IAMA,GAAO,GAAQ",
+  "names": []
+}

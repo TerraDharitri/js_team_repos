@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Fields/AmountSlider/index.d.ts", "../../../../src/UI/Fields/AmountSlider/AmountSlider.js"],
+  "sourcesContent": ["export * from './AmountSlider';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../../__chunks__/chunk-QO5UV6S4.js\";import\"../../../__chunks__/chunk-IH4F4ZNM.js\";import\"../../../__chunks__/chunk-SVQK3TVL.js\";export{a as AmountSlider};\n//# sourceMappingURL=AmountSlider.js.map\n"],
+  "mappings": "+KAAA,ICAA",
+  "names": []
+}

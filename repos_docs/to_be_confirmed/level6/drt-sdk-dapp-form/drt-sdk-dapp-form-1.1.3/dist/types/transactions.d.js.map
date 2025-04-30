@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/types/transactions.d.ts"],
+  "sourcesContent": ["export interface DelegationContractDataType {\n    delegationContract: string;\n    delegationContractData: {\n        minGasLimit: string;\n    };\n}\n//# sourceMappingURL=transactions.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

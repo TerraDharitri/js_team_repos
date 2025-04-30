@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/Receiver/components/Menu/Menu.d.ts"],
+  "sourcesContent": ["import { components } from 'react-select';\nexport declare const Menu: typeof components.Menu;\n//# sourceMappingURL=Menu.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

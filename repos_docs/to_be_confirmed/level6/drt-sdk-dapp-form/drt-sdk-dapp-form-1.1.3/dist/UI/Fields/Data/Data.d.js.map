@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Fields/Data/Data.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nexport declare const Data: ({ className }: WithClassnameType) => React.JSX.Element;\n//# sourceMappingURL=Data.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

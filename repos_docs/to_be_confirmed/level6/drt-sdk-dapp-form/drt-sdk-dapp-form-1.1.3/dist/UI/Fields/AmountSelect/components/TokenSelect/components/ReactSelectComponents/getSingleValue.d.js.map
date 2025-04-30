@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../../src/UI/Fields/AmountSelect/components/TokenSelect/components/ReactSelectComponents/getSingleValue.d.ts"],
+  "sourcesContent": ["import { components } from 'react-select';\nimport type { TokenSelectPropsType } from '../../tokenSelect.types';\nexport declare const getSingleValue: (TokenTickerIcon?: TokenSelectPropsType['TokenTickerIcon']) => typeof components.SingleValue;\n//# sourceMappingURL=getSingleValue.d.ts.map"],
+  "mappings": "mFAAA",
+  "names": []
+}

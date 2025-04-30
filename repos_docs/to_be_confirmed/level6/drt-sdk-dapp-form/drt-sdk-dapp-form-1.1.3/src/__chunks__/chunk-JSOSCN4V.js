@@ -1,0 +1,2 @@
+import{a as r}from"./chunk-7FL7QWGO.js";import{i}from"./chunk-SVQK3TVL.js";i();import{getIdentifierType as u}from"@terradharitri/sdk-dapp/utils/validation/getIdentifierType";function E({nft:e,tokenId:t}){let{isDcdt:T,isNft:o,isRewa:p}=u(t);return p?"REWA":(e==null?void 0:e.type)===r.NonFungibleDCDT?"NonFungibleDCDT":(e==null?void 0:e.type)===r.SemiFungibleDCDT?"SemiFungibleDCDT":(e==null?void 0:e.type)===r.MetaDCDT||o?"MetaDCDT":T?"DCDT":"REWA"}var s=E;export{E as a,s as b};
+//# sourceMappingURL=chunk-JSOSCN4V.js.map

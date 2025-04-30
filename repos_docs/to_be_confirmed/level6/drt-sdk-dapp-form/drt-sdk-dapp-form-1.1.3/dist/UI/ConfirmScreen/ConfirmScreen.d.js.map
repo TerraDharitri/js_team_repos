@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/UI/ConfirmScreen/ConfirmScreen.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nimport { TransactionSummaryPropsType } from './components';\nexport type ConfirmScreenPropsType = TransactionSummaryPropsType & WithClassnameType;\nexport declare const ConfirmScreen: (props: ConfirmScreenPropsType) => React.JSX.Element;\n//# sourceMappingURL=ConfirmScreen.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

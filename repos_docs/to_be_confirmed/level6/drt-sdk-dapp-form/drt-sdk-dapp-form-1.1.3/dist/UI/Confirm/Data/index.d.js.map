@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Confirm/Data/index.d.ts", "../../../../src/UI/Confirm/Data/Data.js"],
+  "sourcesContent": ["export * from './Data';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../../__chunks__/chunk-T7HBBTKV.js\";import\"../../../__chunks__/chunk-U5DMEJ2A.js\";import\"../../../__chunks__/chunk-Z2Q55TPK.js\";import\"../../../__chunks__/chunk-5SPHUVUS.js\";import\"../../../__chunks__/chunk-SVQK3TVL.js\";export{a as Data};\n//# sourceMappingURL=Data.js.map\n"],
+  "mappings": "2QAAA,ICAA",
+  "names": []
+}

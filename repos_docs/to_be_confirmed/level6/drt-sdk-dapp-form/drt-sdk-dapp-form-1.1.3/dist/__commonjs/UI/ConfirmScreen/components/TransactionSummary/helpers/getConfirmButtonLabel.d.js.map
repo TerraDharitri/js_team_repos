@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/__commonjs/UI/ConfirmScreen/components/TransactionSummary/helpers/getConfirmButtonLabel.d.ts"],
+  "sourcesContent": ["export interface GetConfirmButtonLabelType {\n    providerType: string;\n    hasGuardianScreen: boolean;\n}\nexport declare const getConfirmButtonLabel: ({ providerType, hasGuardianScreen }: GetConfirmButtonLabelType) => \"Confirm & Continue\" | \"Confirm on xPortal\" | \"Confirm on DeFi Wallet\" | \"Confirm on Ledger\" | \"Confirm\";\n//# sourceMappingURL=getConfirmButtonLabel.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

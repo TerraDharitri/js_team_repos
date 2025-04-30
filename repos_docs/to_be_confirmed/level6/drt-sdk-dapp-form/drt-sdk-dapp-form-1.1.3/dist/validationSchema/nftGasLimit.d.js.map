@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/validationSchema/nftGasLimit.d.ts"],
+  "sourcesContent": ["import { ValidationErrorMessagesType } from 'types/validation';\ndeclare const nftGasLimit: (errorMessages: ValidationErrorMessagesType) => import(\"yup\").StringSchema<string | undefined, import(\"yup/lib/types\").AnyObject, string | undefined>;\nexport default nftGasLimit;\n//# sourceMappingURL=nftGasLimit.d.ts.map"],
+  "mappings": "iEAAA,IAEA,GAAO,GAAQ",
+  "names": []
+}

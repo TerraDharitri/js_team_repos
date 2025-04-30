@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__mocks__/index.d.ts", "../../src/__mocks__/accountConfig.js", "../../src/__chunks__/chunk-VHUTOLZC.js"],
+  "sourcesContent": ["export * from './accountConfig';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a,b,c}from\"../__chunks__/chunk-VHUTOLZC.js\";import\"../__chunks__/chunk-SVQK3TVL.js\";export{a as testAddress,b as testNetwork,c as testReceiver};\n//# sourceMappingURL=accountConfig.js.map\n", "import{i as t}from\"./chunk-SVQK3TVL.js\";t();import{fallbackNetworkConfigurations as e}from\"@terradharitri/sdk-dapp/constants/index\";import{EnvironmentsEnum as q}from\"@terradharitri/sdk-dapp/types/enums.types\";var c=\"drt1spyavw0956vq68xj8y4tenjpq2wd5a9p2c6j8gsz7ztyrnpxrruqlqde3c\",d=e[q.testnet],u=\"drt1qqqqqqqqqqqqqpgqp699jngundfqw07d8jzkepucvpzush6k3wvqeyzkqc\";export{c as a,d as b,u as c};\n//# sourceMappingURL=chunk-VHUTOLZC.js.map\n"],
+  "mappings": "qHAAA,ICAA,ICAA,IAA4C,wFAAwF,6EAA5F,EAAE,EAAuK,GAAI,GAAE,iEAAiE,EAAE,EAAE,EAAE,SAAS,EAAE",
+  "names": []
+}

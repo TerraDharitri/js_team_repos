@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-JAFPFCVM.js"],
+  "sourcesContent": ["import{b as e}from\"./chunk-UN52NNL6.js\";import{a as o,b as t,i as r}from\"./chunk-SVQK3TVL.js\";r();import n from\"react\";import{components as l}from\"react-select\";var a=m=>n.createElement(l.Control,t(o({},m),{className:e.receiverSelectControl}));export{a};\n//# sourceMappingURL=chunk-JAFPFCVM.js.map\n"],
+  "mappings": "iIAAA,IAAkG,qBAAqB,0CAAzB,EAAE,EAAiE,GAAI,GAAE,GAAG,EAAE,cAAc,EAAE,QAAQ,EAAE,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,UAAU,EAAE,qBAAqB,CAAC,CAAC",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/hooks/getInitialValues/extractNftFromData.d.ts"],
+  "sourcesContent": ["import { SearchNFTPropsType } from './searchNft';\ninterface ExistingNftType {\n    collection: string;\n    nonce: string;\n    quantity: string;\n    receiver: string;\n}\nexport declare const extractNftFromData: ({ data, nft, address }: SearchNFTPropsType) => ExistingNftType | undefined;\nexport {};\n//# sourceMappingURL=extractNftFromData.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

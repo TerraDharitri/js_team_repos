@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/validationSchema/data.d.ts"],
+  "sourcesContent": ["export declare const data: import(\"yup\").StringSchema<string | undefined, import(\"yup/lib/types\").AnyObject, string | undefined>;\nexport default data;\n//# sourceMappingURL=data.d.ts.map"],
+  "mappings": "oEAAA,IACA,GAAO,GAAQ",
+  "names": []
+}

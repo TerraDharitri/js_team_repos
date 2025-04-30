@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/contexts/DataFieldContext/DataFieldContext.d.ts"],
+  "sourcesContent": ["import React, { ChangeEvent, ReactNode } from 'react';\nexport interface DataContextPropsType {\n    data: string;\n    dataError?: string;\n    isDataInvalid: boolean;\n    isAdvancedModeEnabled?: boolean;\n    onChange: (newValue: string | ChangeEvent<any>, shouldValidate?: boolean) => void;\n    onBlur: () => void;\n    onReset: () => void;\n}\ninterface DataContextProviderPropsType {\n    children: ReactNode;\n}\nexport declare const DataFieldContext: React.Context<DataContextPropsType>;\nexport declare function DataContextProvider({ children }: DataContextProviderPropsType): React.JSX.Element;\nexport declare function useDataContext(): DataContextPropsType;\nexport {};\n//# sourceMappingURL=DataFieldContext.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

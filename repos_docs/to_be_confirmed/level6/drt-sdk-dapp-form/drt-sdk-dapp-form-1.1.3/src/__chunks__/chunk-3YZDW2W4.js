@@ -1,0 +1,2 @@
+import{b as c}from"./chunk-OLQUPYTS.js";import{g as e,i}from"./chunk-SVQK3TVL.js";i();import{addressIsValid as f}from"@terradharitri/sdk-dapp/utils/account/addressIsValid";import m from"axios";function T(a,p){return e(this,null,function*(){var o;try{let r=p||(yield c()),{request:t,data:s}=yield m.get(`usernames/${a}`,r);if(!(t!=null&&t.responseURL))return null;let[,n]=(o=t.responseURL.split("/accounts/"))!=null?o:[],u=n!=null?n:s.address;return f(u)?s:null}catch(r){return null}})}export{T as a};
+//# sourceMappingURL=chunk-3YZDW2W4.js.map

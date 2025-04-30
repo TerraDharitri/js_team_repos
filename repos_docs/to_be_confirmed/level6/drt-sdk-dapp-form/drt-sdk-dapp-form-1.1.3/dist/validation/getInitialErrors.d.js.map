@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/validation/getInitialErrors.d.ts"],
+  "sourcesContent": ["import { ValuesType } from 'types';\nimport { ValidationErrorMessagesType } from '../types/validation';\ninterface GetInitialErrorsType {\n    prefilledForm: boolean;\n    initialValues?: ValuesType;\n    errorMessages: ValidationErrorMessagesType;\n}\nexport declare const getInitialErrors: ({ prefilledForm, initialValues, errorMessages }: GetInitialErrorsType) => {\n    [x: string]: string;\n};\nexport default getInitialErrors;\n//# sourceMappingURL=getInitialErrors.d.ts.map"],
+  "mappings": "iEAAA,IAUA,GAAO,GAAQ",
+  "names": []
+}

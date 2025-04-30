@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-3L2K3M32.js"],
+  "sourcesContent": ["import{c as a}from\"./chunk-R5VT33NT.js\";import{a as o}from\"./chunk-YTIFEKCD.js\";import{i as e}from\"./chunk-SVQK3TVL.js\";e();var c=()=>{let{formInfo:{isRewaTransaction:r,readonly:t},dataFieldInfo:{isAdvancedModeEnabled:n}}=a();return n?!1:!r||o(\"data\",t)};export{c as a};\n//# sourceMappingURL=chunk-3L2K3M32.js.map\n"],
+  "mappings": "gKAAA,IAAwH,EAAE,EAAE,GAAI,GAAE,IAAI,CAAC,GAAG,CAAC,SAAS,CAAC,kBAAkB,EAAE,SAAS,GAAG,cAAc,CAAC,sBAAsB,IAAI,EAAE,EAAE,MAAO,GAAE,GAAG,CAAC,GAAG,EAAE,OAAO,CAAC,CAAC",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/Receiver/hooks/useReceiverDisplayStates/useReceiverDisplayStates.d.ts"],
+  "sourcesContent": ["export interface UseReceiverDisplayStatesType {\n    menuIsOpen: boolean;\n}\nexport declare const useReceiverDisplayStates: ({ menuIsOpen }: UseReceiverDisplayStatesType) => {\n    isAddressError: boolean;\n    isUsernameError: boolean;\n    isRequiredError: boolean;\n    isReceiverDropdownOpened: boolean | \"\";\n};\n//# sourceMappingURL=useReceiverDisplayStates.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

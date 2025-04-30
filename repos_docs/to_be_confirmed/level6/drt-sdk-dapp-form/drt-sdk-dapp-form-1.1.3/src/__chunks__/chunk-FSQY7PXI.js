@@ -1,0 +1,2 @@
+import{b as e}from"./chunk-UN52NNL6.js";import{a as s,b as n,i as c}from"./chunk-SVQK3TVL.js";c();import p from"react";import i from"classnames";import{components as l}from"react-select";var y=o=>{let{selectProps:m,isFocused:r,className:a}=o,{menuIsOpen:t}=m;return p.createElement(l.SelectContainer,n(s({},o),{className:i(a,{[e.expanded]:t,[e.focused]:r&&t})}))};export{y as a};
+//# sourceMappingURL=chunk-FSQY7PXI.js.map

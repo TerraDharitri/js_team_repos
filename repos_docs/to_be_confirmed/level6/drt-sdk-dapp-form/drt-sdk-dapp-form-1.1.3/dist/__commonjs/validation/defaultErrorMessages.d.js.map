@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/validation/defaultErrorMessages.d.ts"],
+  "sourcesContent": ["import { ValidationErrorMessagesType } from '../types/validation';\nexport declare const defaultErrorMessages: ValidationErrorMessagesType;\n//# sourceMappingURL=defaultErrorMessages.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

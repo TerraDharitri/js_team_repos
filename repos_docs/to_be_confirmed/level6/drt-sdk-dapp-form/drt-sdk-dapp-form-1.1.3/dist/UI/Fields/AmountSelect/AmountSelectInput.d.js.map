@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Fields/AmountSelect/AmountSelectInput.d.ts"],
+  "sourcesContent": ["import React from 'react';\n/**\n * Gets form state and renders a connected `AmountSelect` component\n */\nexport declare const AmountSelectInput: () => React.JSX.Element | null;\n//# sourceMappingURL=AmountSelectInput.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/UI/WREWAWarning/WREWAWarning.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nexport interface WREWAWarningPropsType extends WithClassnameType {\n    tokenId: string;\n}\nexport declare const WREWAWarning: (props: WREWAWarningPropsType) => React.JSX.Element | null;\n//# sourceMappingURL=WREWAWarning.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

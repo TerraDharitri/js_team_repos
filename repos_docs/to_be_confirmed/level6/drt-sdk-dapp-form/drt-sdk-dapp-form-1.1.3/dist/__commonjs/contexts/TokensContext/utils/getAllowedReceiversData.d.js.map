@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/contexts/TokensContext/utils/getAllowedReceiversData.d.ts"],
+  "sourcesContent": ["import { PartialNftType } from 'types';\n/**\n * @returns a buffer dictionary of collections with canTransfer false\n */\nexport declare const getAllowedReceiversData: (nft?: PartialNftType) => Promise<string[] | null>;\n//# sourceMappingURL=getAllowedReceiversData.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

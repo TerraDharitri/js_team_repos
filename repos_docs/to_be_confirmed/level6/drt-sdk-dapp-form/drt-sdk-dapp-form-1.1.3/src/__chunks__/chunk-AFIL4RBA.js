@@ -1,0 +1,2 @@
+import{a as e}from"./chunk-GG46MDT3.js";import{a as o}from"./chunk-G2KE7XO3.js";import{a as r}from"./chunk-EPSD43SA.js";import{c as m}from"./chunk-VMXC44RX.js";import{i as a}from"./chunk-SVQK3TVL.js";a();import c from"bignumber.js";function N({txType:i,data:n="",isGuarded:s}){let G=o(s),t=r();return i==="DCDT"&&(t=m),i==="REWA"&&(t=e({data:n.trim()})),new c(t).plus(G).toString(10)}export{N as a};
+//# sourceMappingURL=chunk-AFIL4RBA.js.map

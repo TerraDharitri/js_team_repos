@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/UI/InfoDust/InfoDust.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport 'react-tooltip/dist/react-tooltip.css';\nexport declare const InfoDust: ({ rewaLabel }: {\n    rewaLabel: string;\n}) => React.JSX.Element;\n//# sourceMappingURL=InfoDust.d.ts.map"],
+  "mappings": "uEAAA,IACA",
+  "names": []
+}

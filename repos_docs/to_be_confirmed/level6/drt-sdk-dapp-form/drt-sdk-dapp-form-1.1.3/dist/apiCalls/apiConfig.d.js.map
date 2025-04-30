@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/apiCalls/apiConfig.d.ts"],
+  "sourcesContent": ["import { NetworkType } from '@terradharitri/sdk-dapp/types/network.types';\nexport interface ApiConfigType {\n    baseURL: string;\n    timeout: number;\n}\nexport declare function setApiConfig(networkConfiguration: NetworkType): ApiConfigType;\nexport declare function getApiConfig(chainId?: string): Promise<ApiConfigType>;\n//# sourceMappingURL=apiConfig.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

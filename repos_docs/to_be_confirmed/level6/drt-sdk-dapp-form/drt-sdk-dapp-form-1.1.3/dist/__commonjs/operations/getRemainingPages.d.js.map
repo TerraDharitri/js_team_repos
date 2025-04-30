@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/operations/getRemainingPages.d.ts"],
+  "sourcesContent": ["export declare const getRemainingPages: ({ count, maxCount }: {\n    count: number | undefined;\n    maxCount: number;\n}) => number[];\nexport default getRemainingPages;\n//# sourceMappingURL=getRemainingPages.d.ts.map"],
+  "mappings": "oEAAA,IAIA,GAAO,GAAQ",
+  "names": []
+}

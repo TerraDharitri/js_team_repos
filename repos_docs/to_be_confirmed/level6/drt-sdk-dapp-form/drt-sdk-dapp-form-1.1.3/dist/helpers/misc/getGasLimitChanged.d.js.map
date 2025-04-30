@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/helpers/misc/getGasLimitChanged.d.ts"],
+  "sourcesContent": ["import { FormikTouched } from 'formik';\nimport { ExtendedValuesType } from 'types/form';\nexport declare const getGasLimitChanged: ({ initialValues, gasLimit, touched }: {\n    initialValues: ExtendedValuesType;\n    gasLimit: string;\n    touched: FormikTouched<ExtendedValuesType>;\n}) => boolean | undefined;\n//# sourceMappingURL=getGasLimitChanged.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

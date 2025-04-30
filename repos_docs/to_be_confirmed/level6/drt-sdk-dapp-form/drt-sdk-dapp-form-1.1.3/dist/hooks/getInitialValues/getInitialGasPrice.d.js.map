@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/hooks/getInitialValues/getInitialGasPrice.d.ts"],
+  "sourcesContent": ["export declare const getInitialGasPrice: (gasPrice?: string) => string;\n//# sourceMappingURL=getInitialGasPrice.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

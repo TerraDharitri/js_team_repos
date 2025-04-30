@@ -1,0 +1,2 @@
+import{a as t}from"./chunk-VHUTOLZC.js";import{i as o}from"./chunk-SVQK3TVL.js";o();import{fallbackNetworkConfigurations as n,TESTNET_REWA_LABEL as e,TESTNET_CHAIN_ID as r}from"@terradharitri/sdk-dapp/constants/index";import{EnvironmentsEnum as a}from"@terradharitri/sdk-dapp/types/enums.types";var i=n[a.testnet],T={rewaLabel:e,address:t,chainId:r,balance:"812350000000000000",nonce:0,networkConfig:i};export{T as a};
+//# sourceMappingURL=chunk-SHFXYNBY.js.map

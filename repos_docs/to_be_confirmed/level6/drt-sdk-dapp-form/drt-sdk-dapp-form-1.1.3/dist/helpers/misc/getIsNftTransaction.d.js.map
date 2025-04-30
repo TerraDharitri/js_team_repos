@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/helpers/misc/getIsNftTransaction.d.ts"],
+  "sourcesContent": ["import { TransactionTypeEnum } from 'types/enums';\nexport declare const getIsNftTransaction: (txType: TransactionTypeEnum) => boolean;\n//# sourceMappingURL=getIsNftTransaction.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

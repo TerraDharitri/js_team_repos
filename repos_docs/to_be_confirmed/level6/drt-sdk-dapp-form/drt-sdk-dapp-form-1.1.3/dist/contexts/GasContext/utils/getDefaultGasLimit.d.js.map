@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/contexts/GasContext/utils/getDefaultGasLimit.d.ts"],
+  "sourcesContent": ["export declare const getDefaultGasLimit: ({ isNftTransaction, isDcdtTransaction, data, isGuarded }: {\n    isNftTransaction: boolean;\n    isDcdtTransaction: boolean;\n    data?: string | undefined;\n    isGuarded?: boolean | undefined;\n}) => string;\n//# sourceMappingURL=getDefaultGasLimit.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

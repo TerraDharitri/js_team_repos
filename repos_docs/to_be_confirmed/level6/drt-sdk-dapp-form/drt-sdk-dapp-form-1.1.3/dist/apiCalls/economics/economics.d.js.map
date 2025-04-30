@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/apiCalls/economics/economics.d.ts"],
+  "sourcesContent": ["export interface EconomicsInfoType {\n    totalSupply: number;\n    circulatingSupply: number;\n    staked: number;\n    price: number;\n    marketCap: number;\n    apr: number;\n    topUpApr: number;\n    baseApr: number;\n}\nexport declare function getEconomicsInfo(): Promise<EconomicsInfoType | null>;\n//# sourceMappingURL=economics.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

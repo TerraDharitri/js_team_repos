@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/helpers/misc/getStartsWithDrt1.d.ts"],
+  "sourcesContent": ["export declare const getStartsWithDrt1: (value?: string) => boolean;\n//# sourceMappingURL=getStartsWithDrt1.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

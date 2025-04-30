@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/apiCalls/tokens/nfts.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls/apiConfig';\nimport { PartialNftType } from 'types';\nexport interface GetNftByAddressAndIdentifierArgsType {\n    address: string;\n    identifier: string;\n}\nexport declare function getNftByAddressAndIdentifier({ address, identifier }: GetNftByAddressAndIdentifierArgsType, apiConfig?: ApiConfigType): Promise<PartialNftType | null>;\nexport declare function getGlobalNftByIdentifier(identifier: string, apiConfig?: ApiConfigType): Promise<PartialNftType | null>;\n//# sourceMappingURL=nfts.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

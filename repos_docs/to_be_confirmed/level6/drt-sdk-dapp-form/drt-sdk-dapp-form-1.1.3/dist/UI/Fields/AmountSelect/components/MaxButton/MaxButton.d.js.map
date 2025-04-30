@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/AmountSelect/components/MaxButton/MaxButton.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { PartialTokenType } from 'types/tokens';\nexport interface MaxButtonPropsType {\n    token?: PartialTokenType;\n    rewaLabel?: string;\n    inputAmount: string;\n    isMaxClicked?: boolean;\n    isMaxButtonVisible?: boolean;\n    onMaxClick?: (maxAmount: string) => void;\n    className?: string;\n    wrapperClassName?: string;\n}\nexport declare const MaxButton: ({ token, rewaLabel, inputAmount, className, onMaxClick }: MaxButtonPropsType) => React.JSX.Element | null;\n//# sourceMappingURL=MaxButton.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/hooks/getInitialValues/getSearchParamNft.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls';\nexport declare function searchNftByIdentifier(props: {\n    identifier: string;\n    address: string;\n}, apiConfig?: ApiConfigType): Promise<import(\"../..\").PartialNftType | null>;\n//# sourceMappingURL=getSearchParamNft.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Fields/SFTAmount/types.d.ts"],
+  "sourcesContent": ["import { PartialNftType } from 'types';\nexport interface DcdtAmountType {\n    tokenBalance: string;\n}\nexport interface NftAmountType {\n    nftBalance: string;\n    nft: PartialNftType;\n}\n//# sourceMappingURL=types.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

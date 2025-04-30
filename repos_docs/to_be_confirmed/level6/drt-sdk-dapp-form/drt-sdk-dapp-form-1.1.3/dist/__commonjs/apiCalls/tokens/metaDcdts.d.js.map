@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/apiCalls/tokens/metaDcdts.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls/apiConfig';\nimport { PartialNftType } from 'types';\nexport declare function getAllowedReceivers(nft: PartialNftType, apiConfig?: ApiConfigType): Promise<string[] | null>;\n//# sourceMappingURL=metaDcdts.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/helpers/transformations/bech32.d.ts"],
+  "sourcesContent": ["export declare const bech32: {\n    encode: (publicKey: any) => string;\n    decode: (address: any) => string;\n};\n//# sourceMappingURL=bech32.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

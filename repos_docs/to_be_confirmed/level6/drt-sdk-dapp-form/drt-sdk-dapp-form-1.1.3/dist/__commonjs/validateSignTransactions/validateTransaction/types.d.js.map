@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/validateSignTransactions/validateTransaction/types.d.ts"],
+  "sourcesContent": ["import { IPlainTransactionObject } from '@terradharitri/sdk-core/out';\nimport { MultiDcdtTransactionType, MultiSignTransactionType, TransactionsDataTokensType } from '@terradharitri/sdk-dapp/types/transactions.types';\nimport { ApiConfigType } from 'apiCalls';\nimport { ExtendedValuesType } from 'types';\nexport interface TxSignValuesType {\n    receiver: string;\n    receiverUsername?: string;\n    senderUsername?: string;\n    amount: string;\n    tokenId: string;\n    gasLimit: string;\n    gasPrice: string;\n    data: string;\n    nonce?: string;\n}\nexport interface ValidateType {\n    tx: MultiSignTransactionType;\n    txsDataTokens: TransactionsDataTokensType;\n    type?: MultiDcdtTransactionType['type'];\n    ledger?: ExtendedValuesType['ledger'];\n    rewaLabel: string;\n    address: string;\n    balance: string;\n    chainId: string;\n    apiConfig: ApiConfigType;\n}\nexport interface ValidateSignTransactionsType {\n    extractedTxs: IPlainTransactionObject[];\n    address: string;\n    rewaLabel: string;\n    balance: string;\n    chainId: string;\n    apiConfig: ApiConfigType;\n}\n//# sourceMappingURL=types.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

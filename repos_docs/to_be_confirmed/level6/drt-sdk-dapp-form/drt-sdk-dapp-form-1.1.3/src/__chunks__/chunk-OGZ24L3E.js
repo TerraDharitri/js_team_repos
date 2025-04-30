@@ -1,0 +1,2 @@
+import{b as a}from"./chunk-R66ZR5LT.js";import{i as t}from"./chunk-SVQK3TVL.js";t();import s from"react";import o from"classnames";var f=({label:p,value:r,className:l,token:e,"data-testid":n,"data-value":i})=>s.createElement("div",{"data-testid":n,"data-value":i,className:o(a.balance,l)},s.createElement("span",{className:a.label},p,": "),s.createElement("span",{className:a.value},r)," ",e==null?void 0:e.ticker);export{f as a};
+//# sourceMappingURL=chunk-OGZ24L3E.js.map

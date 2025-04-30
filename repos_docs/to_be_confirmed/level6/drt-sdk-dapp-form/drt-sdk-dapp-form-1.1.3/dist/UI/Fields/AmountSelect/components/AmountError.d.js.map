@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/UI/Fields/AmountSelect/components/AmountError.d.ts"],
+  "sourcesContent": ["import React, { PropsWithChildren } from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nexport interface AmountErrorPropsType extends WithClassnameType, PropsWithChildren {\n    hasErrors?: boolean;\n    error?: string;\n}\nexport declare const AmountError: ({ hasErrors, className, error, \"data-testid\": dataTestId }: AmountErrorPropsType) => React.JSX.Element | null;\n//# sourceMappingURL=AmountError.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

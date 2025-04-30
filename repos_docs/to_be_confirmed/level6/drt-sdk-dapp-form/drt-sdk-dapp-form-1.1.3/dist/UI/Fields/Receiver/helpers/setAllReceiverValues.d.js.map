@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/UI/Fields/Receiver/helpers/setAllReceiverValues.d.ts"],
+  "sourcesContent": ["import { Dispatch, SetStateAction } from 'react';\nimport { FormikHelpers } from 'formik';\nimport { KnowAddressType } from 'contexts/ReceiverContext/ReceiverContext';\nimport { UsernameAccountsType } from 'contexts/ReceiverUsernameContext/hooks/useFetchUsernameAddress';\nimport { ExtendedValuesType } from 'types';\nimport { GenericOptionType } from '../Receiver.types';\nexport interface SetAllReceiverValuesType {\n    setFieldValue: FormikHelpers<ExtendedValuesType>['setFieldValue'];\n    setInputValue: (value: string) => void;\n    setOption: Dispatch<SetStateAction<GenericOptionType | null>>;\n    options: GenericOptionType[];\n    usernameAccounts: UsernameAccountsType;\n    knownAddresses: KnowAddressType[];\n}\nexport declare const setAllReceiverValues: ({ options, usernameAccounts, knownAddresses, setFieldValue, setInputValue, setOption }: SetAllReceiverValuesType) => (value: string) => void;\n//# sourceMappingURL=setAllReceiverValues.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

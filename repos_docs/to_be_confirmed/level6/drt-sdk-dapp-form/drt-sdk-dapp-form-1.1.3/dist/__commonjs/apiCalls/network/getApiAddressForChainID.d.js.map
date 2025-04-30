@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/apiCalls/network/getApiAddressForChainID.d.ts"],
+  "sourcesContent": ["export declare function getApiAddressForChainID(chainId: string): any;\n//# sourceMappingURL=getApiAddressForChainID.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

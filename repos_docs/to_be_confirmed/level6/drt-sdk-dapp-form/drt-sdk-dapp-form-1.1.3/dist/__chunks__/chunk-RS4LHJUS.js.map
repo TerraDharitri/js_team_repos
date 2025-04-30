@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-BKI3YF2D.js", "../../src/__chunks__/chunk-3LCFZXAP.js"],
+  "sourcesContent": ["import{a as n}from\"./chunk-625HCERT.js\";import{b as a}from\"./chunk-KO3VAJBX.js\";import{c as o}from\"./chunk-R5VT33NT.js\";import{a as e,i as m}from\"./chunk-SVQK3TVL.js\";m();import s,{useEffect as i}from\"react\";import f from\"classnames\";var x=r=>{let{formInfo:{setHasGuardianScreen:t}}=o();return i(()=>{r.hasGuardianScreen&&t(!0)},[]),s.createElement(\"div\",{className:f(a.confirm,r.className),\"data-testid\":\"confirmScreen\"},s.createElement(n,e({},r)))};export{x as a};\n//# sourceMappingURL=chunk-BKI3YF2D.js.map\n", "import{i as o}from\"./chunk-SVQK3TVL.js\";o();\n//# sourceMappingURL=chunk-3LCFZXAP.js.map\n"],
+  "mappings": "8KAAA,IAA2K,qCAAqC,0BAAzC,EAAE,EAAiE,GAAI,GAAE,GAAG,CAAC,GAAG,CAAC,SAAS,CAAC,qBAAqB,IAAI,EAAE,EAAE,MAAO,GAAE,IAAI,CAAC,EAAE,mBAAmB,EAAE,EAAE,CAAC,EAAE,CAAC,CAAC,EAAE,EAAE,cAAc,MAAM,CAAC,UAAU,EAAE,EAAE,QAAQ,EAAE,SAAS,EAAE,cAAc,eAAe,EAAE,EAAE,cAAc,EAAE,EAAE,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,ECAjc,IAAwC,EAAE",
+  "names": []
+}

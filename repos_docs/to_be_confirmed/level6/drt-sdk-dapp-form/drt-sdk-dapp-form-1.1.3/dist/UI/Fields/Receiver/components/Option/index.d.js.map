@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/Receiver/components/Option/index.d.ts", "../../../../../../src/UI/Fields/Receiver/components/Option/Option.js"],
+  "sourcesContent": ["export * from './Option';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../../../../__chunks__/chunk-PGRGVIEB.js\";import\"../../../../../__chunks__/chunk-UN52NNL6.js\";import\"../../../../../__chunks__/chunk-EMB7JRSO.js\";import\"../../../../../__chunks__/chunk-3NZJ35CF.js\";import\"../../../../../__chunks__/chunk-ERHO76BV.js\";import\"../../../../../__chunks__/chunk-NGZMB6MT.js\";import\"../../../../../__chunks__/chunk-SVQK3TVL.js\";export{a as Option};\n//# sourceMappingURL=Option.js.map\n"],
+  "mappings": "iZAAA,ICAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/apiCalls/account/getAccount.d.ts"],
+  "sourcesContent": ["import { AccountContextPropsType } from '../../contexts';\nexport declare function getDharitrIAccount(address: string, apiAddress: string): Promise<AccountContextPropsType | null>;\n//# sourceMappingURL=getAccount.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

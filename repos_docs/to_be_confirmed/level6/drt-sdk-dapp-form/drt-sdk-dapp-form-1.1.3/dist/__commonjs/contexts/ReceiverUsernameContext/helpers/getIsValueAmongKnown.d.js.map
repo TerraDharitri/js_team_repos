@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/contexts/ReceiverUsernameContext/helpers/getIsValueAmongKnown.d.ts"],
+  "sourcesContent": ["import { KnowAddressType } from 'contexts';\nexport interface GetIsValueAmongKnownType {\n    knownAddresses: KnowAddressType[] | null;\n    inputValue: string;\n    key: keyof KnowAddressType;\n}\nexport declare const getIsValueAmongKnown: ({ knownAddresses, inputValue, key }: GetIsValueAmongKnownType) => boolean;\n//# sourceMappingURL=getIsValueAmongKnown.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

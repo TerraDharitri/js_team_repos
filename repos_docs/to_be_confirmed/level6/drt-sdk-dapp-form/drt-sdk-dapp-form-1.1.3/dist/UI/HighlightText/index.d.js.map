@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/UI/HighlightText/index.d.ts", "../../../src/UI/HighlightText/HighlightText.js"],
+  "sourcesContent": ["export * from './HighlightText';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../__chunks__/chunk-3NZJ35CF.js\";import\"../../__chunks__/chunk-ERHO76BV.js\";import\"../../__chunks__/chunk-SVQK3TVL.js\";export{a as HighlightText};\n//# sourceMappingURL=HighlightText.js.map\n"],
+  "mappings": "sKAAA,ICAA",
+  "names": []
+}

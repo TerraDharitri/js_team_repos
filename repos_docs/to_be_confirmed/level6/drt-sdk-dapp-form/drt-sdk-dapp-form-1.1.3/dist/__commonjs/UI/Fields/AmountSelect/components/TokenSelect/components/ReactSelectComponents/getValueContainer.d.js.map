@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../../../src/__commonjs/UI/Fields/AmountSelect/components/TokenSelect/components/ReactSelectComponents/getValueContainer.d.ts"],
+  "sourcesContent": ["import React, { JSXElementConstructor } from 'react';\nimport { components } from 'react-select';\ninterface ValueComponentPropsType {\n    RewaIcon?: JSXElementConstructor<any>;\n    rewaLabel: string;\n    icon?: string | null;\n    isDisabled?: boolean;\n    tokenId?: string;\n}\nexport declare const ValueComponent: ({ RewaIcon, tokenId, icon }: ValueComponentPropsType) => React.JSX.Element;\nexport declare const getValueContainer: (rewaLabel: string, selectedTokenIconClassName?: string, RewaIcon?: JSXElementConstructor<any>) => typeof components.ValueContainer;\nexport {};\n//# sourceMappingURL=getValueContainer.d.ts.map"],
+  "mappings": "sFAAA",
+  "names": []
+}

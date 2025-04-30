@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/contexts/ReceiverContext/hooks/useFetchKnownAddresses/helpers/formatAddressesFromTransactions.d.ts"],
+  "sourcesContent": ["import { ServerTransactionType } from '@terradharitri/sdk-dapp/types';\nimport { KnowAddressType } from 'contexts/ReceiverContext/ReceiverContext';\nexport declare const formatAddressesFromTransactions: (transactions: ServerTransactionType[]) => KnowAddressType[];\n//# sourceMappingURL=formatAddressesFromTransactions.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

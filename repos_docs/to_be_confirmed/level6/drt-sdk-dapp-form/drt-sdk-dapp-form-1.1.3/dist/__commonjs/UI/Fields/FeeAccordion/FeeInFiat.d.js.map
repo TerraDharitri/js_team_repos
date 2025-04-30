@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/UI/Fields/FeeAccordion/FeeInFiat.d.ts"],
+  "sourcesContent": ["import React from 'react';\ninterface FeeInFiatType {\n    feeLimit: string;\n    rewaPriceInUsd: number;\n}\nexport declare const FeeInFiat: ({ feeLimit, rewaPriceInUsd }: FeeInFiatType) => React.JSX.Element | null;\nexport {};\n//# sourceMappingURL=FeeInFiat.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

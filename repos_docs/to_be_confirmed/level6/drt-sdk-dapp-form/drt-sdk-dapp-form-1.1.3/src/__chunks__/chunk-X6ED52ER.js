@@ -1,0 +1,2 @@
+import{a as t}from"./chunk-WWWEDGNE.js";import{g as o,i as a}from"./chunk-SVQK3TVL.js";a();var u="nftTransaction";function k(c,n){return o(this,null,function*(){let{type:i,nonce:s,amount:f,receiver:p,tokenId:d,data:m,address:e}=c;if(i===u){let r={collection:d,nonce:s,quantity:f,receiver:p};return yield t({data:`${"DCDTNFTTransfer"}@`,nft:r,address:e},n)}else return yield t({data:m,address:e},n)})}export{k as a};
+//# sourceMappingURL=chunk-X6ED52ER.js.map

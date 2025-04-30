@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/Receiver/components/Control/Control.d.ts"],
+  "sourcesContent": ["import { components } from 'react-select';\nexport declare const Control: typeof components.Control;\n//# sourceMappingURL=Control.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

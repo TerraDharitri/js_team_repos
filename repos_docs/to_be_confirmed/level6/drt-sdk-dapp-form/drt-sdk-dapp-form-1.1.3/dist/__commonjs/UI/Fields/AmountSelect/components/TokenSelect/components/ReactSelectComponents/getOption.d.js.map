@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../../../src/__commonjs/UI/Fields/AmountSelect/components/TokenSelect/components/ReactSelectComponents/getOption.d.ts"],
+  "sourcesContent": ["import { JSXElementConstructor } from 'react';\nimport { components } from 'react-select';\nimport type { TokenSelectPropsType } from '../../tokenSelect.types';\nexport declare const DharitrIIcon: any;\nexport interface GetOptionPropsType {\n    RewaIcon?: JSXElementConstructor<any>;\n    TokenTickerIcon?: TokenSelectPropsType['TokenTickerIcon'];\n    rewaLabel: string;\n    showBalanceUsdValue?: boolean;\n    showTokenPrice?: boolean;\n}\nexport declare const getOption: ({ RewaIcon, TokenTickerIcon, showBalanceUsdValue, showTokenPrice }: GetOptionPropsType) => typeof components.Option;\n//# sourceMappingURL=getOption.d.ts.map"],
+  "mappings": "sFAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/contexts/ReceiverContext/hooks/useScamError.d.ts"],
+  "sourcesContent": ["export declare function useScamError(receiver: string): {\n    scamError: string;\n    fetchingScamAddress: boolean;\n};\n//# sourceMappingURL=useScamError.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

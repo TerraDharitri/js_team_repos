@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/helpers/misc/scamFlag.d.ts"],
+  "sourcesContent": ["export declare const scamFlag: (input: string, scamInfo?: {\n    type: string;\n    info: string;\n}) => {\n    output: string;\n    stringWithLinks: string;\n    found: boolean;\n};\nexport default scamFlag;\n//# sourceMappingURL=scamFlag.d.ts.map"],
+  "mappings": "oEAAA,IAQA,GAAO,GAAQ",
+  "names": []
+}

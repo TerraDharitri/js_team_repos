@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/UI/Fields/AmountSelect/components/AmountInput/components/RewaInfoDust.d.ts"],
+  "sourcesContent": ["import React from 'react';\ninterface InfoDustPropsType {\n    rewaLabel: string;\n    amount: string;\n    maxAmountMinusDust?: string;\n    isMaxClicked?: boolean;\n    tokenId?: string;\n}\nexport declare const RewaInfoDust: ({ rewaLabel, amount, maxAmountMinusDust, isMaxClicked, tokenId }: InfoDustPropsType) => React.JSX.Element | null;\nexport {};\n//# sourceMappingURL=RewaInfoDust.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

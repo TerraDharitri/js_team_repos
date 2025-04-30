@@ -1,0 +1,2 @@
+import{b as n}from"./chunk-ERHO76BV.js";import{i as h}from"./chunk-SVQK3TVL.js";h();import i from"react";var k=({highlight:r,text:p=""})=>{let l=p.split(" "),e=r.toLowerCase(),a=new RegExp(`(${e})`,"gi"),c=l.map(t=>t.split(a).filter(o=>o));return i.createElement("span",{className:n.highlight},c.map((t,o)=>{let m=`${t}-${o}`;return i.createElement("span",{key:m},t.map((s,y)=>{let x=s.toLowerCase()===e,w=e&&x,g=`${s}-${y}`;return w?i.createElement("strong",{key:g},s):i.createElement("span",{key:g},s)}))}))};export{k as a};
+//# sourceMappingURL=chunk-3NZJ35CF.js.map

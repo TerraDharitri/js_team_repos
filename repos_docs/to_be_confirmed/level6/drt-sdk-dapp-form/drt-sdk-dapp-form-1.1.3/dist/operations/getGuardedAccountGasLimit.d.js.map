@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/operations/getGuardedAccountGasLimit.d.ts"],
+  "sourcesContent": ["export declare function getGuardedAccountGasLimit(isGuarded?: boolean): 0 | 50000;\n//# sourceMappingURL=getGuardedAccountGasLimit.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Form/helpers/index.d.ts", "../../../../src/UI/Form/helpers/getSendLabel.js"],
+  "sourcesContent": ["export * from './getSendLabel';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../../__chunks__/chunk-AAQHX5NX.js\";import\"../../../__chunks__/chunk-7FL7QWGO.js\";import\"../../../__chunks__/chunk-SVQK3TVL.js\";export{a as getSendLabel};\n//# sourceMappingURL=getSendLabel.js.map\n"],
+  "mappings": "6NAAA,ICAA",
+  "names": []
+}

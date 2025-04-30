@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/UI/Fields/AmountSelect/components/TokenSelect/components/SmallLoader.d.ts"],
+  "sourcesContent": ["import React from 'react';\nexport declare const SmallLoader: ({ show, color }: {\n    show: boolean;\n    color?: string | undefined;\n}) => React.JSX.Element | null;\n//# sourceMappingURL=SmallLoader.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

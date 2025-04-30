@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/hooks/getInitialValues/getToken.d.ts"],
+  "sourcesContent": ["export declare function getToken(props: {\n    identifier?: string;\n    address: string;\n}): Promise<import(\"../..\").PartialTokenType | null> | null;\n//# sourceMappingURL=getToken.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

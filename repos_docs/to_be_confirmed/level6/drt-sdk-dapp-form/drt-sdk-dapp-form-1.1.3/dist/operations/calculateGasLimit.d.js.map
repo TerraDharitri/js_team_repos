@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/operations/calculateGasLimit.d.ts"],
+  "sourcesContent": ["interface CalculateGasLimitType {\n    data: string;\n    isGuarded?: boolean;\n}\nexport declare const calculateGasLimit: ({ data, isGuarded }: CalculateGasLimitType) => string;\nexport {};\n//# sourceMappingURL=calculateGasLimit.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

@@ -1,0 +1,2 @@
+import{i as e}from"./chunk-BL7T5FXS.js";import{f as T}from"./chunk-RGFNPOTZ.js";T();import{NftEnumType as t}from"@terradharitri/sdk-dapp/types/tokens.types";e();var r=(D=>(D.REWA="REWA",D.DCDT="DCDT",D.MetaDCDT="MetaDCDT",D.NonFungibleDCDT="NonFungibleDCDT",D.SemiFungibleDCDT="SemiFungibleDCDT",D))(r||{}),C=(D=>(D.DCDTNFTTransfer="DCDTNFTTransfer",D.DCDTNFTCreate="DCDTNFTCreate",D.DCDTNFTBurn="DCDTNFTBurn",D.MultiDCDTNFTTransfer="MultiDCDTNFTTransfer",D))(C||{});export{t as a,r as b,C as c};
+//# sourceMappingURL=chunk-H5PSEE4B.js.map

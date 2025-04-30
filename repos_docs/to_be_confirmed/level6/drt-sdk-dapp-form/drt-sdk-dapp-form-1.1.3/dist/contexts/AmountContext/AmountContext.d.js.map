@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/contexts/AmountContext/AmountContext.d.ts"],
+  "sourcesContent": ["import React, { ChangeEvent, ReactNode } from 'react';\nexport interface AmountContextPropsType {\n    amount: string;\n    error?: string;\n    isInvalid: boolean;\n    maxAmountAvailable: string;\n    maxAmountMinusDust: string;\n    isMaxButtonVisible: boolean;\n    amountRange: number;\n    isMaxClicked: boolean;\n    onFocus: () => void;\n    onBlur: () => void;\n    onChange: (newValue: string | ChangeEvent<HTMLInputElement>, shouldValidate?: boolean) => void;\n    onMaxClicked: () => void;\n    onSetAmountPercentage: (percentage: number) => void;\n}\ninterface AmountContextProviderPropsType {\n    children: ReactNode;\n}\nexport declare const AmountContext: React.Context<AmountContextPropsType>;\nexport declare function AmountContextProvider({ children }: AmountContextProviderPropsType): React.JSX.Element;\nexport declare function useAmountContext(): AmountContextPropsType;\nexport {};\n//# sourceMappingURL=AmountContext.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

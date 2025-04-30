@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/operations/getEntireBalance.d.ts"],
+  "sourcesContent": ["interface EntireBalanceType {\n    balance?: string;\n    gasPrice: string;\n    gasLimit?: string;\n    decimals: number;\n    digits: number;\n    data?: string;\n    chainId: string;\n}\nexport declare function getEntireBalance({ balance, gasLimit, gasPrice, decimals, digits, data, chainId }: EntireBalanceType): {\n    entireBalance: string;\n    entireBalanceMinusDust: string;\n    parsedEntireBalance: string;\n};\nexport declare function getEntireTokenBalance({ balance, decimals, digits }: {\n    balance?: string | undefined;\n    decimals?: number | undefined;\n    digits?: number | undefined;\n}): string;\nexport default getEntireBalance;\n//# sourceMappingURL=getEntireBalance.d.ts.map"],
+  "mappings": "oEAAA,IAmBA,GAAO,GAAQ",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/contexts/AmountContext/utils/getIsMaxButtonVisible.d.ts"],
+  "sourcesContent": ["import { ExtendedValuesType, PartialNftType, TransactionTypeEnum } from 'types';\ninterface GetIsMaxButtonVisiblePropsType {\n    nft?: PartialNftType;\n    amount: string;\n    readonly?: ExtendedValuesType['readonly'];\n    maxAmountAvailable: string;\n    maxAmountMinusDust: string;\n    txType: TransactionTypeEnum;\n}\nexport declare function getIsMaxButtonVisible({ nft, amount, readonly, maxAmountAvailable, maxAmountMinusDust, txType }: GetIsMaxButtonVisiblePropsType): boolean;\nexport {};\n//# sourceMappingURL=getIsMaxButtonVisible.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

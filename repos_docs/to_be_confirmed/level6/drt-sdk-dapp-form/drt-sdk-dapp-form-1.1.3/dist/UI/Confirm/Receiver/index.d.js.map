@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Confirm/Receiver/index.d.ts", "../../../../src/UI/Confirm/Receiver/Receiver.js"],
+  "sourcesContent": ["export * from './Receiver';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../../__chunks__/chunk-C527GJ5Y.js\";import\"../../../__chunks__/chunk-NGZMB6MT.js\";import\"../../../__chunks__/chunk-PXTZCHS7.js\";import\"../../../__chunks__/chunk-Z2Q55TPK.js\";import\"../../../__chunks__/chunk-5SPHUVUS.js\";import\"../../../__chunks__/chunk-SVQK3TVL.js\";export{a as Receiver};\n//# sourceMappingURL=Receiver.js.map\n"],
+  "mappings": "yTAAA,ICAA",
+  "names": []
+}

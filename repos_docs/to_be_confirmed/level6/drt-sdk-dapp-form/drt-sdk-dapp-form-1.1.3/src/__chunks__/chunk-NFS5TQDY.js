@@ -1,0 +1,2 @@
+import{c}from"./chunk-QHMB2Z6Q.js";import{b as s}from"./chunk-O5SEF2CY.js";import{a as i,b as n,c as a,g as o,i as m}from"./chunk-SVQK3TVL.js";m();var L=t=>o(void 0,null,function*(){let e=t,{configValues:r}=e,I=a(e,["configValues"]),l=s(t.chainId),p=n(i(i({isInternal:["1","T"].includes(t.chainId)},I),r),{delegationContractData:l});return c(p)});export{L as a};
+//# sourceMappingURL=chunk-NFS5TQDY.js.map

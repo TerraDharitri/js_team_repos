@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-7FHVYJYL.js"],
+  "sourcesContent": ["import{b as e}from\"./chunk-OLQUPYTS.js\";import{g as n,i as o}from\"./chunk-SVQK3TVL.js\";o();import c from\"axios\";function s(){return n(this,null,function*(){try{let r=yield e(),{data:t}=yield c.get(\"economics\",r);return t}catch(r){return console.error(\"err fetching economics info\",r),null}})}export{s as a};\n//# sourceMappingURL=chunk-7FHVYJYL.js.map\n"],
+  "mappings": "+HAAA,IAA2F,qBAAJ,EAAE,EAAuB,YAAY,CAAC,MAAO,GAAE,KAAK,KAAK,WAAW,CAAC,GAAG,CAAC,GAAI,GAAE,KAAM,GAAE,EAAE,CAAC,KAAK,GAAG,KAAM,GAAE,IAAI,YAAY,CAAC,EAAE,MAAO,EAAC,OAAO,EAAN,CAAS,MAAO,SAAQ,MAAM,8BAA8B,CAAC,EAAE,IAAI,CAAC,CAAC,CAAC",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/hooks/getInitialValues/getInitialData.d.ts"],
+  "sourcesContent": ["import { ComputedNftType } from './types';\nexport declare function getInitialData(props: {\n    computedNft: ComputedNftType | null;\n    data?: string;\n    receiver: string;\n    amount: string;\n}): string;\n//# sourceMappingURL=getInitialData.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

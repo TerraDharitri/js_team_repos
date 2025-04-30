@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/operations/generateTransaction.d.ts"],
+  "sourcesContent": ["import { ExtendedValuesType } from 'types';\ninterface GenerateTransactionPropsType {\n    address: string;\n    balance: string;\n    chainId: string;\n    nonce: number;\n    values: ExtendedValuesType;\n}\nexport declare function generateTransaction(props: GenerateTransactionPropsType): Promise<import(\"@terradharitri/sdk-core/out\").Transaction>;\nexport {};\n//# sourceMappingURL=generateTransaction.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

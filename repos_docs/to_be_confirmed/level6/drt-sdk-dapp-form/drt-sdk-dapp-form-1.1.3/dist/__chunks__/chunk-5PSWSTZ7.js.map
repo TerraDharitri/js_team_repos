@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-ISL7WVLN.js"],
+  "sourcesContent": ["import{a}from\"./chunk-G2KE7XO3.js\";import{a as r}from\"./chunk-EPSD43SA.js\";import{c as o}from\"./chunk-VMXC44RX.js\";import{i}from\"./chunk-SVQK3TVL.js\";i();import{GAS_LIMIT as u}from\"@terradharitri/sdk-dapp/constants/index\";import f from\"bignumber.js\";var b=({isNftTransaction:n,isDcdtTransaction:s,data:e,isGuarded:m})=>{let c=a(m),t=u.toString();return n&&(t=r(e)),s&&(t=o),new f(t).plus(c).toString(10)};export{b as a};\n//# sourceMappingURL=chunk-ISL7WVLN.js.map\n"],
+  "mappings": "uKAAA,IAA0J,oEAAoE,4BAAxE,EAAE,EAAkG,GAAI,GAAE,CAAC,CAAC,iBAAiB,EAAE,kBAAkB,EAAE,KAAK,EAAE,UAAU,KAAK,CAAC,GAAI,GAAE,EAAE,CAAC,EAAE,EAAE,EAAE,SAAS,EAAE,MAAO,IAAI,GAAE,EAAE,CAAC,GAAG,GAAI,GAAE,GAAG,GAAI,GAAE,CAAC,EAAE,KAAK,CAAC,EAAE,SAAS,EAAE,CAAC",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/containers/SendFormContainer.d.ts"],
+  "sourcesContent": ["import React, { Dispatch, JSXElementConstructor, ReactNode, SetStateAction } from 'react';\nimport { Transaction } from '@terradharitri/sdk-core';\nimport { AccountContextPropsType, FormContextBasePropsType, TokensContextInitializationPropsType } from 'contexts';\nimport { ExtendedValuesType, ValuesType } from 'types';\nimport { FormNetworkConfigType } from 'types/network';\nimport { ValidationErrorMessagesType } from 'types/validation';\nexport interface SendFormContainerPropsType {\n    initialValues?: ExtendedValuesType;\n    enableReinitialize?: boolean;\n    initGasLimitError?: string;\n    onFormSubmit: (values: ValuesType, transaction: Transaction | null, \n    /**\n     * control isFormSubmitted from outside\n     */\n    setIsFormSubmitted?: Dispatch<SetStateAction<boolean>>) => void;\n    accountInfo: AccountContextPropsType;\n    formInfo: Omit<FormContextBasePropsType, 'txType' | 'setTxType'>;\n    tokensInfo?: TokensContextInitializationPropsType;\n    networkConfig: FormNetworkConfigType;\n    Loader?: JSXElementConstructor<any> | null;\n    shouldGenerateTransactionOnSubmit?: boolean;\n    children: ReactNode | JSX.Element;\n    errorMessageTranslations?: Partial<ValidationErrorMessagesType>;\n}\nexport declare function SendFormContainer(props: SendFormContainerPropsType): React.JSX.Element;\n//# sourceMappingURL=SendFormContainer.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

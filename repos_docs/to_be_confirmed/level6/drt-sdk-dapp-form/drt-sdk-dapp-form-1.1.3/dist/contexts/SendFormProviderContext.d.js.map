@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/contexts/SendFormProviderContext.d.ts"],
+  "sourcesContent": ["import React, { ReactNode } from 'react';\nimport { AccountContextPropsType } from './AccountContext';\nimport { AmountContextPropsType } from './AmountContext';\nimport { DataContextPropsType } from './DataFieldContext';\nimport { FormContextPropsType } from './FormContext';\nimport { GasContextPropsType } from './GasContext';\nimport { ReceiverContextPropsType } from './ReceiverContext';\nimport { ReceiverUsernameContextPropsType } from './ReceiverUsernameContext';\nimport { TokensContextPropsType } from './TokensContext';\nexport interface SendFormContextPropsType {\n    amountInfo: AmountContextPropsType;\n    accountInfo: AccountContextPropsType;\n    formInfo: FormContextPropsType;\n    tokensInfo: TokensContextPropsType;\n    gasInfo: GasContextPropsType;\n    dataFieldInfo: DataContextPropsType;\n    receiverInfo: ReceiverContextPropsType;\n    receiverUsernameInfo: ReceiverUsernameContextPropsType;\n}\ninterface SendFormContextProviderPropsType {\n    children: ReactNode;\n}\nexport declare const SendFormContext: React.Context<SendFormContextPropsType>;\nexport declare function SendFormContextProvider({ children }: SendFormContextProviderPropsType): React.JSX.Element;\nexport declare function useSendFormContext(): SendFormContextPropsType;\nexport {};\n//# sourceMappingURL=SendFormProviderContext.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

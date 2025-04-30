@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/UI/Fields/AmountSelect/components/AmountInput/helpers/roundAmount.d.ts"],
+  "sourcesContent": ["export declare const roundAmount: (amount: string, digits?: number) => string;\n//# sourceMappingURL=roundAmount.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

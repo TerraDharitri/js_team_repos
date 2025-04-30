@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/helpers/misc/selectCustomStyles.d.ts"],
+  "sourcesContent": ["export declare function selectCustomStyles({ docStyle }: {\n    docStyle: any;\n}): {\n    valueContainer: () => {\n        padding: string;\n        lineHeight: string;\n        fontSize: string;\n        maxWidth: string;\n        display: string;\n    };\n    control: (props: any, state: any) => any;\n    input: (props: any) => any;\n    indicatorSeparator: (props: any) => any;\n    indicatorsContainer: (props: any) => any;\n    dropdownIndicator: (props: any) => any;\n    multiValue: (props: any) => any;\n    multiValueRemove: (props: any) => any;\n    multiValueLebel: (props: any) => any;\n    placeholder: (props: any) => any;\n    option: (props: any, { isFocused, isSelected }: any) => any;\n    menu: (props: any) => any;\n};\nexport default selectCustomStyles;\n//# sourceMappingURL=selectCustomStyles.d.ts.map"],
+  "mappings": "oEAAA,IAsBA,GAAO,GAAQ",
+  "names": []
+}

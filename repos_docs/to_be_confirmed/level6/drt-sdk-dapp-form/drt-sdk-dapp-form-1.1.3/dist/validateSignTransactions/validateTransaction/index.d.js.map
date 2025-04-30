@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/validateSignTransactions/validateTransaction/index.d.ts", "../../../src/validateSignTransactions/validateTransaction/types.js"],
+  "sourcesContent": ["import { ValidateType } from './types';\nexport declare const validateTransaction: ({ tx, txsDataTokens, rewaLabel, address, balance, chainId, ledger, apiConfig }: ValidateType) => Promise<{}>;\nexport default validateTransaction;\nexport * from './types';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import\"../../__chunks__/chunk-CZKNCRVS.js\";import\"../../__chunks__/chunk-SVQK3TVL.js\";\n//# sourceMappingURL=types.js.map\n"],
+  "mappings": "0JAAA,ICAA,IDEA,GAAO,GAAQ",
+  "names": []
+}

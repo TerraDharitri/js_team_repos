@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/types/network.d.ts"],
+  "sourcesContent": ["export type FormNetworkConfigType = {\n    chainId: string;\n    apiAddress?: string;\n    rewaLabel?: string;\n    apiTimeout?: number;\n    skipFetchFromServer?: boolean;\n};\n//# sourceMappingURL=network.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

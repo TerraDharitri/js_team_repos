@@ -1,0 +1,2 @@
+import{b as e}from"./chunk-VEYYXRHL.js";import{a as m,b as s,i}from"./chunk-SVQK3TVL.js";i();import n from"react";import{faCircleNotch as t}from"@fortawesome/free-solid-svg-icons";import{FontAwesomeIcon as r}from"@fortawesome/react-fontawesome";import{components as c}from"react-select";var g=o=>n.createElement(c.Menu,s(m({},o),{className:e.menu}),o.selectProps.isLoading?n.createElement("div",{className:e.loading},n.createElement(r,{icon:t,className:"fa-spin",size:"lg"})):o.children);export{g as a};
+//# sourceMappingURL=chunk-D3APLAMJ.js.map

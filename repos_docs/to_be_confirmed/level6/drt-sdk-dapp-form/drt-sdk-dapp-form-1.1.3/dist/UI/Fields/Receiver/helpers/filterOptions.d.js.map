@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/UI/Fields/Receiver/helpers/filterOptions.d.ts"],
+  "sourcesContent": ["import type { FilterOptionOption } from 'react-select/dist/declarations/src/filters';\nimport type { GenericOptionType } from '../Receiver.types';\nexport declare const filterOptions: (option: FilterOptionOption<GenericOptionType>, search: string) => boolean;\n//# sourceMappingURL=filterOptions.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

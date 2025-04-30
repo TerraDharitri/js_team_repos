@@ -1,0 +1,2 @@
+import{h as e}from"./chunk-VMXC44RX.js";import{i}from"./chunk-SVQK3TVL.js";i();import{stringIsFloat as o}from"@terradharitri/sdk-dapp/utils/validation/stringIsFloat";import r from"bignumber.js";var b=(t,n)=>{let m=o(String(t))?t:e,g=o(String(n))?new r(n):new r(e),c=r(100).dividedBy(g.dividedBy(m)).toNumber();return r.minimum(c,100).toNumber()};export{b as a};
+//# sourceMappingURL=chunk-FSF3TKUM.js.map

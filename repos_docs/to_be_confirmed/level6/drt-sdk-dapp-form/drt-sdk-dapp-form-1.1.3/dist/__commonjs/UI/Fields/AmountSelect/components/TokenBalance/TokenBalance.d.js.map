@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/__commonjs/UI/Fields/AmountSelect/components/TokenBalance/TokenBalance.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nimport { OptionType } from '../TokenSelect';\nexport interface TokenBalancePropsType extends WithClassnameType {\n    label?: string;\n    value?: string;\n    token?: OptionType['token'];\n    'data-value'?: string;\n}\nexport declare const TokenBalance: ({ label, value, className, token, \"data-testid\": dataTestId, \"data-value\": dataValue }: TokenBalancePropsType) => React.JSX.Element;\n//# sourceMappingURL=TokenBalance.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

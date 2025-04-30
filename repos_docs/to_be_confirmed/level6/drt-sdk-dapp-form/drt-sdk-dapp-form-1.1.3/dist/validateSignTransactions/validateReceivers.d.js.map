@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/validateSignTransactions/validateReceivers.d.ts"],
+  "sourcesContent": ["import { IPlainTransactionObject } from '@terradharitri/sdk-core/out';\nimport { TransactionsDataTokensType } from '@terradharitri/sdk-dapp/types/transactions.types';\nexport interface ValidateReceiversType {\n    transactions: IPlainTransactionObject[];\n    txsDataTokens?: TransactionsDataTokensType;\n    isMainnet: boolean;\n    address: string;\n    whitelistedReceivers?: string[];\n}\nexport declare function validateReceivers({ transactions: txs, txsDataTokens, isMainnet, address, whitelistedReceivers }: ValidateReceiversType): boolean;\nexport default validateReceivers;\n//# sourceMappingURL=validateReceivers.d.ts.map"],
+  "mappings": "iEAAA,IAUA,GAAO,GAAQ",
+  "names": []
+}

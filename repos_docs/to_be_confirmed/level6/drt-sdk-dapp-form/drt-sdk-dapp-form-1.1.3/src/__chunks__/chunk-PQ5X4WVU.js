@@ -1,0 +1,2 @@
+import{a as d}from"./chunk-XVBR52WU.js";import{c as t}from"./chunk-LQFLWU3Q.js";import{i as o}from"./chunk-SVQK3TVL.js";o();import{useEffect as i}from"react";function E(s){var r;let{address:f}=t(),{verifiedAddresses:e,verifyScamAddress:m,fetchingScamAddress:n}=d(),c=(r=e[s])==null?void 0:r.info;return i(()=>{s&&m({address:f,addressToVerify:s})},[s]),{scamError:c,fetchingScamAddress:n}}export{E as a};
+//# sourceMappingURL=chunk-PQ5X4WVU.js.map

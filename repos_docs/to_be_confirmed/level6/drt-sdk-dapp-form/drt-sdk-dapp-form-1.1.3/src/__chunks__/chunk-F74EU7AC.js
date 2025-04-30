@@ -1,0 +1,2 @@
+import{i as t}from"./chunk-SVQK3TVL.js";t();import{addressIsValid as i}from"@terradharitri/sdk-dapp/utils/account/addressIsValid";import{string as a}from"yup";var d=n=>[a().test("invalidHerotag",n.invalidHerotag,function(r){let{receiver:e}=this.parent;if((e==null?void 0:e.startsWith("drt1"))||!r&&!e)return!0;let o=r&&i(e);return Boolean(o)})].reduce((s,r)=>s.concat(r),a()),y=d;export{d as a,y as b};
+//# sourceMappingURL=chunk-F74EU7AC.js.map

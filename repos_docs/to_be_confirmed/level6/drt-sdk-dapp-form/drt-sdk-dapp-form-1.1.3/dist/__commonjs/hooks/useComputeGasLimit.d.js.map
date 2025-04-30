@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/hooks/useComputeGasLimit.d.ts"],
+  "sourcesContent": ["export declare function useComputeGasLimit(): (computedTokenId: string) => Promise<{\n    initGasLimit: string;\n    initGasLimitError: string | undefined;\n}>;\nexport default useComputeGasLimit;\n//# sourceMappingURL=useComputeGasLimit.d.ts.map"],
+  "mappings": "oEAAA,IAIA,GAAO,GAAQ",
+  "names": []
+}

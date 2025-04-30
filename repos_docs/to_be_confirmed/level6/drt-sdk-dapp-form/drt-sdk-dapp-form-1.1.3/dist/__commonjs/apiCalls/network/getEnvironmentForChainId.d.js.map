@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/apiCalls/network/getEnvironmentForChainId.d.ts"],
+  "sourcesContent": ["export declare function getEnvironmentForChainId(chainId: string): string;\nexport declare function getWrewaIdForChainId(chainId: string): string;\n//# sourceMappingURL=getEnvironmentForChainId.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

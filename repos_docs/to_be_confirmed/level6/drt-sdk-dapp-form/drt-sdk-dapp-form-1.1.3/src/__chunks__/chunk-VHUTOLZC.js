@@ -1,0 +1,2 @@
+import{i as t}from"./chunk-SVQK3TVL.js";t();import{fallbackNetworkConfigurations as e}from"@terradharitri/sdk-dapp/constants/index";import{EnvironmentsEnum as q}from"@terradharitri/sdk-dapp/types/enums.types";var c="drt1spyavw0956vq68xj8y4tenjpq2wd5a9p2c6j8gsz7ztyrnpxrruqlqde3c",d=e[q.testnet],u="drt1qqqqqqqqqqqqqpgqp699jngundfqw07d8jzkepucvpzush6k3wvqeyzkqc";export{c as a,d as b,u as c};
+//# sourceMappingURL=chunk-VHUTOLZC.js.map

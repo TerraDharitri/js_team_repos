@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/__commonjs/UI/Fields/Receiver/helpers/onReceiverInputChange.d.ts"],
+  "sourcesContent": ["import { Dispatch, SetStateAction } from 'react';\nimport { InputActionMeta } from 'react-select';\nimport { GenericOptionType } from '../Receiver.types';\nexport interface OnReceiverInputChangeType {\n    setOption: Dispatch<SetStateAction<GenericOptionType | null>>;\n    setAllValues: (value: string) => void;\n}\nexport declare const onReceiverInputChange: ({ setOption, setAllValues }: OnReceiverInputChangeType) => (inputValue: string, meta: InputActionMeta) => void;\n//# sourceMappingURL=onReceiverInputChange.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

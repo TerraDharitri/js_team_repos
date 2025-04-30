@@ -1,0 +1,2 @@
+import{b as o}from"./chunk-Y7MEMM4P.js";import{i as t}from"./chunk-SVQK3TVL.js";t();import{DIGITS as m,DECIMALS as n,GAS_PRICE as s}from"@terradharitri/sdk-dapp/constants/index";import a from"bignumber.js";var r,i,e,c=o({input:String((r=s)!=null?r:1e9),decimals:(i=n)!=null?i:18,showLastNonZeroDecimal:!0,digits:(e=m)!=null?e:4}),A=new a(c).times(10).toString(10);export{c as a,A as b};
+//# sourceMappingURL=chunk-C4PJGKWQ.js.map

@@ -1,0 +1,2 @@
+import{h as n}from"./chunk-VMXC44RX.js";import{a,b as r,i as t}from"./chunk-SVQK3TVL.js";t();import{DECIMALS as l}from"@terradharitri/sdk-dapp/constants/index";function e({tokens:o,tokenId:m}){let i=o.find(({identifier:c})=>c===m),f=i?i.decimals:l,p=(i==null?void 0:i.balance)||n;return r(a({},i),{decimals:f,identifier:(i==null?void 0:i.identifier)||"",name:(i==null?void 0:i.name)||"",ticker:(i==null?void 0:i.ticker)||"",balance:p})}var b=e;export{e as a,b};
+//# sourceMappingURL=chunk-5I5B5RVZ.js.map

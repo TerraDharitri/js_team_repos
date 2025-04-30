@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-NZ6Y75I4.js"],
+  "sourcesContent": ["import{i as e}from\"./chunk-SVQK3TVL.js\";e();import{DIGITS as r}from\"@terradharitri/sdk-dapp/constants\";import{formatAmount as p}from\"@terradharitri/sdk-dapp/utils/operations/formatAmount\";import{stringIsInteger as u}from\"@terradharitri/sdk-dapp/utils/validation/stringIsInteger\";var A=({amount:a=\"0\",decimals:s=0,digits:m=r,addCommas:n=!1,showLastNonZeroDecimal:i=!1})=>{if(a==null||!u(a))return\"0\";let t=l=>p({input:a,digits:l,decimals:s,addCommas:n,showLastNonZeroDecimal:i}),o=t(m);return o=parseFloat(o)>0?o:t(r),o=parseFloat(o)>0?o:t(r+2),o=parseFloat(o)>0?o:t(r+4),o=parseFloat(o)>0?o:t(r+6),o=parseFloat(o)>0?o:t(r+10),parseFloat(o)>0?o:t(r+14)};export{A as a};\n//# sourceMappingURL=chunk-NZ6Y75I4.js.map\n"],
+  "mappings": "gFAAA,IAA4C,2DAA2D,qFAAqF,2FAApJ,EAAE,EAA6O,GAAI,GAAE,CAAC,CAAC,OAAO,EAAE,IAAI,SAAS,EAAE,EAAE,OAAO,EAAE,EAAE,UAAU,EAAE,GAAG,uBAAuB,EAAE,MAAM,CAAC,GAAG,GAAG,MAAM,CAAC,EAAE,CAAC,EAAE,MAAM,IAAI,GAAI,GAAE,GAAG,EAAE,CAAC,MAAM,EAAE,OAAO,EAAE,SAAS,EAAE,UAAU,EAAE,uBAAuB,CAAC,CAAC,EAAE,EAAE,EAAE,CAAC,EAAE,MAAO,GAAE,WAAW,CAAC,EAAE,EAAE,EAAE,EAAE,CAAC,EAAE,EAAE,WAAW,CAAC,EAAE,EAAE,EAAE,EAAE,EAAE,CAAC,EAAE,EAAE,WAAW,CAAC,EAAE,EAAE,EAAE,EAAE,EAAE,CAAC,EAAE,EAAE,WAAW,CAAC,EAAE,EAAE,EAAE,EAAE,EAAE,CAAC,EAAE,EAAE,WAAW,CAAC,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,WAAW,CAAC,EAAE,EAAE,EAAE,EAAE,EAAE,EAAE,CAAC",
+  "names": []
+}

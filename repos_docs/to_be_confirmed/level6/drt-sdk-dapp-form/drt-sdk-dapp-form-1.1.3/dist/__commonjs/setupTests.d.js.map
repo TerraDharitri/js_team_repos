@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__commonjs/setupTests.d.ts"],
+  "sourcesContent": ["export {};\n//# sourceMappingURL=setupTests.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

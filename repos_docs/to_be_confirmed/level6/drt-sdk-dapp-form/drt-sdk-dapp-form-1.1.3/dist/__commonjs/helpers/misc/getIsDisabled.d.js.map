@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/helpers/misc/getIsDisabled.d.ts"],
+  "sourcesContent": ["import { ExtendedValuesType, ValuesEnum } from 'types';\nexport declare const getIsDisabled: (field: keyof typeof ValuesEnum, readonly?: ExtendedValuesType['readonly']) => boolean;\n//# sourceMappingURL=getIsDisabled.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

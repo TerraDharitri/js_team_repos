@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/UI/NFTSFTPreview/NFTSFTPreview.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { FormContextPropsType } from 'contexts';\nimport { PartialNftType, TransactionTypeEnum } from 'types';\nexport interface NFTSFTPreviewPropsType extends PartialNftType {\n    txType: TransactionTypeEnum;\n    onClick?: FormContextPropsType['onPreviewClick'];\n}\nexport declare const NFTSFTPreview: (props: NFTSFTPreviewPropsType) => React.JSX.Element | null;\n//# sourceMappingURL=NFTSFTPreview.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/contexts/ReceiverContext/hooks/useVerifyScamAddress.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls';\ninterface VerifiedAddressesType {\n    [address: string]: {\n        type: string;\n        info: string;\n    };\n}\nexport declare function useVerifyScamAddress(apiConfig?: ApiConfigType): {\n    verifiedAddresses: VerifiedAddressesType;\n    verifyScamAddress: ({ address, addressToVerify }: {\n        address: string;\n        addressToVerify?: string | undefined;\n    }) => Promise<void>;\n    fetchingScamAddress: boolean;\n};\nexport {};\n//# sourceMappingURL=useVerifyScamAddress.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/apiCalls/network/getDelegationContractDataForChainId.d.ts"],
+  "sourcesContent": ["import { DelegationContractDataType } from 'types';\nexport declare const delegationContractDataByEnvironment: Record<string, DelegationContractDataType>;\nexport declare function getDelegationDataForChainId(chainId: string): DelegationContractDataType | null;\n//# sourceMappingURL=getDelegationContractDataForChainId.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

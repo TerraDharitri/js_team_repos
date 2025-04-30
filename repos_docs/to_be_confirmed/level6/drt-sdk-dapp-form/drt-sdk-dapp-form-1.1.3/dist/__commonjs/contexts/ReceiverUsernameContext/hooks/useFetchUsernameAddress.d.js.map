@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/contexts/ReceiverUsernameContext/hooks/useFetchUsernameAddress.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls';\nexport interface UsernameAccountsType {\n    [username: string]: {\n        address: string;\n        /**\n         * **username**: Might differ from the original username search string.\n         */\n        username: string;\n        rawUsername: string;\n    } | null;\n}\nexport declare function useFetchUsernameAddress(apiConfig?: ApiConfigType): {\n    usernameAccounts: UsernameAccountsType;\n    fetchUsernameAccount: (username: string) => Promise<void>;\n    fetchUsernameByAddress: (address: string) => Promise<void>;\n    fetchingUsernameAccount: boolean;\n};\n//# sourceMappingURL=useFetchUsernameAddress.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

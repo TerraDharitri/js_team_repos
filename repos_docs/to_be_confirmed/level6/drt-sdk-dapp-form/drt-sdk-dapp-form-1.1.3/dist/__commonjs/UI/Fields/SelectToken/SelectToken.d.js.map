@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/UI/Fields/SelectToken/SelectToken.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nexport interface SelectTokenPropsType extends WithClassnameType {\n    label?: string;\n}\nexport declare const SelectToken: ({ className, label }: SelectTokenPropsType) => React.JSX.Element;\n//# sourceMappingURL=SelectToken.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

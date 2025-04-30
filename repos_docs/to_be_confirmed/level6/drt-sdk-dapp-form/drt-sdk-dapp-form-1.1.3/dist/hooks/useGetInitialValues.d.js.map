@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/hooks/useGetInitialValues.d.ts"],
+  "sourcesContent": ["import { GetInitialValuesReturnType } from './getInitialValues';\nimport { GetInitialValuesType } from './getInitialValues/types';\nexport { GetInitialValuesReturnType };\nexport declare function useGetInitialValues(props: GetInitialValuesType): GetInitialValuesReturnType | null;\n//# sourceMappingURL=useGetInitialValues.d.ts.map"],
+  "mappings": "ivCAAA",
+  "names": []
+}

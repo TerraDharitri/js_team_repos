@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/validation/validateGasLimitAmount.d.ts"],
+  "sourcesContent": ["interface ValidateGasLimitAmountType {\n    amount: string;\n    balance: string;\n    gasPrice: string;\n    gasLimit: string;\n    data: string;\n    chainId: string;\n}\nexport declare const validateGasLimitAmount: ({ amount, balance, gasPrice, gasLimit, data, chainId }: ValidateGasLimitAmountType) => boolean;\nexport {};\n//# sourceMappingURL=validateGasLimitAmount.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

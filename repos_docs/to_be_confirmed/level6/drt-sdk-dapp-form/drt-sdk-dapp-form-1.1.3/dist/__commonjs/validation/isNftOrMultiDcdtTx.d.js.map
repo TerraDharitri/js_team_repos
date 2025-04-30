@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/validation/isNftOrMultiDcdtTx.d.ts"],
+  "sourcesContent": ["export declare const isNftOrMultiDcdtTx: (data: string) => boolean;\n//# sourceMappingURL=isNftOrMultiDcdtTx.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

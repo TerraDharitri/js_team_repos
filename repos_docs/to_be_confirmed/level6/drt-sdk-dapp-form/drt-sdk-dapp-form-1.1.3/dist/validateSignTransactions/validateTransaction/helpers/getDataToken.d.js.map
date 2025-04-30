@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/validateSignTransactions/validateTransaction/helpers/getDataToken.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls';\nexport declare function getDataToken({ tokenId, parsedTokenAmount: parsedTokenAmount }: {\n    tokenId: string;\n    parsedTokenAmount: string;\n}, apiConfig: ApiConfigType): Promise<{\n    tokenData: null;\n    tokenAmount: string;\n    tokenFound: boolean;\n} | {\n    tokenData: import(\"../../..\").PartialTokenType;\n    tokenAmount: string;\n    tokenFound: boolean;\n}>;\nexport default getDataToken;\n//# sourceMappingURL=getDataToken.d.ts.map"],
+  "mappings": "uEAAA,IAaA,GAAO,GAAQ",
+  "names": []
+}

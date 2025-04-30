@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/contexts/ReceiverUsernameContext/ReceiverUsernameContext.d.ts"],
+  "sourcesContent": ["import React, { ReactNode } from 'react';\nimport { UsernameAccountsType } from './hooks/useFetchUsernameAddress';\nexport interface ReceiverUsernameContextPropsType {\n    receiverUsername?: string;\n    receiverUsernameError?: string;\n    isReceiverUsernameInvalid: boolean;\n    showUsernameError: boolean;\n    searchQueryIsAddress: boolean;\n    isUsernameLoading: boolean;\n    isUsernameDebouncing: boolean;\n    usernameIsAmongKnown: boolean;\n    usernameAccounts: UsernameAccountsType;\n}\ninterface ReceiverUsernameContextProviderPropsType {\n    children: ReactNode;\n}\nexport declare const ReceiverUsernameContext: React.Context<ReceiverUsernameContextPropsType>;\nexport declare function ReceiverUsernameContextProvider({ children }: ReceiverUsernameContextProviderPropsType): React.JSX.Element;\nexport declare function useReceiverUsernameContext(): ReceiverUsernameContextPropsType;\nexport {};\n//# sourceMappingURL=ReceiverUsernameContext.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

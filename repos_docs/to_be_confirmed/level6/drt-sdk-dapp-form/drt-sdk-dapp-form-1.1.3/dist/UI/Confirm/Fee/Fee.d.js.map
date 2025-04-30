@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Confirm/Fee/Fee.d.ts"],
+  "sourcesContent": ["import React from 'react';\nexport interface FeePropsType {\n    label?: string;\n    rewaPriceInUsd: number;\n    feeLimit: string;\n    rewaLabel: string;\n}\nexport declare const Fee: ({ rewaPriceInUsd, label, feeLimit, rewaLabel }: FeePropsType) => React.JSX.Element;\n//# sourceMappingURL=Fee.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

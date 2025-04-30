@@ -1,0 +1,2 @@
+import{c as s}from"./chunk-R5VT33NT.js";import{i as t}from"./chunk-SVQK3TVL.js";t();import{useFormikContext as a}from"formik";var p=()=>{let{receiverInfo:{receiverError:o,isReceiverInvalid:i},receiverUsernameInfo:{receiverUsernameError:c,isReceiverUsernameInvalid:r,receiverUsername:e}}=s(),{touched:{receiver:n}}=a(),v=i&&n||r;return e!=null&&e.startsWith("drt1")?{isInvalid:i,receiverErrorDataTestId:"receiverError",error:o}:{isInvalid:v,receiverErrorDataTestId:r?"receiverUsernameError":"receiverError",error:r?c:o}};export{p as a};
+//# sourceMappingURL=chunk-DR7LZP42.js.map

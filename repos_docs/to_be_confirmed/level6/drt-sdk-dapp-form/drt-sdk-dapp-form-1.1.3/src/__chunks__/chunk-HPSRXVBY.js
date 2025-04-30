@@ -1,0 +1,2 @@
+import{c as d}from"./chunk-7VOG2AES.js";import{g as o,i as s}from"./chunk-SVQK3TVL.js";s();import{getIdentifierType as c}from"@terradharitri/sdk-dapp/utils/validation/getIdentifierType";function f(n,e){return o(this,null,function*(){let{address:t,identifier:i}=n;try{let{data:r}=yield d({address:t,token:i},e);return r}catch(r){console.log(r)}return null})}function k(n){let{identifier:e,address:t}=n,{isDcdt:i}=c(e);return e&&i?f({address:t,identifier:e}):null}export{k as a};
+//# sourceMappingURL=chunk-HPSRXVBY.js.map

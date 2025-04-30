@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/contexts/AmountContext/utils/getIsAmountInvalid.d.ts"],
+  "sourcesContent": ["import { FormikErrors, FormikTouched } from 'formik';\nimport { ExtendedValuesType } from 'types';\nexport declare function getIsAmountInvalid({ values, errors, touched }: {\n    values: ExtendedValuesType;\n    errors: FormikErrors<ExtendedValuesType>;\n    touched: FormikTouched<ExtendedValuesType>;\n}): boolean;\n//# sourceMappingURL=getIsAmountInvalid.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

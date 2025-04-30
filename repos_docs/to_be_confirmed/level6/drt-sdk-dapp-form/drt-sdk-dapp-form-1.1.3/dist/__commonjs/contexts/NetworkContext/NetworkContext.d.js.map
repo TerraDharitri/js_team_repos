@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/contexts/NetworkContext/NetworkContext.d.ts"],
+  "sourcesContent": ["import React, { ReactNode } from 'react';\nimport { NetworkType } from '@terradharitri/sdk-dapp/types/network.types';\nimport { DelegationContractDataType } from 'types';\nexport interface NetworkContextPropsType {\n    networkConfig: NetworkType;\n    delegationContractData: DelegationContractDataType | null;\n}\ninterface NetworkContextProviderValueType {\n    networkConfig: NetworkType;\n}\ninterface NetworkContextProviderPropsType {\n    children: ReactNode;\n    value: NetworkContextProviderValueType;\n}\nexport declare const NetworkContext: React.Context<NetworkContextPropsType>;\nexport declare function NetworkContextProvider({ children, value: { networkConfig } }: NetworkContextProviderPropsType): React.JSX.Element;\nexport declare function useNetworkConfigContext(): NetworkContextPropsType;\nexport {};\n//# sourceMappingURL=NetworkContext.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

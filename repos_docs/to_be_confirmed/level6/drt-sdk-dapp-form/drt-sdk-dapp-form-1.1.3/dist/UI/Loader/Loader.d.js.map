@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/UI/Loader/Loader.d.ts"],
+  "sourcesContent": ["import React from 'react';\nexport declare const Loader: () => React.JSX.Element;\n//# sourceMappingURL=Loader.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

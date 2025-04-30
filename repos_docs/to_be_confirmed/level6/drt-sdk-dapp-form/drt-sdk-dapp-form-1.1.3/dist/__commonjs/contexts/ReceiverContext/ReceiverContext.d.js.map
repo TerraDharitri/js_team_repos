@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/contexts/ReceiverContext/ReceiverContext.d.ts"],
+  "sourcesContent": ["import React from 'react';\nexport interface KnowAddressType {\n    address: string;\n    username?: string;\n    rawUsername?: string;\n}\nexport interface ReceiverContextPropsType {\n    receiver: string;\n    receiverInputValue: string;\n    setReceiverInputValue: (value: string) => void;\n    receiverError?: string;\n    isReceiverInvalid: boolean;\n    knownAddresses: KnowAddressType[] | null;\n    scamError?: string;\n    fetchingScamAddress: boolean;\n    onChangeReceiver: (newReceiver: string, shouldValidate?: boolean) => void;\n    onBlurReceiver: (event: Event) => void;\n}\ninterface ReceiverContextProviderPropsType {\n    children: any;\n}\nexport declare const ReceiverContext: React.Context<ReceiverContextPropsType>;\nexport declare function ReceiverContextProvider({ children }: ReceiverContextProviderPropsType): React.JSX.Element;\nexport declare function useReceiverContext(): ReceiverContextPropsType;\nexport {};\n//# sourceMappingURL=ReceiverContext.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

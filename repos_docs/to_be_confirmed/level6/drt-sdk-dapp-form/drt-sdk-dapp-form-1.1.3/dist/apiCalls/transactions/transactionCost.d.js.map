@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/apiCalls/transactions/transactionCost.d.ts"],
+  "sourcesContent": ["export declare function getTransactionCost(transaction: {\n    [key: string]: any;\n}): Promise<{\n    data: {\n        data?: {\n            txGasUnits: number;\n            returnMessage: string;\n        } | undefined;\n        code: string;\n    };\n    success: boolean;\n} | {\n    success: boolean;\n    data?: undefined;\n}>;\nexport default getTransactionCost;\n//# sourceMappingURL=transactionCost.d.ts.map"],
+  "mappings": "oEAAA,IAeA,GAAO,GAAQ",
+  "names": []
+}

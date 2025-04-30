@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/hooks/useFetchGasLimit/index.d.ts"],
+  "sourcesContent": ["import { SendFormContainerPropsType } from 'containers/SendFormContainer';\nexport declare function useFetchGasLimit(initGasLimitError?: SendFormContainerPropsType['initGasLimitError']): {\n    gasCostLoading: boolean;\n    gasCostError: string | undefined;\n};\nexport default useFetchGasLimit;\n//# sourceMappingURL=index.d.ts.map"],
+  "mappings": "uEAAA,IAKA,GAAO,GAAQ",
+  "names": []
+}

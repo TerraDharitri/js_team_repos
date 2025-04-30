@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/operations/calculateNftGasLimit.d.ts"],
+  "sourcesContent": ["export declare const calculateNftGasLimit: (data?: string) => string;\n//# sourceMappingURL=calculateNftGasLimit.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

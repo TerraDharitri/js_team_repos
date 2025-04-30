@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/helpers/misc/processScamNft/types.d.ts"],
+  "sourcesContent": ["import { SuspiciousLinkPropsType } from '@terradharitri/sdk-dapp/types';\nimport { PartialNftType } from 'types';\nexport interface KeyValueType {\n    key: string;\n    value: string;\n}\nexport interface NftAttributeType {\n    attribute: [KeyValueType];\n}\nexport interface NftMetadataType {\n    description: string;\n    attributes: [NftAttributeType];\n}\nexport interface NftType extends Pick<SuspiciousLinkPropsType, 'isNsfw' | 'verified' | 'scamInfo'>, Pick<PartialNftType, 'name' | 'media'> {\n    metadata?: NftMetadataType;\n}\nexport interface ProcessScamNftType {\n    nft: NftType;\n    skipDescription?: boolean;\n}\n//# sourceMappingURL=types.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

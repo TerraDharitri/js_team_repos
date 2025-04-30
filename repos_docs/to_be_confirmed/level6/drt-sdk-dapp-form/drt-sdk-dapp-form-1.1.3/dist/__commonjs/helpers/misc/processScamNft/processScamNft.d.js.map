@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/helpers/misc/processScamNft/processScamNft.d.ts"],
+  "sourcesContent": ["import { ProcessScamNftType } from './types';\nexport declare const processScamNft: ({ nft, skipDescription }: ProcessScamNftType) => {\n    isSuspicious: any;\n    name: any;\n    thumbnail: string | undefined;\n    description: any;\n};\n//# sourceMappingURL=processScamNft.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

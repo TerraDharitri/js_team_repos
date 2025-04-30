@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/hooks/useFetchGasLimit/fetchGasLimit.d.ts"],
+  "sourcesContent": ["import { ValuesType } from 'types';\ninterface FetchGasLimitType {\n    balance: string;\n    address: string;\n    isGuarded?: boolean;\n    nonce: number;\n    values: Omit<ValuesType, 'tokenId'>;\n    chainId: string;\n}\nexport declare const fetchGasLimit: ({ balance, address, isGuarded, nonce, values, chainId }: FetchGasLimitType) => Promise<{\n    gasLimit: string;\n    gasLimitCostError?: string | undefined;\n}>;\nexport default fetchGasLimit;\n//# sourceMappingURL=fetchGasLimit.d.ts.map"],
+  "mappings": "uEAAA,IAaA,GAAO,GAAQ",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../../src/__commonjs/UI/Fields/AmountSelect/components/AmountInput/helpers/useImprovedDebounce.d.ts"],
+  "sourcesContent": ["export interface ImprovedDebounceValueType {\n    value: string;\n    count: number;\n}\nexport declare const useImprovedDebounce: (debounceValue: ImprovedDebounceValueType, timeout: number) => ImprovedDebounceValueType;\n//# sourceMappingURL=useImprovedDebounce.d.ts.map"],
+  "mappings": "mFAAA",
+  "names": []
+}

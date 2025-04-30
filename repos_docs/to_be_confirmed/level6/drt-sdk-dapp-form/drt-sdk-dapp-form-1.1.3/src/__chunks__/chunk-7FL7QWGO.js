@@ -1,0 +1,2 @@
+import{i as D}from"./chunk-SVQK3TVL.js";D();import{NftEnumType as g}from"@terradharitri/sdk-dapp/types/tokens.types";var e=(S=>(S.REWA="REWA",S.DCDT="DCDT",S.MetaDCDT="MetaDCDT",S.NonFungibleDCDT="NonFungibleDCDT",S.SemiFungibleDCDT="SemiFungibleDCDT",S))(e||{}),F=(T=>(T.DCDTNFTTransfer="DCDTNFTTransfer",T.DCDTNFTCreate="DCDTNFTCreate",T.DCDTNFTBurn="DCDTNFTBurn",T.MultiDCDTNFTTransfer="MultiDCDTNFTTransfer",T))(F||{});export{g as a,e as b,F as c};
+//# sourceMappingURL=chunk-7FL7QWGO.js.map

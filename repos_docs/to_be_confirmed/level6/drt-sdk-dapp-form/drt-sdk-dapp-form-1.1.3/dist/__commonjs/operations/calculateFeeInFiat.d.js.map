@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/operations/calculateFeeInFiat.d.ts"],
+  "sourcesContent": ["export declare function calculateFeeInFiat({ feeLimit, rewaPriceInUsd }: {\n    feeLimit: string;\n    rewaPriceInUsd: number;\n}): string;\nexport default calculateFeeInFiat;\n//# sourceMappingURL=calculateFeeInFiat.d.ts.map"],
+  "mappings": "oEAAA,IAIA,GAAO,GAAQ",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/operations/computeInitGasLimit.d.ts"],
+  "sourcesContent": ["import { SendFormContainerPropsType } from 'containers/SendFormContainer';\nimport { DelegationContractDataType } from 'types';\nexport interface ComputeInitGasLimitType {\n    computedTokenId: string;\n    receiver: string;\n    isInternal: boolean;\n    balance: string;\n    address: string;\n    isGuarded?: boolean;\n    nonce: number;\n    amount: string;\n    data: string;\n    gasLimit: string;\n    gasPrice: string;\n    chainId: string;\n    delegationContractData: DelegationContractDataType | null;\n    rewaLabel: string;\n}\nexport declare const computeInitGasLimit: (props: ComputeInitGasLimitType) => Promise<{\n    initGasLimit: string;\n    initGasLimitError?: SendFormContainerPropsType['initGasLimitError'];\n}>;\n//# sourceMappingURL=computeInitGasLimit.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

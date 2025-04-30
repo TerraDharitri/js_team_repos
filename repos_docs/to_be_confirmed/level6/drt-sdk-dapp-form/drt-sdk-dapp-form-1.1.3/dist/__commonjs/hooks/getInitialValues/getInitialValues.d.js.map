@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/hooks/getInitialValues/getInitialValues.d.ts"],
+  "sourcesContent": ["import { SendFormContainerPropsType } from 'containers/SendFormContainer';\nimport { PartialNftType, PartialTokenType } from 'types';\nimport { GetInitialValuesType } from './types';\nexport interface GetInitialValuesReturnType {\n    initialValues: {\n        receiver: string;\n        receiverUsername?: string;\n        amount: string;\n        tokenId: string;\n        gasLimit: string;\n        gasPrice: string;\n        data: string;\n    };\n    nft?: PartialNftType;\n    gasLimitCostError?: SendFormContainerPropsType['initGasLimitError'];\n    computedTokens: PartialTokenType[];\n    computedTokenId: string;\n    tokenFound: boolean;\n}\nexport declare function getInitialValues(props: GetInitialValuesType): Promise<GetInitialValuesReturnType>;\n//# sourceMappingURL=getInitialValues.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

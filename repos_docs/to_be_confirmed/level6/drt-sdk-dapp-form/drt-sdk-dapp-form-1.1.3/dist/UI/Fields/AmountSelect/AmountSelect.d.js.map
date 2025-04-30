@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Fields/AmountSelect/AmountSelect.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nimport { ExtendedValuesType } from 'types';\nimport { AmountErrorPropsType, AmountInputPropsType, MaxButtonPropsType, TokenBalancePropsType, TokenSelectPropsType } from './components';\nexport interface AmountSelectPropsType extends WithClassnameType {\n    label?: string;\n    name: string;\n    readonly?: ExtendedValuesType['readonly'];\n    wrapperControlsClassName?: string;\n    amountErrorProps: AmountErrorPropsType;\n    tokenBalanceProps: TokenBalancePropsType;\n    tokenSelectProps: TokenSelectPropsType;\n    amountInputProps: AmountInputPropsType;\n    maxButtonProps: MaxButtonPropsType;\n}\nexport declare const AmountSelect: ({ className, label, name, wrapperControlsClassName, tokenSelectProps, tokenBalanceProps, amountInputProps, amountErrorProps, maxButtonProps, readonly }: AmountSelectPropsType) => React.JSX.Element;\n//# sourceMappingURL=AmountSelect.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

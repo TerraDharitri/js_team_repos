@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/UI/Fields/Receiver/hooks/useReceiverError.d.ts"],
+  "sourcesContent": ["export declare const useReceiverError: () => {\n    isInvalid: boolean;\n    receiverErrorDataTestId: string;\n    error: string | undefined;\n};\n//# sourceMappingURL=useReceiverError.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

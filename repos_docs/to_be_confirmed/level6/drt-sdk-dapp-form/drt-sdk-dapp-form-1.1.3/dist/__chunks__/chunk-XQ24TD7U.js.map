@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-OP3NS4PH.js", "../../src/__chunks__/chunk-HYV67ZHX.js"],
+  "sourcesContent": ["import{a}from\"./chunk-53V27M6E.js\";import{c as i}from\"./chunk-LQFLWU3Q.js\";import{b as r}from\"./chunk-OLQUPYTS.js\";import{g as t,i as n}from\"./chunk-SVQK3TVL.js\";n();import{useEffect as A,useState as w}from\"react\";import{getTransactions as l}from\"@terradharitri/sdk-dapp/apiCalls/transactions/getTransactions\";import K from\"lodash/uniqBy\";function x(){let{address:e}=i(),[d,o]=w(null);function c(){return t(this,null,function*(){try{let s=yield r(),{data:m}=yield l({sender:e,receiver:e,transactionSize:50,apiAddress:s.baseURL,apiTimeout:s.timeout,withUsername:!0}),u=a(m),f=K(u,p=>p.address);o(f)}catch(s){console.error(\"Unable to fetch transactions\",s),o([])}})}return A(()=>{c()},[]),d}export{x as a};\n//# sourceMappingURL=chunk-OP3NS4PH.js.map\n", "import{i as o}from\"./chunk-SVQK3TVL.js\";o();\n//# sourceMappingURL=chunk-HYV67ZHX.js.map\n"],
+  "mappings": "+MAAA,IAAsK,gDAAgD,gGAAgG,6BAApJ,EAAE,EAA+K,YAAY,CAAC,GAAG,CAAC,QAAQ,GAAG,EAAE,EAAE,CAAC,EAAE,GAAG,EAAE,IAAI,EAAE,YAAY,CAAC,MAAO,GAAE,KAAK,KAAK,WAAW,CAAC,GAAG,CAAC,GAAI,GAAE,KAAM,GAAE,EAAE,CAAC,KAAK,GAAG,KAAM,GAAE,CAAC,OAAO,EAAE,SAAS,EAAE,gBAAgB,GAAG,WAAW,EAAE,QAAQ,WAAW,EAAE,QAAQ,aAAa,EAAE,CAAC,EAAE,EAAE,EAAE,CAAC,EAAE,EAAE,EAAE,EAAE,GAAG,EAAE,OAAO,EAAE,EAAE,CAAC,CAAC,OAAO,EAAN,CAAS,QAAQ,MAAM,+BAA+B,CAAC,EAAE,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,MAAO,GAAE,IAAI,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC,EAAE,CAAC,CCAhrB,IAAwC,EAAE",
+  "names": []
+}

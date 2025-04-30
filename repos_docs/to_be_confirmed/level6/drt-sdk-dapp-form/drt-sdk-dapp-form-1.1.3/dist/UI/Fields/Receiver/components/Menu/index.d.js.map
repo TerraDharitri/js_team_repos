@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/Receiver/components/Menu/index.d.ts", "../../../../../../src/UI/Fields/Receiver/components/Menu/Menu.js"],
+  "sourcesContent": ["export * from './Menu';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../../../../__chunks__/chunk-M5JNVMWV.js\";import\"../../../../../__chunks__/chunk-UN52NNL6.js\";import\"../../../../../__chunks__/chunk-SVQK3TVL.js\";export{a as Menu};\n//# sourceMappingURL=Menu.js.map\n"],
+  "mappings": "qPAAA,ICAA",
+  "names": []
+}

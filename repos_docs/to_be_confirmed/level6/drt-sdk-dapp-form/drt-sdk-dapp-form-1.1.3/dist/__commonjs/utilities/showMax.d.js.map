@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/utilities/showMax.d.ts"],
+  "sourcesContent": ["import { ExtendedValuesType } from 'types';\nexport declare function showMax({ amount, available, readonly, entireBalanceMinusDust }: {\n    amount: string | undefined;\n    available: string;\n    entireBalanceMinusDust: string;\n    readonly?: ExtendedValuesType['readonly'];\n}): boolean;\nexport default showMax;\n//# sourceMappingURL=showMax.d.ts.map"],
+  "mappings": "oEAAA,IAOA,GAAO,GAAQ",
+  "names": []
+}

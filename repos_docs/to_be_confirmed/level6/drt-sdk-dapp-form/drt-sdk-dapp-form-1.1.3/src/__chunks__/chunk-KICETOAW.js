@@ -1,0 +1,2 @@
+import{a as s}from"./chunk-5S7IQTJ5.js";import{h as i}from"./chunk-VMXC44RX.js";import{i as r}from"./chunk-SVQK3TVL.js";r();function E({nft:e,amount:t,readonly:n,maxAmountAvailable:a,maxAmountMinusDust:o,txType:u}){switch(u){case"REWA":return s({amount:t,entireBalanceMinusDust:o,readonly:n,available:a});case"DCDT":return t!==a&&!n&&a!==i;default:return e!=null&&t!==(e==null?void 0:e.balance)&&!n}}export{E as a};
+//# sourceMappingURL=chunk-KICETOAW.js.map

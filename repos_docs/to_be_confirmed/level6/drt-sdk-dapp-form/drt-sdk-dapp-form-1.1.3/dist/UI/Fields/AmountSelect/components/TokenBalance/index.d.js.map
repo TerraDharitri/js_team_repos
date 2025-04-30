@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/AmountSelect/components/TokenBalance/index.d.ts", "../../../../../../src/UI/Fields/AmountSelect/components/TokenBalance/TokenBalance.js"],
+  "sourcesContent": ["export * from './TokenBalance';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../../../../__chunks__/chunk-OGZ24L3E.js\";import\"../../../../../__chunks__/chunk-R66ZR5LT.js\";import\"../../../../../__chunks__/chunk-SVQK3TVL.js\";export{a as TokenBalance};\n//# sourceMappingURL=TokenBalance.js.map\n"],
+  "mappings": "iMAAA,ICAA",
+  "names": []
+}

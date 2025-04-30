@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/__commonjs/contexts/ReceiverUsernameContext/hooks/useUsernameAccount/useUsernameAccount.d.ts"],
+  "sourcesContent": ["import { UseUsernameAccountType, UseUsernameAddressReturnType } from './useUsernameAccount.types';\nexport declare const useUsernameAccount: ({ shouldSkipSearch, searchPatternToLookFor }: UseUsernameAccountType) => UseUsernameAddressReturnType;\n//# sourceMappingURL=useUsernameAccount.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

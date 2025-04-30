@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-QYAXV7JA.js"],
+  "sourcesContent": ["import{i as s}from\"./chunk-SVQK3TVL.js\";s();var u=({knownAddresses:e,inputValue:n,key:t})=>!e||!n?!1:e.some(r=>{var o;return Boolean((o=r[t])==null?void 0:o.startsWith(n))});export{u as a};\n//# sourceMappingURL=chunk-QYAXV7JA.js.map\n"],
+  "mappings": "gFAAA,IAAwC,EAAE,EAAE,GAAI,GAAE,CAAC,CAAC,eAAe,EAAE,WAAW,EAAE,IAAI,KAAK,CAAC,GAAG,CAAC,EAAE,GAAG,EAAE,KAAK,GAAG,CAAC,GAAI,GAAE,MAAO,SAAS,GAAE,EAAE,KAAK,KAAK,OAAO,EAAE,WAAW,CAAC,CAAC,CAAC,CAAC",
+  "names": []
+}

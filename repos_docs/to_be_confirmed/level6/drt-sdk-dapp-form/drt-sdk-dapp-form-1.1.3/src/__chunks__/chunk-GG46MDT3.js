@@ -1,0 +1,2 @@
+import{a as e}from"./chunk-G2KE7XO3.js";import{h as i,i as a}from"./chunk-SVQK3TVL.js";a();import{GAS_LIMIT as u,GAS_PER_DATA_BYTE as g}from"@terradharitri/sdk-dapp/constants/index";import s from"bignumber.js";var f=({data:t,isGuarded:o})=>{let r=new s(u),m=new s(g),n=t?m.times(i.Buffer.from(t).length):0,c=e(o);return r.plus(n).plus(c).toString(10)};export{f as a};
+//# sourceMappingURL=chunk-GG46MDT3.js.map

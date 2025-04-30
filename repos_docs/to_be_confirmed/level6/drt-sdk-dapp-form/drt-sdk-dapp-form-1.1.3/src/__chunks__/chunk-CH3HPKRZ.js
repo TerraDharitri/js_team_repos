@@ -1,0 +1,2 @@
+import{a as r}from"./chunk-HWZ5KA5F.js";import{i as n}from"./chunk-SVQK3TVL.js";n();import{useEffect as U}from"react";import{addressIsValid as f}from"@terradharitri/sdk-dapp/utils";var o=({shouldSkipSearch:m=!1,searchPatternToLookFor:e})=>{let{fetchUsernameAccount:c,fetchUsernameByAddress:t,fetchingUsernameAccount:u,usernameAccounts:d}=r(),s=f(e);return U(()=>{if(!(!e||m)){if(s){t(e);return}c(e)}},[e,s]),{fetchingUsernameAccount:u,usernameAccounts:d}};export{o as a};
+//# sourceMappingURL=chunk-CH3HPKRZ.js.map

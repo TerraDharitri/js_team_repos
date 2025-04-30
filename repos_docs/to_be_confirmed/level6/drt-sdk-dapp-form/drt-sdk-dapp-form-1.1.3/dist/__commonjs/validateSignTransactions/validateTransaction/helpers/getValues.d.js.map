@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/validateSignTransactions/validateTransaction/helpers/getValues.d.ts"],
+  "sourcesContent": ["import { MultiSignTransactionType } from '@terradharitri/sdk-dapp/types/transactions.types';\nimport { TxSignValuesType } from '../types';\nexport declare function getValues(props: {\n    tx: MultiSignTransactionType;\n    tokenId: string;\n    rewaLabel: string;\n    tokenFound?: boolean;\n    tokenAmount: string;\n}): TxSignValuesType;\n//# sourceMappingURL=getValues.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

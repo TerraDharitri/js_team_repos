@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/__commonjs/UI/Fields/Data/hooks/useIsDataDisabled.d.ts"],
+  "sourcesContent": ["export declare const useIsDataDisabled: () => boolean;\n//# sourceMappingURL=useIsDataDisabled.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

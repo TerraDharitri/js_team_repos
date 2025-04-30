@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/operations/getTokenDetails.d.ts"],
+  "sourcesContent": ["import { PartialTokenType } from 'types';\nexport declare function getTokenDetails({ tokens, tokenId }: {\n    tokens: PartialTokenType[];\n    tokenId: string;\n}): PartialTokenType;\nexport default getTokenDetails;\n//# sourceMappingURL=getTokenDetails.d.ts.map"],
+  "mappings": "iEAAA,IAKA,GAAO,GAAQ",
+  "names": []
+}

@@ -1,0 +1,2 @@
+import{a as m}from"./chunk-UJTCESJI.js";import{a as s}from"./chunk-WWWEDGNE.js";import{a as f,b as i,g as o,i as a}from"./chunk-SVQK3TVL.js";a();import{getIdentifierType as u}from"@terradharitri/sdk-dapp/utils/validation/getIdentifierType";var c={receiver:"",quantity:""},P=w=>o(void 0,[w],function*({data:r,address:e,identifier:t}){if(r)return yield s({data:r,address:e});let{isNft:p}=u(t);if(t&&p){let n=yield m({identifier:t,address:e});return n?i(f({},c),{nft:n}):null}return null});export{P as a};
+//# sourceMappingURL=chunk-VWBUNLER.js.map

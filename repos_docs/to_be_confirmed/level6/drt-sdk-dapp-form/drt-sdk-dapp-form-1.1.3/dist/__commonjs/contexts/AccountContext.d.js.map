@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/contexts/AccountContext.d.ts"],
+  "sourcesContent": ["import React, { ReactNode } from 'react';\nimport { AssetType } from '@terradharitri/sdk-dapp/types/account.types';\nimport { LoginMethodsEnum } from '@terradharitri/sdk-dapp/types/enums.types';\nexport interface AccountContextPropsType {\n    address: string;\n    assets?: AssetType;\n    nonce: number;\n    balance: string;\n    username?: string;\n    isGuarded?: boolean;\n    providerType: LoginMethodsEnum;\n}\ninterface AccountContextProviderPropsType {\n    children: ReactNode;\n    value: AccountContextPropsType;\n}\nexport declare const AccountContext: React.Context<AccountContextPropsType>;\nexport declare function AccountContextProvider({ children, value }: AccountContextProviderPropsType): React.JSX.Element;\nexport declare function useAccountContext(): AccountContextPropsType;\nexport {};\n//# sourceMappingURL=AccountContext.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

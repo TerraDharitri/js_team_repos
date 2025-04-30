@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/Receiver/components/Control/index.d.ts", "../../../../../../src/UI/Fields/Receiver/components/Control/Control.js"],
+  "sourcesContent": ["export * from './Control';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../../../../__chunks__/chunk-JAFPFCVM.js\";import\"../../../../../__chunks__/chunk-UN52NNL6.js\";import\"../../../../../__chunks__/chunk-SVQK3TVL.js\";export{a as Control};\n//# sourceMappingURL=Control.js.map\n"],
+  "mappings": "qPAAA,ICAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/UI/Fields/AmountSlider/AmountSlider.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nexport interface AmountSliderPropsType extends WithClassnameType {\n    disabled?: boolean;\n    percentageValue: number;\n    onPercentageChange: (percentage: number) => void;\n}\nexport declare const AmountSlider: ({ disabled, percentageValue, onPercentageChange, className }: AmountSliderPropsType) => React.JSX.Element;\n//# sourceMappingURL=AmountSlider.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

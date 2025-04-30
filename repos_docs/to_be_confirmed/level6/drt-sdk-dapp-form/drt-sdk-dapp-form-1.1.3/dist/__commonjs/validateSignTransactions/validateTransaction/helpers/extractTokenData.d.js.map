@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/validateSignTransactions/validateTransaction/helpers/extractTokenData.d.ts"],
+  "sourcesContent": ["import { TransactionsDataTokensType } from '@terradharitri/sdk-dapp/types/transactions.types';\nexport declare function extractTokenData(props: {\n    dataId: string;\n    rewaLabel: string;\n    txsDataTokens: TransactionsDataTokensType;\n}): import(\"@terradharitri/sdk-dapp/types/transactions.types\").TransactionDataTokenType | {\n    tokenId: string;\n    amount: string;\n    type: string;\n    nonce: string;\n    receiver: string;\n};\nexport default extractTokenData;\n//# sourceMappingURL=extractTokenData.d.ts.map"],
+  "mappings": "0EAAA,IAYA,GAAO,GAAQ",
+  "names": []
+}

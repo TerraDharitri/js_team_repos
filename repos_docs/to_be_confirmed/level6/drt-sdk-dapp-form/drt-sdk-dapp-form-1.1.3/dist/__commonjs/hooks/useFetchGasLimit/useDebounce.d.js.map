@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/hooks/useFetchGasLimit/useDebounce.d.ts"],
+  "sourcesContent": ["declare function useDebounce<T>(value: T, timeout: number): T;\nexport default useDebounce;\n//# sourceMappingURL=useDebounce.d.ts.map"],
+  "mappings": "uEAAA,IACA,GAAO,GAAQ",
+  "names": []
+}

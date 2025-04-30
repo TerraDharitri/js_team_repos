@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/contexts/TokensContext/utils/useGetEconomicsInfo.d.ts"],
+  "sourcesContent": ["interface EconomicsInfoType {\n    rewaPriceInUsd: number;\n    digits: number;\n    rewaLabel: string;\n}\nexport declare function useGetEconomicsInfo(): EconomicsInfoType;\nexport {};\n//# sourceMappingURL=useGetEconomicsInfo.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-UWPUJSIY.js"],
+  "sourcesContent": ["import{b as n}from\"./chunk-OLQUPYTS.js\";import{g as t,i as o}from\"./chunk-SVQK3TVL.js\";o();import r from\"axios\";function d(i,a){return t(this,null,function*(){let e=a||(yield n()),{data:p}=yield r.get(`/accounts/${i}`,e);return p})}export{d as a};\n//# sourceMappingURL=chunk-UWPUJSIY.js.map\n"],
+  "mappings": "+HAAA,IAA2F,qBAAJ,EAAE,EAAuB,WAAW,EAAE,EAAE,CAAC,MAAO,GAAE,KAAK,KAAK,WAAW,CAAC,GAAI,GAAE,GAAI,MAAM,GAAE,GAAG,CAAC,KAAK,GAAG,KAAM,GAAE,IAAI,aAAa,IAAI,CAAC,EAAE,MAAO,EAAC,CAAC,CAAC",
+  "names": []
+}

@@ -1,0 +1,2 @@
+import{b as e}from"./chunk-VEYYXRHL.js";import{a as l,b as p,i as m}from"./chunk-SVQK3TVL.js";m();import t from"react";import c from"classnames";import{components as a}from"react-select";var d=s=>o=>{let{selectProps:r,children:i}=o,n=r.value;return t.createElement(a.SingleValue,p(l({},o),{className:c(e.single,{[e.focused]:o.selectProps.menuIsOpen})}),t.createElement("div",{className:e.ticker},i,s&&t.createElement(s,{token:n==null?void 0:n.token})))};export{d as a};
+//# sourceMappingURL=chunk-WQNFCD57.js.map

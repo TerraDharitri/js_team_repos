@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/UI/Confirm/Amount/Amount.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { PartialNftType, TransactionTypeEnum } from 'types';\nexport interface AmountPropsType {\n    amount: string;\n    tokenId: string;\n    tokenIdError?: string;\n    label?: string;\n    rewaLabel: string;\n    tokenLabel: string;\n    tokenAvatar: string;\n    rewaPriceInUsd: number;\n    tokenDecimals: number;\n    txType: TransactionTypeEnum;\n    nft?: PartialNftType;\n}\nexport declare const Amount: ({ label, amount, txType, tokenDecimals, tokenId, rewaLabel, rewaPriceInUsd, nft, tokenAvatar }: AmountPropsType) => React.JSX.Element | null;\n//# sourceMappingURL=Amount.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

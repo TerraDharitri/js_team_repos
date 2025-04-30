@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Confirm/Data/Data.d.ts"],
+  "sourcesContent": ["import React from 'react';\nexport interface DataPropsType {\n    label?: string;\n    scCallLabel?: string;\n    data: string;\n    highlight?: string;\n    isScCall?: boolean;\n}\nexport declare const Data: ({ label, scCallLabel, data, highlight, isScCall }: DataPropsType) => React.JSX.Element;\n//# sourceMappingURL=Data.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/__mocks__/accountConfig.d.ts"],
+  "sourcesContent": ["export declare const testAddress = \"drt1spyavw0956vq68xj8y4tenjpq2wd5a9p2c6j8gsz7ztyrnpxrruqlqde3c\";\nexport declare const testNetwork: NetworkType;\nexport declare const testReceiver = \"drt1qqqqqqqqqqqqqpgqp699jngundfqw07d8jzkepucvpzush6k3wvqeyzkqc\";\n//# sourceMappingURL=accountConfig.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

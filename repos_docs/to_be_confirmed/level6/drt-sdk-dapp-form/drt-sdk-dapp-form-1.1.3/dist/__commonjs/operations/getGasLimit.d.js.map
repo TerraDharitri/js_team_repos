@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/operations/getGasLimit.d.ts"],
+  "sourcesContent": ["import { TransactionTypeEnum } from 'types/enums';\nexport interface GetGasLimitType {\n    txType: TransactionTypeEnum;\n    data?: string;\n    isGuarded?: boolean;\n}\nexport declare function getGasLimit({ txType, data, isGuarded }: GetGasLimitType): string;\n//# sourceMappingURL=getGasLimit.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

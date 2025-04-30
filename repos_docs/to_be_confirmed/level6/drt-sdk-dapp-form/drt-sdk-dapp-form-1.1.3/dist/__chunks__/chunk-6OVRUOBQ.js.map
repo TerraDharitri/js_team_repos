@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-5S7IQTJ5.js"],
+  "sourcesContent": ["import{a}from\"./chunk-YTIFEKCD.js\";import{h as t}from\"./chunk-VMXC44RX.js\";import{i as n}from\"./chunk-SVQK3TVL.js\";n();import s from\"bignumber.js\";function c({amount:e=\"\",available:r,readonly:i=!1,entireBalanceMinusDust:o}){let l=new s(e),u=new s(o).isGreaterThan(l),m=!e,d=a(\"amount\",i);return(m||u)&&r!==t&&!d}var N=c;export{c as a,N as b};\n//# sourceMappingURL=chunk-5S7IQTJ5.js.map\n"],
+  "mappings": "gKAAA,IAAuH,4BAAJ,EAAE,EAA8B,WAAW,CAAC,OAAO,EAAE,GAAG,UAAU,EAAE,SAAS,EAAE,GAAG,uBAAuB,GAAG,CAAC,GAAI,GAAE,GAAI,GAAE,CAAC,EAAE,EAAE,GAAI,GAAE,CAAC,EAAE,cAAc,CAAC,EAAE,EAAE,CAAC,EAAE,EAAE,EAAE,SAAS,CAAC,EAAE,MAAO,IAAG,IAAI,IAAI,GAAG,CAAC,CAAC",
+  "names": []
+}

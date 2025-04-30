@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/UI/Confirm/Receiver/Receiver.d.ts"],
+  "sourcesContent": ["import React, { ReactNode } from 'react';\nexport interface ReceiverPropsType {\n    label?: string;\n    receiver: string;\n    receiverUsername?: string;\n    scamReport?: ReactNode;\n}\nexport declare const Receiver: ({ label, receiver, scamReport, receiverUsername }: ReceiverPropsType) => React.JSX.Element;\n//# sourceMappingURL=Receiver.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

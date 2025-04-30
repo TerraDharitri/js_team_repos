@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/AmountSelect/components/TokenSelect/tokenSelect.types.d.ts"],
+  "sourcesContent": ["import { PartialTokenType, TokenAssetsType } from 'types';\nimport { JSXElementConstructor } from 'react';\nexport interface SelectOptionType {\n    label: string;\n    value: string;\n}\nexport interface OptionType {\n    value: string;\n    label: string;\n    assets?: TokenAssetsType;\n    token: PartialTokenType & {\n        usdPrice?: string;\n        valueUSD?: string;\n    };\n}\nexport interface TokenSelectPropsType {\n    id?: string;\n    value?: OptionType;\n    name: string;\n    isLoading?: boolean;\n    options: OptionType[];\n    isSearchable?: boolean;\n    className?: string;\n    wrapperClassName?: string;\n    onChange: (option: any) => void;\n    onBlur?: (option: any) => void;\n    onMenuOpen?: () => void;\n    disabled?: boolean;\n    error?: string;\n    RewaIcon?: JSXElementConstructor<any>;\n    rewaLabel: string;\n    chainId: string;\n    isInvalid?: boolean;\n    noOptionsMessage?: string;\n    hasLockedMOA?: boolean;\n    hasLockedTokens?: boolean;\n    onFocus?: (props: any) => void;\n    disabledOption?: SelectOptionType;\n    handleDisabledOptionClick?: any;\n    showTokenPrice?: boolean;\n    showBalanceUsdValue?: boolean;\n    selectedTokenIconClassName?: string;\n    TokenTickerIcon?: ({ token }: {\n        token?: PartialTokenType;\n    }) => JSX.Element;\n}\n//# sourceMappingURL=tokenSelect.types.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

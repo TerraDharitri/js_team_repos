@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-K2TVXLEN.js"],
+  "sourcesContent": ["import{b as a}from\"./chunk-OLQUPYTS.js\";import{g as r,i as s}from\"./chunk-SVQK3TVL.js\";s();import e from\"axios\";function i(n){return r(this,null,function*(){try{let t=yield a(),{data:o}=yield e.post(\"/transaction/cost\",n,t);return{data:o,success:!0}}catch(t){return console.error(t),{success:!1}}})}var m=i;export{i as a,m as b};\n//# sourceMappingURL=chunk-K2TVXLEN.js.map\n"],
+  "mappings": "+HAAA,IAA2F,qBAAJ,EAAE,EAAuB,WAAW,EAAE,CAAC,MAAO,GAAE,KAAK,KAAK,WAAW,CAAC,GAAG,CAAC,GAAI,GAAE,KAAM,GAAE,EAAE,CAAC,KAAK,GAAG,KAAM,GAAE,KAAK,oBAAoB,EAAE,CAAC,EAAE,MAAM,CAAC,KAAK,EAAE,QAAQ,EAAE,CAAC,OAAO,EAAN,CAAS,MAAO,SAAQ,MAAM,CAAC,EAAE,CAAC,QAAQ,EAAE,CAAC,CAAC,CAAC,CAAC",
+  "names": []
+}

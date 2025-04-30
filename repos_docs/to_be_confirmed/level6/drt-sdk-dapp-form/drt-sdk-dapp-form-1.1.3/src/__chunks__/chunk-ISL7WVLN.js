@@ -1,0 +1,2 @@
+import{a}from"./chunk-G2KE7XO3.js";import{a as r}from"./chunk-EPSD43SA.js";import{c as o}from"./chunk-VMXC44RX.js";import{i}from"./chunk-SVQK3TVL.js";i();import{GAS_LIMIT as u}from"@terradharitri/sdk-dapp/constants/index";import f from"bignumber.js";var b=({isNftTransaction:n,isDcdtTransaction:s,data:e,isGuarded:m})=>{let c=a(m),t=u.toString();return n&&(t=r(e)),s&&(t=o),new f(t).plus(c).toString(10)};export{b as a};
+//# sourceMappingURL=chunk-ISL7WVLN.js.map

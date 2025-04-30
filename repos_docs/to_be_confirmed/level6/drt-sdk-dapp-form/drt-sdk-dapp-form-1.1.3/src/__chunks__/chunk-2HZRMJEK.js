@@ -1,0 +1,2 @@
+import{a as m}from"./chunk-QK5NRU7B.js";import{a as r,b as o,g as a,i as s}from"./chunk-SVQK3TVL.js";s();import{ZERO as d}from"@terradharitri/sdk-dapp/constants";import{getAccount as f}from"@terradharitri/sdk-dapp/utils/account/getAccount";var l=e=>a(void 0,null,function*(){let c=e.txType==="REWA"?e.amount:d,i=m(e.txType),t=yield f(e.receiver),p=t==null?void 0:t.username,T=i?e.senderUsername:p,n=o(r({},e),{amount:c,receiverUsername:T});return delete n.rawReceiverUsername,n});export{l as a};
+//# sourceMappingURL=chunk-2HZRMJEK.js.map

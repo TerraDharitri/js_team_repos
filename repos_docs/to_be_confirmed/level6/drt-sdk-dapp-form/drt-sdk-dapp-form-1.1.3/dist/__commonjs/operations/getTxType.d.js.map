@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/operations/getTxType.d.ts"],
+  "sourcesContent": ["import { PartialNftType } from 'types';\nimport { TransactionTypeEnum } from 'types';\nexport declare function getTxType({ nft, tokenId }: {\n    nft?: PartialNftType;\n    tokenId: string;\n}): TransactionTypeEnum;\nexport default getTxType;\n//# sourceMappingURL=getTxType.d.ts.map"],
+  "mappings": "oEAAA,IAMA,GAAO,GAAQ",
+  "names": []
+}

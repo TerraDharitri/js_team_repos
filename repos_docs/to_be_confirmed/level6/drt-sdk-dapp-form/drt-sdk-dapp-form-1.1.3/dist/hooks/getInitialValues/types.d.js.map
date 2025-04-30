@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/hooks/getInitialValues/types.d.ts"],
+  "sourcesContent": ["import { NetworkType } from '@terradharitri/sdk-dapp/types/network.types';\nimport { FormConfigType, PartialNftType } from 'types';\nexport interface ComputedNftType {\n    receiver: string;\n    quantity: string;\n    nft: PartialNftType;\n}\nexport interface GetInitialValuesType {\n    configValues: FormConfigType;\n    address: string;\n    balance: string;\n    rewaLabel: string;\n    nonce: number;\n    chainId: string;\n    networkConfig?: NetworkType;\n}\n//# sourceMappingURL=types.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

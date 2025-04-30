@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/validateSignTransactions/validateSignTransactions.d.ts"],
+  "sourcesContent": ["import { MultiSignTransactionType, TransactionDataTokenType } from '@terradharitri/sdk-dapp/types/transactions.types';\nimport { ValidateSignTransactionsType } from './validateTransaction';\nexport declare function validateSignTransactions(props: ValidateSignTransactionsType): Promise<{\n    txsDataTokens: Record<string, TransactionDataTokenType>;\n    errors: {\n        [key: string]: string;\n    };\n    parsedTransactions: MultiSignTransactionType[];\n} | null>;\n//# sourceMappingURL=validateSignTransactions.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

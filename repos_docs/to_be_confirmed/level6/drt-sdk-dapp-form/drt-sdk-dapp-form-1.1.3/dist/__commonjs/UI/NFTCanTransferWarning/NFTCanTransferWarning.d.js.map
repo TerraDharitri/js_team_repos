@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/UI/NFTCanTransferWarning/NFTCanTransferWarning.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nexport declare const NFTCanTransferWarning: (props: WithClassnameType) => React.JSX.Element | null;\n//# sourceMappingURL=NFTCanTransferWarning.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

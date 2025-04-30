@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-AAQHX5NX.js"],
+  "sourcesContent": ["import{a as t}from\"./chunk-7FL7QWGO.js\";import{i as o}from\"./chunk-SVQK3TVL.js\";o();var u=e=>{var r,n;return((r=e.nft)==null?void 0:r.type)===t.NonFungibleDCDT?\"NFT\":((n=e.nft)==null?void 0:n.type)===t.SemiFungibleDCDT?\"SFT\":e.tokenDetails.ticker};export{u as a};\n//# sourceMappingURL=chunk-AAQHX5NX.js.map\n"],
+  "mappings": "wHAAA,IAAgF,EAAE,EAAE,GAAI,GAAE,GAAG,CAAC,GAAI,GAAE,EAAE,MAAQ,IAAE,EAAE,MAAM,KAAK,OAAO,EAAE,QAAQ,EAAE,gBAAgB,MAAQ,IAAE,EAAE,MAAM,KAAK,OAAO,EAAE,QAAQ,EAAE,iBAAiB,MAAM,EAAE,aAAa,MAAM",
+  "names": []
+}

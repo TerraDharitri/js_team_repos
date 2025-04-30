@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/__commonjs/UI/Fields/AmountSelect/components/AmountInput/AmountInput.d.ts"],
+  "sourcesContent": ["import React, { ChangeEvent, FocusEvent, KeyboardEvent } from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nexport interface AmountInputPropsType extends WithClassnameType {\n    'data-testid'?: string;\n    InfoDustComponent?: JSX.Element;\n    disabled?: boolean;\n    error?: string;\n    handleBlur?: (event: FocusEvent<HTMLInputElement>) => void;\n    handleChange: (event: ChangeEvent<HTMLInputElement>) => void;\n    isInvalid?: boolean;\n    name: string;\n    onDebounceChange?: (amount: string) => void;\n    onFocus?: () => void;\n    onKeyDown?: (event: KeyboardEvent<HTMLInputElement>) => void;\n    placeholder?: string;\n    readonly?: boolean;\n    required: boolean;\n    usdPrice?: number;\n    value: string;\n    usdValue?: string;\n    autoFocus?: boolean;\n    suffix?: string;\n}\nexport declare const AmountInput: React.MemoExoticComponent<({ \"data-testid\": dataTestId, InfoDustComponent, disabled, handleBlur, handleChange, name, onDebounceChange, onFocus, onKeyDown, placeholder, required, usdPrice, value, usdValue, className, autoFocus, suffix }: AmountInputPropsType) => React.JSX.Element>;\n//# sourceMappingURL=AmountInput.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

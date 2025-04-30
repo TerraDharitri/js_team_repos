@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/__commonjs/operations/getParsedGasPrice.d.ts"],
+  "sourcesContent": ["export declare function getParsedGasPrice(value: string): string;\n//# sourceMappingURL=getParsedGasPrice.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

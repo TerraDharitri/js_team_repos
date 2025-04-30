@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-3YZDW2W4.js"],
+  "sourcesContent": ["import{b as c}from\"./chunk-OLQUPYTS.js\";import{g as e,i}from\"./chunk-SVQK3TVL.js\";i();import{addressIsValid as f}from\"@terradharitri/sdk-dapp/utils/account/addressIsValid\";import m from\"axios\";function T(a,p){return e(this,null,function*(){var o;try{let r=p||(yield c()),{request:t,data:s}=yield m.get(`usernames/${a}`,r);if(!(t!=null&&t.responseURL))return null;let[,n]=(o=t.responseURL.split(\"/accounts/\"))!=null?o:[],u=n!=null?n:s.address;return f(u)?s:null}catch(r){return null}})}export{T as a};\n//# sourceMappingURL=chunk-3YZDW2W4.js.map\n"],
+  "mappings": "+HAAA,IAAsF,sFAAsF,qBAA1F,EAAE,EAA6G,WAAW,EAAE,EAAE,CAAC,MAAO,GAAE,KAAK,KAAK,WAAW,CAAC,GAAI,GAAE,GAAG,CAAC,GAAI,GAAE,GAAI,MAAM,GAAE,GAAG,CAAC,QAAQ,EAAE,KAAK,GAAG,KAAM,GAAE,IAAI,aAAa,IAAI,CAAC,EAAE,GAAG,CAAE,IAAG,MAAM,EAAE,aAAa,MAAO,MAAK,GAAG,CAAC,CAAC,GAAI,GAAE,EAAE,YAAY,MAAM,YAAY,IAAI,KAAK,EAAE,CAAC,EAAE,EAAE,GAAG,KAAK,EAAE,EAAE,QAAQ,MAAO,GAAE,CAAC,EAAE,EAAE,IAAI,OAAO,EAAN,CAAS,MAAO,KAAI,CAAC,CAAC,CAAC",
+  "names": []
+}

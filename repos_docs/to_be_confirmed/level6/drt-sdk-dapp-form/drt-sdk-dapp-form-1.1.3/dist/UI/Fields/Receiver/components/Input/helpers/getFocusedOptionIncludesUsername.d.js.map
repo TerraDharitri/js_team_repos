@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/UI/Fields/Receiver/components/Input/helpers/getFocusedOptionIncludesUsername.d.ts"],
+  "sourcesContent": ["import { MutableRefObject } from 'react';\nimport { ReceiverSelectReferenceType } from 'UI/Fields/Receiver/Receiver.types';\nexport declare const getFocusedOptionIncludesUsername: (receiverSelectReference: MutableRefObject<ReceiverSelectReferenceType>, inputValue: string) => boolean;\n//# sourceMappingURL=getFocusedOptionIncludesUsername.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

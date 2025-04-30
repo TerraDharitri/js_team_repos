@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/__commonjs/UI/Fields/SelectToken/TokenElement/TokenElement.d.ts"],
+  "sourcesContent": ["import React, { JSXElementConstructor } from 'react';\nimport { NftEnumType, PartialNftType, PartialTokenType } from 'types';\nexport interface TokenElementPropsType {\n    RewaIcon?: JSXElementConstructor<any>;\n    inDropdown?: boolean;\n    isRewa?: boolean;\n    nftTokenDetails?: PartialNftType;\n    nftType?: NftEnumType;\n    token: PartialTokenType;\n}\nexport declare const TokenElement: ({ RewaIcon, inDropdown, isRewa, nftTokenDetails, nftType, token }: TokenElementPropsType) => React.JSX.Element;\n//# sourceMappingURL=TokenElement.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

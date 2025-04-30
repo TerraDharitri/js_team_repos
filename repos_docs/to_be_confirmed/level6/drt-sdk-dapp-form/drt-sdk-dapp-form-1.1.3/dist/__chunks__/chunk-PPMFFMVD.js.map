@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/__chunks__/chunk-53V27M6E.js"],
+  "sourcesContent": ["import{i as m}from\"./chunk-SVQK3TVL.js\";m();import{trimUsernameDomain as t}from\"@terradharitri/sdk-dapp/hooks/account/helpers/trimUsernameDomain\";import{isContract as c}from\"@terradharitri/sdk-dapp/utils\";var u=p=>p.reduce((r,e)=>{var a,i;let s=(a=e.receiverAssets)==null?void 0:a.name,n=(i=e.senderAssets)==null?void 0:i.name,T=t(s),f=t(n),d=c(e.receiver),o=c(e.sender),v={address:e.receiver,username:d?void 0:T,rawUsername:d?void 0:s},y={address:e.sender,username:o?void 0:f,rawUsername:o?void 0:n};return e?[...r,v,y]:r},[]);export{u as a};\n//# sourceMappingURL=chunk-53V27M6E.js.map\n"],
+  "mappings": "gFAAA,IAA4C,sGAAsG,2DAA1G,EAAE,EAAmK,GAAI,GAAE,GAAG,EAAE,OAAO,CAAC,EAAE,IAAI,CAAC,GAAI,GAAE,EAAE,GAAI,GAAG,GAAE,EAAE,iBAAiB,KAAK,OAAO,EAAE,KAAK,EAAG,GAAE,EAAE,eAAe,KAAK,OAAO,EAAE,KAAK,EAAE,EAAE,CAAC,EAAE,EAAE,EAAE,CAAC,EAAE,EAAE,EAAE,EAAE,QAAQ,EAAE,EAAE,EAAE,EAAE,MAAM,EAAE,EAAE,CAAC,QAAQ,EAAE,SAAS,SAAS,EAAE,OAAO,EAAE,YAAY,EAAE,OAAO,CAAC,EAAE,EAAE,CAAC,QAAQ,EAAE,OAAO,SAAS,EAAE,OAAO,EAAE,YAAY,EAAE,OAAO,CAAC,EAAE,MAAO,GAAE,CAAC,GAAG,EAAE,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,CAAC",
+  "names": []
+}

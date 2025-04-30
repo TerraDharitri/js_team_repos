@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/UI/Form/Form.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { GuardianScreenType } from '@terradharitri/sdk-dapp/types/transactions.types';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\ninterface FormPropsType extends WithClassnameType {\n    GuardianScreen?: (props: GuardianScreenType) => JSX.Element;\n}\nexport declare const Form: ({ className, GuardianScreen }: FormPropsType) => React.JSX.Element;\nexport {};\n//# sourceMappingURL=Form.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

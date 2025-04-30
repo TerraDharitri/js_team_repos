@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/operations/computeDataField.d.ts"],
+  "sourcesContent": ["import { PartialNftType, TransactionTypeEnum, ExtendedValuesType } from 'types';\nexport declare const computeTokenDataField: ({ amount, decimals, tokenId }: {\n    amount: string;\n    tokenId: string;\n    decimals: number;\n}) => string;\nexport declare const computeNftDataField: ({ nft, amount, receiver, errors }: {\n    nft?: PartialNftType | undefined;\n    amount: string;\n    receiver: string;\n    errors: boolean;\n}) => string;\nexport declare const getDataField: ({ txType, values, nft, amountError, receiverError }: {\n    txType: TransactionTypeEnum;\n    values: ExtendedValuesType;\n    nft?: PartialNftType | undefined;\n    amountError?: boolean | undefined;\n    receiverError?: string | undefined;\n}) => string;\n//# sourceMappingURL=computeDataField.d.ts.map"],
+  "mappings": "iEAAA",
+  "names": []
+}

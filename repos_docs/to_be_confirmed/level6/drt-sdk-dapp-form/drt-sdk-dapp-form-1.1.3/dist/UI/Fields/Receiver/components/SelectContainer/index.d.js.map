@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/Receiver/components/SelectContainer/index.d.ts", "../../../../../../src/UI/Fields/Receiver/components/SelectContainer/SelectContainer.js"],
+  "sourcesContent": ["export * from './SelectContainer';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../../../../__chunks__/chunk-FSQY7PXI.js\";import\"../../../../../__chunks__/chunk-UN52NNL6.js\";import\"../../../../../__chunks__/chunk-SVQK3TVL.js\";export{a as SelectContainer};\n//# sourceMappingURL=SelectContainer.js.map\n"],
+  "mappings": "qPAAA,ICAA",
+  "names": []
+}

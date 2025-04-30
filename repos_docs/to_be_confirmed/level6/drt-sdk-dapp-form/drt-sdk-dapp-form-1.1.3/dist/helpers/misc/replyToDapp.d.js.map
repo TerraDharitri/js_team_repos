@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/helpers/misc/replyToDapp.d.ts"],
+  "sourcesContent": ["interface ReplyToDappBasicType {\n    callbackUrl: string;\n}\ninterface ReplyToDappUrlType extends ReplyToDappBasicType {\n    urlParams?: {\n        [key: string]: string;\n    };\n    qsStr?: never;\n}\ninterface ReplyToDappQsType extends ReplyToDappBasicType {\n    urlParams?: never;\n    qsStr?: string;\n}\ntype ReplyToDappType = ReplyToDappUrlType | ReplyToDappQsType;\nexport declare function replyUrl({ callbackUrl, urlParams }: ReplyToDappType): string;\nexport declare function replyToDapp({ callbackUrl, urlParams, qsStr }: ReplyToDappType): void;\nexport default replyToDapp;\n//# sourceMappingURL=replyToDapp.d.ts.map"],
+  "mappings": "oEAAA,IAgBA,GAAO,GAAQ",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../src/__commonjs/UI/Fields/GasLimit/GasLimit.d.ts"],
+  "sourcesContent": ["import React from 'react';\nexport declare const GasLimit: () => React.JSX.Element;\n//# sourceMappingURL=GasLimit.d.ts.map"],
+  "mappings": "0EAAA",
+  "names": []
+}

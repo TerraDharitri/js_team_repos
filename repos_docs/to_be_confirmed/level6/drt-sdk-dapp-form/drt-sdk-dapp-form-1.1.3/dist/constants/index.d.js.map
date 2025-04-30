@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/constants/index.d.ts", "../../src/constants/messages.js", "../../src/constants/formDataTestIds.js"],
+  "sourcesContent": ["export * from './messages';\nexport * from './formDataTestIds';\nexport declare const MAX_GAS_LIMIT = \"600000000\";\nexport declare const GAS_LIMIT_DELTA = 10;\nexport declare const TOKEN_GAS_LIMIT = \"500000\";\nexport declare const MIN_NFT_GAS_LIMIT = 750000;\nexport declare const MAX_NFT_GAS_LIMIT = 1000000;\nexport declare const BURN_NFT_GAS_LIMIT = 200000;\nexport declare const MIN_DUST = \"5000000000000000\";\nexport declare const ZERO = \"0\";\nexport declare const WREWA_ID = \"WREWA-bd4d79\";\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a,b}from\"../__chunks__/chunk-WT245BWC.js\";import\"../__chunks__/chunk-SVQK3TVL.js\";export{a as CAN_TRANSFER_MESSAGE,b as WREWA_MESSAGE};\n//# sourceMappingURL=messages.js.map\n", "\"use strict\";import{a}from\"../__chunks__/chunk-5SPHUVUS.js\";import\"../__chunks__/chunk-SVQK3TVL.js\";export{a as FormDataTestIdsEnum};\n//# sourceMappingURL=formDataTestIds.js.map\n"],
+  "mappings": "wNAAA,ICAA,ICAA",
+  "names": []
+}

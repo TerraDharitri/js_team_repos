@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Fields/GasPrice/GasPrice.d.ts"],
+  "sourcesContent": ["import React from 'react';\nexport declare const GasPrice: () => React.JSX.Element;\n//# sourceMappingURL=GasPrice.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

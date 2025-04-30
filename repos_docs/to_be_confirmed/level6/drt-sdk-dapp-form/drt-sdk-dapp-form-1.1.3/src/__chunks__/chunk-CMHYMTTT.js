@@ -1,0 +1,2 @@
+import{a as o}from"./chunk-VMXC44RX.js";import{i as m}from"./chunk-SVQK3TVL.js";m();import{stringIsInteger as g}from"@terradharitri/sdk-dapp/utils/validation/stringIsInteger";import n from"bignumber.js";import{string as e}from"yup";var G=r=>{let s=e().required(r.required),a=e().test("isValidInteger",r.invalidNumber,t=>{let i=t&&g(t);return Boolean(i)}),d=e().test("maximum",r.tooHighGasLimit(o),t=>{let i=new n(String(t)),u=new n(o),c=t&&u.comparedTo(i)>=0;return Boolean(c)});return[s,a,d]};export{G as a};
+//# sourceMappingURL=chunk-CMHYMTTT.js.map

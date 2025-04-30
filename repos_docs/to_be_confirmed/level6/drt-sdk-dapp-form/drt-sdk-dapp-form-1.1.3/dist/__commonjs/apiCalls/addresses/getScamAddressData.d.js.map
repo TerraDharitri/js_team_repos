@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/apiCalls/addresses/getScamAddressData.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls/apiConfig';\nexport type ScamInfoType = {\n    scamInfo?: {\n        type: string;\n        info: string;\n    };\n    code: string;\n};\nexport declare function getScamAddressData(addressToVerify: string, apiConfig?: ApiConfigType): Promise<ScamInfoType>;\n//# sourceMappingURL=getScamAddressData.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/UI/Confirm/index.d.ts"],
+  "sourcesContent": ["import { Component } from 'react';\nexport declare class Confirm extends Component {\n    static Receiver: ({ label, receiver, scamReport, receiverUsername }: import(\"./Receiver\").ReceiverPropsType) => import(\"react\").JSX.Element;\n    static Amount: ({ label, amount, txType, tokenDecimals, tokenId, rewaLabel, rewaPriceInUsd, nft, tokenAvatar }: import(\"./Amount\").AmountPropsType) => import(\"react\").JSX.Element | null;\n    static Fee: ({ rewaPriceInUsd, label, feeLimit, rewaLabel }: import(\"./Fee\").FeePropsType) => import(\"react\").JSX.Element;\n    static Data: ({ label, scCallLabel, data, highlight, isScCall }: import(\"./Data\").DataPropsType) => import(\"react\").JSX.Element;\n    static Token: ({ RewaIcon, rewaLabel, isDcdtTransaction, nft, tokenAvatar, tokenId, tokenIdError }: import(\"./Token\").TokenPropsType) => import(\"react\").JSX.Element;\n    render(): null;\n}\nexport default Confirm;\n//# sourceMappingURL=index.d.ts.map"],
+  "mappings": "oEAAA,IASA,GAAO,GAAQ",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/UI/Fields/AmountSelect/components/AmountInput/helpers/removeCommas.d.ts"],
+  "sourcesContent": ["export declare const removeCommas: (amount: string) => string;\n//# sourceMappingURL=removeCommas.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

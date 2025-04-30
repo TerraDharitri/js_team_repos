@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/ConfirmScreen/components/TransactionSummary/helpers/getReceiverUsername.d.ts"],
+  "sourcesContent": ["import { KnowAddressType } from 'contexts';\nexport interface GetReceiverUsernameType {\n    knownAddresses: KnowAddressType[] | null;\n    receiverAddress: string;\n    existingReceiverUsername?: string;\n}\nexport declare const getReceiverUsername: ({ receiverAddress, knownAddresses, existingReceiverUsername }: GetReceiverUsernameType) => string | undefined;\n//# sourceMappingURL=getReceiverUsername.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

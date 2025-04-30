@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Form/helpers/getSendLabel.d.ts"],
+  "sourcesContent": ["import { TokensContextPropsType } from 'contexts/TokensContext';\nexport declare const getSendLabel: (tokensInfo: TokensContextPropsType) => string | undefined;\n//# sourceMappingURL=getSendLabel.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

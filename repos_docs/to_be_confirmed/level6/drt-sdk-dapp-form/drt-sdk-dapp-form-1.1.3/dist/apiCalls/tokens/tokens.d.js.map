@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/apiCalls/tokens/tokens.d.ts"],
+  "sourcesContent": ["import axios from 'axios';\nimport { ApiConfigType } from 'apiCalls/apiConfig';\nimport { PartialMetaDcdtType, PartialTokenType } from 'types';\nexport interface GetTokensType {\n    address: string;\n    search?: string;\n}\nexport declare function getTokens({ address, size, from, search }: GetTokensType & {\n    from?: number;\n    size?: number;\n}): Promise<axios.AxiosResponse<(PartialTokenType | PartialMetaDcdtType)[], any>>;\nexport declare function getTokensCount({ address, search }: GetTokensType): Promise<axios.AxiosResponse<number, any>>;\nexport declare function getAccountToken(props: {\n    address: string;\n    token: string;\n}, apiConfig?: ApiConfigType): Promise<axios.AxiosResponse<PartialTokenType, any>>;\nexport declare function getToken(token: string, apiConfig?: ApiConfigType): Promise<PartialTokenType>;\nexport interface FetchTokensArgumentsType {\n    address: string;\n    page?: number;\n    search?: string;\n    size?: number;\n}\nexport declare function fetchTokens({ address, page, search, size }: FetchTokensArgumentsType): Promise<(PartialTokenType | PartialMetaDcdtType)[]>;\nexport declare function fetchAllTokens(address: string): Promise<PartialTokenType[]>;\n//# sourceMappingURL=tokens.d.ts.map"],
+  "mappings": "oEAAA",
+  "names": []
+}

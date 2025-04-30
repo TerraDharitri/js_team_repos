@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/UI/Fields/Receiver/components/DropdownIndicator/DropdownIndicator.d.ts"],
+  "sourcesContent": ["import { components } from 'react-select';\nexport declare const DropdownIndicator: typeof components.DropdownIndicator;\n//# sourceMappingURL=DropdownIndicator.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}

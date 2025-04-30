@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../src/__commonjs/UI/Fields/AmountSelect/components/TokenSelect/TokenSelect.d.ts"],
+  "sourcesContent": ["import React from 'react';\nimport { TokenSelectPropsType } from './tokenSelect.types';\nexport declare const TokenSelect: (props: TokenSelectPropsType) => React.JSX.Element;\n//# sourceMappingURL=TokenSelect.d.ts.map"],
+  "mappings": "gFAAA",
+  "names": []
+}

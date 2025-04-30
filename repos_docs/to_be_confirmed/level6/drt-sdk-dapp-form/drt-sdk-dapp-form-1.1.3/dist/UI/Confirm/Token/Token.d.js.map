@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/UI/Confirm/Token/Token.d.ts"],
+  "sourcesContent": ["import React, { JSXElementConstructor } from 'react';\nimport { WithClassnameType } from '@terradharitri/sdk-dapp/UI/types';\nimport { PartialNftType } from 'types';\nexport interface TokenPropsType extends WithClassnameType {\n    RewaIcon?: JSXElementConstructor<any>;\n    rewaLabel: string;\n    isDcdtTransaction: boolean;\n    nft?: PartialNftType;\n    tokenAvatar?: string;\n    tokenId: string;\n    tokenIdError?: string;\n}\nexport declare const Token: ({ RewaIcon, rewaLabel, isDcdtTransaction, nft, tokenAvatar, tokenId, tokenIdError }: TokenPropsType) => React.JSX.Element;\n//# sourceMappingURL=Token.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

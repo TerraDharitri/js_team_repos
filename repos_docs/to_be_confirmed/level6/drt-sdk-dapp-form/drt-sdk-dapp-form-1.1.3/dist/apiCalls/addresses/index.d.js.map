@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/apiCalls/addresses/index.d.ts", "../../../src/apiCalls/addresses/getScamAddressData.js"],
+  "sourcesContent": ["export * from './getScamAddressData';\n//# sourceMappingURL=index.d.ts.map", "\"use strict\";import{a}from\"../../__chunks__/chunk-UWPUJSIY.js\";import\"../../__chunks__/chunk-OLQUPYTS.js\";import\"../../__chunks__/chunk-FDS2C3TB.js\";import\"../../__chunks__/chunk-O5SEF2CY.js\";import\"../../__chunks__/chunk-UUQ7HSCP.js\";import\"../../__chunks__/chunk-YAIHDQUB.js\";import\"../../__chunks__/chunk-2NUPBZTD.js\";import\"../../__chunks__/chunk-VMXC44RX.js\";import\"../../__chunks__/chunk-5SPHUVUS.js\";import\"../../__chunks__/chunk-WT245BWC.js\";import\"../../__chunks__/chunk-SVQK3TVL.js\";export{a as getScamAddressData};\n//# sourceMappingURL=getScamAddressData.js.map\n"],
+  "mappings": "waAAA,ICAA",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../../../src/__commonjs/UI/Fields/Receiver/hooks/useReceiverDisplayStates/helpers/isAnyOptionFound.d.ts"],
+  "sourcesContent": ["import { KnowAddressType } from 'contexts';\nexport interface IsAnyOptionFoundType {\n    knownAddresses: KnowAddressType[] | null;\n    inputValue: string;\n}\nexport declare const isAnyOptionFound: ({ knownAddresses, inputValue }: IsAnyOptionFoundType) => boolean;\n//# sourceMappingURL=isAnyOptionFound.d.ts.map"],
+  "mappings": "mFAAA",
+  "names": []
+}

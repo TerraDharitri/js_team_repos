@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../src/__commonjs/hooks/getInitialValues/searchNft.d.ts"],
+  "sourcesContent": ["import { ApiConfigType } from 'apiCalls';\nimport { ComputedNftType } from './types';\ninterface ExistingNftType {\n    collection: string;\n    nonce: string;\n    quantity: string;\n    receiver: string;\n}\nexport interface SearchNFTPropsType {\n    data: string;\n    address: string;\n    nft?: ExistingNftType;\n}\nexport declare const searchNft: (props: SearchNFTPropsType, apiConfig?: ApiConfigType) => Promise<ComputedNftType | null>;\nexport {};\n//# sourceMappingURL=searchNft.d.ts.map"],
+  "mappings": "uEAAA",
+  "names": []
+}

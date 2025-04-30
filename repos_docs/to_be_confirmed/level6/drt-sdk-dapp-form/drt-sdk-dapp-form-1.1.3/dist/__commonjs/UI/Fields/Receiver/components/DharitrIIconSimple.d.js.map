@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../src/__commonjs/UI/Fields/Receiver/components/DharitrIIconSimple.d.ts"],
+  "sourcesContent": ["export declare const DharitrIIconSimple: any;\n//# sourceMappingURL=DharitrIIconSimple.d.ts.map"],
+  "mappings": "6EAAA",
+  "names": []
+}
