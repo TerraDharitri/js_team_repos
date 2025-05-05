@@ -31,7 +31,7 @@ const formatAmountInvalid = (
 
 const formatAmountValid = (
   props: FormatAmountPropsType & WithStylesImportType,
-  drtLabel: string
+  erdLabel: string
 ) => {
   const { value, showLastNonZeroDecimal = false, showLabel = true } = props;
   const digits = props.digits != null ? props.digits : DIGITS;
@@ -93,7 +93,7 @@ const formatAmountValid = (
           )}
           data-testid={DataTestIdsEnum.formatAmountSymbol}
         >
-          {` ${props.token ?? drtLabel}`}
+          {` ${props.token ?? erdLabel}`}
         </span>
       )}
     </span>

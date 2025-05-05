@@ -1,9 +1,9 @@
 export function isTokenTransfer({
   tokenId,
-  drtLabel
+  erdLabel
 }: {
   tokenId: string | undefined;
-  drtLabel: string;
+  erdLabel: string;
 }) {
-  return Boolean(tokenId && tokenId !== drtLabel);
+  return Boolean(tokenId && tokenId !== erdLabel);
 }

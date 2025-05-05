@@ -3,13 +3,13 @@ import { removeTransactionParamsFromUrl } from '../removeTransactionParamsFromUr
 describe('removeTransactionParamsFromUrl tests', () => {
   test('removes all data from URL', () => {
     const search =
-      '?nonce=1&value=123&receiver=drt123&sender=drt456&gasLimit=60000&gasPrice=60000&chainID=D';
+      '?nonce=1&value=123&receiver=drt123&sender=erd456&gasLimit=60000&gasPrice=60000&chainID=D';
     const transaction = {
       value: '123',
       data: 'test',
       nonce: '1',
       receiver: 'drt123',
-      sender: 'drt456',
+      sender: 'erd456',
       gasLimit: '60000',
       gasPrice: '60000',
       chainID: 'D'
@@ -21,13 +21,13 @@ describe('removeTransactionParamsFromUrl tests', () => {
   });
   test('removes only tx data from the URL ', () => {
     const search =
-      '?testParam=123&searchParam=asd&nonce=1&value=123&receiver=drt123&sender=drt456&gasLimit=60000&gasPrice=60000&chainID=D';
+      '?testParam=123&searchParam=asd&nonce=1&value=123&receiver=drt123&sender=erd456&gasLimit=60000&gasPrice=60000&chainID=D';
     const transaction = {
       value: '123',
       data: 'test',
       nonce: '1',
       receiver: 'drt123',
-      sender: 'drt456',
+      sender: 'erd456',
       gasLimit: '60000',
       gasPrice: '60000',
       chainID: 'D'
