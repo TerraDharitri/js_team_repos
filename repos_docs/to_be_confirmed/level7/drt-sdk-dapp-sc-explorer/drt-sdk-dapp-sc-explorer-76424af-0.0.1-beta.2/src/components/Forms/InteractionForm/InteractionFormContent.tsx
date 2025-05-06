@@ -6,7 +6,7 @@ import {
   faTriangleExclamation
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DECIMALS } from '@terradharitri/sdk-dapp/constants/index';
+import { DECIMALS } from '@terradharitri/sdk-dapp/dist/constants/index';
 import classNames from 'classnames';
 import { Form, Field, getIn } from 'formik';
 

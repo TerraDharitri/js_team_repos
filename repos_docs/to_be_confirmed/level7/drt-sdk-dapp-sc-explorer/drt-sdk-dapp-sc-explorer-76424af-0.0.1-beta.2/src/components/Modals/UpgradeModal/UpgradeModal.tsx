@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import {
   removeAllSignedTransactions,
   removeAllTransactionsToSign
-} from '@terradharitri/sdk-dapp/services/transactions/clearTransactions';
-import { sendTransactions } from '@terradharitri/sdk-dapp/services/transactions/sendTransactions';
-import { refreshAccount } from '@terradharitri/sdk-dapp/utils/account/refreshAccount';
+} from '@terradharitri/sdk-dapp/dist/services/transactions/clearTransactions';
+import { sendTransactions } from '@terradharitri/sdk-dapp/dist/services/transactions/sendTransactions';
+import { refreshAccount } from '@terradharitri/sdk-dapp/dist/utils/account/refreshAccount';
 
 import { InteractionModalForm, TransactionPanel } from 'components';
 import { useUserActionDispatch, useSCExplorerContext } from 'contexts';

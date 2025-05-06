@@ -5,9 +5,9 @@ import {
   faCircleNotch
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { CopyButton } from '@terradharitri/sdk-dapp/UI/CopyButton';
-import { addressIsValid } from '@terradharitri/sdk-dapp/utils/account/addressIsValid';
-import { isContract } from '@terradharitri/sdk-dapp/utils/smartContracts';
+import { CopyButton } from '@terradharitri/sdk-dapp/dist/UI/CopyButton';
+import { addressIsValid } from '@terradharitri/sdk-dapp/dist/utils/account/addressIsValid';
+import { isContract } from '@terradharitri/sdk-dapp/dist/utils/smartContracts';
 import classNames from 'classnames';
 import { Formik, Form, Field, getIn } from 'formik';
 import { mixed, object, string } from 'yup';

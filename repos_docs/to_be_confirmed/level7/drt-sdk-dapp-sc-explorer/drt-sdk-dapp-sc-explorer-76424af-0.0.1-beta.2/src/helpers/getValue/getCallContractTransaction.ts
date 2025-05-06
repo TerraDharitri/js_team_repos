@@ -8,8 +8,8 @@ import {
 import {
   DcdtEnumType,
   NftEnumType
-} from '@terradharitri/sdk-dapp/types/tokens.types';
-import { getChainID } from '@terradharitri/sdk-dapp/utils/network';
+} from '@terradharitri/sdk-dapp/dist/types/tokens.types';
+import { getChainID } from '@terradharitri/sdk-dapp/dist/utils/network';
 
 import { SC_GAS_LIMIT } from 'constants/general';
 import { GetCallContractTransactionType, ProcessedFormTokenType } from 'types';

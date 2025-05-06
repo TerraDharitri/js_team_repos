@@ -1,6 +1,6 @@
 import React from 'react';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
-import { CopyButton } from '@terradharitri/sdk-dapp/UI/CopyButton';
+import { CopyButton } from '@terradharitri/sdk-dapp/dist/UI/CopyButton';
 import BigNumber from 'bignumber.js';
 import classNames from 'classnames';
 

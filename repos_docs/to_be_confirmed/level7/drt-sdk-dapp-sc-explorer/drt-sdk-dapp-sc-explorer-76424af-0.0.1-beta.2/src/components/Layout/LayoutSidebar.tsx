@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from 'react';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { isWindowAvailable } from '@terradharitri/sdk-dapp/utils/isWindowAvailable';
+import { isWindowAvailable } from '@terradharitri/sdk-dapp/dist/utils/isWindowAvailable';
 import classNames from 'classnames';
 import { Nav } from 'react-bootstrap';
 

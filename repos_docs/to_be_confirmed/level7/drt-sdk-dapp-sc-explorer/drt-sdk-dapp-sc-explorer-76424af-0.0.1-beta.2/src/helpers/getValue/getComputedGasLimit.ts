@@ -1,5 +1,5 @@
 import { Transaction } from '@terradharitri/sdk-core/out';
-import { GAS_LIMIT, GAS_PER_DATA_BYTE } from '@terradharitri/sdk-dapp/constants';
+import { GAS_LIMIT, GAS_PER_DATA_BYTE } from '@terradharitri/sdk-dapp/dist/constants';
 import BigNumber from 'bignumber.js';
 
 export const getComputedGasLimit = ({

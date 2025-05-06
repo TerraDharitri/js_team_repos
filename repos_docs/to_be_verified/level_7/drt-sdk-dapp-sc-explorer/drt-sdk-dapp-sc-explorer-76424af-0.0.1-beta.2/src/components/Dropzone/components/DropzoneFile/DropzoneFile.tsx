@@ -1,7 +1,7 @@
 import React from 'react';
 import { faCheck, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Trim } from '@terradharitri/sdk-dapp/UI/Trim';
+import { Trim } from '@terradharitri/sdk-dapp/dist/UI/Trim';
 import classNames from 'classnames';
 
 import { withStyles, WithStylesImportType } from 'hocs/withStyles';

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useTrackTransactionStatus } from '@terradharitri/sdk-dapp/hooks/transactions/useTrackTransactionStatus';
+import { useTrackTransactionStatus } from '@terradharitri/sdk-dapp/dist/hooks/transactions/useTrackTransactionStatus';
 
 export const useTrackTransaction = (sessionId: string = '0') => {
   const [txProcessingFinished, setTxProcessingFinished] = useState(false);

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { DECIMALS } from '@terradharitri/sdk-dapp/constants/index';
-import { getRewaLabel } from '@terradharitri/sdk-dapp/utils/network/getRewaLabel';
-import { parseAmount } from '@terradharitri/sdk-dapp/utils/operations/parseAmount';
-import { stringIsFloat } from '@terradharitri/sdk-dapp/utils/validation/stringIsFloat';
+import { DECIMALS } from '@terradharitri/sdk-dapp/dist/constants/index';
+import { getRewaLabel } from '@terradharitri/sdk-dapp/dist/utils/network/getRewaLabel';
+import { parseAmount } from '@terradharitri/sdk-dapp/dist/utils/operations/parseAmount';
+import { stringIsFloat } from '@terradharitri/sdk-dapp/dist/utils/validation/stringIsFloat';
 import BigNumber from 'bignumber.js';
 import { Formik } from 'formik';
 import { array, object, string } from 'yup';

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { addressIsValid } from '@terradharitri/sdk-dapp/utils/account/addressIsValid';
-import { isContract } from '@terradharitri/sdk-dapp/utils/smartContracts';
+import { addressIsValid } from '@terradharitri/sdk-dapp/dist/utils/account/addressIsValid';
+import { isContract } from '@terradharitri/sdk-dapp/dist/utils/smartContracts';
 
 import { INTERFACE_NAME_PLACEHOLDER } from 'constants/general';
 import { useSmartContractDispatch, useSCExplorerContext } from 'contexts';

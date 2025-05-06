@@ -1,7 +1,7 @@
 import React from 'react';
 import { faFileAlt, faLink, faCopy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { CopyButton } from '@terradharitri/sdk-dapp/UI/CopyButton';
+import { CopyButton } from '@terradharitri/sdk-dapp/dist/UI/CopyButton';
 import classNames from 'classnames';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import rust from 'react-syntax-highlighter/dist/esm/languages/hljs/rust';

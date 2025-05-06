@@ -1,5 +1,5 @@
 import React, { useContext, ReactNode, createContext } from 'react';
-import { AccountType } from '@terradharitri/sdk-dapp/types/account.types';
+import { AccountType } from '@terradharitri/sdk-dapp/dist/types/account.types';
 
 import { AccountConsumerHandlersType } from 'types';
 

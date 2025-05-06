@@ -11,15 +11,15 @@ import {
   faUser
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { CopyButton } from '@terradharitri/sdk-dapp/UI/CopyButton';
-import { ExplorerLink } from '@terradharitri/sdk-dapp/UI/ExplorerLink';
-import { FormatAmount } from '@terradharitri/sdk-dapp/UI/FormatAmount';
-import { TimeAgo } from '@terradharitri/sdk-dapp/UI/TimeAgo';
-import { ScAddressIcon } from '@terradharitri/sdk-dapp/UI/TransactionsTable/components/ScAddressIcon';
-import { ShardSpan } from '@terradharitri/sdk-dapp/UI/TransactionsTable/components/ShardSpan';
-import { Trim } from '@terradharitri/sdk-dapp/UI/Trim';
-import { explorerUrlBuilder } from '@terradharitri/sdk-dapp/utils/transactions/getInterpretedTransaction/helpers';
-import { getHumanReadableTimeFormat } from '@terradharitri/sdk-dapp/utils/transactions/getInterpretedTransaction/helpers/getHumanReadableTimeFormat';
+import { CopyButton } from '@terradharitri/sdk-dapp/dist/UI/CopyButton';
+import { ExplorerLink } from '@terradharitri/sdk-dapp/dist/UI/ExplorerLink';
+import { FormatAmount } from '@terradharitri/sdk-dapp/dist/UI/FormatAmount';
+import { TimeAgo } from '@terradharitri/sdk-dapp/dist/UI/TimeAgo';
+import { ScAddressIcon } from '@terradharitri/sdk-dapp/dist/UI/TransactionsTable/components/ScAddressIcon';
+import { ShardSpan } from '@terradharitri/sdk-dapp/dist/UI/TransactionsTable/components/ShardSpan';
+import { Trim } from '@terradharitri/sdk-dapp/dist/UI/Trim';
+import { explorerUrlBuilder } from '@terradharitri/sdk-dapp/dist/utils/transactions/getInterpretedTransaction/helpers';
+import { getHumanReadableTimeFormat } from '@terradharitri/sdk-dapp/dist/utils/transactions/getInterpretedTransaction/helpers/getHumanReadableTimeFormat';
 import BigNumber from 'bignumber.js';
 import classNames from 'classnames';
 

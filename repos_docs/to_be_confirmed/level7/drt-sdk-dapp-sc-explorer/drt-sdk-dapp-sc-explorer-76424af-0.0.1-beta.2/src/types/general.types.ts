@@ -2,7 +2,7 @@ import { TypedValue, AbiRegistry, Code } from '@terradharitri/sdk-core/out';
 import {
   DcdtEnumType,
   NftEnumType
-} from '@terradharitri/sdk-dapp/types/tokens.types';
+} from '@terradharitri/sdk-dapp/dist/types/tokens.types';
 import { MetadataFieldsInitialValuesType } from 'types';
 
 export interface DocumentedTypesExampleType {

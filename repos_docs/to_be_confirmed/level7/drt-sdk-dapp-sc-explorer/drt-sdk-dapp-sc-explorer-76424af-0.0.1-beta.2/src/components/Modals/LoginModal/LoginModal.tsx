@@ -6,8 +6,8 @@ import {
   LedgerLoginButton,
   WalletConnectLoginButton,
   CrossWindowLoginButton
-} from '@terradharitri/sdk-dapp/UI';
-import { isWindowAvailable } from '@terradharitri/sdk-dapp/utils/isWindowAvailable';
+} from '@terradharitri/sdk-dapp/dist/UI';
+import { isWindowAvailable } from '@terradharitri/sdk-dapp/dist/utils/isWindowAvailable';
 import classNames from 'classnames';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { AccountType } from '@terradharitri/sdk-dapp/types/account.types';
-import { OnProviderLoginType } from '@terradharitri/sdk-dapp/types/login.types';
+import { AccountType } from '@terradharitri/sdk-dapp/dist/types/account.types';
+import { OnProviderLoginType } from '@terradharitri/sdk-dapp/dist/types/login.types';
 import {
   RawAbiType,
   VerifiedContractType,

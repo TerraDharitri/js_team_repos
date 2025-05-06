@@ -1,4 +1,4 @@
-import { EnvironmentsEnum } from '@terradharitri/sdk-dapp/types/enums.types';
+import { EnvironmentsEnum } from '@terradharitri/sdk-dapp/dist/types/enums.types';
 
 export interface NetworkType {
   environment: EnvironmentsEnum;

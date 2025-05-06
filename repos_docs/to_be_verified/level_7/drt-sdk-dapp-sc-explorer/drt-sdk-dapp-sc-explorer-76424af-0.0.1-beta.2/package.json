@@ -25,8 +25,8 @@
     "test:watch": "jest --watch"
   },
   "devDependencies": {
-    "@terradharitri/sdk-core": "13.15.0",
-    "@terradharitri/sdk-dapp": "3.0.23",
+    "@terradharitri/sdk-core": "../../../../level2/drt-js-sdk-core/drt-js-sdk-core-13.15.0",
+    "@terradharitri/sdk-dapp": "../../../../to_be_confirmed/level5/drt-sdk-dapp/drt-sdk-dapp-bdf020_3.0.23",
     "@testing-library/jest-dom": "6.1.3",
     "@testing-library/react": "14.0.0",
     "@types/react": "18.2.33",
@@ -79,8 +79,8 @@
     "transaction"
   ],
   "peerDependencies": {
-    "@terradharitri/sdk-core": ">=13.12.0",
-    "@terradharitri/sdk-dapp": ">=3.0.0",
+    "@terradharitri/sdk-core": "../../../../level2/drt-js-sdk-core/drt-js-sdk-core-13.15.0",
+    "@terradharitri/sdk-dapp": "../../../../to_be_confirmed/level5/drt-sdk-dapp/drt-sdk-dapp-bdf020_3.0.23",
     "axios": ">=1.7.4",
     "react": ">=18",
     "react-dom": ">=18"
@@ -93,9 +93,9 @@
     "classnames": "2.3.2"
   },
   "dependencies": {
-    "@terradharitri/sdk-dapp-form": "1.1.3",
-    "@terradharitri/sdk-network-providers": "2.9.3",
-    "bignumber.js": "9.x",
+    "@terradharitri/sdk-dapp-form": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level6/drt-sdk-dapp-form/drt-sdk-dapp-form-1.1.3",
+    "@terradharitri/sdk-network-providers": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-network-providers/drt-js-sdk-network-providers-2.9.3",
+    "bignumber.js": "^9.1.2",
     "formik": "2.4.4",
     "react-bootstrap": "2.8.0",
     "react-dropzone": "11.5.1",

@@ -1,5 +1,5 @@
 import { Transaction } from '@terradharitri/sdk-core/out';
-import { EXTRA_GAS_LIMIT_GUARDED_TX } from '@terradharitri/sdk-dapp/constants/index';
+import { EXTRA_GAS_LIMIT_GUARDED_TX } from '@terradharitri/sdk-dapp/dist/constants/index';
 import BigNumber from 'bignumber.js';
 
 import { SC_GAS_LIMIT, SC_DEPLOY_GAS_LIMIT } from 'constants/general';

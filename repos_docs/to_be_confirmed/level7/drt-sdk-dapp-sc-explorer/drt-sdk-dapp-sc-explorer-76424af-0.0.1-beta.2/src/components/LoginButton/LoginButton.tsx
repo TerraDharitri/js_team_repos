@@ -1,10 +1,10 @@
 import React from 'react';
 import { faCopy, faBolt, faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { CopyButton } from '@terradharitri/sdk-dapp/UI/CopyButton';
-import { Trim } from '@terradharitri/sdk-dapp/UI/Trim';
-import { isWindowAvailable } from '@terradharitri/sdk-dapp/utils/isWindowAvailable';
-import { logout } from '@terradharitri/sdk-dapp/utils/logout';
+import { CopyButton } from '@terradharitri/sdk-dapp/dist/UI/CopyButton';
+import { Trim } from '@terradharitri/sdk-dapp/dist/UI/Trim';
+import { isWindowAvailable } from '@terradharitri/sdk-dapp/dist/utils/isWindowAvailable';
+import { logout } from '@terradharitri/sdk-dapp/dist/utils/logout';
 import classNames from 'classnames';
 
 import { useSCExplorerContext, useUserActionDispatch } from 'contexts';

@@ -1,4 +1,4 @@
-import { SignedTransactionType } from '@terradharitri/sdk-dapp/types/transactions.types';
+import { SignedTransactionType } from '@terradharitri/sdk-dapp/dist/types/transactions.types';
 import { UserInterfaceType } from 'types';
 
 export interface TransactionPanelUIType extends UserInterfaceType {

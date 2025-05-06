@@ -7,9 +7,9 @@ import {
   faTimes
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { TransactionServerStatusesEnum } from '@terradharitri/sdk-dapp/types/enums.types';
-import { CopyButton } from '@terradharitri/sdk-dapp/UI/CopyButton';
-import { Trim } from '@terradharitri/sdk-dapp/UI/Trim';
+import { TransactionServerStatusesEnum } from '@terradharitri/sdk-dapp/dist/types/enums.types';
+import { CopyButton } from '@terradharitri/sdk-dapp/dist/UI/CopyButton';
+import { Trim } from '@terradharitri/sdk-dapp/dist/UI/Trim';
 import { TransactionEvent } from '@terradharitri/sdk-network-providers/out/transactionEvents';
 import classNames from 'classnames';
 

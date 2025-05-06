@@ -4,7 +4,7 @@ import {
   TokenTransfer,
   CodeMetadata
 } from '@terradharitri/sdk-core/out';
-import { getChainID } from '@terradharitri/sdk-dapp/utils/network';
+import { getChainID } from '@terradharitri/sdk-dapp/dist/utils/network';
 
 import { SC_DEPLOY_GAS_LIMIT } from 'constants/general';
 import { GetUpgradeTransactionType } from 'types';

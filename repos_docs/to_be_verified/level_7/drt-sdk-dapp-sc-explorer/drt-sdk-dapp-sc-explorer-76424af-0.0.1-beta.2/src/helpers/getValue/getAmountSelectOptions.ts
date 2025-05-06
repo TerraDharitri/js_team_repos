@@ -1,5 +1,5 @@
-import { DECIMALS } from '@terradharitri/sdk-dapp/constants/index';
-import { getRewaLabel } from '@terradharitri/sdk-dapp/utils/network/getRewaLabel';
+import { DECIMALS } from '@terradharitri/sdk-dapp/dist/constants/index';
+import { getRewaLabel } from '@terradharitri/sdk-dapp/dist/utils/network/getRewaLabel';
 
 import { SelectOptionType, PartialDcdtType } from 'types';
 

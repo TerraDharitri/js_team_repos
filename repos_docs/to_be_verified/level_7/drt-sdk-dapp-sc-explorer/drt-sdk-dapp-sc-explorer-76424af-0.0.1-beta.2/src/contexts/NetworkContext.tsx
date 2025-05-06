@@ -1,5 +1,5 @@
 import React, { useContext, ReactNode, createContext } from 'react';
-import { fallbackNetworkConfigurations } from '@terradharitri/sdk-dapp/constants/index';
+import { fallbackNetworkConfigurations } from '@terradharitri/sdk-dapp/dist/constants/index';
 import { NetworkType } from 'types';
 
 export interface NetworkContextPropsType {

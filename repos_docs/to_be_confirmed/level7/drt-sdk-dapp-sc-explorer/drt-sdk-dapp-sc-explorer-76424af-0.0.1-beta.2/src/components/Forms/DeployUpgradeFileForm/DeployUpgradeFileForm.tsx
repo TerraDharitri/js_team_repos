@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Code, NativeSerializer } from '@terradharitri/sdk-core/out';
-import { CopyButton } from '@terradharitri/sdk-dapp/UI/CopyButton';
+import { CopyButton } from '@terradharitri/sdk-dapp/dist/UI/CopyButton';
 import classNames from 'classnames';
 import { Formik, Form } from 'formik';
 import { lazy, mixed, object } from 'yup';
