@@ -3628,9 +3628,9 @@
   dependencies:
     bignumber.js "^9.1.2"
 
-"@terradharitri/sdk-extension-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-extension-provider/drt-sdk-js-extension-provider-4.0.0":
+"@terradharitri/sdk-extension-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-extension-provider/drt-js-sdk-extension-provider-4.0.0":
   version "4.0.0"
-  resolved "file:../../../../to_be_confirmed/level3/drt-sdk-js-extension-provider/drt-sdk-js-extension-provider-4.0.0"
+  resolved "file:../../../../to_be_confirmed/level3/drt-js-sdk-extension-provider/drt-js-sdk-extension-provider-4.0.0"
 
 "@terradharitri/sdk-hw-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-hw-provider/drt-js-sdk-hw-provider-7.0.0":
   version "7.0.0"
@@ -3645,9 +3645,9 @@
     buffer "6.0.3"
     platform "1.3.6"
 
-"@terradharitri/sdk-metamask-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-metamask-provider/drt-js-sdk-metamask-provider-a87be86":
+"@terradharitri/sdk-metamask-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-metamask-provider/drt-js-sdk-metamask-provider-a87be86":
   version "1.0.0"
-  resolved "file:../../../../to_be_confirmed/level3/drt-sdk-js-metamask-provider/drt-js-sdk-metamask-provider-a87be86"
+  resolved "file:../../../../to_be_confirmed/level3/drt-js-sdk-metamask-provider/drt-js-sdk-metamask-provider-a87be86"
   dependencies:
     "@metamask/providers" "16.0.0"
     protobufjs "7.4.0"
@@ -3662,9 +3662,9 @@
   version "1.0.0-alpha.1"
   resolved "file:../../../../level1/drt-js-sdk-opera-provider/drt-js-sdk-opera-provider-v1.0.0-alpha.1"
 
-"@terradharitri/sdk-passkey-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-passkey-provider/drt-sdk-js-passkey-provider_2.0.1":
+"@terradharitri/sdk-passkey-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-passkey-provider/drt-js-sdk-passkey-provider_2.0.1":
   version "2.0.1"
-  resolved "file:../../../../to_be_confirmed/level3/drt-js-sdk-passkey-provider/drt-sdk-js-passkey-provider_2.0.1"
+  resolved "file:../../../../to_be_confirmed/level3/drt-js-sdk-passkey-provider/drt-js-sdk-passkey-provider_2.0.1"
   dependencies:
     "@noble/ed25519" "2.1.0"
     "@noble/hashes" "^1.7.2"
@@ -3679,9 +3679,9 @@
     "@walletconnect/utils" "2.17.0"
     bech32 "1.1.4"
 
-"@terradharitri/sdk-web-wallet-cross-window-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-cc99a36":
+"@terradharitri/sdk-web-wallet-cross-window-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-cc99a36":
   version "2.0.6"
-  resolved "file:../../../../to_be_confirmed/level3/drt-sdk-js-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-cc99a36"
+  resolved "file:../../../../to_be_confirmed/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-cc99a36"
   dependencies:
     qs "6.11.2"
 
@@ -3699,9 +3699,9 @@
   dependencies:
     qs "6.10.3"
 
-"@terradharitri/sdk-webview-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level4/drt-js-sdk-webview-provider/drt-sdk-js-webview-provider-2.0.0-alpha.0":
+"@terradharitri/sdk-webview-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level4/drt-js-sdk-webview-provider/drt-js-sdk-webview-provider-2.0.0-alpha.0":
   version "2.0.0-alpha.0"
-  resolved "file:../../../../to_be_confirmed/level4/drt-js-sdk-webview-provider/drt-sdk-js-webview-provider-2.0.0-alpha.0"
+  resolved "file:../../../../to_be_confirmed/level4/drt-js-sdk-webview-provider/drt-js-sdk-webview-provider-2.0.0-alpha.0"
 
 "@testing-library/dom@^8.3.0", "@testing-library/dom@^8.5.0", "@testing-library/dom@>=7.21.4":
   version "8.20.1"

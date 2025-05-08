@@ -1,1 +1,1 @@
-# drt-sdk-js-bridge
+# drt-js-sdk-bridge

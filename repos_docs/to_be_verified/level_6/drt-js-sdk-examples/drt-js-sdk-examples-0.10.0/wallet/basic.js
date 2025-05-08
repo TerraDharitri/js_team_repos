@@ -8,7 +8,7 @@ const APIUrl = "https://devnet-api.dharitri.org";
 module.exports.exampleDeriveAccountsFromMnemonic = function () {
     const mnemonic = Mnemonic.fromString(DummyMnemonic);
 
-    // https://github.com/TerraDharitri/drt-sdk-js-wallet/blob/main/src/users.spec.ts
+    // https://github.com/TerraDharitri/drt-js-sdk-wallet/blob/main/src/users.spec.ts
     const addressIndexOfAlice = 0;
     const userSecretKeyOfAlice = mnemonic.deriveKey(addressIndexOfAlice);
     const userPublicKeyOfAlice = userSecretKeyOfAlice.generatePublicKey();

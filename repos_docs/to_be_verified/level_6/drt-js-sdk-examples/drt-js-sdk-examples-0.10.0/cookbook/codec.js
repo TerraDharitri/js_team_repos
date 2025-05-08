@@ -15,7 +15,7 @@ const abiMultisig = AbiRegistry.create(JSON.parse(abiJsonMultisig));
 // ```
 
 // :::note
-// The ABI files used within this cookbook are available [here](https://github.com/TerraDharitri/drt-sdk-js-examples).
+// The ABI files used within this cookbook are available [here](https://github.com/TerraDharitri/drt-js-sdk-examples).
 // :::
 
 // ### Decoding a custom type

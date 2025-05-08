@@ -146,7 +146,7 @@
   ],
   "dependencies": {
     "@terradharitri/sdk-core": "../../../../level2/drt-js-sdk-core/drt-js-sdk-core-12.18.0",
-    "@terradharitri/sdk-extension-provider": "../../../../to_be_confirmed/level3/drt-sdk-js-extension-provider/drt-sdk-js-extension-provider-3.0.0",
+    "@terradharitri/sdk-extension-provider": "../../../../to_be_confirmed/level3/drt-js-sdk-extension-provider/drt-js-sdk-extension-provider-3.0.0",
     "@terradharitri/sdk-hw-provider": "../../../../to_be_confirmed/level3/drt-js-sdk-hw-provider/drt-js-sdk-hw-provider-6.4.0",
     "@terradharitri/sdk-native-auth-client": "../../../../level1/drt-js-sdk-native-auth-client/drt-js-sdk-native-auth-client-1.0.9",
     "@terradharitri/sdk-network-providers": "../../../../level1/drt-js-sdk-network-providers/drt-js-sdk-network-providers-1.5.0",

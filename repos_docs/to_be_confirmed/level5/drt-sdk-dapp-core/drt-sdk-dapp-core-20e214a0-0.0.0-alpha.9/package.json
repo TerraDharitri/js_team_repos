@@ -33,9 +33,9 @@
   "dependencies": {
     "@lifeomic/axios-fetch": "3.0.1",
     "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0",
-    "@terradharitri/sdk-extension-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-extension-provider/drt-sdk-js-extension-provider-4.0.0",
+    "@terradharitri/sdk-extension-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-extension-provider/drt-js-sdk-extension-provider-4.0.0",
     "@terradharitri/sdk-hw-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-hw-provider/drt-js-sdk-hw-provider-7.0.0",
-    "@terradharitri/sdk-metamask-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-metamask-provider/drt-sdk-js-metamask-provider-f4860dd",
+    "@terradharitri/sdk-metamask-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-metamask-provider/drt-js-sdk-metamask-provider-f4860dd",
     "@terradharitri/sdk-native-auth-client": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-native-auth-client/drt-js-sdk-native-auth-client-1.0.9",
     "@terradharitri/sdk-opera-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-opera-provider/drt-js-sdk-opera-provider-v1.0.0-alpha.1",
     "@terradharitri/sdk-wallet": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-wallet/drt-js-sdk-wallet-4.6.0",
@@ -52,7 +52,7 @@
   "peerDependencies": {
     "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0",
     "@terradharitri/sdk-dapp-utils": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-dapp-utils/drt-sdk-dapp-utils-1.0.4",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-web-wallet-cross-window-provider/drt-sdk-js-web-wallet-cross-window-provider-a7fa821-2.0.1",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-a7fa821-2.0.1",
     "axios": ">=1.6.5",
     "bignumber.js": "9.x",
     "immer": "10.x"
@@ -63,7 +63,7 @@
     "@eslint/js": "9.15.0",
     "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0",
     "@terradharitri/sdk-dapp-utils": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-dapp-utils/drt-sdk-dapp-utils-1.0.4",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-web-wallet-cross-window-provider/drt-sdk-js-web-wallet-cross-window-provider-a7fa821-2.0.1",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-a7fa821-2.0.1",
     "@swc/core": "^1.4.17",
     "@swc/jest": "^0.2.36",
     "@types/jest": "29.5.13",

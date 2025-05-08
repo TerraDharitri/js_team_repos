@@ -1,4 +1,4 @@
-# drt-sdk-js-metamask-provider
+# drt-js-sdk-metamask-provider
 Signing provider for dApps: Metamask Snap
 
 # Installation

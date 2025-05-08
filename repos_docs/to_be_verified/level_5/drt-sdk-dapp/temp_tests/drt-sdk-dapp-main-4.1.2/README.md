@@ -1227,7 +1227,7 @@ If you are using [Next.js](https://nextjs.org/), make sure to check out the [REA
 
 Starting with the 2.0 version of the dApp SDK ( previously `@numbatnetwork/dapp-core@2.0.0` ) and `@terradharitri/sdk-dapp@2.2.8` [WalletConnect 2.0](https://docs.walletconnect.com/2.0/) is available as a login and signing provider, allowing users to login by scanning a QR code with the Mobile App
 
-This is an implementation of [sdk-wallet-connect-provider](https://github.com/TerraDharitri/drt-sdk-js-wallet-connect-provider) ( [docs](https://docs.dharitri.org/sdk-and-tools/sdk-js/sdk-js-signing-providers/#the-wallet-connect-provider) ) signing provider
+This is an implementation of [sdk-wallet-connect-provider](https://github.com/TerraDharitri/drt-js-sdk-wallet-connect-provider) ( [docs](https://docs.dharitri.org/sdk-and-tools/sdk-js/sdk-js-signing-providers/#the-wallet-connect-provider) ) signing provider
 
 As a ProjectID is needed for the complete functionality, the following change is needed:
 

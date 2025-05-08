@@ -29,7 +29,7 @@ export const accessWallet = ({
         kdContent,
         accessPassVal
       );
-      // will be improved once issue is fixed https://github.com/TerraDharitri/drt-sdk-js-wallet/issues/31
+      // will be improved once issue is fixed https://github.com/TerraDharitri/drt-js-sdk-wallet/issues/31
       const secretKeyUint8Array = new Uint8Array(
         Buffer.from(decryptedSecretKey.hex(), 'hex')
       );

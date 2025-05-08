@@ -33,7 +33,7 @@
         "@golevelup/nestjs-rabbitmq": "^4.0.0",
         "@terradharitri/sdk-core": "/home/dugong/Documents/js_team_repos-main/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-12.8.0",
         "@terradharitri/sdk-data-api-client": "/home/dugong/Documents/js_team_repos-main/repos_docs/to_be_verified/level3/drt-js-sdk-data-api-client/drt-js-sdk-data-api-client-0.5.8",
-        "@terradharitri/sdk-exchange": "/home/dugong/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level3/drt-sdk-js-exchange/drt-sdk-js-exchange-0.2.18",
+        "@terradharitri/sdk-exchange": "/home/dugong/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level3/drt-js-sdk-exchange/drt-js-sdk-exchange-0.2.18",
         "@terradharitri/sdk-native-auth-server": "/home/dugong/Documents/js_team_repos-main/repos_docs/to_be_verified/level3/drt-js-sdk-native-auth-server/drt-js-sdk-native-auth-server-1.0.7",
         "@terradharitri/sdk-nestjs-cache": "/home/dugong/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level4/drt-sdk-nestjs/drt-nestjs-sdk-2.0.0-beta.2/packages/cache",
         "@terradharitri/sdk-nestjs-common": "/home/dugong/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level4/drt-sdk-nestjs/drt-nestjs-sdk-2.0.0-beta.2/packages/common",

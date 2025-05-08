@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@terradharitri/sdk-core": "../../../../../../to_be_confirmed/level2/drt-js-sdk-core/drt-js-sdk-core-14.0.1",
-    "@terradharitri/sdk-native-auth-server": "../../../../../../to_be_verified/level3/drt-js-sdk-native-auth-server/drt-sdk-js-native-auth-server_2.0.0",
+    "@terradharitri/sdk-native-auth-server": "../../../../../../to_be_verified/level3/drt-js-sdk-native-auth-server/drt-js-sdk-native-auth-server_2.0.0",
     "jsonwebtoken": "^9.0.0"
   },
   "peerDependencies": {

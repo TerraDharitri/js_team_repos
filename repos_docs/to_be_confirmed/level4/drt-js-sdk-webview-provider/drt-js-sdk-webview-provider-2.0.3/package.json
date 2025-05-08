@@ -16,7 +16,7 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@terradharitri/sdk-core": "/home/dharitri/Documents/js_team_repos-main/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level3/drt-sdk-js-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-cc99a36-2.0.6",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-cc99a36-2.0.6",
     "prettier": "3.2.5",
     "typescript": "5.4.5"
   },

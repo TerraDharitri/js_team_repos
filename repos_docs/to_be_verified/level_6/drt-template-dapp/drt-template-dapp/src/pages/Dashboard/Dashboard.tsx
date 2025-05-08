@@ -59,7 +59,7 @@ const WIDGETS: WidgetType[] = [
     widget: NativeAuth,
     description:
       'A secure authentication token can be used to interact with the backend',
-    reference: 'https://github.com/TerraDharitri/drt-sdk-js-native-auth-server'
+    reference: 'https://github.com/TerraDharitri/drt-js-sdk-native-auth-server'
   },
   {
     title: 'Batch Transactions',

@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TerraDharitri/drt-sdk-js-bridge.git"
+    "url": "git+https://github.com/TerraDharitri/drt-js-sdk-bridge.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TerraDharitri/drt-sdk-js-bridge/issues"
+    "url": "https://github.com/TerraDharitri/drt-js-sdk-bridge/issues"
   },
-  "homepage": "https://github.com/TerraDharitri/drt-sdk-js-bridge#readme",
+  "homepage": "https://github.com/TerraDharitri/drt-js-sdk-bridge#readme",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^7.1.0",

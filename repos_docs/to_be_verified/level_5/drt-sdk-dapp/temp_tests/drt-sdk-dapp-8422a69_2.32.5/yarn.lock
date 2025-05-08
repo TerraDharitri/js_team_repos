@@ -3665,8 +3665,8 @@
   "resolved" "file:../../../../to_be_confirmed/level3/drt-sdk-dapp-utils/drt-sdk-dapp-utils-0.0.1"
   "version" "0.0.1"
 
-"@terradharitri/sdk-extension-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-extension-provider/drt-sdk-js-extension-provider-3.0.0":
-  "resolved" "file:../../../../to_be_confirmed/level3/drt-sdk-js-extension-provider/drt-sdk-js-extension-provider-3.0.0"
+"@terradharitri/sdk-extension-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-extension-provider/drt-js-sdk-extension-provider-3.0.0":
+  "resolved" "file:../../../../to_be_confirmed/level3/drt-js-sdk-extension-provider/drt-js-sdk-extension-provider-3.0.0"
   "version" "3.0.0"
 
 "@terradharitri/sdk-hw-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-hw-provider/drt-js-sdk-hw-provider-6.4.0":
@@ -3682,8 +3682,8 @@
     "buffer" "6.0.3"
     "platform" "1.3.6"
 
-"@terradharitri/sdk-metamask-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-metamask-provider/drt-sdk-js-metamask-provider-f4860dd":
-  "resolved" "file:../../../../to_be_confirmed/level3/drt-sdk-js-metamask-provider/drt-sdk-js-metamask-provider-f4860dd"
+"@terradharitri/sdk-metamask-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-metamask-provider/drt-js-sdk-metamask-provider-f4860dd":
+  "resolved" "file:../../../../to_be_confirmed/level3/drt-js-sdk-metamask-provider/drt-js-sdk-metamask-provider-f4860dd"
   "version" "0.0.7"
   dependencies:
     "@metamask/providers" "16.0.0"
@@ -3723,8 +3723,8 @@
     "tweetnacl" "1.0.3"
     "uuid" "8.3.2"
 
-"@terradharitri/sdk-web-wallet-cross-window-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-web-wallet-cross-window-provider/drt-sdk-js-web-wallet-cross-window-provider-f1bf53c-1.0.0":
-  "resolved" "file:../../../../to_be_confirmed/level3/drt-sdk-js-web-wallet-cross-window-provider/drt-sdk-js-web-wallet-cross-window-provider-f1bf53c-1.0.0"
+"@terradharitri/sdk-web-wallet-cross-window-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-f1bf53c-1.0.0":
+  "resolved" "file:../../../../to_be_confirmed/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-f1bf53c-1.0.0"
   "version" "1.0.0"
   dependencies:
     "@types/jest" "^29.5.11"
@@ -3737,8 +3737,8 @@
   dependencies:
     "qs" "6.10.3"
 
-"@terradharitri/sdk-webview-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level4/drt-js-sdk-webview-provider/drt-sdk-js-webview-provider-1.0.0":
-  "resolved" "file:../../../../to_be_confirmed/level4/drt-js-sdk-webview-provider/drt-sdk-js-webview-provider-1.0.0"
+"@terradharitri/sdk-webview-provider@/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level4/drt-js-sdk-webview-provider/drt-js-sdk-webview-provider-1.0.0":
+  "resolved" "file:../../../../to_be_confirmed/level4/drt-js-sdk-webview-provider/drt-js-sdk-webview-provider-1.0.0"
   "version" "1.0.0"
 
 "@testing-library/dom@^8.3.0", "@testing-library/dom@^8.5.0", "@testing-library/dom@>=7.21.4":

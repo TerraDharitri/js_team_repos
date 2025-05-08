@@ -929,7 +929,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [[v2.15.0](https://github.com/TerraDharitri/drt-sdk-dapp/pull/835)] - 2023-06-19
 
 - [Added `on-pull-request.yml` script](https://github.com/TerraDharitri/drt-sdk-dapp/pull/838)
-- [Changed local native auth service with drt-sdk-js-native-auth-client package](https://github.com/TerraDharitri/drt-sdk-dapp/pull/837)
+- [Changed local native auth service with drt-js-sdk-native-auth-client package](https://github.com/TerraDharitri/drt-sdk-dapp/pull/837)
 - [Changed usage of `dataTestid` to `data-testid`](https://github.com/TerraDharitri/drt-sdk-dapp/pull/836)
 
 ## [[v2.14.13](https://github.com/TerraDharitri/drt-sdk-dapp/pull/835)] - 2023-06-15

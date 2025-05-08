@@ -30,7 +30,7 @@ For this reason, blockchain smart contracts have so-called ABIs, expressed in a 
 
 Read more about the DharitrI ABI Format here: [https://docs.Dharitri.org/developers/data/abi](https://docs.Dharitri.org/developers/data/abi)
 
-The ABI interaction functionality is built upon [https://github.com/TerraDharitri/drt-sdk-js-core](https://github.com/TerraDharitri/drt-sdk-js-core).
+The ABI interaction functionality is built upon [https://github.com/TerraDharitri/drt-js-sdk-core](https://github.com/TerraDharitri/drt-js-sdk-core).
 
 ---
 

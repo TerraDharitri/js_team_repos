@@ -46,7 +46,7 @@
     "@nestjs/schedule": "^3.0.3",
     "@nestjs/swagger": "^7.1.11",
     "@nestjs/typeorm": "^10.0.0",
-    "@terradharitri/sdk-exchange": "/home/dharitri/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level3/drt-sdk-js-exchange/drt-sdk-js-exchange-0.2.18",
+    "@terradharitri/sdk-exchange": "/home/dharitri/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level3/drt-js-sdk-exchange/drt-js-sdk-exchange-0.2.18",
     "@terradharitri/sdk-nestjs-auth": "/home/dharitri/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level4/drt-sdk-nestjs/drt-nestjs-sdk-2.0.0-beta.3/packages/auth",
     "@terradharitri/sdk-nestjs-cache": "/home/dharitri/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level4/drt-sdk-nestjs/drt-nestjs-sdk-2.0.0-beta.3/packages/cache",
     "@terradharitri/sdk-nestjs-common": "/home/dharitri/Documents/js_team_repos-main/repos_docs/to_be_confirmed/level4/drt-sdk-nestjs/drt-nestjs-sdk-2.0.0-beta.3/packages/common",

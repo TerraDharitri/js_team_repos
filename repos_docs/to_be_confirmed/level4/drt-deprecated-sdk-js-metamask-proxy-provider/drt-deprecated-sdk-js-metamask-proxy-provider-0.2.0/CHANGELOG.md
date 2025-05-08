@@ -7,5 +7,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- [Rename IFrameProvider into MetamaskProxyProvider](https://github.com/TerraDharitri/drt-sdk-js-metamask-proxy-provider/pull/1)
+- [Rename IFrameProvider into MetamaskProxyProvider](https://github.com/TerraDharitri/drt-js-sdk-metamask-proxy-provider/pull/1)
 

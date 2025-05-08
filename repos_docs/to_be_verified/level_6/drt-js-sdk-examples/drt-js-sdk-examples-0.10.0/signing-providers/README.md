@@ -2,12 +2,12 @@
 
 This example (a simple, frontend-only web application) depicts the usage of different signing providers for dApps, such as:
 
-- [(Web) Wallet provider](https://github.com/TerraDharitri/drt-sdk-js-web-wallet-provider)
+- [(Web) Wallet provider](https://github.com/TerraDharitri/drt-js-sdk-web-wallet-provider)
 - [(Web) Wallet Cross-Window provider](@terradharitri/sdk-web-wallet-cross-window-provider)
-- [xAlias](https://github.com/TerraDharitri/drt-sdk-js-web-wallet-provider) - from the perspective of a dApp, this one follows the interface of the Web Wallet provider (above)
-- [DeFi Wallet provider](https://github.com/TerraDharitri/drt-sdk-js-extension-provider)
-- [Wallet Connect (xPortal) provider](https://github.com/TerraDharitri/drt-sdk-js-wallet-connect-provider)
-- [Hardware Wallet (Ledger) provider](https://github.com/TerraDharitri/drt-sdk-js-hw-provider)
+- [xAlias](https://github.com/TerraDharitri/drt-js-sdk-web-wallet-provider) - from the perspective of a dApp, this one follows the interface of the Web Wallet provider (above)
+- [DeFi Wallet provider](https://github.com/TerraDharitri/drt-js-sdk-extension-provider)
+- [Wallet Connect (xPortal) provider](https://github.com/TerraDharitri/drt-js-sdk-wallet-connect-provider)
+- [Hardware Wallet (Ledger) provider](https://github.com/TerraDharitri/drt-js-sdk-hw-provider)
 
 ## Prerequisites
 

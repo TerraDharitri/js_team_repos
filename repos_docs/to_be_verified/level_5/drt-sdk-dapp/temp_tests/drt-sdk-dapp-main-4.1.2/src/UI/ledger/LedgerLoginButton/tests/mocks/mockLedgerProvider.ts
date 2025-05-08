@@ -1,4 +1,4 @@
-//  https://github.com/TerraDharitri/drt-sdk-js-hw-provider/blob/main/src/hwProvider.ts
+//  https://github.com/TerraDharitri/drt-js-sdk-hw-provider/blob/main/src/hwProvider.ts
 //  https://github.com/LedgerHQ/ledger-live/tree/develop/libs/ledgerjs/packages/hw-transport-mocker
 
 import { HWProvider } from '@terradharitri/sdk-hw-provider/out/hwProvider';

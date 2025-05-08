@@ -88,7 +88,7 @@
     "@golevelup/nestjs-rabbitmq": "^4.0.0",
     "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.2.2",
     "@terradharitri/sdk-data-api-client": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-data-api-client/drt-js-sdk-data-api-client-0.7.0",
-    "@terradharitri/sdk-exchange": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-exchange/drt-sdk-js-exchange-0.2.21",
+    "@terradharitri/sdk-exchange": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-exchange/drt-js-sdk-exchange-0.2.21",
     "@terradharitri/sdk-nestjs-auth": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level4/drt-sdk-nestjs/drt-nestjs-sdk-5.0.0/packages/auth",
     "@terradharitri/sdk-nestjs-cache": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level4/drt-sdk-nestjs/drt-nestjs-sdk-5.0.0/packages/cache",
     "@terradharitri/sdk-nestjs-common": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level4/drt-sdk-nestjs/drt-nestjs-sdk-5.0.0/packages/common",

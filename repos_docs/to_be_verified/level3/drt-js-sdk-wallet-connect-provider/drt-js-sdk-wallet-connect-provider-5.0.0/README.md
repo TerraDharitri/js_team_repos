@@ -1,4 +1,4 @@
-# drt-sdk-js-wallet-connect-provider
+# drt-js-sdk-wallet-connect-provider
 
 Signing provider for dApps: WalletConnect.
 

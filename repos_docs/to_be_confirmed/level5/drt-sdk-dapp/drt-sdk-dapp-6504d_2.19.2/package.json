@@ -145,7 +145,7 @@
   ],
   "dependencies": {
     "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-12.5.0",
-    "@terradharitri/sdk-extension-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-sdk-js-extension-provider/drt-sdk-js-extension-provider-3.0.0",
+    "@terradharitri/sdk-extension-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-extension-provider/drt-js-sdk-extension-provider-3.0.0",
     "@terradharitri/sdk-hw-provider": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_confirmed/level3/drt-js-sdk-hw-provider/drt-js-sdk-hw-provider-6.2.0",
     "@terradharitri/sdk-native-auth-client": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-native-auth-client/drt-js-sdk-native-auth-client-1.0.9",
     "@terradharitri/sdk-network-providers": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-network-providers/drt-js-sdk-network-providers-1.4.0",

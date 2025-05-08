@@ -24,7 +24,7 @@ DIRECTIVE_UNINDENT = "// md-unindent"
 DIRECTIVE_AS_COMMENT = "// md-as-comment"
 DIRECTIVE_INSERT = f"// {MARKER_INSERT}"
 
-API_URL = "https://dharitri.github.io/drt-sdk-js-core"
+API_URL = "https://dharitri.github.io/drt-js-sdk-core"
 API_DEFAIULT_VERSION = "v13"
 DOCS_URL = "https://docs.dharitri.org"
 

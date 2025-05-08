@@ -23,7 +23,7 @@
   "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-sdk-js-web-wallet-cross-window-provider/drt-sdk-js-web-wallet-cross-window-provider-a7fa821-2.0.1",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-a7fa821-2.0.1",
     "@types/node": "18.19.0",
     "@typescript-eslint/eslint-plugin": "5.0.0",
     "@typescript-eslint/parser": "5.14.0",
@@ -44,7 +44,7 @@
   },
   "peerDependencies": {
     "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-sdk-js-web-wallet-cross-window-provider/drt-sdk-js-web-wallet-cross-window-provider-a7fa821-2.0.1"
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-a7fa821-2.0.1"
   },
   "dependencies": {
     "@types/jest": "^29.5.11",

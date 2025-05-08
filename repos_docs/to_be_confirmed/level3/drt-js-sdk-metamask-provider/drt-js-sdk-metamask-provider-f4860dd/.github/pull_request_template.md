@@ -1,7 +1,7 @@
 ### Issue/Feature
 
 ### Reproduce
-Issue exists on version `` of drt-sdk-js-metamask-provider
+Issue exists on version `` of drt-js-sdk-metamask-provider
 
 ### Root cause
 

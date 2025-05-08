@@ -57,7 +57,7 @@ console.log("Nonce:", alice.nonce);
 ```
 
 :::note
-Since `sdk-core v13`, the [`Transaction`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/Transaction.html) class exhibits its state as public read-write properties. For example, you can access and set the `nonce` property, instead of using `getNonce` and `setNonce`.
+Since `sdk-core v13`, the [`Transaction`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/Transaction.html) class exhibits its state as public read-write properties. For example, you can access and set the `nonce` property, instead of using `getNonce` and `setNonce`.
 :::
 
 If you are using `sdk-core v13` or later, use `tx.nonce = ` to apply the nonce to a transaction.
@@ -74,7 +74,7 @@ For further reference, please see [nonce management](/integrators/creating-trans
 ### Preparing a simple transaction
 
 :::note
-Since `sdk-core v13`, the [`Transaction`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/Transaction.html) class exhibits its state as public read-write properties. For example, you can access and set the `nonce` property, instead of using `getNonce` and `setNonce`.
+Since `sdk-core v13`, the [`Transaction`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/Transaction.html) class exhibits its state as public read-write properties. For example, you can access and set the `nonce` property, instead of using `getNonce` and `setNonce`.
 :::
 
 ```js
@@ -182,7 +182,7 @@ const watcherUsingApi = new TransactionWatcher(apiNetworkProvider);
 const transactionOnNetworkUsingApi = await watcherUsingApi.awaitCompleted(txHash);
 ```
 
-If, instead, you use a `ProxyNetworkProvider` to instantiate the [`TransactionWatcher`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionWatcher.html), you'll need to patch the `getTransaction` method,
+If, instead, you use a `ProxyNetworkProvider` to instantiate the [`TransactionWatcher`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionWatcher.html), you'll need to patch the `getTransaction` method,
 so that it instructs the network provider to fetch the so-called _processing status_, as well (required by the watcher to detect transaction completion).
 
 ```js
@@ -209,32 +209,32 @@ In some circumstances, when awaiting for a transaction completion in order to re
 it's possible that these pieces of information are missing at the very moment the transaction is marked as completed -
 they may not be immediately available.
 
-If that is an issue, you can configure the [`TransactionWatcher`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionWatcher.html) to have additional **patience**
+If that is an issue, you can configure the [`TransactionWatcher`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionWatcher.html) to have additional **patience**
 before returning the transaction object. Below, we're adding a patience of 8 seconds:
 
 ```js
 const watcherWithPatience = new TransactionWatcher(apiNetworkProvider, { patienceMilliseconds: 8000 });
 ```
 
-Alternatively, use [`TransactionWatcher.awaitAnyEvent()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionWatcher.html#awaitAnyEvent) or [`TransactionWatcher.awaitOnCondition()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionWatcher.html#awaitOnCondition) to customize the waiting strategy.
+Alternatively, use [`TransactionWatcher.awaitAnyEvent()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionWatcher.html#awaitAnyEvent) or [`TransactionWatcher.awaitOnCondition()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionWatcher.html#awaitOnCondition) to customize the waiting strategy.
 
 For a different awaiting strategy, also see [extending sdk-js](/sdk-and-tools/sdk-js/extending-sdk-js).
 
 ## Token transfers
 
-Generally speaking, in order to create transactions that transfer native tokens or DCDT tokens, one should use the [`TransferTransactionsFactory`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransferTransactionsFactory.html) class.
+Generally speaking, in order to create transactions that transfer native tokens or DCDT tokens, one should use the [`TransferTransactionsFactory`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransferTransactionsFactory.html) class.
 
 :::note
-In `sdk-core v13`, the [`TransferTransactionsFactory`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransferTransactionsFactory.html) class was extended with new methods,
+In `sdk-core v13`, the [`TransferTransactionsFactory`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransferTransactionsFactory.html) class was extended with new methods,
 to be aligned with the [SDKs specs](https://github.com/TerraDharitri/drt-sdk-specs/blob/main/core/transactions-factories/transfer_transactions_factory.md).
 The old, legacy methods are still available (see below), thus existing client code isn't affected.
 :::
 
 :::note
-In `sdk-core v13`, the [`TokenTransfer`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TokenTransfer.html) class has changed, in a non-breaking manner.
+In `sdk-core v13`, the [`TokenTransfer`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TokenTransfer.html) class has changed, in a non-breaking manner.
 Though, from now on, it should only be used for prepairing DCDT token transfers, not native REWA transfers.
 
-A [`TokenTransfer`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TokenTransfer.html) object can still be instantiated using the legacy methods, e.g. `fungibleFromAmount`, `nonFungible` (which are still available),
+A [`TokenTransfer`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TokenTransfer.html) object can still be instantiated using the legacy methods, e.g. `fungibleFromAmount`, `nonFungible` (which are still available),
 but we recommend using the new approach instead (which, among others, makes abstraction of the number of decimals a token has).
 :::
 
@@ -242,7 +242,7 @@ but we recommend using the new approach instead (which, among others, makes abst
 For formatting or parsing token amounts, see [formatting and parsing amounts](#formatting-and-parsing-amounts).
 :::
 
-First, let's create a [`TransferTransactionsFactory`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransferTransactionsFactory.html):
+First, let's create a [`TransferTransactionsFactory`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransferTransactionsFactory.html):
 
 ```js
 import { Token, TokenTransfer, TransactionsFactoryConfig, TransferTransactionsFactory } from "@terradharitri/sdk-core";
@@ -406,7 +406,7 @@ let abi = AbiRegistry.create(abiObj);
 ```js
 import axios from "axios";
 
-const response = await axios.get("https://github.com/TerraDharitri/drt-sdk-js-core/raw/main/src/testdata/counter.abi.json");
+const response = await axios.get("https://github.com/TerraDharitri/drt-js-sdk-core/raw/main/src/testdata/counter.abi.json");
 abi = AbiRegistry.create(response.data);
 ```
 
@@ -467,12 +467,12 @@ const code = Code.fromBuffer(codeBuffer);
 
 In `sdk-core v13`, the recommended way to create transactions for deploying
 (and, for that matter, upgrading and interacting with)
-smart contracts is through a [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractTransactionsFactory.html).
+smart contracts is through a [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractTransactionsFactory.html).
 
-The older (legacy) approach, using the method [`SmartContract.deploy()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContract.html#deploy), is still available, however.
-At some point in the future, [`SmartContract.deploy()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContract.html#deploy) will be deprecated and removed.
+The older (legacy) approach, using the method [`SmartContract.deploy()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContract.html#deploy), is still available, however.
+At some point in the future, [`SmartContract.deploy()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContract.html#deploy) will be deprecated and removed.
 
-Now, let's create a [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractTransactionsFactory.html):
+Now, let's create a [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractTransactionsFactory.html):
 
 ```js
 import { SmartContractTransactionsFactory, TransactionsFactoryConfig } from "@terradharitri/sdk-core";
@@ -512,10 +512,10 @@ const deployTransaction = factory.createTransactionForDeploy({
 ```
 
 :::tip
-When creating transactions using [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractTransactionsFactory.html), even if the ABI is available and provided,
-you can still use [`TypedValue`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TypedValue.html) objects as arguments for deployments and interactions.
+When creating transactions using [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractTransactionsFactory.html), even if the ABI is available and provided,
+you can still use [`TypedValue`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TypedValue.html) objects as arguments for deployments and interactions.
 
-Even further, you can use a mix of [`TypedValue`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TypedValue.html) objects and plain JavaScript values and objects. For example:
+Even further, you can use a mix of [`TypedValue`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TypedValue.html) objects and plain JavaScript values and objects. For example:
 
 ```js
 let args = [new U32Value(42), "hello", { foo: "bar" }, new TokenIdentifierValue("TEST-abcdef")];
@@ -573,9 +573,9 @@ console.log("Contract address:", contractAddress.bech32());
 
 ### Parsing transaction outcome
 
-In the end, you can parse the results using a [`SmartContractTransactionsOutcomeParser`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractTransactionsOutcomeParser.html).
-However, since the `parseDeploy` method requires a [`TransactionOutcome`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionOutcome.html) object as input,
-we need to first convert our `TransactionOnNetwork` object to a [`TransactionOutcome`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionOutcome.html), by means of a [`TransactionsConverter`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionsConverter.html).
+In the end, you can parse the results using a [`SmartContractTransactionsOutcomeParser`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractTransactionsOutcomeParser.html).
+However, since the `parseDeploy` method requires a [`TransactionOutcome`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionOutcome.html) object as input,
+we need to first convert our `TransactionOnNetwork` object to a [`TransactionOutcome`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionOutcome.html), by means of a [`TransactionsConverter`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionsConverter.html).
 
 ```js
 import { SmartContractTransactionsOutcomeParser, TransactionsConverter } from "@terradharitri/sdk-core";
@@ -593,13 +593,13 @@ console.log(parsedOutcome);
 
 In `sdk-core v13`, the recommended way to create transactions for calling
 (and, for that matter, deploying and upgrading)
-smart contracts is through a [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractTransactionsFactory.html).
+smart contracts is through a [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractTransactionsFactory.html).
 
 The older (legacy) approaches, using `SmartContract.call()`, `SmartContract.methods.myFunction()`, `SmartContract.methodsExplicit.myFunction()` and
 `new Interaction(contract, "myFunction", args)` are still available.
 However, at some point in the (more distant) future, they will be deprecated and removed.
 
-Now, let's create a [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractTransactionsFactory.html):
+Now, let's create a [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractTransactionsFactory.html):
 
 ```js
 import { SmartContractTransactionsFactory, TransactionsFactoryConfig } from "@terradharitri/sdk-core";
@@ -643,10 +643,10 @@ const transaction = factory.createTransactionForExecute({
 ```
 
 :::tip
-When creating transactions using [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractTransactionsFactory.html), even if the ABI is available and provided,
-you can still use [`TypedValue`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TypedValue.html) objects as arguments for deployments and interactions.
+When creating transactions using [`SmartContractTransactionsFactory`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractTransactionsFactory.html), even if the ABI is available and provided,
+you can still use [`TypedValue`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TypedValue.html) objects as arguments for deployments and interactions.
 
-Even further, you can use a mix of [`TypedValue`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TypedValue.html) objects and plain JavaScript values and objects. For example:
+Even further, you can use a mix of [`TypedValue`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TypedValue.html) objects and plain JavaScript values and objects. For example:
 
 ```js
 let args = [new U32Value(42), "hello", { foo: "bar" }, new TokenIdentifierValue("TEST-abcdef")];
@@ -744,13 +744,13 @@ const transactionWithMultipleTokenTransfers = factory.createTransactionForExecut
 });
 ```
 
-Above, we've prepared the [`TokenTransfer`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TokenTransfer.html) objects as seen in the section [token transfers](#token-transfers).
+Above, we've prepared the [`TokenTransfer`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TokenTransfer.html) objects as seen in the section [token transfers](#token-transfers).
 
 ### Parsing transaction outcome
 
-Once a transaction is completed, you can parse the results using a [`SmartContractTransactionsOutcomeParser`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractTransactionsOutcomeParser.html).
-However, since the `parseExecute` method requires a [`TransactionOutcome`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionOutcome.html) object as input,
-we need to first convert our `TransactionOnNetwork` object to a `TransactionOutcome`, by means of a [`TransactionsConverter`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionsConverter.html).
+Once a transaction is completed, you can parse the results using a [`SmartContractTransactionsOutcomeParser`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractTransactionsOutcomeParser.html).
+However, since the `parseExecute` method requires a [`TransactionOutcome`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionOutcome.html) object as input,
+we need to first convert our `TransactionOnNetwork` object to a `TransactionOutcome`, by means of a [`TransactionsConverter`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionsConverter.html).
 
 ```js
 import { SmartContractTransactionsOutcomeParser, TransactionsConverter } from "@terradharitri/sdk-core";
@@ -769,12 +769,12 @@ console.log(parsedOutcome);
 ### Decode transaction events
 
 Additionally, you might be interested into decoding the events emitted by a contract.
-You can do so by means of the [`TransactionEventsParser`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionEventsParser.html).
+You can do so by means of the [`TransactionEventsParser`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionEventsParser.html).
 
 Suppose we'd like to decode a `startPerformAction` event emitted by the [**multisig**](https://github.com/TerraDharitri/drt-contracts-rs/tree/main/contracts/multisig) contract.
 
 Let's fetch [a previously-processed transaction](https://devnet-explorer.dharitri.org/transactions/05d445cdd145ecb20374844dcc67f0b1e370b9aa28a47492402bc1a150c2bab4),
-to serve as an example, and convert it to a [`TransactionOutcome`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionOutcome.html) (see above why):
+to serve as an example, and convert it to a [`TransactionOutcome`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionOutcome.html) (see above why):
 
 ```js
 const transactionOnNetworkMultisig = await apiNetworkProvider.getTransaction("05d445cdd145ecb20374844dcc67f0b1e370b9aa28a47492402bc1a150c2bab4");
@@ -801,10 +801,10 @@ console.log(parsedEvent);
 
 ## Contract queries
 
-In order to perform Smart Contract queries, we recommend the use of [`SmartContractQueriesController`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractQueriesController.html).
-The legacy approaches that rely on [`SmartContract.createQuery()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContract.html#createQuery) or [`Interaction.buildQuery()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/Interaction.html#buildQuery) are still available, but they will be deprecated in the (distant) future.
+In order to perform Smart Contract queries, we recommend the use of [`SmartContractQueriesController`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractQueriesController.html).
+The legacy approaches that rely on [`SmartContract.createQuery()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContract.html#createQuery) or [`Interaction.buildQuery()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/Interaction.html#buildQuery) are still available, but they will be deprecated in the (distant) future.
 
-You will notice that the [`SmartContractQueriesController`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractQueriesController.html) requires a `QueryRunner` object at initialization.
+You will notice that the [`SmartContractQueriesController`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractQueriesController.html) requires a `QueryRunner` object at initialization.
 A `NetworkProvider`, slighly adapted, is used to satisfy this requirement.
 
 ```js
@@ -838,7 +838,7 @@ const query = controller.createQuery({
 });
 ```
 
-Then, run the query against the network. You will get a [`SmartContractQueryResponse`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/SmartContractQueryResponse.html) object.
+Then, run the query against the network. You will get a [`SmartContractQueryResponse`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/SmartContractQueryResponse.html) object.
 
 ```js
 const response = await controller.runQuery(query);
@@ -857,7 +857,7 @@ console.log(sum);
 
 ## Explicit decoding / encoding of values
 
-When needed, you can use the [`BinaryCodec`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/BinaryCodec.html) to [decode and encode values](/developers/data/serialization-overview/) manually,
+When needed, you can use the [`BinaryCodec`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/BinaryCodec.html) to [decode and encode values](/developers/data/serialization-overview/) manually,
 leveraging contract ABIs:
 
 ```js
@@ -869,7 +869,7 @@ const abiMultisig = AbiRegistry.create(JSON.parse(abiJsonMultisig));
 ```
 
 :::note
-The ABI files used within this cookbook are available [here](https://github.com/TerraDharitri/drt-sdk-js-examples).
+The ABI files used within this cookbook are available [here](https://github.com/TerraDharitri/drt-js-sdk-examples).
 :::
 
 ### Decoding a custom type
@@ -1026,9 +1026,9 @@ console.log("Is signature of Bob?", bobVerifier.verify(serializedMessage, messag
 
 ### Handling messages over boundaries
 
-Generally speaking, signed [`Message`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/Message.html) objects are meant to be sent to a remote party (e.g. a service), which can then verify the signature.
+Generally speaking, signed [`Message`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/Message.html) objects are meant to be sent to a remote party (e.g. a service), which can then verify the signature.
 
-In order to prepare a message for transmission, you can use the [`MessageComputer.packMessage()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/MessageComputer.html#packMessage) utility method:
+In order to prepare a message for transmission, you can use the [`MessageComputer.packMessage()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/MessageComputer.html#packMessage) utility method:
 
 ```js
 const packedMessage = messageComputer.packMessage(message);
@@ -1036,7 +1036,7 @@ const packedMessage = messageComputer.packMessage(message);
 console.log("Packed message", packedMessage);
 ```
 
-Then, on the receiving side, you can use [`MessageComputer.unpackMessage()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/MessageComputer.html#unpackMessage) to reconstruct the message, prior verification:
+Then, on the receiving side, you can use [`MessageComputer.unpackMessage()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/MessageComputer.html#unpackMessage) to reconstruct the message, prior verification:
 
 ```js
 const unpackedMessage = messageComputer.unpackMessage(packedMessage);
@@ -1048,12 +1048,12 @@ console.log("Is signature of Alice?", aliceVerifier.verify(serializedUnpackedMes
 
 ### Signing hashes of objects
 
-Under the hood, [`MessageComputer.computeBytesForSigning()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/MessageComputer.html#computeBytesForSigning) does not compute a plain serialization of the message.
+Under the hood, [`MessageComputer.computeBytesForSigning()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/MessageComputer.html#computeBytesForSigning) does not compute a plain serialization of the message.
 Instead, it first decorates the message (with a special prefix, plus the message length), and computes a **`keccak256` hash** of this decorated variant.
 Ultimately, the signature is computed over the hash.
 
 However, for transactions, **by default**, the Network expects the signature to be computed over [the plain serialization](/developers/signing-transactions/#serialization-for-signing) of the transaction.
-The function [`TransactionComputer.computeBytesForSigning()`](https://dharitri.github.io/drt-sdk-js-core/v13/classes/TransactionComputer.html#computeBytesForSigning) adheres to this default policy.
+The function [`TransactionComputer.computeBytesForSigning()`](https://dharitri.github.io/drt-js-sdk-core/v13/classes/TransactionComputer.html#computeBytesForSigning) adheres to this default policy.
 
 The behavior can be overridden by setting the _sign using hash_ flag of `transaction.options`:
 

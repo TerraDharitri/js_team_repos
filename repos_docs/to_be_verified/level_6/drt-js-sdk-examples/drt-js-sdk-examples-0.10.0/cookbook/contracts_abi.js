@@ -19,7 +19,7 @@ let abi = AbiRegistry.create(abiObj);
 // ```js
 import axios from "axios";
 
-const response = await axios.get("https://github.com/TerraDharitri/drt-sdk-js-core/raw/main/src/testdata/counter.abi.json");
+const response = await axios.get("https://github.com/TerraDharitri/drt-js-sdk-core/raw/main/src/testdata/counter.abi.json");
 abi = AbiRegistry.create(response.data);
 // ```
 
