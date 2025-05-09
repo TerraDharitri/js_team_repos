@@ -158,7 +158,7 @@ export const useSignMultipleTransactions = ({
     }
 
     const isTokenTransaction = Boolean(
-      tokenId && isTokenTransfer({ tokenId, erdLabel: rewaLabel })
+      tokenId && isTokenTransfer({ tokenId, drtLabel: rewaLabel })
     );
 
     const needsSigning = currentTx.needsSigning;

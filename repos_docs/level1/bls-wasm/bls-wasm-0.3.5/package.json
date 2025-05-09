@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-bls-wasm",
-  "version": "0.3.5",
+  "version": "0.0.3",
   "description": "BLS signature for Node.js by WebAssembly",
   "main": "bls.js",
   "scripts": {

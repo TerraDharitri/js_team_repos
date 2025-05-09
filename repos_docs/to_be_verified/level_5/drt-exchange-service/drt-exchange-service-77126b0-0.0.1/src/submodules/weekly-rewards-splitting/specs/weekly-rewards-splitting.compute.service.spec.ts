@@ -352,7 +352,7 @@ describe('WeeklyRewardsSplittingComputeService', () => {
             ' first user should have double APR compared with 2nd one',
         async () => {
             const user1 = 'drt1';
-            const user2 = 'erd2';
+            const user2 = 'drt2';
             const moa = 'MOA-123456';
             const priceMap = new Map<string, string>();
             priceMap.set('Wrewa-123456', '10');
@@ -427,7 +427,7 @@ describe('WeeklyRewardsSplittingComputeService', () => {
             ' first user should have global APR x2',
         async () => {
             const user1 = 'drt1';
-            const user2 = 'erd2';
+            const user2 = 'drt2';
             const moa = 'MOA-123456';
             const priceMap = new Map<string, string>();
             priceMap.set('Wrewa-123456', '10');
