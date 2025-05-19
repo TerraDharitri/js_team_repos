@@ -1,0 +1,30 @@
+{
+  "name": "@terradharitri/sdk-wallet-connect-provider",
+  "version": "0.0.2",
+  "description": "Signing provider for dApps: Wallet Connect",
+  "main": "out/index.js",
+  "types": "out/index.d.js",
+  "files": [
+    "out/**/*"
+  ],
+  "scripts": {
+    "compile": "tsc -p tsconfig.json",
+    "pretest": "npm run compile",
+    "prepare": "npm run compile"
+  },
+  "author": "Dharitri",
+  "license": "MIT",
+  "dependencies": {
+    "@walletconnect/client": "1.8.0",
+    "@walletconnect/sign-client": "2.6.2",
+    "@walletconnect/utils": "2.6.2",
+    "bech32": "1.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.23",
+    "@walletconnect/types": "2.6.2",
+    "esmify": "2.1.1",
+    "tslib": "2.4.0",
+    "typescript": "4.1.2"
+  }
+}
