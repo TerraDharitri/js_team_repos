@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-elastic",
-  "version": "1.2.6",
+  "version": "0.0.4",
   "description": "Dharitri SDK Nestjs elastic package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

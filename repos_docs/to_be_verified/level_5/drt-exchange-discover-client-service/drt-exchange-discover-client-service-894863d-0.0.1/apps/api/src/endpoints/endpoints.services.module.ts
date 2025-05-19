@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { ExampleModule } from "@mvx-monorepo/common";
+import { ExampleModule } from "@drt-monorepo/common";
 import { TestSocketModule } from "./test-sockets/test.socket.module";
 import { TokenModule } from "./tokens/token.module";
 import { UsersModule } from "./users/user.module";

@@ -1,14 +1,14 @@
 import { forwardRef, Module } from '@nestjs/common';
-import { ApiConfigModule, ApiConfigService, DatabaseModule } from '@mvx-monorepo/common';
-import { AxelarGmpApi } from '@mvx-monorepo/common/api/axelar.gmp.api';
-import { ProviderKeys } from '@mvx-monorepo/common/utils/provider.enum';
+import { ApiConfigModule, ApiConfigService, DatabaseModule } from '@drt-monorepo/common';
+import { AxelarGmpApi } from '@drt-monorepo/common/api/axelar.gmp.api';
+import { ProviderKeys } from '@drt-monorepo/common/utils/provider.enum';
 import * as https from 'https';
 import { join } from 'path';
-import { Client as AxelarGmpApiClient } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
+import { Client as AxelarGmpApiClient } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
 import { readFileSync } from 'fs';
 import yaml from 'js-yaml';
 import { Document, OpenAPIClientAxios } from 'openapi-client-axios';
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 @Module({
   imports: [forwardRef(() => DatabaseModule), ApiConfigModule],

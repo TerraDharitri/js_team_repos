@@ -35,10 +35,13 @@ describe("test hwProvider", () => {
         try {
             await hwProvider.getTransport();
             assert.fail("Ledger is not supported");
-        } catch (e) {
-            assert.equal(e.message, "Ledger is not supported");
-        }
-    });
+        }catch (e) {
+            if (e instanceof Error) {
+              assert.equal(e.message, "Ledger is not supported");
+            } else {
+              throw e; // or handle differently
+            }
+    }});
 
     it("should support Bluetooth API", async () => {
         Object.assign(global, {
@@ -165,8 +168,11 @@ describe("test hwProvider", () => {
 
             assert.fail("Should have thrown");
         } catch (err) {
-            assert.equal(err.message, "DharitrI App v1.0.21 does not support guarded transactions.");
-        }
+            if (err instanceof Error) {
+              assert.equal(err.message, "DharitrI App v1.0.21 does not support guarded transactions.");
+            } else {
+              throw err; // Re-throw or handle differently
+            }
 
         await testSignTransaction({
             deviceVersion: "1.0.22",
@@ -176,7 +182,7 @@ describe("test hwProvider", () => {
             expectedTransactionVersion: 2,
             expectedTransactionOptions: 0b1111
         });
-    });
+    }});
 
     async function testSignTransaction(options: {
         deviceVersion: string,

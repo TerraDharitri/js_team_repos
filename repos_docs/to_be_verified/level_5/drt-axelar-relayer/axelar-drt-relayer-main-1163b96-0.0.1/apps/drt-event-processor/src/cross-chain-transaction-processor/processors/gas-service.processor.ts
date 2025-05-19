@@ -1,15 +1,15 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { EventIdentifiers, Events } from '@mvx-monorepo/common/utils/event.enum';
-import { GasServiceContract } from '@mvx-monorepo/common/contracts/gas-service.contract';
+import { EventIdentifiers, Events } from '@drt-monorepo/common/utils/event.enum';
+import { GasServiceContract } from '@drt-monorepo/common/contracts/gas-service.contract';
 import {
   GasAddedEvent,
   GasPaidForContractCallEvent,
   RefundedEvent,
-} from '@mvx-monorepo/common/contracts/entities/gas-service-events';
+} from '@drt-monorepo/common/contracts/entities/gas-service-events';
 import { ITransactionEvent } from '@terradharitri/sdk-core/out';
-import { DecodingUtils } from '@mvx-monorepo/common/utils/decoding.utils';
-import { Components } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
-import { ApiConfigService, GatewayContract } from '@mvx-monorepo/common';
+import { DecodingUtils } from '@drt-monorepo/common/utils/decoding.utils';
+import { Components } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
+import { ApiConfigService, GatewayContract } from '@drt-monorepo/common';
 import { TransactionOnNetwork } from '@terradharitri/sdk-network-providers/out';
 import GasRefundedEvent = Components.Schemas.GasRefundedEvent;
 import Event = Components.Schemas.Event;

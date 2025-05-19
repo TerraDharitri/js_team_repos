@@ -1,6 +1,6 @@
 import { Address, TokenTransfer, Transaction, TransactionPayload } from "@terradharitri/sdk-core/out";
 import { Injectable } from "@nestjs/common";
-import { ApiConfigService } from "@mvx-monorepo/common";
+import { ApiConfigService } from "@drt-monorepo/common";
 import { ApiService } from "@terradharitri/sdk-nestjs-http";
 import { BinaryUtils } from "@terradharitri/sdk-nestjs-common";
 

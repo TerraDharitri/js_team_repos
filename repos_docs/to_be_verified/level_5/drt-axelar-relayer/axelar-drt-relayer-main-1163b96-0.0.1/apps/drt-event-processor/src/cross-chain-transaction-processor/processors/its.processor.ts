@@ -1,10 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Events } from '@mvx-monorepo/common/utils/event.enum';
+import { Events } from '@drt-monorepo/common/utils/event.enum';
 import { ITransactionEvent } from '@terradharitri/sdk-core/out';
-import { DecodingUtils } from '@mvx-monorepo/common/utils/decoding.utils';
-import { Components } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
+import { DecodingUtils } from '@drt-monorepo/common/utils/decoding.utils';
+import { Components } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
 import { TransactionOnNetwork } from '@terradharitri/sdk-network-providers/out';
-import { ItsContract } from '@mvx-monorepo/common/contracts/its.contract';
+import { ItsContract } from '@drt-monorepo/common/contracts/its.contract';
 import Event = Components.Schemas.Event;
 import ITSInterchainTransferEvent = Components.Schemas.ITSInterchainTransferEvent;
 import ITSInterchainTokenDeploymentStartedEvent = Components.Schemas.ITSInterchainTokenDeploymentStartedEvent;

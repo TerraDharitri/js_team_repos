@@ -1,12 +1,12 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { EventIdentifiers, Events } from '@mvx-monorepo/common/utils/event.enum';
+import { EventIdentifiers, Events } from '@drt-monorepo/common/utils/event.enum';
 import { MessageApprovedStatus } from '@prisma/client';
 import { ITransactionEvent } from '@terradharitri/sdk-core/out';
-import { CONSTANTS } from '@mvx-monorepo/common/utils/constants.enum';
-import { DecodingUtils } from '@mvx-monorepo/common/utils/decoding.utils';
-import { GatewayContract } from '@mvx-monorepo/common';
-import { Components } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
-import { MessageApprovedRepository } from '@mvx-monorepo/common/database/repository/message-approved.repository';
+import { CONSTANTS } from '@drt-monorepo/common/utils/constants.enum';
+import { DecodingUtils } from '@drt-monorepo/common/utils/decoding.utils';
+import { GatewayContract } from '@drt-monorepo/common';
+import { Components } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
+import { MessageApprovedRepository } from '@drt-monorepo/common/database/repository/message-approved.repository';
 import { TransactionOnNetwork } from '@terradharitri/sdk-network-providers/out';
 import { BinaryUtils } from '@terradharitri/sdk-nestjs-common';
 import CallEvent = Components.Schemas.CallEvent;
@@ -15,7 +15,7 @@ import Event = Components.Schemas.Event;
 import MessageExecutedEvent = Components.Schemas.MessageExecutedEvent;
 import BigNumber from 'bignumber.js';
 import SignersRotatedEvent = Components.Schemas.SignersRotatedEvent;
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 @Injectable()
 export class GatewayProcessor {

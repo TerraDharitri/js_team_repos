@@ -2,18 +2,18 @@ import { forwardRef, Module } from '@nestjs/common';
 import { GatewayContract } from './gateway.contract';
 import { ApiNetworkProvider, ProxyNetworkProvider } from '@terradharitri/sdk-network-providers/out';
 import { ResultsParser, TransactionWatcher } from '@terradharitri/sdk-core/out';
-import { ContractLoader } from '@mvx-monorepo/common/contracts/contract.loader';
+import { ContractLoader } from '@drt-monorepo/common/contracts/contract.loader';
 import { join } from 'path';
-import { GasServiceContract } from '@mvx-monorepo/common/contracts/gas-service.contract';
-import { ProviderKeys } from '@mvx-monorepo/common/utils/provider.enum';
+import { GasServiceContract } from '@drt-monorepo/common/contracts/gas-service.contract';
+import { ProviderKeys } from '@drt-monorepo/common/utils/provider.enum';
 import { Mnemonic, UserSigner } from '@terradharitri/sdk-wallet/out';
-import { TransactionsHelper } from '@mvx-monorepo/common/contracts/transactions.helper';
-import { WrewaSwapContract } from '@mvx-monorepo/common/contracts/wrewa-swap.contract';
-import { ApiConfigService } from '@mvx-monorepo/common/config';
-import { DynamicModuleUtils } from '@mvx-monorepo/common/utils';
-import { ItsContract } from '@mvx-monorepo/common/contracts/its.contract';
-import { FeeHelper } from '@mvx-monorepo/common/contracts/fee.helper';
-import { ApiModule } from '@mvx-monorepo/common/api';
+import { TransactionsHelper } from '@drt-monorepo/common/contracts/transactions.helper';
+import { WrewaSwapContract } from '@drt-monorepo/common/contracts/wrewa-swap.contract';
+import { ApiConfigService } from '@drt-monorepo/common/config';
+import { DynamicModuleUtils } from '@drt-monorepo/common/utils';
+import { ItsContract } from '@drt-monorepo/common/contracts/its.contract';
+import { FeeHelper } from '@drt-monorepo/common/contracts/fee.helper';
+import { ApiModule } from '@drt-monorepo/common/api';
 
 
 @Module({
@@ -24,7 +24,7 @@ import { ApiModule } from '@mvx-monorepo/common/api';
       useFactory: (apiConfigService: ApiConfigService) => {
         return new ProxyNetworkProvider(apiConfigService.getGatewayUrl(), {
           timeout: apiConfigService.getGatewayTimeout(),
-          ...(({ clientName: 'axelar-mvx-relayer' } as any)),
+          ...(({ clientName: 'axelar-drt-relayer' } as any)),
         });
       },
       inject: [ApiConfigService],
@@ -34,7 +34,7 @@ import { ApiModule } from '@mvx-monorepo/common/api';
       useFactory: (apiConfigService: ApiConfigService) => {
         return new ApiNetworkProvider(apiConfigService.getApiUrl(), {
           timeout: apiConfigService.getApiTimeout(),
-          ...(({ clientName: 'axelar-mvx-relayer' } as any)),
+          ...(({ clientName: 'axelar-drt-relayer' } as any)),
         });
       },
       inject: [ApiConfigService],

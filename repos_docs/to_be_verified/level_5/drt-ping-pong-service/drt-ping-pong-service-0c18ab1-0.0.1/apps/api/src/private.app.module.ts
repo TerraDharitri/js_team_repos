@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { HealthCheckController } from './endpoints/health-check/health.check.controller';
-import { ApiMetricsController } from '@mvx-monorepo/common/metrics/api.metrics.controller';
-import { ApiMetricsModule, DynamicModuleUtils } from '@mvx-monorepo/common';
+import { ApiMetricsController } from '@drt-monorepo/common/metrics/api.metrics.controller';
+import { ApiMetricsModule, DynamicModuleUtils } from '@drt-monorepo/common';
 import { LoggingModule } from '@terradharitri/sdk-nestjs-common';
 import configuration from '../config/configuration';
 

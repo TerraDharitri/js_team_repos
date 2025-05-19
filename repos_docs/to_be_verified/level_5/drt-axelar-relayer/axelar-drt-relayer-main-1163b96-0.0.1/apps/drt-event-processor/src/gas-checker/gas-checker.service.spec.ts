@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { GasCheckerService } from './gas-checker.service';
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
-import { CacheInfo, GasServiceContract, TransactionsHelper, WrewaSwapContract } from '@mvx-monorepo/common';
+import { CacheInfo, GasServiceContract, TransactionsHelper, WrewaSwapContract } from '@drt-monorepo/common';
 import { UserSigner } from '@terradharitri/sdk-wallet/out';
 import { AccountOnNetwork, ApiNetworkProvider } from '@terradharitri/sdk-network-providers/out';
-import { ProviderKeys } from '@mvx-monorepo/common/utils/provider.enum';
+import { ProviderKeys } from '@drt-monorepo/common/utils/provider.enum';
 import { Address, Transaction } from '@terradharitri/sdk-core/out';
 import { CacheService } from '@terradharitri/sdk-nestjs-cache';
 import { UserAddress } from '@terradharitri/sdk-wallet/out/userAddress';
 import BigNumber from 'bignumber.js';
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 describe('GasCheckerService', () => {
   const gasServiceAddress = Address.newFromBech32('drt1qqqqqqqqqqqqqpgqhe8t5jewej70zupmh44jurgn29psua5l2jpsv0u330');

@@ -150,7 +150,7 @@
     "rxjs": "^7.8.1"
   },
   "_moduleAliases": {
-    "@mvx-monorepo/common": "dist/libs/common"
+    "@drt-monorepo/common": "dist/libs/common"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -169,8 +169,8 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node",
     "moduleNameMapper": {
-      "^@mvx-monorepo/common(|/.*)$": "<rootDir>/libs/common/src/$1",
-      "^@mvx-monorepo/common": "<rootDir>/libs/common"
+      "^@drt-monorepo/common(|/.*)$": "<rootDir>/libs/common/src/$1",
+      "^@drt-monorepo/common": "<rootDir>/libs/common"
     }
   }
 }

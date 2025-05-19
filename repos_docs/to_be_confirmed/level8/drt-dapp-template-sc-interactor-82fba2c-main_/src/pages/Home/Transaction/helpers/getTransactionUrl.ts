@@ -1,5 +1,5 @@
 import { TokenTransfer } from '@terradharitri/sdk-core';
-import { WALLET_PROVIDER_SEND_TRANSACTION_URL } from '@terradharitri/sdk-dapp/dist/constants';
+import { WALLET_PROVIDER_SEND_TRANSACTION_URL } from '@terradharitri/sdk-dapp/constants';
 
 /**
  * For documentation, check out {@link https://docs.dharitri.org/wallet/webhooks#send-transaction-hook send transaciton hook}

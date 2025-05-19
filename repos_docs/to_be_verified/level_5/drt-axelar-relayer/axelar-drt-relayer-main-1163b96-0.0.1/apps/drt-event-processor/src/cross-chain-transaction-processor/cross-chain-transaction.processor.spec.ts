@@ -1,15 +1,15 @@
-import { ApiConfigService } from '@mvx-monorepo/common';
+import { ApiConfigService } from '@drt-monorepo/common';
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
 import { Test } from '@nestjs/testing';
-import { AxelarGmpApi } from '@mvx-monorepo/common/api/axelar.gmp.api';
+import { AxelarGmpApi } from '@drt-monorepo/common/api/axelar.gmp.api';
 import { ApiNetworkProvider, TransactionEvent, TransactionOnNetwork } from '@terradharitri/sdk-network-providers/out';
-import { RedisHelper } from '@mvx-monorepo/common/helpers/redis.helper';
+import { RedisHelper } from '@drt-monorepo/common/helpers/redis.helper';
 import { CrossChainTransactionProcessorService } from './cross-chain-transaction.processor.service';
-import { EventIdentifiers, Events } from '@mvx-monorepo/common/utils/event.enum';
+import { EventIdentifiers, Events } from '@drt-monorepo/common/utils/event.enum';
 import { BinaryUtils } from '@terradharitri/sdk-nestjs-common';
 import { GasServiceProcessor, GatewayProcessor } from './processors';
 import { ItsProcessor } from './processors/its.processor';
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 const mockTransactionResponse = {
   txHash: '5cc3bf9866b77b6d05b3756a0faff67d7685058579550989f39cb4319bec0fc1',

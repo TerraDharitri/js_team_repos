@@ -3,15 +3,15 @@ import { getChainID } from '@terradharitri/sdk-dapp/utils/network';
 import { getRewaLabel } from '@terradharitri/sdk-dapp/utils/network/getRewaLabel';
 import { formatAmount } from '@terradharitri/sdk-dapp/utils/operations/formatAmount';
 import { stringIsInteger } from '@terradharitri/sdk-dapp/utils/validation/stringIsInteger';
-import { AmountSelect } from '@terradharitri/sdk-dapp-form/UI/Fields/AmountSelect';
+import { AmountSelect } from '@terradharitri/sdk-dapp-form/src/UI/Fields/AmountSelect';
 import {
   AmountErrorPropsType,
   MaxButtonPropsType,
   OptionType,
   TokenBalancePropsType,
   TokenSelectPropsType
-} from '@terradharitri/sdk-dapp-form/UI/Fields/AmountSelect/components';
-import { AmountInputPropsType } from '@terradharitri/sdk-dapp-form/UI/Fields/AmountSelect/components/AmountInput';
+} from '@terradharitri/sdk-dapp-form/src/UI/Fields/AmountSelect/components';
+import { AmountInputPropsType } from '@terradharitri/sdk-dapp-form/src/UI/Fields/AmountSelect/components/AmountInput';
 import classNames from 'classnames';
 
 import { ZERO } from 'constants/general';

@@ -5,7 +5,7 @@ import {
   CacheInfo, JoinExitEvent,
   LogPerformanceAsync,
   MetricsEvents, Pair, PairResponse, SwapEvent,
-} from "@mvx-monorepo/common";
+} from "@drt-monorepo/common";
 import { Injectable } from "@nestjs/common";
 import { ApiService } from "@terradharitri/sdk-nestjs-http";
 import { ContractQueryResponse } from "@terradharitri/sdk-network-providers/out";
@@ -20,12 +20,12 @@ import { BinaryUtils, OriginLogger } from "@terradharitri/sdk-nestjs-common";
 import { PAIR_EVENTS } from "@terradharitri/sdk-exchange";
 import { ApiService } from "../../services/dharitri.api";
 import { PerformanceProfiler } from "@terradharitri/sdk-nestjs-monitoring";
-import { GeneralEvent } from "@mvx-monorepo/common/providers/entities/general.event";
-import { IProviderService } from "@mvx-monorepo/common/providers";
-import { DharitrixPair } from "@mvx-monorepo/common/providers/dharitrix/entities/dharitrix.pair";
-import { DharitrixSwapEvent } from "@mvx-monorepo/common/providers/dharitrix/entities/dharitrix.swap.event";
-import { DharitrixAddLiquidityEvent } from "@mvx-monorepo/common/providers/dharitrix/entities/dharitrix.add.liquidity.event";
-import { DharitrixRemoveLiquidityEvent } from "@mvx-monorepo/common/providers/dharitrix/entities/dharitrix.remove.liquidity.event";
+import { GeneralEvent } from "@drt-monorepo/common/providers/entities/general.event";
+import { IProviderService } from "@drt-monorepo/common/providers";
+import { DharitrixPair } from "@drt-monorepo/common/providers/dharitrix/entities/dharitrix.pair";
+import { DharitrixSwapEvent } from "@drt-monorepo/common/providers/dharitrix/entities/dharitrix.swap.event";
+import { DharitrixAddLiquidityEvent } from "@drt-monorepo/common/providers/dharitrix/entities/dharitrix.add.liquidity.event";
+import { DharitrixRemoveLiquidityEvent } from "@drt-monorepo/common/providers/dharitrix/entities/dharitrix.remove.liquidity.event";
 
 @Injectable()
 export class DharitrixService implements IProviderService {

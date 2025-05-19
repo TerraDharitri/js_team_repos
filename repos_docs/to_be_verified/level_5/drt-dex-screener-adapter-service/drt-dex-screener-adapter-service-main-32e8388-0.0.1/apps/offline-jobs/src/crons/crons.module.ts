@@ -1,4 +1,4 @@
-import { ApiConfigModule, DynamicModuleUtils } from "@mvx-monorepo/common";
+import { ApiConfigModule, DynamicModuleUtils } from "@drt-monorepo/common";
 import { Module } from "@nestjs/common";
 import configuration from "../../config/configuration";
 import { CacheWarmerModule } from "./cache-warmer";

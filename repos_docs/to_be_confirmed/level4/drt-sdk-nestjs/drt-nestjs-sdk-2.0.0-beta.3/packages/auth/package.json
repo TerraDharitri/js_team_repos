@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-auth",
-  "version": "2.0.0-beta.3",
+  "version": "0.0.6",
   "description": "Dharitri SDK Nestjs auth package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -32,15 +32,15 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-12.6.1",
-    "@terradharitri/sdk-native-auth-server": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/to_be_verified/level3/drt-js-sdk-native-auth-server/drt-js-sdk-native-auth-server-1.0.6",
-    "@terradharitri/sdk-wallet": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-wallet/drt-js-sdk-wallet-3.0.0",
+    "@terradharitri/sdk-core": "0.0.13",
+    "@terradharitri/sdk-native-auth-server": "0.0.2",
+    "@terradharitri/sdk-wallet": "0.0.5",
     "jsonwebtoken": "^9.0.0"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-nestjs-cache": "^2.0.0-beta.2",
-    "@terradharitri/sdk-nestjs-common": "^2.0.0-beta.2",
-    "@terradharitri/sdk-nestjs-monitoring": "^2.0.0-beta.2",
+    "@terradharitri/sdk-nestjs-cache": "0.0.6",
+    "@terradharitri/sdk-nestjs-common": "0.0.6",
+    "@terradharitri/sdk-nestjs-monitoring": "0.0.6",
     "@terradharitri/sdk-wallet": "<=3.0.0",
     "@nestjs/common": "^10.x"
   },

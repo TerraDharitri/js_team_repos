@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-webview-provider",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "SDK Webview Provider",
   "main": "out/index.js",
   "types": "out/index.d.js",
@@ -15,13 +15,13 @@
   "author": "DharitrI",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-12.1.0",
-    "@terradharitri/sdk-dapp-utils": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-sdk-dapp-utils/drt-sdk-dapp-utils-0.1.0",
+    "@terradharitri/sdk-core": "0.0.7",
+    "@terradharitri/sdk-dapp-utils": "0.1.2",
     "prettier": "3.2.5",
     "typescript": "5.4.5"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-12.1.0",
-    "@terradharitri/sdk-dapp-utils": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-sdk-dapp-utils/drt-sdk-dapp-utils-0.1.0"
+    "@terradharitri/sdk-core": "0.0.7",
+    "@terradharitri/sdk-dapp-utils": "0.1.2"
   }
 }

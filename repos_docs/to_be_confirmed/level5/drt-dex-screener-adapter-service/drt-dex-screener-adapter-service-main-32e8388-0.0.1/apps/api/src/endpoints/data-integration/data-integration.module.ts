@@ -1,9 +1,9 @@
 import { Module } from "@nestjs/common";
 import { DataIntegrationService } from "./data-integration.service";
 import { DataIntegrationController } from "./data-integration.controller";
-import { IndexerModule, ApiModule, DharitrixModule } from "@mvx-monorepo/common";
+import { IndexerModule, ApiModule, DharitrixModule } from "@drt-monorepo/common";
 import configuration from "../../../config/configuration";
-import { OneDexModule } from "@mvx-monorepo/common/providers";
+import { OneDexModule } from "@drt-monorepo/common/providers";
 
 @Module({
   imports: [

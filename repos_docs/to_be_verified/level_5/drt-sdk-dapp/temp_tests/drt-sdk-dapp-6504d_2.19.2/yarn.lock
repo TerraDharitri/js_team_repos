@@ -2007,7 +2007,7 @@
     "bech32" "^2.0.0"
 
 "@terradharitri/sdk-wallet-connect-provider@4.0.2":
-  "integrity" "sha512-WGim7kD49N5LoWestdmvxBYeJEDCevJv50Gt/RFBtZoWT3OyDoWu2wotVNssjPW0UQ5EyYPae96g+6FNHrXsxw=="
+  "integrity" "sha512-WGim7kD49N5LoWestddrtBYeJEDCevJv50Gt/RFBtZoWT3OyDoWu2wotVNssjPW0UQ5EyYPae96g+6FNHrXsxw=="
   "resolved" "https://registry.npmjs.org/@terradharitri/sdk-wallet-connect-provider/-/sdk-wallet-connect-provider-4.0.2.tgz"
   "version" "4.0.2"
   dependencies:
@@ -15505,7 +15505,7 @@
   "version" "2.0.1"
 
 "which-typed-array@^1.1.2", "which-typed-array@^1.1.9":
-  "integrity" "sha512-w9c4xkx6mPidwp7180ckYWfMmvxpjlZuIudNtDf4N/tTAUB8VJbX25qZoAsrtGuYNnGw3pa0AXgbGKRB8/EceA=="
+  "integrity" "sha512-w9c4xkx6mPidwp7180ckYWfMdrtpjlZuIudNtDf4N/tTAUB8VJbX25qZoAsrtGuYNnGw3pa0AXgbGKRB8/EceA=="
   "resolved" "https://registry.npmjs.org/which-typed-array/-/which-typed-array-1.1.9.tgz"
   "version" "1.1.9"
   dependencies:

@@ -1,4 +1,4 @@
-import { TransactionDecoder, TransactionMetadata } from "@terradharitri/sdk-transaction-decoder/src/transaction.decoder";
+import { TransactionDecoder, TransactionMetadata } from "@terradharitri/sdk-transaction-decoder/lib/src/transaction.decoder";
 import { Address } from "../address";
 import { ErrCannotParseContractResults } from "../errors";
 import { IAddress } from "../interface";

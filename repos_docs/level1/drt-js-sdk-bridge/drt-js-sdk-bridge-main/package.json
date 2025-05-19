@@ -1,6 +1,6 @@
 {
-  "name": "@terradharitri/js-sdk-bridge",
-  "version": "0.3.2",
+  "name": "@terradharitri/sdk-js-bridge",
+  "version": "0.0.2",
   "description": "SDK library to interact with the bridges on DharitrI blockchain",
   "main": "index.js",
   "scripts": {

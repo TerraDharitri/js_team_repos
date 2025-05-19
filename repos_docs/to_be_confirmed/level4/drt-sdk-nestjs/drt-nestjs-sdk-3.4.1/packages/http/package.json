@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-http",
-  "version": "3.4.1",
+  "version": "0.0.8",
   "description": "Dharitri SDK Nestjs http package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -33,13 +33,13 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@terradharitri/sdk-native-auth-client": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-native-auth-client/drt-js-sdk-native-auth-client-1.0.9",
+    "@terradharitri/sdk-native-auth-client": "0.0.5",
     "agentkeepalive": "^4.3.0",
     "axios": "^1.6.8"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-nestjs-common": "^3.0.0",
-    "@terradharitri/sdk-nestjs-monitoring": "^3.0.0",
+    "@terradharitri/sdk-nestjs-common": "0.0.8",
+    "@terradharitri/sdk-nestjs-monitoring": "0.0.8",
     "@nestjs/common": "^10.x",
     "@nestjs/core": "^10.x"
   },

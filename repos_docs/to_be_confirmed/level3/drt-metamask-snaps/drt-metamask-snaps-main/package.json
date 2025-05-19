@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/metamask-snap",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Snap connector to DharitrI chain.",
   "keywords": [],
   "bugs": {
@@ -36,9 +36,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.1.0",
-    "@terradharitri/sdk-network-providers": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-network-providers/drt-js-sdk-network-providers-2.4.3",
-    "@terradharitri/sdk-wallet": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-wallet/drt-js-sdk-wallet-4.4.0",
+    "@terradharitri/sdk-core": "0.1.0",
+    "@terradharitri/sdk-network-providers": "0.0.6",
+    "@terradharitri/sdk-wallet": "0.0.9",
     "bignumber.js": "^9.1.2",
     "buffer": "6.0.3",
     "protobufjs": "7.3.0"

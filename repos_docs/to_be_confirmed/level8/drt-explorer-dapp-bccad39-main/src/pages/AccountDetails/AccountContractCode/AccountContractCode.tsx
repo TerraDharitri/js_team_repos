@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { VerifiedContractType } from '@terradharitri/sdk-dapp-sc-explorer/dist/types/verifiedContract.types';
+import { VerifiedContractType } from '@terradharitri/sdk-dapp-sc-explorer/types/verifiedContract.types';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 

@@ -1,5 +1,5 @@
 import { AddressType, BigUIntType, BinaryCodec, FieldDefinition, StructType, TokenIdentifierType, U64Type } from "@terradharitri/sdk-core/out";
-import { ElasticEvent, ElasticLog } from "@mvx-monorepo/common";
+import { ElasticEvent, ElasticLog } from "@drt-monorepo/common";
 import { GeneralEvent } from "../../entities/general.event";
 import { DharitrixPair } from "./dharitrix.pair";
 

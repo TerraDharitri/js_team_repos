@@ -1,14 +1,14 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
 import { Locker } from '@terradharitri/sdk-nestjs-common';
-import { ApiConfigService, AxelarGmpApi, CacheInfo } from '@mvx-monorepo/common';
-import { RedisHelper } from '@mvx-monorepo/common/helpers/redis.helper';
+import { ApiConfigService, AxelarGmpApi, CacheInfo } from '@drt-monorepo/common';
+import { RedisHelper } from '@drt-monorepo/common/helpers/redis.helper';
 import { ApiNetworkProvider, TransactionOnNetwork } from '@terradharitri/sdk-network-providers/out';
 import { GasServiceProcessor, GatewayProcessor } from './processors';
 import { AxiosError } from 'axios';
-import { MessageApprovedEvent } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
+import { MessageApprovedEvent } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
 import { ItsProcessor } from './processors/its.processor';
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 @Injectable()
 export class CrossChainTransactionProcessorService {

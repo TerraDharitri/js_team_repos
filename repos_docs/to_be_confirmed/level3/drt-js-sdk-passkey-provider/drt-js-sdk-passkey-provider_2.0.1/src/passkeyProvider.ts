@@ -1,3 +1,6 @@
+import { getPublicKey } from '@noble/ed25519';
+import * as ed from '@noble/ed25519';
+import { sha512 } from '@noble/hashes/sha512';
 import {
   Message,
   UserSecretKey,
@@ -6,9 +9,6 @@ import {
   MessageComputer
 } from '@terradharitri/sdk-core';
 import { Transaction } from '@terradharitri/sdk-core/out/transaction';
-import { getPublicKey } from '@noble/ed25519';
-import * as ed from '@noble/ed25519';
-import { sha512 } from '@noble/hashes/sha512';
 
 import {
   AuthenticatorNotSupported,

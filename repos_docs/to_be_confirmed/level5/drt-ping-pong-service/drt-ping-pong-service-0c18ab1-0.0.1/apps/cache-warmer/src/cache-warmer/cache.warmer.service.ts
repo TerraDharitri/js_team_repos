@@ -3,8 +3,8 @@ import { Cron, CronExpression } from "@nestjs/schedule";
 import { ClientProxy } from "@nestjs/microservices";
 import { CacheService } from "@terradharitri/sdk-nestjs-cache";
 import { Lock } from "@terradharitri/sdk-nestjs-common";
-import { CacheInfo } from "@mvx-monorepo/common/utils/cache.info";
-import { StatsService } from "@mvx-monorepo/common";
+import { CacheInfo } from "@drt-monorepo/common/utils/cache.info";
+import { StatsService } from "@drt-monorepo/common";
 
 @Injectable()
 export class CacheWarmerService {

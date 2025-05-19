@@ -1,4 +1,4 @@
-import { NetworkType as NetworkConfigType } from '@terradharitri/sdk-dapp/dist/types/network.types';
+import { NetworkType as NetworkConfigType } from '@terradharitri/sdk-dapp/types/network.types';
 import { NetworkAdapterEnum } from './adapter.types';
 
 export interface NetworkType extends Partial<NetworkConfigType> {

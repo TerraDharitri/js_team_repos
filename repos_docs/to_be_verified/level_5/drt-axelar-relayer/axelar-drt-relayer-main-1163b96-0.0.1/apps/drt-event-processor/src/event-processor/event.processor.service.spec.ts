@@ -1,11 +1,11 @@
 import { EventProcessorService } from './event.processor.service';
-import { ApiConfigService } from '@mvx-monorepo/common';
+import { ApiConfigService } from '@drt-monorepo/common';
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
 import { Test } from '@nestjs/testing';
 import { NotifierBlockEvent } from './types';
-import { RedisHelper } from '@mvx-monorepo/common/helpers/redis.helper';
+import { RedisHelper } from '@drt-monorepo/common/helpers/redis.helper';
 import { BinaryUtils } from '@terradharitri/sdk-nestjs-common';
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 describe('EventProcessorService', () => {
   let redisHelper: DeepMocked<RedisHelper>;

@@ -1,4 +1,4 @@
-import { stringIsInteger } from '@terradharitri/sdk-dapp/dist/utils/validation/stringIsInteger';
+import { stringIsInteger } from '@terradharitri/sdk-dapp/utils/validation/stringIsInteger';
 
 import { ELLIPSIS } from 'appConstants';
 

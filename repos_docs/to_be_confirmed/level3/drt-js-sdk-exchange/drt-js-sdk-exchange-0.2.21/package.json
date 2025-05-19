@@ -1,6 +1,6 @@
 {
     "name": "@terradharitri/sdk-exchange",
-    "version": "0.2.21",
+    "version": "0.0.3",
     "description": "Utilities modules for DharitriX interactions",
     "author": "DharitrI",
     "repository": {
@@ -33,7 +33,7 @@
         "typescript": "4.6.4"
     },
     "dependencies": {
-        "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.6.3",
+        "@terradharitri/sdk-core": "0.1.5",
         "bignumber.js": "9.0.1"
     }
 }

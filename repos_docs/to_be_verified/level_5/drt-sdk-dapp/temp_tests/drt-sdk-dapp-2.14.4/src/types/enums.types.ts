@@ -77,7 +77,7 @@ export enum TransactionsDefaultTitles {
 }
 
 export enum DappCoreWCV2CustomMethodsEnum {
-  mvx_cancelAction = 'mvx_cancelAction'
+  drt_cancelAction = 'drt_cancelAction'
 }
 
 export enum PlatformsEnum {

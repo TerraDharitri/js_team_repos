@@ -14,11 +14,11 @@ import {
   GasAddedEvent,
   GasPaidForContractCallEvent,
   RefundedEvent,
-} from '@mvx-monorepo/common/contracts/entities/gas-service-events';
-import { CONSTANTS } from '@mvx-monorepo/common/utils/constants.enum';
-import { DecodingUtils } from '@mvx-monorepo/common/utils/decoding.utils';
+} from '@drt-monorepo/common/contracts/entities/gas-service-events';
+import { CONSTANTS } from '@drt-monorepo/common/utils/constants.enum';
+import { DecodingUtils } from '@drt-monorepo/common/utils/decoding.utils';
 import BigNumber from 'bignumber.js';
-import { GasInfo } from '@mvx-monorepo/common/utils/gas.info';
+import { GasInfo } from '@drt-monorepo/common/utils/gas.info';
 
 @Injectable()
 export class GasServiceContract {

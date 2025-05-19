@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { ApiConfigModule, ApiMetricsController, HealthCheckController } from '@mvx-monorepo/common';
-import { ApiMetricsModule } from '@mvx-monorepo/common';
+import { ApiConfigModule, ApiMetricsController, HealthCheckController } from '@drt-monorepo/common';
+import { ApiMetricsModule } from '@drt-monorepo/common';
 import { LoggingModule } from '@terradharitri/sdk-nestjs-common';
 import configuration from '../config/configuration';
 

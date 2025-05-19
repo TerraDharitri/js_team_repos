@@ -1,4 +1,4 @@
-import { Token } from "@mvx-monorepo/common";
+import { Token } from "@drt-monorepo/common";
 import { ApiProperty } from "@nestjs/swagger";
 
 export class Asset {

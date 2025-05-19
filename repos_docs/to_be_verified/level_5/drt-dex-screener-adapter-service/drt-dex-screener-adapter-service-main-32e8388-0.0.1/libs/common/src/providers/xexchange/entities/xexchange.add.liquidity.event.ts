@@ -1,4 +1,4 @@
-import { ElasticEvent, ElasticLog } from "@mvx-monorepo/common";
+import { ElasticEvent, ElasticLog } from "@drt-monorepo/common";
 import { DharitrixPair } from "./dharitrix.pair";
 import { DharitrixLiquidityEvent } from "./dharitrix.liquidity.event";
 

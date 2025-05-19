@@ -1,27 +1,27 @@
 import { BinaryUtils, Locker } from '@terradharitri/sdk-nestjs-common';
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
-import { AxelarGmpApi } from '@mvx-monorepo/common/api/axelar.gmp.api';
-import { CacheInfo, GasServiceContract } from '@mvx-monorepo/common';
-import { ProviderKeys } from '@mvx-monorepo/common/utils/provider.enum';
+import { AxelarGmpApi } from '@drt-monorepo/common/api/axelar.gmp.api';
+import { CacheInfo, GasServiceContract } from '@drt-monorepo/common';
+import { ProviderKeys } from '@drt-monorepo/common/utils/provider.enum';
 import { UserSigner } from '@terradharitri/sdk-wallet/out';
-import { TransactionsHelper } from '@mvx-monorepo/common/contracts/transactions.helper';
-import { GatewayContract } from '@mvx-monorepo/common/contracts/gateway.contract';
+import { TransactionsHelper } from '@drt-monorepo/common/contracts/transactions.helper';
+import { GatewayContract } from '@drt-monorepo/common/contracts/gateway.contract';
 import { PendingTransaction } from './entities/pending-transaction';
-import { CONSTANTS } from '@mvx-monorepo/common/utils/constants.enum';
-import { Components } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
-import { MessageApprovedRepository } from '@mvx-monorepo/common/database/repository/message-approved.repository';
+import { CONSTANTS } from '@drt-monorepo/common/utils/constants.enum';
+import { Components } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
+import { MessageApprovedRepository } from '@drt-monorepo/common/database/repository/message-approved.repository';
 import { MessageApprovedStatus } from '@prisma/client';
 import { ApiNetworkProvider } from '@terradharitri/sdk-network-providers/out';
 import BigNumber from 'bignumber.js';
-import { GasError } from '@mvx-monorepo/common/contracts/entities/gas.error';
-import { GasInfo } from '@mvx-monorepo/common/utils/gas.info';
-import { RedisHelper } from '@mvx-monorepo/common/helpers/redis.helper';
+import { GasError } from '@drt-monorepo/common/contracts/entities/gas.error';
+import { GasInfo } from '@drt-monorepo/common/utils/gas.info';
+import { RedisHelper } from '@drt-monorepo/common/helpers/redis.helper';
 import {
   LAST_PROCESSED_DATA_TYPE,
   LastProcessedDataRepository,
-} from '@mvx-monorepo/common/database/repository/last-processed-data.repository';
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+} from '@drt-monorepo/common/database/repository/last-processed-data.repository';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 import TaskItem = Components.Schemas.TaskItem;
 import GatewayTransactionTask = Components.Schemas.GatewayTransactionTask;
 import ExecuteTask = Components.Schemas.ExecuteTask;

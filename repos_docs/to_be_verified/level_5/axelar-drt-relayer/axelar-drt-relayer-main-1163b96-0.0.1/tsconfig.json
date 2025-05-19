@@ -32,16 +32,16 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "typeRoots": [
-      "apps/mvx-event-processor/src/@types",
+      "apps/drt-event-processor/src/@types",
       "node_modules/@types"
     ],
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "paths": {
-      "@mvx-monorepo/common": [
+      "@drt-monorepo/common": [
         "libs/common/src"
       ],
-      "@mvx-monorepo/common/*": [
+      "@drt-monorepo/common/*": [
         "libs/common/src/*"
       ],
     }

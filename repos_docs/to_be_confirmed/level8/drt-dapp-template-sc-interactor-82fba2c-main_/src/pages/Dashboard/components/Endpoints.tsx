@@ -1,5 +1,5 @@
 import { EndpointDefinition } from '@terradharitri/sdk-core/out/smartcontracts';
-import { useSCExplorerContext } from '@terradharitri/sdk-dapp-sc-explorer/dist/contexts/SCExplorerContextProvider';
+import { useSCExplorerContext } from '@terradharitri/sdk-dapp-sc-explorer/contexts/SCExplorerContextProvider';
 import { whitelistEndpoints } from 'config';
 import { Endpoint } from './Endpoint';
 

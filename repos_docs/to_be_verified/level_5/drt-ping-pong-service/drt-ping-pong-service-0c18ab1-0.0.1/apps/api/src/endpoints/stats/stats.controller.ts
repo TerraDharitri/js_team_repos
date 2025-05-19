@@ -1,4 +1,4 @@
-import { PingPongStats, StatsService } from "@mvx-monorepo/common";
+import { PingPongStats, StatsService } from "@drt-monorepo/common";
 import { Controller, Get } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 

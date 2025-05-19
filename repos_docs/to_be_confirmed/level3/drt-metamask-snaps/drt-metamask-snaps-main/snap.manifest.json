@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Snap connector to DharitrI chain.",
   "proposedName": "DharitrI",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "https://github.com/TerraDharitri/drt-metamask-snaps.git"
   },
   "source": {
-    "shasum": "e9118GBKUjpU+VWz9vc588X7H7GEyLwVFjmi95I6Th8=",
+    "shasum": "lMq5ZuNCcLJvQA/FgZPudDA5vRn5Labiz07SdJogPck=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",

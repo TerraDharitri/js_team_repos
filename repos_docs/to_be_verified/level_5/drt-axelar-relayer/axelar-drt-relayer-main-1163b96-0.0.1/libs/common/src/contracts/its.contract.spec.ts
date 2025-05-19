@@ -6,7 +6,7 @@ import { TransactionEvent } from '@terradharitri/sdk-network-providers/out';
 
 import itsAbi from '../assets/interchain-token-service.abi.json';
 import BigNumber from 'bignumber.js';
-import { ItsContract } from '@mvx-monorepo/common/contracts/its.contract';
+import { ItsContract } from '@drt-monorepo/common/contracts/its.contract';
 
 describe('ItsContract', () => {
   let smartContract: DeepMocked<SmartContract>;

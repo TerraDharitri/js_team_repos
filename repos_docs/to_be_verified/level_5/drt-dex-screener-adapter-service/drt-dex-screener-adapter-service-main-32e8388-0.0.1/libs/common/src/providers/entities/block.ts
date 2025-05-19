@@ -1,4 +1,4 @@
-import { ElasticRound } from "@mvx-monorepo/common";
+import { ElasticRound } from "@drt-monorepo/common";
 import { ApiProperty } from "@nestjs/swagger";
 
 export class Block {

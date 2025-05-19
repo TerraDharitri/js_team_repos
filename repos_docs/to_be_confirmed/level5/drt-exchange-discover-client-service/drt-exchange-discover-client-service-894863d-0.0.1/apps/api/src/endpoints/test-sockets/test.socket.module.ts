@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
 import { ClientOptions, ClientProxyFactory, Transport } from "@nestjs/microservices";
-import { ApiConfigModule, ApiConfigService } from "@mvx-monorepo/common";
+import { ApiConfigModule, ApiConfigService } from "@drt-monorepo/common";
 import { TestSocketService } from "./test.socket.service";
 import configuration from "../../../config/configuration";
 

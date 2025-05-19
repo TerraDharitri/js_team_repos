@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-hw-provider",
-  "version": "7.0.0",
+  "version": "0.1.3",
   "description": "Signing provider for dApps: hardware wallet (Ledger)",
   "main": "out/index.js",
   "types": "out/index.d.js",
@@ -27,7 +27,7 @@
     "platform": "1.3.6"
   },
   "devDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0",
+    "@terradharitri/sdk-core": "0.1.4",
     "@types/chai": "4.2.11",
     "@types/mocha": "9.1.0",
     "@types/platform": "1.3.3",
@@ -38,6 +38,6 @@
     "typescript": "5.5.4"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0"
+    "@terradharitri/sdk-core": "0.1.4"
   }
 }

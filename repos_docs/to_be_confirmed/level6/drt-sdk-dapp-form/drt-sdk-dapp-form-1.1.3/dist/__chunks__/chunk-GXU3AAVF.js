@@ -1,0 +1,2 @@
+import{i as a}from"./chunk-P4IVSQC4.js";import{f as e}from"./chunk-JH2LJGTQ.js";e();a();var t=(r=>(r.receiver="receiver",r.gasPrice="gasPrice",r.data="data",r.tokenId="tokenId",r.amount="amount",r.gasLimit="gasLimit",r.receiverUsername="receiverUsername",r.rawReceiverUsername="rawReceiverUsername",r.senderUsername="senderUsername",r))(t||{});e();a();e();a();e();a();export{t as a};
+//# sourceMappingURL=chunk-GXU3AAVF.js.map

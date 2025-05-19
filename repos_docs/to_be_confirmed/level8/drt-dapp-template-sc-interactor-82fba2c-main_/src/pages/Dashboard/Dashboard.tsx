@@ -1,5 +1,5 @@
-import { MutateModal } from '@terradharitri/sdk-dapp-sc-explorer/dist/components/Modals/MutateModal';
-import { ScExplorerContainer } from '@terradharitri/sdk-dapp-sc-explorer/dist/containers/ScExplorerContainer';
+import { MutateModal } from '@terradharitri/sdk-dapp-sc-explorer/components/Modals/MutateModal';
+import { ScExplorerContainer } from '@terradharitri/sdk-dapp-sc-explorer/containers/ScExplorerContainer';
 import { contractAddress, contractAbi, environment } from 'config';
 import { useGetAccountInfo, useGetLoginInfo, useScrollToElement } from 'hooks';
 import { useGetSmartContractDetails } from 'hooks/useGetSmartContractDetails';

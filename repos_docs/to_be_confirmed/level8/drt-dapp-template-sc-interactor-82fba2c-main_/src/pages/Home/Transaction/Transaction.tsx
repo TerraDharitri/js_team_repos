@@ -1,4 +1,4 @@
-import { TRANSACTIONS_ENDPOINT } from '@terradharitri/sdk-dapp/dist/apiCalls/endpoints';
+import { TRANSACTIONS_ENDPOINT } from '@terradharitri/sdk-dapp/apiCalls/endpoints';
 import { Label } from 'components/Label';
 import { ExplorerLink } from 'components/sdkDappComponents';
 import { useGetNetworkConfig } from 'hooks';

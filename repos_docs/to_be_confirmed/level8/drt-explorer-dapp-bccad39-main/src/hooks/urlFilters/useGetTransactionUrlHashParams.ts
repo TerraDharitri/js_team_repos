@@ -1,4 +1,4 @@
-import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/dist/types';
+import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/types';
 import { useLocation } from 'react-router-dom';
 
 import { useGetTransactionDecodeFilters } from 'hooks';

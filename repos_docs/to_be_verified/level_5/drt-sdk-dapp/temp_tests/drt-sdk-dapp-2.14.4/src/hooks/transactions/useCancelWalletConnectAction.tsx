@@ -55,7 +55,7 @@ export function useCancelWalletConnectAction(action?: string) {
 
       await provider?.sendCustomRequest?.({
         request: {
-          method: DappCoreWCV2CustomMethodsEnum.mvx_cancelAction,
+          method: DappCoreWCV2CustomMethodsEnum.drt_cancelAction,
           params: { action }
         }
       });

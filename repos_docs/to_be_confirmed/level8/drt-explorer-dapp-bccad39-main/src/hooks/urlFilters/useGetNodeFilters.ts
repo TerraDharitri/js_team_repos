@@ -1,4 +1,4 @@
-import { stringIsInteger } from '@terradharitri/sdk-dapp/dist/utils/validation/stringIsInteger';
+import { stringIsInteger } from '@terradharitri/sdk-dapp/utils/validation/stringIsInteger';
 import { useSearchParams } from 'react-router-dom';
 
 export const useGetNodeFilters = () => {

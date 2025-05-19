@@ -1,6 +1,6 @@
 import { forwardRef, Module } from '@nestjs/common';
-import { ApiModule, DynamicModuleUtils } from '@mvx-monorepo/common';
-import { RedisHelper } from '@mvx-monorepo/common/helpers/redis.helper';
+import { ApiModule, DynamicModuleUtils } from '@drt-monorepo/common';
+import { RedisHelper } from '@drt-monorepo/common/helpers/redis.helper';
 import { MetricsModule } from '@terradharitri/sdk-nestjs-monitoring';
 
 @Module({

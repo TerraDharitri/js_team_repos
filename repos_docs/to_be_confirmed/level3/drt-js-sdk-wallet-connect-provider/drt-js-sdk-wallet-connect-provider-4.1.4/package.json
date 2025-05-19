@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-wallet-connect-provider",
-  "version": "4.1.4",
+  "version": "0.0.4",
   "description": "Signing provider for dApps: WalletConnect",
   "main": "out/index.js",
   "types": "out/index.d.js",
@@ -26,6 +26,6 @@
     "typescript": "4.1.2"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-12.9.0"
+    "@terradharitri/sdk-core": "0.0.15"
   }
 }

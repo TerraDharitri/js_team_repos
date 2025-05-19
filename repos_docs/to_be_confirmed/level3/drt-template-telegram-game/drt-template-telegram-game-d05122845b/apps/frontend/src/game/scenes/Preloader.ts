@@ -53,7 +53,7 @@ export class Preloader extends BaseScene {
         this.load.audio("backgroundLoop", "background_loop.mp3");
 
         this.ClickerLib.init({
-            walletStorageKey: "mxClickerWallet",
+            walletStorageKey: "drtClickerWallet",
             gameApiUrl: "wss://3a599743268b.ngrok.app",
             apiUrl: "https://api.dharitri.org",
         });

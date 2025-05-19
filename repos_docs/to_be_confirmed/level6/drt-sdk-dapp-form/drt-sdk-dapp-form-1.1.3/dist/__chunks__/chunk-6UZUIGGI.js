@@ -1,0 +1,52 @@
+import{a as g}from"./chunk-XGZMKY2R.js";import{a as k}from"./chunk-5ASRFLQP.js";import{c as b}from"./chunk-EXRI3DJM.js";import{c as s,f as u}from"./chunk-IO4ZZN6V.js";import{a as i,g as c,i as r}from"./chunk-P4IVSQC4.js";import{f as t}from"./chunk-JH2LJGTQ.js";t();t();r();var V=`:root {
+  --primary: #1b46c2;
+  --primary-light: #1392ff;
+  --border-color: #dee2e6;
+  --card-bg: white;
+  --black: black;
+  --light: #fafafa;
+  --secondary: #6c757d;
+  --card-bg: #ffffff;
+  --border-color: #dee2e6;
+  --warning: #ffc107;
+  --btn-blue: #163aa0;
+  --brown: #212529;
+  --link-hover-color: #122e7f;
+  --dapp-form-bg: #242526;
+  --dapp-form-label-color: #9ba5b4;
+  --dapp-form-input-bg: #131313;
+  --dapp-form-placeholder-color: #9ba5b4;
+  --dapp-form-input-color: #ffffff;
+  --dapp-form-error-color: #ff4f8a;
+  --dapp-form-max-btn-bg: #242526;
+  --dapp-form-max-hover-btn-bg: #3066ff;
+  --dapp-form-max-btn-color: #ffffff;
+  --dapp-form-input-border-radius: 8px;
+  --dapp-form-input-border-color: #ced4da;
+  --dapp-form-input-border-focus: #7191eb;
+  --dapp-form-select-bg: #242526;
+  --dapp-form-select-input-color: #ffffff;
+  --dapp-form-select-input-color-hover: #9ba5b4;
+  --dapp-form-select-icon-border: #49494d;
+  --dapp-form-select-icon-bg: #2c2d2f;
+  --dapp-form-select-indicator-fill: #ffffff;
+  --dapp-form-select-indicator-fill-hover: #9ba5b4;
+  --dapp-form-select-menu-bg: #18191a;
+  --dapp-form-select-menu-border: #49494d;
+  --dapp-form-select-menu-scroll-track: transparent;
+  --dapp-form-seleet-menu-scroll-thumb: #4a4b4d;
+  --dapp-form-select-option-bg: #18191a;
+  --dapp-form-select-option-bg-hover: #393b3c;
+  --dapp-form-select-option-bg-selected: #393b3c;
+  --dapp-form-select-option-color: #ffffff;
+  --dapp-form-btn-bg: #23f7dd;
+  --dapp-form-btn-bg-hover: #0ac2ae;
+  --dapp-form-nftsft-preview-bg: #262626;
+}
+
+.dapp-core-component__styles-module__selectTokenContainer {
+  margin-bottom: 1.5rem;
+  z-index: 8;
+  position: relative;
+}`;document.head.appendChild(document.createElement("style")).appendChild(document.createTextNode(V));var n={selectTokenContainer:"dapp-core-component__styles-module__selectTokenContainer"};import o from"react";import*as v from"@terradharitri/sdk-dapp/constants/index";import X from"classnames";import H,{components as J}from"react-select";r();var K=a=>o.createElement("div",{className:`token-option ${a.isSelected?"is-selected":""}`,"data-testid":`${a.value}-option`},o.createElement(J.Option,i({},a))),pe=({className:a,label:l})=>{let{formInfo:h,accountInfo:I,tokensInfo:w}=b(),{readonly:E}=h,{balance:y}=I,{getTokens:C,areTokensLoading:T,tokens:x,tokenId:L,rewaLabel:p,RewaIcon:N,tokenIdError:O,onChangeTokenId:_,isTokenIdInvalid:D}=w,S=({token:e})=>o.createElement(g,{inDropdown:!0,token:e,isRewa:e.identifier===p,RewaIcon:N}),f=[{name:"DharitrI eGold",identifier:p,balance:y,decimals:v.DECIMALS,ticker:""},...x].map(e=>({value:e.identifier,label:e.name,assets:e.assets,token:e}));function M(){return c(this,null,function*(){yield C()})}let F=e=>{e&&_(e.value)},R=({value:e,label:G},d)=>{if(Boolean(d)){let P=d.trim().toLowerCase(),m=j=>j.toLowerCase().indexOf(P)>-1;return m(e)||m(G)}return!0},$=window.getComputedStyle(document.documentElement),A=u({docStyle:$});return o.createElement("div",{className:X(n.selectTokenContainer,a)},l&&o.createElement("label",{htmlFor:"tokenId","data-testid":"tokenIdLabel",className:n.selectTokenLabel},l),o.createElement(H,{className:"selectToken",classNamePrefix:"selectToken",components:{Option:K},filterOption:R,formatOptionLabel:S,inputId:"tokenId",isDisabled:s("tokenId",E),isLoading:T,name:"tokenId",onChange:F,onMenuOpen:M,openMenuOnFocus:!0,options:f,styles:a?{}:A,value:f.find(({value:e})=>e===L)||void 0}),D&&o.createElement("div",{className:k.error,"data-testid":"tokenIdError"},o.createElement("small",null,O)))};export{pe as a};
+//# sourceMappingURL=chunk-6UZUIGGI.js.map

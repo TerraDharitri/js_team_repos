@@ -1,8 +1,8 @@
 import { forwardRef, Module } from '@nestjs/common';
 import { GatewayProcessor } from './gateway.processor';
-import { ContractsModule } from '@mvx-monorepo/common/contracts/contracts.module';
-import { DatabaseModule } from '@mvx-monorepo/common';
-import { ApiModule } from '@mvx-monorepo/common/api/api.module';
+import { ContractsModule } from '@drt-monorepo/common/contracts/contracts.module';
+import { DatabaseModule } from '@drt-monorepo/common';
+import { ApiModule } from '@drt-monorepo/common/api/api.module';
 import { GasServiceProcessor } from './gas-service.processor';
 import { ItsProcessor } from './its.processor';
 

@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-metamask-provider",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "description": "Signing provider for dApps: Metamask Snap",
   "license": "GPL-3.0-or-later",
   "author": "terradharitri",
@@ -23,7 +23,7 @@
     "protobufjs": "7.4.0"
   },
   "devDependencies": {
-    "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0",
+    "@terradharitri/sdk-core": "0.1.4",
     "@types/node": "18.19.0",
     "@typescript-eslint/eslint-plugin": "5.0.0",
     "@typescript-eslint/parser": "5.14.0",
@@ -42,6 +42,5 @@
     "typescript": "5.0.4"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0"
-  }
+    "@terradharitri/sdk-core": "0.1.4"  }
 }

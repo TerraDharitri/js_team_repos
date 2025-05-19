@@ -1,7 +1,7 @@
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
-import { MessageApprovedRepository } from '@mvx-monorepo/common/database/repository/message-approved.repository';
-import { ProviderKeys } from '@mvx-monorepo/common/utils/provider.enum';
+import { MessageApprovedRepository } from '@drt-monorepo/common/database/repository/message-approved.repository';
+import { ProviderKeys } from '@drt-monorepo/common/utils/provider.enum';
 import { UserSigner } from '@terradharitri/sdk-wallet/out';
 import {
   Address,
@@ -13,18 +13,18 @@ import {
   Transaction,
 } from '@terradharitri/sdk-core/out';
 import { MessageApproved, MessageApprovedStatus } from '@prisma/client';
-import { TransactionsHelper } from '@mvx-monorepo/common/contracts/transactions.helper';
-import { ApiConfigService, AxelarGmpApi } from '@mvx-monorepo/common';
-import { ItsContract } from '@mvx-monorepo/common/contracts/its.contract';
+import { TransactionsHelper } from '@drt-monorepo/common/contracts/transactions.helper';
+import { ApiConfigService, AxelarGmpApi } from '@drt-monorepo/common';
+import { ItsContract } from '@drt-monorepo/common/contracts/its.contract';
 import { Locker } from '@terradharitri/sdk-nestjs-common';
-import { GasError, NotEnoughGasError } from '@mvx-monorepo/common/contracts/entities/gas.error';
-import { CannotExecuteMessageReason, Components, Event } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
+import { GasError, NotEnoughGasError } from '@drt-monorepo/common/contracts/entities/gas.error';
+import { CannotExecuteMessageReason, Components, Event } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
 import { AxiosError } from 'axios';
-import { DecodingUtils } from '@mvx-monorepo/common/utils/decoding.utils';
-import { FeeHelper } from '@mvx-monorepo/common/contracts/fee.helper';
-import { CONSTANTS } from '@mvx-monorepo/common/utils/constants.enum';
+import { DecodingUtils } from '@drt-monorepo/common/utils/decoding.utils';
+import { FeeHelper } from '@drt-monorepo/common/contracts/fee.helper';
+import { CONSTANTS } from '@drt-monorepo/common/utils/constants.enum';
 import CannotExecuteMessageEventV2 = Components.Schemas.CannotExecuteMessageEventV2;
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 // Support a max of 3 retries (mainly because some Interchain Token Service endpoints need to be called 2 times)
 const MAX_NUMBER_OF_RETRIES: number = 3;

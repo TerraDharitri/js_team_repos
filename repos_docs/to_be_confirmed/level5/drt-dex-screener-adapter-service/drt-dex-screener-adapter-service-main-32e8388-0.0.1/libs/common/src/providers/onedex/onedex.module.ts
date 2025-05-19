@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { DynamicModuleUtils } from "@mvx-monorepo/common";
+import { DynamicModuleUtils } from "@drt-monorepo/common";
 import { IndexerModule } from "../../services/indexer";
 import { ApiModule } from "../../services/dharitri.api";
 import { OneDexService } from "./onedex.service";

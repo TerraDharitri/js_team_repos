@@ -1,5 +1,5 @@
 {
-  "name": "axelar-mvx-amplifier",
+  "name": "axelar-drt-amplifier",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -8,11 +8,11 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build common && nest build",
-    "build:all": "nest build common && nest build mvx-event-processor && nest build axelar-event-processor",
+    "build:all": "nest build common && nest build drt-event-processor && nest build axelar-event-processor",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest build common && nest build mvx-event-processor & nest start",
-    "start:watch": "nest build common && nest build mvx-event-processor & nest start --watch",
-    "start:debug": "nest build common && nest build mvx-event-processor & nest start --watch --debug",
+    "start": "nest build common && nest build drt-event-processor & nest start",
+    "start:watch": "nest build common && nest build drt-event-processor & nest start --watch",
+    "start:debug": "nest build common && nest build drt-event-processor & nest start --watch --debug",
     "start:axelar-event-processor": "nest build common && nest build axelar-event-processor & nest start axelar-event-processor",
     "start:axelar-event-processor:watch": "nest build common && nest build axelar-event-processor & nest start axelar-event-processor --watch",
     "start:axelar-event-processor:debug": "nest build common && nest build axelar-event-processor & nest start axelar-event-processor --watch --debug",
@@ -22,7 +22,7 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "dotenv -e .env.test -- jest --config ./apps/mvx-event-processor/test/jest-e2e.json --force-exit",
+    "test:e2e": "dotenv -e .env.test -- jest --config ./apps/drt-event-processor/test/jest-e2e.json --force-exit",
     "migrate": "prisma migrate dev",
     "generate": "prisma generate",
     "deploy": "prisma migrate deploy",
@@ -93,7 +93,7 @@
     "typescript": "^5.4.5"
   },
   "_moduleAliases": {
-    "@mvx-monorepo/common": "dist/libs/common"
+    "@drt-monorepo/common": "dist/libs/common"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -112,8 +112,8 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node",
     "moduleNameMapper": {
-      "^@mvx-monorepo/common(|/.*)$": "<rootDir>/libs/common/src/$1",
-      "^@mvx-monorepo/common": "<rootDir>/libs/common"
+      "^@drt-monorepo/common(|/.*)$": "<rootDir>/libs/common/src/$1",
+      "^@drt-monorepo/common": "<rootDir>/libs/common"
     }
   }
 }

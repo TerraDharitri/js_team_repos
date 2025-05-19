@@ -6,11 +6,11 @@ dotenv.config({
 import 'module-alias/register';
 import { NestFactory } from '@nestjs/core';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
-import { ApiConfigService } from '@mvx-monorepo/common';
+import { ApiConfigService } from '@drt-monorepo/common';
 import { PrivateAppModule } from './private.app.module';
 import { Logger } from '@nestjs/common';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
-import { PubSubListenerModule } from '@mvx-monorepo/common';
+import { PubSubListenerModule } from '@drt-monorepo/common';
 import { LoggerInitializer } from '@terradharitri/sdk-nestjs-common';
 
 import '@terradharitri/sdk-nestjs-common/lib/utils/extensions/array.extensions';

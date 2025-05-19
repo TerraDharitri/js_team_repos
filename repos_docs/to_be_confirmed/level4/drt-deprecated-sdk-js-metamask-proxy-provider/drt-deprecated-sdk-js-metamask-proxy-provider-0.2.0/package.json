@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-metamask-proxy-provider",
-  "version": "0.2.0",
+  "version": "0.0.1",
   "description": "Signing provider for dApps: Metamask Proxy Provider",
   "main": "out/index.js",
   "types": "out/index.d.js",
@@ -20,9 +20,9 @@
   "author": "DharitrI",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS_JS_versions_test/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.3.0-beta.0",
-    "@terradharitri/sdk-dapp-utils": "/home/dharitri/Desktop/TS_JS_versions_test/js_team_repos/repos_docs/level3/drt-sdk-dapp-utils/drt-sdk-dapp-utils-0.0.1",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Desktop/TS_JS_versions_test/js_team_repos/repos_docs/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-0.4.0",
+    "@terradharitri/sdk-core": "0.1.3",
+    "@terradharitri/sdk-dapp-utils": "0.1.1",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "0.0.2",
     "@types/node": "18.19.0",
     "@typescript-eslint/eslint-plugin": "5.0.0",
     "@typescript-eslint/parser": "5.14.0",
@@ -42,8 +42,8 @@
     "typescript": "5.0.4"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS_JS_versions_test/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.3.0-beta.0",
-    "@terradharitri/sdk-dapp-utils": "/home/dharitri/Desktop/TS_JS_versions_test/js_team_repos/repos_docs/level3/drt-sdk-dapp-utils/drt-sdk-dapp-utils-0.0.1"
+    "@terradharitri/sdk-core": "0.1.3",
+    "@terradharitri/sdk-dapp-utils": "0.1.1"
   },
   "dependencies": {
     "@types/jest": "^29.5.11",

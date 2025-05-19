@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-web-wallet-provider",
-  "version": "2.4.0",
+  "version": "0.0.2",
   "description": "Signing provider for dApps: DharitrI (Web) Wallet",
   "main": "out/index.js",
   "types": "out/index.d.js",

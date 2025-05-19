@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/dist/types';
+import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/types';
 import classNames from 'classnames';
 
 import { CopyButton, DataDecode, AccountLink, NetworkLink } from 'components';

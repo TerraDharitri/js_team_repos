@@ -1,13 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/mvx-event-processor/src",
+  "sourceRoot": "apps/drt-event-processor/src",
   "compilerOptions": {
     "webpack": false,
     "plugins": [
       "@nestjs/swagger"
     ],
-    "tsConfigPath": "apps/mvx-event-processor/tsconfig.app.json",
+    "tsConfigPath": "apps/drt-event-processor/tsconfig.app.json",
     "assets": [
       {
         "include": "../libs/common/src/assets/axelar-gmp-api.schema.yaml",
@@ -16,7 +16,7 @@
     ]
   },
   "monorepo": true,
-  "root": "apps/mvx-event-processor",
+  "root": "apps/drt-event-processor",
   "projects": {
     "axelar-event-processor": {
       "type": "application",
@@ -27,13 +27,13 @@
         "tsConfigPath": "apps/axelar-event-processor/tsconfig.app.json"
       }
     },
-    "mvx-event-processor": {
+    "drt-event-processor": {
       "type": "application",
-      "root": "apps/mvx-event-processor",
+      "root": "apps/drt-event-processor",
       "entryFile": "main",
-      "sourceRoot": "apps/mvx-event-processor/src",
+      "sourceRoot": "apps/drt-event-processor/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/mvx-event-processor/tsconfig.app.json"
+        "tsConfigPath": "apps/drt-event-processor/tsconfig.app.json"
       }
     },
     "common": {

@@ -1,7 +1,7 @@
 import { AbiRegistry, Address, ResultsParser, SmartContract, TokenTransfer } from "@terradharitri/sdk-core/out";
 import { Injectable } from "@nestjs/common";
 import pingPongAbi from './ping.pong.abi.json';
-import { ApiConfigService } from "@mvx-monorepo/common";
+import { ApiConfigService } from "@drt-monorepo/common";
 import { ApiNetworkProvider } from "@terradharitri/sdk-network-providers/out";
 
 @Injectable()

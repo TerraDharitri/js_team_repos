@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-common",
-  "version": "3.7.7",
+  "version": "0.0.12",
   "description": "Dharitri SDK Nestjs common package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -33,14 +33,14 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.5.0",
-    "@terradharitri/sdk-network-providers": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-network-providers/drt-js-sdk-network-providers-2.8.0",
+    "@terradharitri/sdk-core": "0.1.8",
+    "@terradharitri/sdk-network-providers": "0.0.7",
     "nest-winston": "^1.6.2",
     "uuid": "^8.3.2",
     "winston": "^3.7.2"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-nestjs-monitoring": "../monitoring",
+    "@terradharitri/sdk-nestjs-monitoring": "0.0.12",
     "@nestjs/common": "^10.x",
     "@nestjs/config": "^3.x",
     "@nestjs/core": "^10.x",

@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-web-wallet-iframe-provider",
-  "version": "3.0.0",
+  "version": "0.0.5",
   "description": "Signing provider for dApps: Web Wallet Iframe Provider",
   "main": "out/index.js",
   "types": "out/index.d.js",
@@ -22,8 +22,8 @@
   "author": "DharitrI",
   "license": "MIT",
   "devDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-14.0.1",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-main",
+    "@terradharitri/sdk-core": "0.1.11",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "0.0.5",
     "@types/node": "18.19.0",
     "@typescript-eslint/eslint-plugin": "5.0.0",
     "@typescript-eslint/parser": "5.14.0",
@@ -43,12 +43,16 @@
     "typescript": "5.0.4"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-14.0.1",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-main"
+    "@terradharitri/sdk-core": "0.1.11",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "0.0.5"
   },
   "dependencies": {
     "@types/jest": "^29.5.11",
     "@types/qs": "6.9.10",
-    "qs": "6.11.2"
+    "and": "^0.0.3",
+    "compile": "^0.0.2",
+    "npm": "^11.3.0",
+    "qs": "6.11.2",
+    "run": "^1.5.0"
   }
 }

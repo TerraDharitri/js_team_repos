@@ -1,6 +1,6 @@
 import { BullModule } from '@nestjs/bull';
 import { Module } from '@nestjs/common';
-import { ApiConfigModule, ApiConfigService } from '@mvx-monorepo/common';
+import { ApiConfigModule, ApiConfigService } from '@drt-monorepo/common';
 import configuration from '../../config/configuration';
 
 @Module({

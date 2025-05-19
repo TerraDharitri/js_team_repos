@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { EndpointsServicesModule } from './endpoints/endpoints.services.module';
 import { EndpointsControllersModule } from './endpoints/endpoints.controllers.module';
-import { DynamicModuleUtils } from '@mvx-monorepo/common';
+import { DynamicModuleUtils } from '@drt-monorepo/common';
 import { LoggingModule } from '@terradharitri/sdk-nestjs-common';
 
 @Module({

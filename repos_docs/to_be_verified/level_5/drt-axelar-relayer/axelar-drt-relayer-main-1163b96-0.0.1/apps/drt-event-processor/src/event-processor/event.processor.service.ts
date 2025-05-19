@@ -1,12 +1,12 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { ApiConfigService, CacheInfo } from '@mvx-monorepo/common';
+import { ApiConfigService, CacheInfo } from '@drt-monorepo/common';
 import { NotifierBlockEvent, NotifierEvent } from './types';
 import { RabbitSubscribe } from '@golevelup/nestjs-rabbitmq';
 import { EVENTS_NOTIFIER_QUEUE } from '../../../../config/configuration';
-import { RedisHelper } from '@mvx-monorepo/common/helpers/redis.helper';
+import { RedisHelper } from '@drt-monorepo/common/helpers/redis.helper';
 import { BinaryUtils } from '@terradharitri/sdk-nestjs-common';
-import { EventIdentifiers, Events } from '@mvx-monorepo/common/utils/event.enum';
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { EventIdentifiers, Events } from '@drt-monorepo/common/utils/event.enum';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 @Injectable()
 export class EventProcessorService {

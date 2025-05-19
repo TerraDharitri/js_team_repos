@@ -1,9 +1,9 @@
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
 import { Test } from '@nestjs/testing';
 import { BinaryUtils } from '@terradharitri/sdk-nestjs-common';
-import { Events } from '@mvx-monorepo/common/utils/event.enum';
+import { Events } from '@drt-monorepo/common/utils/event.enum';
 import { AbiRegistry, Address, ResultsParser, SmartContract } from '@terradharitri/sdk-core/out';
-import { GatewayContract } from '@mvx-monorepo/common/contracts/gateway.contract';
+import { GatewayContract } from '@drt-monorepo/common/contracts/gateway.contract';
 import { TransactionEvent } from '@terradharitri/sdk-network-providers/out';
 import { NotifierEvent } from 'apps/drt-event-processor/src/event-processor/types';
 

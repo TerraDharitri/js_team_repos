@@ -1,10 +1,10 @@
 import { forwardRef, Module } from '@nestjs/common';
-import { ApiConfigModule, DatabaseModule, DynamicModuleUtils } from '@mvx-monorepo/common';
+import { ApiConfigModule, DatabaseModule, DynamicModuleUtils } from '@drt-monorepo/common';
 import { ApprovalsProcessorService } from './approvals.processor.service';
-import { ApiModule } from '@mvx-monorepo/common/api/api.module';
-import { ContractsModule } from '@mvx-monorepo/common/contracts/contracts.module';
+import { ApiModule } from '@drt-monorepo/common/api/api.module';
+import { ContractsModule } from '@drt-monorepo/common/contracts/contracts.module';
 import { ScheduleModule } from '@nestjs/schedule';
-import { HelpersModule } from '@mvx-monorepo/common/helpers/helpers.module';
+import { HelpersModule } from '@drt-monorepo/common/helpers/helpers.module';
 
 @Module({
   imports: [

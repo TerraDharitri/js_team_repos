@@ -1,7 +1,7 @@
 import 'module-alias/register';
 import { NestFactory } from '@nestjs/core';
 import { TransactionProcessorModule } from './processor';
-import { ApiConfigService, PubSubListenerModule } from '@mvx-monorepo/common';
+import { ApiConfigService, PubSubListenerModule } from '@drt-monorepo/common';
 import { PrivateAppModule } from './private.app.module';
 import configuration from '../config/configuration';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';

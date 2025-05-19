@@ -1,0 +1,2 @@
+import{c as o}from"./chunk-IO4ZZN6V.js";import{h as n}from"./chunk-AWV4CCGJ.js";import{i as t}from"./chunk-P4IVSQC4.js";import{f as r}from"./chunk-JH2LJGTQ.js";r();import e from"bignumber.js";t();function y({amount:a="",available:m,readonly:i=!1,entireBalanceMinusDust:s}){let u=new e(a),l=new e(s).isGreaterThan(u),f=!a,p=o("amount",i);return(f||l)&&m!==n&&!p}export{y as a};
+//# sourceMappingURL=chunk-2PU6H37P.js.map

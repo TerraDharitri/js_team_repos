@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/dist/types';
-import { decodeForDisplay } from '@terradharitri/sdk-dapp/dist/utils/transactions/transactionInfoHelpers/decodeForDisplay';
+import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/types';
+import { decodeForDisplay } from '@terradharitri/sdk-dapp/utils/transactions/transactionInfoHelpers/decodeForDisplay';
 import { InfoTooltip, NetworkLink } from 'components';
 import {
   getTransactionMessages,

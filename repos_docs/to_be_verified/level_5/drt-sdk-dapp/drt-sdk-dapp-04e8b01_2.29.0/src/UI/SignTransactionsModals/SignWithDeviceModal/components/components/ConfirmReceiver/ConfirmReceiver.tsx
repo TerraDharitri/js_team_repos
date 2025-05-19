@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import BigNumber from 'bignumber.js';
 
 import { ACCOUNTS_ENDPOINT } from 'apiCalls';
-import DharitriIconSimple from 'assets/icons/mvx-icon-simple.svg';
+import DharitriIconSimple from 'assets/icons/drt-icon-simple.svg';
 import { DataTestIdsEnum } from 'constants/index';
 import { withStyles } from 'hocs/withStyles';
 import { useGetAccountFromApi } from 'hooks';

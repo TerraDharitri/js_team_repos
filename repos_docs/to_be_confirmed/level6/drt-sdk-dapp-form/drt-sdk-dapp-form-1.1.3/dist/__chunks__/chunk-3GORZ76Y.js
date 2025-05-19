@@ -1,0 +1,2 @@
+import{b as a}from"./chunk-UMC5E373.js";import{g as s,i as o}from"./chunk-P4IVSQC4.js";import{f as r}from"./chunk-JH2LJGTQ.js";r();import i from"axios";o();function d(e){return s(this,null,function*(){try{let t=yield a(),{data:c}=yield i.post("/transaction/cost",e,t);return{data:c,success:!0}}catch(t){return console.error(t),{success:!1}}})}export{d as a};
+//# sourceMappingURL=chunk-3GORZ76Y.js.map

@@ -1,4 +1,4 @@
-import { ApiConfigModule, DynamicModuleUtils, StatsModule } from "@mvx-monorepo/common";
+import { ApiConfigModule, DynamicModuleUtils, StatsModule } from "@drt-monorepo/common";
 import { Module } from "@nestjs/common";
 import configuration from '../../config/configuration';
 import { PingPongModule as PingPongRawModule } from "./ping-pong.raw/ping.pong.module";

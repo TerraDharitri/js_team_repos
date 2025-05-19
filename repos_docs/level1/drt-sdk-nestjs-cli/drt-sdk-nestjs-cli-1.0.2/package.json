@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-cli",
-  "version": "1.0.2",
+  "version": "0.0.3",
   "description": "Dharitri configuration schema helper functions",
   "author": "",
   "private": false,
@@ -40,7 +40,7 @@
     "typescript": "^5.3.2"
   },
   "_moduleAliases": {
-    "@mvx-monorepo/common": "dist/libs/common"
+    "@drt-monorepo/common": "dist/libs/common"
   },
   "jest": {
     "moduleFileExtensions": [

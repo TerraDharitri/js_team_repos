@@ -1,4 +1,4 @@
-import type { AccountType } from '@terradharitri/sdk-dapp/dist/types';
+import type { AccountType } from '@terradharitri/sdk-dapp/types';
 import { Label } from 'components/Label';
 import { trimUsernameDomain } from 'helpers/sdkDappHelpers';
 import { ProfileType } from 'types';

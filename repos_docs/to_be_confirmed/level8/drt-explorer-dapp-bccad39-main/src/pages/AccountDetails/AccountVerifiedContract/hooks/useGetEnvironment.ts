@@ -1,6 +1,6 @@
-import { getEnvironmentForChainId } from '@terradharitri/sdk-dapp/dist/apiCalls/configuration/getEnvironmentForChainId';
-import { fallbackNetworkConfigurations } from '@terradharitri/sdk-dapp/dist/constants/index';
-import { EnvironmentsEnum } from '@terradharitri/sdk-dapp/dist/types/enums.types';
+import { getEnvironmentForChainId } from '@terradharitri/sdk-dapp/apiCalls/configuration/getEnvironmentForChainId';
+import { fallbackNetworkConfigurations } from '@terradharitri/sdk-dapp/constants/index';
+import { EnvironmentsEnum } from '@terradharitri/sdk-dapp/types/enums.types';
 import { useSelector } from 'react-redux';
 import { activeNetworkSelector } from 'redux/selectors';
 

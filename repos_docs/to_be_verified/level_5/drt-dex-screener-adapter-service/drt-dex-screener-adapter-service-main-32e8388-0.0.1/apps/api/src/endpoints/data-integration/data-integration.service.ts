@@ -3,11 +3,11 @@ import {
   ApiConfigService, Asset, AssetResponse, Block, ElasticRound, EventsResponse,
   IndexerService, JoinExitEvent, LatestBlockResponse,
   ApiService, PairResponse, SwapEvent, DharitrixService,
-} from "@mvx-monorepo/common";
+} from "@drt-monorepo/common";
 import { AddressUtils, BatchUtils, OriginLogger } from "@terradharitri/sdk-nestjs-common";
-import { IProviderService } from "@mvx-monorepo/common/providers/interface";
-import { GeneralEvent } from "@mvx-monorepo/common/providers/entities/general.event";
-import { OneDexService } from "@mvx-monorepo/common/providers";
+import { IProviderService } from "@drt-monorepo/common/providers/interface";
+import { GeneralEvent } from "@drt-monorepo/common/providers/entities/general.event";
+import { OneDexService } from "@drt-monorepo/common/providers";
 
 @Injectable()
 export class DataIntegrationService {

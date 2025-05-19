@@ -1,5 +1,5 @@
 import { DynamicModule, Module } from '@nestjs/common';
-import { DynamicModuleUtils } from '@mvx-monorepo/common/utils/dynamic.module.utils';
+import { DynamicModuleUtils } from '@drt-monorepo/common/utils/dynamic.module.utils';
 import { ApiConfigModule } from '../config/api.config.module';
 import { PubSubListenerController } from './pub.sub.listener.controller';
 import { LoggingModule } from '@terradharitri/sdk-nestjs-common';

@@ -4,7 +4,7 @@ import {
   type OperaWalletLoginButtonPropsType,
   type LedgerLoginButtonPropsType,
   type WalletConnectLoginButtonPropsType
-} from '@terradharitri/sdk-dapp/dist/UI';
+} from '@terradharitri/sdk-dapp/UI';
 import { useNavigate } from 'react-router-dom';
 import {
   ExtensionLoginButton,

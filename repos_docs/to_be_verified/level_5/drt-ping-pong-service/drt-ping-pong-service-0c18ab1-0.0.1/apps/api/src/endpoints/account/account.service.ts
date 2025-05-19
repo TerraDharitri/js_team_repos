@@ -1,5 +1,5 @@
 import { Injectable } from "@nestjs/common";
-import { ApiConfigService } from "@mvx-monorepo/common";
+import { ApiConfigService } from "@drt-monorepo/common";
 import { ApiService } from "@terradharitri/sdk-nestjs-http";
 import { Account } from "./entities";
 

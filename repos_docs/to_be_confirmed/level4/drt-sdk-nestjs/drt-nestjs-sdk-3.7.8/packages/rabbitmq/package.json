@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-rabbitmq",
-  "version": "3.7.8",
+  "version": "0.0.13",
   "description": "Dharitri SDK Nestjs rabbitmq client package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -37,7 +37,7 @@
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-nestjs-common": "../common",
+    "@terradharitri/sdk-nestjs-common": "0.0.13",
     "@nestjs/common": "^10.x"
   },
   "publishConfig": {

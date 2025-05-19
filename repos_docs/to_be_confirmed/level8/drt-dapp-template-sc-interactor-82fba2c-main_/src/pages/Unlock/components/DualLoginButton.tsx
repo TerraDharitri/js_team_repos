@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useEffect, useRef, useState } from 'react';
-import { InitiateLoginFunctionType } from '@terradharitri/sdk-dapp/dist/types/login.types';
-import { WebWalletLoginButtonPropsType } from '@terradharitri/sdk-dapp/dist/UI/webWallet/WebWalletLoginButton/WebWalletLoginButton';
+import { InitiateLoginFunctionType } from '@terradharitri/sdk-dapp/types/login.types';
+import { WebWalletLoginButtonPropsType } from '@terradharitri/sdk-dapp/UI/webWallet/WebWalletLoginButton/WebWalletLoginButton';
 
 export const DualLoginButton = ({
   onInitiateLogin,

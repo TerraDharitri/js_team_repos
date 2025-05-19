@@ -339,7 +339,7 @@
 "@terradharitri/sdk-wallet-connect-provider@4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@terradharitri/sdk-wallet-connect-provider/-/sdk-wallet-connect-provider-4.0.2.tgz#e127aaa53612bc0dbc38aeb77b48681b18244b5d"
-  integrity sha512-WGim7kD49N5LoWestdmvxBYeJEDCevJv50Gt/RFBtZoWT3OyDoWu2wotVNssjPW0UQ5EyYPae96g+6FNHrXsxw==
+  integrity sha512-WGim7kD49N5LoWestddrtBYeJEDCevJv50Gt/RFBtZoWT3OyDoWu2wotVNssjPW0UQ5EyYPae96g+6FNHrXsxw==
   dependencies:
     "@walletconnect/sign-client" "2.9.0"
     "@walletconnect/utils" "2.9.0"

@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { NoSQLDatabaseModule } from '@mvx-monorepo/common';
+import { NoSQLDatabaseModule } from '@drt-monorepo/common';
 import { Token, TokenSchema } from './schemas/token.schema';
 import { TokenService } from './token.service';
 

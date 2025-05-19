@@ -8,10 +8,10 @@ import {
   ApiService,
   CacheInfo,
   IndexerService,
-} from "@mvx-monorepo/common";
+} from "@drt-monorepo/common";
 import { Injectable } from "@nestjs/common";
-import { GeneralEvent } from "@mvx-monorepo/common/providers/entities/general.event";
-import { IProviderService } from "@mvx-monorepo/common/providers";
+import { GeneralEvent } from "@drt-monorepo/common/providers/entities/general.event";
+import { IProviderService } from "@drt-monorepo/common/providers";
 import { OneDexPair } from "./entities/onedex.pair";
 import swapAbi from "./abis/swap.abi.json";
 import { AbiRegistry, Address, Interaction, ResultsParser, SmartContract, TypedOutcomeBundle, U32Value } from "@terradharitri/sdk-core/out";

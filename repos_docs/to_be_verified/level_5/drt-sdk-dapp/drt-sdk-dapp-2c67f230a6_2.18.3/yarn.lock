@@ -2017,7 +2017,7 @@
 "@terradharitri/sdk-wallet-connect-provider@4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@terradharitri/sdk-wallet-connect-provider/-/sdk-wallet-connect-provider-4.0.2.tgz#e127aaa53612bc0dbc38aeb77b48681b18244b5d"
-  integrity sha512-WGim7kD49N5LoWestdmvxBYeJEDCevJv50Gt/RFBtZoWT3OyDoWu2wotVNssjPW0UQ5EyYPae96g+6FNHrXsxw==
+  integrity sha512-WGim7kD49N5LoWestddrtBYeJEDCevJv50Gt/RFBtZoWT3OyDoWu2wotVNssjPW0UQ5EyYPae96g+6FNHrXsxw==
   dependencies:
     "@walletconnect/sign-client" "2.9.0"
     "@walletconnect/utils" "2.9.0"
@@ -15565,7 +15565,7 @@ which-module@^2.0.0:
 which-typed-array@^1.1.2, which-typed-array@^1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/which-typed-array/-/which-typed-array-1.1.9.tgz#307cf898025848cf995e795e8423c7f337efbde6"
-  integrity sha512-w9c4xkx6mPidwp7180ckYWfMmvxpjlZuIudNtDf4N/tTAUB8VJbX25qZoAsrtGuYNnGw3pa0AXgbGKRB8/EceA==
+  integrity sha512-w9c4xkx6mPidwp7180ckYWfMdrtpjlZuIudNtDf4N/tTAUB8VJbX25qZoAsrtGuYNnGw3pa0AXgbGKRB8/EceA==
   dependencies:
     available-typed-arrays "^1.0.5"
     call-bind "^1.0.2"

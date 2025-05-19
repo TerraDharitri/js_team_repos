@@ -2,7 +2,7 @@
 	"name": "vscode-numbat-ide",
 	"displayName": "DharitrI IDE",
 	"description": "DharitrI IDE for developing Smart Contracts",
-	"version": "0.22.0",
+	"version": "0.0.1",
 	"publisher": "Numbat",
 	"repository": {
 		"type": "git",

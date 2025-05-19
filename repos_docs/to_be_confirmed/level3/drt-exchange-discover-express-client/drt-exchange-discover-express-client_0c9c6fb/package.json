@@ -1,0 +1,19 @@
+{
+  "name": "drt-exchange-discover-express-client",
+  "version": "0.0.1",
+  "description": "Demo Express app for projects participating in Exchange Discover program",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@terradharitri/sdk-core": "0.0.18",
+    "@terradharitri/sdk-wallet": "0.0.8",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3"
+  }
+}

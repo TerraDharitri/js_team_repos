@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { ACCOUNTS_ENDPOINT } from 'apiCalls';
-import DharitriIconSimple from 'assets/icons/mvx-icon-simple.svg';
+import DharitriIconSimple from 'assets/icons/drt-icon-simple.svg';
 import { trimUsernameDomain } from 'hooks/account/helpers';
 import { CopyButton } from 'UI/CopyButton';
 import { ExplorerLink } from 'UI/ExplorerLink';

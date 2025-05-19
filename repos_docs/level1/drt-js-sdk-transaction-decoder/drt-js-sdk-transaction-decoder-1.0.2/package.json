@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-transaction-decoder",
-  "version": "1.0.2",
+  "version": "0.0.7",
   "description": "Transaction metadata decoder",
   "main": "lib/transaction.decoder.js",
   "types": "lib/transaction.decoder.d.ts",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TerraDharitri/drt-sdk-transaction-decoder.git"
+    "url": "git+https://github.com/TerraDharitri/drt-js-sdk-transaction-decoder.git"
   },
   "keywords": [
     "dharitri",

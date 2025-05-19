@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
-import { MvxEventProcessorModule } from './drt-event-processor.module';
+import { DrtEventProcessorModule } from './drt-event-processor.module';
 
 async function bootstrap() {
-  await NestFactory.createApplicationContext(MvxEventProcessorModule);
+  await NestFactory.createApplicationContext(DrtEventProcessorModule);
 }
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises

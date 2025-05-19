@@ -1,10 +1,10 @@
 import { Inject, Injectable } from "@nestjs/common";
 import { Cron } from "@nestjs/schedule";
 import { ClientProxy } from "@nestjs/microservices";
-import { ExampleService } from "@mvx-monorepo/common";
+import { ExampleService } from "@drt-monorepo/common";
 import { CacheService } from "@terradharitri/sdk-nestjs-cache";
 import { Locker } from "@terradharitri/sdk-nestjs-common";
-import { CacheInfo } from "@mvx-monorepo/common/utils/cache.info";
+import { CacheInfo } from "@drt-monorepo/common/utils/cache.info";
 
 @Injectable()
 export class CacheWarmerService {

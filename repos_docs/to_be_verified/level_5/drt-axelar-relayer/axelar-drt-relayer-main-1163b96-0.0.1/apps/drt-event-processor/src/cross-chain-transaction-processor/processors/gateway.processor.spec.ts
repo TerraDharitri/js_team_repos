@@ -1,26 +1,26 @@
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
 import { Test } from '@nestjs/testing';
 import { BinaryUtils } from '@terradharitri/sdk-nestjs-common';
-import { EventIdentifiers, Events } from '@mvx-monorepo/common/utils/event.enum';
+import { EventIdentifiers, Events } from '@drt-monorepo/common/utils/event.enum';
 import { GatewayProcessor } from './gateway.processor';
 import { Address, ITransactionEvent } from '@terradharitri/sdk-core/out';
-import { GatewayContract } from '@mvx-monorepo/common/contracts/gateway.contract';
+import { GatewayContract } from '@drt-monorepo/common/contracts/gateway.contract';
 import {
   ContractCallEvent,
   MessageApprovedEvent,
   MessageExecutedEvent,
   SignersRotatedEvent,
-} from '@mvx-monorepo/common/contracts/entities/gateway-events';
+} from '@drt-monorepo/common/contracts/entities/gateway-events';
 import { TransactionEvent, TransactionOnNetwork } from '@terradharitri/sdk-network-providers/out';
-import { MessageApprovedRepository } from '@mvx-monorepo/common/database/repository/message-approved.repository';
-import { Components } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
+import { MessageApprovedRepository } from '@drt-monorepo/common/database/repository/message-approved.repository';
+import { Components } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
 import { MessageApproved, MessageApprovedStatus } from '@prisma/client';
 import BigNumber from 'bignumber.js';
 import CallEvent = Components.Schemas.CallEvent;
 import MessageApprovedEventApi = Components.Schemas.MessageApprovedEvent;
 import MessageExecutedEventApi = Components.Schemas.MessageExecutedEvent;
 import SignersRotatedEventApi = Components.Schemas.SignersRotatedEvent;
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 const mockGatewayContract = 'drt1qqqqqqqqqqqqqpgqvc7gdl0p4s97guh498wgz75k8sav6sjfjlwq2xfx36';
 

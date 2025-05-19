@@ -27,7 +27,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@terradharitri/sdk-dapp/*": ["node_modules/@terradharitri/sdk-dapp/dist/*"]
+      "@terradharitri/sdk-dapp/*": ["node_modules/@terradharitri/sdk-dapp/*"]
     }
   },
   "include": ["src", "scripts"],

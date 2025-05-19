@@ -16,7 +16,7 @@ describe('getTokenFromData tests', () => {
   });
   test('get token test', () => {
     const result = getTokenFromData(
-      'DCDTTransfer@5745474c442d383836303061@8ac7230489e80000@73776170546f6b656e734669786564496e707574@555344432d613332393036@480e48f5'
+      'DCDTTransfer@57524557412d383836303061@8ac7230489e80000@73776170546f6b656e734669786564496e707574@555344432d613332393036@480e48f5'
     );
 
     expect(result).toStrictEqual({
@@ -26,7 +26,7 @@ describe('getTokenFromData tests', () => {
   });
   test('get multidcdt test', () => {
     const result = getTokenFromData(
-      'MultiDCDTNFTTransfer@00000000000000000500bfa6f00d36d61f232c3c7532fae6b08e3909aac27ceb@02@5745474c442d383836303061@@4657679aa5be59@4d45582d623662623764@@e5eb0b83150fb8ec2b@6164644c6971756964697479@45a354a5e6a567@e39e745b5f173ec0d8'
+      'MultiDCDTNFTTransfer@00000000000000000500bfa6f00d36d61f232c3c7532fae6b08e3909aac27ceb@02@57524557412d383836303061@@4657679aa5be59@4d45582d623662623764@@e5eb0b83150fb8ec2b@6164644c6971756964697479@45a354a5e6a567@e39e745b5f173ec0d8'
     );
 
     expect(result).toStrictEqual({

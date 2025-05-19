@@ -9,7 +9,8 @@ import { safeDocument } from '../constants';
 import { MetamaskProxyProviderContentWindow } from './MetamaskProxyProviderContentWindow';
 
 export class MetamaskProxyManager extends WindowManager {
-  private metamaskProxyWalletComponent: MetamaskProxyProviderContentWindow | null = null;
+  private metamaskProxyWalletComponent: MetamaskProxyProviderContentWindow | null =
+    null;
   private readonly iframeId = 'metamask-proxy-wallet';
 
   public get metamaskProxyWallet() {

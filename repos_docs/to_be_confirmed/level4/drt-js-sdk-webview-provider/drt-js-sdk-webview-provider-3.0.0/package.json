@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-webview-provider",
-  "version": "3.0.0",
+  "version": "0.0.5",
   "description": "SDK Webview Provider",
   "main": "out/index.js",
   "types": "out/index.d.js",
@@ -15,13 +15,13 @@
   "author": "DharitrI",
   "license": "MIT",
   "devDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-14.0.1",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-main",
+    "@terradharitri/sdk-core": "0.1.11",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "0.0.5",
     "prettier": "3.2.5",
     "typescript": "5.4.5"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-core": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-14.0.1",
-    "@terradharitri/sdk-web-wallet-cross-window-provider": "/home/dharitri/Desktop/TS&JS_versions/js_team_repos/repos_docs/to_be_verified/level3/drt-js-sdk-web-wallet-cross-window-provider/drt-js-sdk-web-wallet-cross-window-provider-main"
+    "@terradharitri/sdk-core": "0.1.11",
+    "@terradharitri/sdk-web-wallet-cross-window-provider": "0.0.5"
   }
 }

@@ -1,7 +1,7 @@
 import 'module-alias/register';
 import { NestFactory } from '@nestjs/core';
 import { TransactionProcessorModule } from './processor';
-import { ApiConfigService } from '@mvx-monorepo/common';
+import { ApiConfigService } from '@drt-monorepo/common';
 
 async function bootstrap() {
   const transactionProcessorApp = await NestFactory.create(TransactionProcessorModule);

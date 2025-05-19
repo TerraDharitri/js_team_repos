@@ -1,4 +1,4 @@
-import { RawAbiType } from '@terradharitri/sdk-dapp-sc-explorer/dist/types/abi.types';
+import { RawAbiType } from '@terradharitri/sdk-dapp-sc-explorer/types/abi.types';
 
 import { downloadFile } from 'helpers';
 

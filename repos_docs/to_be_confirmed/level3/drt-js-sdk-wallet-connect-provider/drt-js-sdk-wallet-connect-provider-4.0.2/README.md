@@ -176,7 +176,7 @@ console.log(message.toJSON());
 
 ## Namespaces
 
-DharitrI Namespace: `mvx`
+DharitrI Namespace: `drt`
 
 Reference: `1` for `Mainnet`, `T` for `Testnet`, `D` for `Devnet` ( same as the DharitrI chainID )
 
@@ -185,12 +185,12 @@ Reference: `1` for `Mainnet`, `T` for `Testnet`, `D` for `Devnet` ( same as the 
 ```json
 {
   "requiredNamespaces": {
-    "mvx": {
-      "chains": ["mvx:D"],
+    "drt": {
+      "chains": ["drt:D"],
       "methods": [
-        "mvx_signTransaction",
-        "mvx_signTransactions",
-        "mvx_signMessage"
+        "drt_signTransaction",
+        "drt_signTransactions",
+        "drt_signMessage"
       ],
       "events": []
     }
@@ -205,16 +205,16 @@ If the wallet (or the user) does NOT approve the session, then it is rejected. O
 ```json
 {
   "sessionNamespaces": {
-    "mvx": {
-      "chains": ["mvx:D"],
+    "drt": {
+      "chains": ["drt:D"],
       "methods": [
-        "mvx_signTransaction",
-        "mvx_signTransactions",
-        "mvx_signMessage"
+        "drt_signTransaction",
+        "drt_signTransactions",
+        "drt_signMessage"
       ],
       "events": [],
       "accounts": [
-        "mvx:D:drt1p47hljmqsetgzc4yqp700z6443r655zfkkg9lfkh0tx2wzyxl8sa5jdjq"
+        "drt:D:drt1p47hljmqsetgzc4yqp700z6443r655zfkkg9lfkh0tx2wzyxl8sa5jdjq"
       ]
     }
   }
@@ -223,16 +223,16 @@ If the wallet (or the user) does NOT approve the session, then it is rejected. O
 
 ### Optional Methods
 
-The default methods are `mvx_signTransaction`, `mvx_signTransactions` and `mvx_signMessage`.
+The default methods are `drt_signTransaction`, `drt_signTransactions` and `drt_signMessage`.
 
 Any additional methods must be passed in the `.connect` step
 
 ```js
 const { uri, approval } = await provider.connect({
-  methods: ["mvx_signNativeAuthToken", "mvx_cancelAction"],
+  methods: ["drt_signNativeAuthToken", "drt_cancelAction"],
 });
 ```
 
-- `mvx_signLoginToken` - Included by default for now for compatibility reasons. Subject to change as it will be replaced by the `mvx_signNativeAuthToken` method soon.
-- `mvx_signNativeAuthToken` - Used while logging in with a nativeAuth token, this will offer a special UI based on that format.
-- `mvx_cancelAction` - The dApp can trigger a `sendCustomRequest` event that will cancel the current signing flow on the device.
+- `drt_signLoginToken` - Included by default for now for compatibility reasons. Subject to change as it will be replaced by the `drt_signNativeAuthToken` method soon.
+- `drt_signNativeAuthToken` - Used while logging in with a nativeAuth token, this will offer a special UI based on that format.
+- `drt_cancelAction` - The dApp can trigger a `sendCustomRequest` event that will cancel the current signing flow on the device.

@@ -3,7 +3,7 @@ import Redis from 'ioredis';
 import { REDIS_CLIENT_TOKEN } from '@terradharitri/sdk-nestjs-redis/lib/entities/common.constants';
 import { RedisCacheService } from '@terradharitri/sdk-nestjs-cache';
 import { MetricsService, PerformanceProfiler } from '@terradharitri/sdk-nestjs-monitoring';
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 @Injectable()
 export class RedisHelper {

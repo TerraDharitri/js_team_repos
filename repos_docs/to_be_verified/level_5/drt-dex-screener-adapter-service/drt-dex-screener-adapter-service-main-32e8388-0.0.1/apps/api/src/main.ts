@@ -9,14 +9,14 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { readFileSync } from 'fs';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { join } from 'path';
-import { ApiConfigService } from '@mvx-monorepo/common';
+import { ApiConfigService } from '@drt-monorepo/common';
 import { PrivateAppModule } from './private.app.module';
 import { PublicAppModule } from './public.app.module';
 import * as bodyParser from 'body-parser';
 import { Logger, NestInterceptor } from '@nestjs/common';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 import cookieParser from 'cookie-parser';
-import { PubSubListenerModule } from '@mvx-monorepo/common';
+import { PubSubListenerModule } from '@drt-monorepo/common';
 import { LoggingInterceptor, MetricsService } from '@terradharitri/sdk-nestjs-monitoring';
 import { LoggerInitializer } from '@terradharitri/sdk-nestjs-common';
 

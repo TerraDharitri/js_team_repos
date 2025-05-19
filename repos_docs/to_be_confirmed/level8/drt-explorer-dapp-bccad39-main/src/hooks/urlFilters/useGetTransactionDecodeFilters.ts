@@ -1,5 +1,5 @@
-import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/dist/types';
-import { stringIsInteger } from '@terradharitri/sdk-dapp/dist/utils/validation/stringIsInteger';
+import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/types';
+import { stringIsInteger } from '@terradharitri/sdk-dapp/utils/validation/stringIsInteger';
 import { useSearchParams } from 'react-router-dom';
 
 const checkType = (type: string) =>

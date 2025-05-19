@@ -1,6 +1,6 @@
 import { Inject } from '@nestjs/common';
 import { CacheService } from '@terradharitri/sdk-nestjs-cache';
-import { CacheInfo } from '@mvx-monorepo/common';
+import { CacheInfo } from '@drt-monorepo/common';
 
 export function GetOrSetCache(cacheInfoFunc: (...args: any[]) => CacheInfo) {
   const injectCacheService = Inject(CacheService);

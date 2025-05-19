@@ -2,9 +2,9 @@
 
 Signing provider for dApps: DharitrI (Web) Wallet.
 
-Documentation is available on [docs.DharitrI.org](https://docs.DharitrI.org/sdk-and-tools/drtjs/drtjs-signing-providers/), while an integration example can be found [here](https://github.com/DharitrI/drt-js-sdk-examples/tree/main/signing-providers).
+Documentation is available on [docs.DharitrI.org](https://docs.DharitrI.org/sdk-and-tools/drtjs/drtjs-signing-providers/), while an integration example can be found [here](https://github.com/TerraDharitri/drt-js-sdk-examples/tree/main/signing-providers).
 
-Note that **we recommend using [dapp-core](https://github.com/DharitrI/drt-sdk-dapp)** instead of integrating the signing provider on your own.
+Note that **we recommend using [dapp-core](https://github.com/TerraDharitri/drt-sdk-dapp)** instead of integrating the signing provider on your own.
 
 ## Distribution
 

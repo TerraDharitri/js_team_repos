@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-http",
-  "version": "2.0.0-beta.2",
+  "version": "0.0.5",
   "description": "Dharitri SDK Nestjs http package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -33,14 +33,14 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@terradharitri/sdk-wallet": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-wallet/drt-js-sdk-wallet-3.0.0",
+    "@terradharitri/sdk-wallet": "0.0.5",
     "agentkeepalive": "^4.3.0",
     "axios": "^0.27.2"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-nestjs-common": "^2.0.0-beta.2",
-    "@terradharitri/sdk-nestjs-monitoring": "^2.0.0-beta.2",
-    "@terradharitri/sdk-wallet": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-wallet/drt-js-sdk-wallet-3.0.0",
+    "@terradharitri/sdk-nestjs-common": "0.0.5",
+    "@terradharitri/sdk-nestjs-monitoring": "0.0.5",
+    "@terradharitri/sdk-wallet": "0.0.5",
     "@nestjs/common": "^10.x",
     "@nestjs/core": "^10.x"
   },

@@ -12,8 +12,8 @@ import {
   ContractCallEvent,
   MessageApprovedEvent, MessageExecutedEvent,
   SignersRotatedEvent,
-} from '@mvx-monorepo/common/contracts/entities/gateway-events';
-import { DecodingUtils } from '@mvx-monorepo/common/utils/decoding.utils';
+} from '@drt-monorepo/common/contracts/entities/gateway-events';
+import { DecodingUtils } from '@drt-monorepo/common/utils/decoding.utils';
 
 @Injectable()
 export class GatewayContract {

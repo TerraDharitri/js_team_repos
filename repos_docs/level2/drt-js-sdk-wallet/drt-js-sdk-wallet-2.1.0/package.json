@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-wallet",
-  "version": "2.1.0",
+  "version": "0.0.3",
   "description": "Core wallet components for TerraDharitri",
   "main": "out/index.js",
   "types": "out/index.d.js",
@@ -20,7 +20,7 @@
   "author": "TerraDharitri",
   "license": "MIT",
   "dependencies": {
-    "@terradharitri/sdk-bls-wasm": "../../../level1/bls-wasm/bls-wasm-0.3.5/",
+    "@terradharitri/sdk-bls-wasm": "^0.0.3",
     "bech32": "1.1.4",
     "bip39": "3.0.2",
     "blake2b": "2.1.3",

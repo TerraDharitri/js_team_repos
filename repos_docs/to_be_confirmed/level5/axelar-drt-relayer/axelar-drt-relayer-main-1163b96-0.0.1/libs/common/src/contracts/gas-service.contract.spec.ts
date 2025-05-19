@@ -1,10 +1,10 @@
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
 import { Test } from '@nestjs/testing';
 import { BinaryUtils } from '@terradharitri/sdk-nestjs-common';
-import { Events } from '@mvx-monorepo/common/utils/event.enum';
+import { Events } from '@drt-monorepo/common/utils/event.enum';
 import { AbiRegistry, Address, ResultsParser, SmartContract } from '@terradharitri/sdk-core/out';
 import { TransactionEvent } from '@terradharitri/sdk-network-providers/out';
-import { GasServiceContract } from '@mvx-monorepo/common/contracts/gas-service.contract';
+import { GasServiceContract } from '@drt-monorepo/common/contracts/gas-service.contract';
 
 import gasServiceAbi from '../assets/gas-service.abi.json';
 import BigNumber from 'bignumber.js';

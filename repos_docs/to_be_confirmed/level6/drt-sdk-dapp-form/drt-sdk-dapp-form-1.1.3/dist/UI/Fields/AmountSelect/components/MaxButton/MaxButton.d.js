@@ -1,2 +1,2 @@
-"use strict";import{f as t}from"../../../../../__chunks__/chunk-RGFNPOTZ.js";t();
+"use strict";import{f as t}from"../../../../../__chunks__/chunk-JH2LJGTQ.js";t();
 //# sourceMappingURL=MaxButton.d.js.map

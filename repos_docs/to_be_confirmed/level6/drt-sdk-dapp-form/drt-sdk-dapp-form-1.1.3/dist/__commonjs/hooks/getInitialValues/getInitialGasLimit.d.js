@@ -1,2 +1,2 @@
-"use strict";import{f as i}from"../../../__chunks__/chunk-RGFNPOTZ.js";i();
+"use strict";import{f as i}from"../../../__chunks__/chunk-JH2LJGTQ.js";i();
 //# sourceMappingURL=getInitialGasLimit.d.js.map

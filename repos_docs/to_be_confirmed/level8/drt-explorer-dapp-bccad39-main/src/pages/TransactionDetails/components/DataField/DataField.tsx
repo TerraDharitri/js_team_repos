@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/dist/types';
+import { DecodeMethodEnum } from '@terradharitri/sdk-dapp/types';
 import { Anchorme } from 'react-anchorme';
 import { useLocation, useNavigate } from 'react-router-dom';
 

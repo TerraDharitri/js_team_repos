@@ -1,4 +1,4 @@
-import { ElasticEvent, ElasticLog } from "@mvx-monorepo/common";
+import { ElasticEvent, ElasticLog } from "@drt-monorepo/common";
 import { GeneralEvent } from "../../entities/general.event";
 import { OneDexPair } from "./onedex.pair";
 import { AddressUtils, BinaryUtils } from "@terradharitri/sdk-nestjs-common";

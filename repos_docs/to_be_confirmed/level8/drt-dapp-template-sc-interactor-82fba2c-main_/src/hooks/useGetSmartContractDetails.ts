@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { AccountType } from '@terradharitri/sdk-dapp/dist/types';
+import { AccountType } from '@terradharitri/sdk-dapp/types';
 import axios from 'axios';
 import { contractAddress } from 'config';
 import { useGetNetworkConfig } from 'hooks';

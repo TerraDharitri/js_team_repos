@@ -1,4 +1,4 @@
-import { ElasticEvent } from "@mvx-monorepo/common";
+import { ElasticEvent } from "@drt-monorepo/common";
 
 export class GeneralEvent {
   type: string;

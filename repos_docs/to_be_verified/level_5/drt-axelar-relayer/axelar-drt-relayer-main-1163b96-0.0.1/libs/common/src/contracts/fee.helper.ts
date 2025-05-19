@@ -1,9 +1,9 @@
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ProxyNetworkProvider } from '@terradharitri/sdk-network-providers/out';
-import { ApiConfigService } from '@mvx-monorepo/common';
+import { ApiConfigService } from '@drt-monorepo/common';
 import { ITransactionPayload, ITransactionValue } from '@terradharitri/sdk-core/out';
 import { MessageApproved } from '@prisma/client';
-import { NotEnoughGasError } from '@mvx-monorepo/common/contracts/entities/gas.error';
+import { NotEnoughGasError } from '@drt-monorepo/common/contracts/entities/gas.error';
 
 const MAX_GAS_LIMIT = 600_000_000n;
 

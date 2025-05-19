@@ -1,0 +1,2 @@
+import{a as t}from"./chunk-JPRFA642.js";import{i as e}from"./chunk-P4IVSQC4.js";import{f as a}from"./chunk-JH2LJGTQ.js";a();import m from"react";e();var L=({rewaLabel:r,amount:o,maxAmountMinusDust:i,isMaxClicked:s,tokenId:l})=>o===i&&s&&l===r?m.createElement("span",{style:{marginLeft:"0.2rem"}},m.createElement(t,{rewaLabel:r})):null;a();e();export{L as a};
+//# sourceMappingURL=chunk-HTNZIELH.js.map

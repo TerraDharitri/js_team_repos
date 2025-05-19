@@ -1,6 +1,6 @@
 import { Module } from "@nestjs/common";
 import { IndexerService } from "./indexer.service";
-import { DynamicModuleUtils } from "@mvx-monorepo/common";
+import { DynamicModuleUtils } from "@drt-monorepo/common";
 
 @Module({})
 export class IndexerModule {

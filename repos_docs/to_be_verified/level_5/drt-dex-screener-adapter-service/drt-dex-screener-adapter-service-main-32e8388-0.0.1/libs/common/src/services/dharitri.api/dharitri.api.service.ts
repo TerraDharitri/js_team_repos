@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { Token } from "./entities";
 import { ApiService } from "@terradharitri/sdk-nestjs-http";
-import { ApiConfigService, CacheInfo } from "@mvx-monorepo/common";
+import { ApiConfigService, CacheInfo } from "@drt-monorepo/common";
 import { OriginLogger } from "@terradharitri/sdk-nestjs-common";
 import { CacheService } from "@terradharitri/sdk-nestjs-cache";
 

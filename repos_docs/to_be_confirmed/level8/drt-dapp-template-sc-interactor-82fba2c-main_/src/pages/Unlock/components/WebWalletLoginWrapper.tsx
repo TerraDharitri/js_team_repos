@@ -1,6 +1,6 @@
 import React from 'react';
-import { useWebWalletLogin } from '@terradharitri/sdk-dapp/dist/hooks/login/useWebWalletLogin';
-import { WebWalletLoginButtonPropsType } from '@terradharitri/sdk-dapp/dist/UI/webWallet/WebWalletLoginButton/WebWalletLoginButton';
+import { useWebWalletLogin } from '@terradharitri/sdk-dapp/hooks/login/useWebWalletLogin';
+import { WebWalletLoginButtonPropsType } from '@terradharitri/sdk-dapp/UI/webWallet/WebWalletLoginButton/WebWalletLoginButton';
 import { CrossWindowLoginButton } from 'components/sdkDappComponents';
 import { DualLoginButton } from './DualLoginButton';
 

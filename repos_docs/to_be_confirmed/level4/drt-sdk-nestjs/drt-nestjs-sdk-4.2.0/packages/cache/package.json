@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-cache",
-  "version": "4.2.0",
+  "version": "0.0.14",
   "description": "Dharitri SDK Nestjs cache package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -40,9 +40,9 @@
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-nestjs-common": "../common",
-    "@terradharitri/sdk-nestjs-monitoring": "../monitoring",
-    "@terradharitri/sdk-nestjs-redis": "../redis",
+    "@terradharitri/sdk-nestjs-common": "0.0.14",
+    "@terradharitri/sdk-nestjs-monitoring": "0.0.14",
+    "@terradharitri/sdk-nestjs-redis": "0.0.14",
     "@nestjs/common": "^10.x",
     "@nestjs/core": "^10.x"
   },

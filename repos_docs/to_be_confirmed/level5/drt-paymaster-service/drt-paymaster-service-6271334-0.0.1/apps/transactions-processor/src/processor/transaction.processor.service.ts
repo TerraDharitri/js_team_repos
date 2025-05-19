@@ -4,7 +4,7 @@ import { Locker } from "@terradharitri/sdk-nestjs-common";
 import { TransactionProcessor } from "@terradharitri/sdk-transaction-processor";
 import { Injectable, Logger } from "@nestjs/common";
 import { Cron } from "@nestjs/schedule";
-import { ApiConfigService, CacheInfo } from "@mvx-monorepo/common";
+import { ApiConfigService, CacheInfo } from "@drt-monorepo/common";
 
 @Injectable()
 export class TransactionProcessorService {

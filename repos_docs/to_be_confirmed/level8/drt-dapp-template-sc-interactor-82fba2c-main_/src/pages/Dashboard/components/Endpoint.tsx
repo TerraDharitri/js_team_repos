@@ -1,6 +1,6 @@
 import { EndpointDefinition } from '@terradharitri/sdk-core/out';
-import { ContractEndpoint } from '@terradharitri/sdk-dapp-sc-explorer/dist/components/ContractEndpoints/ContractEndpoint';
-import { EndpointTitle } from '@terradharitri/sdk-dapp-sc-explorer/dist/components/ContractEndpoints/ContractEndpoint/components/EndpointTitle';
+import { ContractEndpoint } from '@terradharitri/sdk-dapp-sc-explorer/components/ContractEndpoints/ContractEndpoint';
+import { EndpointTitle } from '@terradharitri/sdk-dapp-sc-explorer/components/ContractEndpoints/ContractEndpoint/components/EndpointTitle';
 import { whitelistEndpoints } from 'config';
 
 export const Endpoint = ({ endpoint }: { endpoint: EndpointDefinition }) => {

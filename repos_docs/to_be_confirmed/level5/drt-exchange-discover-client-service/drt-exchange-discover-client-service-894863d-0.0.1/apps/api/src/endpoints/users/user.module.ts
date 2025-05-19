@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { DatabaseModule } from '@mvx-monorepo/common';
+import { DatabaseModule } from '@drt-monorepo/common';
 import { UsersService } from './user.service';
 import { User } from './entities/user.entity';
 

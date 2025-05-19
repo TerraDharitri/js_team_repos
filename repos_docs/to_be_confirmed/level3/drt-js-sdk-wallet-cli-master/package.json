@@ -1,10 +1,10 @@
 {
   "name": "@terradharitri/sdk-wallet-cli",
-  "version": "2.1.0",
+  "version": "0.0.1",
   "description": "Light CLI wrapper over the wallet components",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DharitrI/drt-js-sdk-wallet-cli"
+    "url": "https://github.com/TerraDharitri/drt-js-sdk-wallet-cli"
   },
   "main": "index.js",
   "bin": {
@@ -19,9 +19,9 @@
   "author": "DharitrI",
   "license": "MIT",
   "dependencies": {
-    "@terradharitri/sdk-transaction-decoder":"/home/dugong/Documents/js_team_repos-main/repos_docs/level1/drt-js-sdk-transaction-decoder/drt-js-sdk-transaction-decoder-1.0.2",
-    "@terradharitri/sdk-core": "/home/dugong/Documents/js_team_repos-main/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-11.2.0",
-    "@terradharitri/sdk-wallet": "/home/dugong/Documents/js_team_repos-main/repos_docs/level2/drt-js-sdk-wallet/drt-js-sdk-wallet-2.1.2",
+    "@terradharitri/sdk-transaction-decoder":"0.0.7",
+    "@terradharitri/sdk-core": "0.0.5",
+    "@terradharitri/sdk-wallet": "0.0.4",
     "commander": "9.0.0"
   }
 }

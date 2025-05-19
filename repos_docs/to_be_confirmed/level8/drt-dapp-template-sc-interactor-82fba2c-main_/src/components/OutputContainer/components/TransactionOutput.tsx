@@ -1,9 +1,9 @@
 import {
   TRANSACTIONS_ENDPOINT,
   ACCOUNTS_ENDPOINT
-} from '@terradharitri/sdk-dapp/dist/apiCalls/endpoints';
-import { useGetNetworkConfig } from '@terradharitri/sdk-dapp/dist/hooks/useGetNetworkConfig';
-import { ExplorerLink } from '@terradharitri/sdk-dapp/dist/UI/ExplorerLink';
+} from '@terradharitri/sdk-dapp/apiCalls/endpoints';
+import { useGetNetworkConfig } from '@terradharitri/sdk-dapp/hooks/useGetNetworkConfig';
+import { ExplorerLink } from '@terradharitri/sdk-dapp/UI/ExplorerLink';
 import { Label } from 'components/Label';
 import { FormatAmount } from 'components/sdkDappComponents';
 import { SignedTransactionType } from 'types';

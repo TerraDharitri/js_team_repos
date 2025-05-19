@@ -3,9 +3,9 @@ import { ProxyNetworkProvider } from '@terradharitri/sdk-network-providers/out';
 import { Transaction, TransactionHash, TransactionWatcher } from '@terradharitri/sdk-core/out';
 import { UserAddress } from '@terradharitri/sdk-wallet/out/userAddress';
 import { UserSigner } from '@terradharitri/sdk-wallet/out';
-import { ApiConfigService } from '@mvx-monorepo/common/config';
-import { GasError } from '@mvx-monorepo/common/contracts/entities/gas.error';
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { ApiConfigService } from '@drt-monorepo/common/config';
+import { GasError } from '@drt-monorepo/common/contracts/entities/gas.error';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 @Injectable()
 export class TransactionsHelper {

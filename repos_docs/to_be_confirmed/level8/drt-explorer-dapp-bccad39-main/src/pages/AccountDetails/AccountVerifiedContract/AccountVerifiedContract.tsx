@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useGetLoginInfo, useGetAccountInfo } from '@terradharitri/sdk-dapp/dist/hooks';
-import { NotificationModal } from '@terradharitri/sdk-dapp/dist/UI/NotificationModal/NotificationModal';
-import { SignTransactionsModals } from '@terradharitri/sdk-dapp/dist/UI/SignTransactionsModals/SignTransactionsModals';
-import { TransactionsToastList } from '@terradharitri/sdk-dapp/dist/UI/TransactionsToastList/TransactionsToastList';
-import { DappProvider } from '@terradharitri/sdk-dapp/dist/wrappers/DappProvider/DappProvider';
-import { ScExplorerContainer } from '@terradharitri/sdk-dapp-sc-explorer/dist/containers/ScExplorerContainer';
-import { VerifiedContractTabsEnum } from '@terradharitri/sdk-dapp-sc-explorer/dist/types/base.types';
-import { VerifiedContractType } from '@terradharitri/sdk-dapp-sc-explorer/dist/types/verifiedContract.types';
+import { useGetLoginInfo, useGetAccountInfo } from '@terradharitri/sdk-dapp/hooks';
+import { NotificationModal } from '@terradharitri/sdk-dapp/UI/NotificationModal/NotificationModal';
+import { SignTransactionsModals } from '@terradharitri/sdk-dapp/UI/SignTransactionsModals/SignTransactionsModals';
+import { TransactionsToastList } from '@terradharitri/sdk-dapp/UI/TransactionsToastList/TransactionsToastList';
+import { DappProvider } from '@terradharitri/sdk-dapp/wrappers/DappProvider/DappProvider';
+import { ScExplorerContainer } from '@terradharitri/sdk-dapp-sc-explorer/containers/ScExplorerContainer';
+import { VerifiedContractTabsEnum } from '@terradharitri/sdk-dapp-sc-explorer/types/base.types';
+import { VerifiedContractType } from '@terradharitri/sdk-dapp-sc-explorer/types/verifiedContract.types';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 

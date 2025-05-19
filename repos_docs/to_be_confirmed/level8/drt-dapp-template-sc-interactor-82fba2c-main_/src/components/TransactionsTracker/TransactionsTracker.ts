@@ -1,4 +1,4 @@
-import { useTransactionsTracker } from '@terradharitri/sdk-dapp/dist/hooks/transactions/useTransactionsTracker';
+import { useTransactionsTracker } from '@terradharitri/sdk-dapp/hooks/transactions/useTransactionsTracker';
 import { useBatchTransactionsTracker } from 'hooks/sdkDappHooks';
 
 export const TransactionsTracker = () => {

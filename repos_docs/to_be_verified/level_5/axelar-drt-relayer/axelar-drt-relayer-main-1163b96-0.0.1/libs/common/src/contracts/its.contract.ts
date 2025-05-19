@@ -1,12 +1,12 @@
 import { AbiRegistry, Interaction, ITransactionEvent, SmartContract, TokenTransfer } from '@terradharitri/sdk-core/out';
 import { Injectable } from '@nestjs/common';
 import { AbiCoder } from 'ethers';
-import { Events } from '@mvx-monorepo/common/utils/event.enum';
-import { DecodingUtils } from '@mvx-monorepo/common/utils/decoding.utils';
+import { Events } from '@drt-monorepo/common/utils/event.enum';
+import { DecodingUtils } from '@drt-monorepo/common/utils/decoding.utils';
 import {
   InterchainTokenDeploymentStartedEvent,
   InterchainTransferEvent,
-} from '@mvx-monorepo/common/contracts/entities/its-events';
+} from '@drt-monorepo/common/contracts/entities/its-events';
 
 const MESSAGE_TYPE_DEPLOY_INTERCHAIN_TOKEN = 1;
 const MESSAGE_TYPE_RECEIVE_FROM_HUB = 4;

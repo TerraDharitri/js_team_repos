@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-event-processor",
-  "version": "1.0.3",
+  "version": "0.0.2",
   "description": "DharitrI logs&events processor",
   "main": "lib/event.processor.js",
   "types": "lib/event.processor.d.ts",

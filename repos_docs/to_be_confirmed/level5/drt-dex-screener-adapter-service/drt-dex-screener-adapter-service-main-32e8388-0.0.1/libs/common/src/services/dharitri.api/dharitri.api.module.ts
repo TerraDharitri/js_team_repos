@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { DynamicModuleUtils } from "@mvx-monorepo/common";
+import { DynamicModuleUtils } from "@drt-monorepo/common";
 import { ApiService } from "./dharitri.api.service";
 
 @Module({})

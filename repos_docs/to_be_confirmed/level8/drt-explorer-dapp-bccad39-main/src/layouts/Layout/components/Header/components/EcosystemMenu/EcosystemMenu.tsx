@@ -1,4 +1,4 @@
-import { dharitrIApps, SHARE_PREFIX } from 'config';
+import { dharitriApps, SHARE_PREFIX } from 'config';
 import { capitalize } from 'helpers';
 
 export const EcosystemMenu = () => {

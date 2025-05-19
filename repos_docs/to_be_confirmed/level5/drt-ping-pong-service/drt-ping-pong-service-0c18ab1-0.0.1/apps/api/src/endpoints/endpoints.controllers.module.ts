@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { DynamicModuleUtils } from "@mvx-monorepo/common";
+import { DynamicModuleUtils } from "@drt-monorepo/common";
 import { EndpointsServicesModule } from "./endpoints.services.module";
 import { HealthCheckController } from "./health-check/health.check.controller";
 import { PingPongController as PingPongRawController } from "./ping-pong.raw/ping.pong.controller";

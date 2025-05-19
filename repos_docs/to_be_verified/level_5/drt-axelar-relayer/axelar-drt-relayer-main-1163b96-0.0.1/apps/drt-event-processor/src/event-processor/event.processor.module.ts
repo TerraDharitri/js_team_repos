@@ -1,8 +1,8 @@
 import { RabbitModule, RabbitModuleOptions } from '@terradharitri/sdk-nestjs-rabbitmq';
 import { forwardRef, Module } from '@nestjs/common';
 import { EventProcessorService } from './event.processor.service';
-import { ApiConfigModule, ApiConfigService, ApiModule } from '@mvx-monorepo/common';
-import { HelpersModule } from '@mvx-monorepo/common/helpers/helpers.module';
+import { ApiConfigModule, ApiConfigService, ApiModule } from '@drt-monorepo/common';
+import { HelpersModule } from '@drt-monorepo/common/helpers/helpers.module';
 
 @Module({
   imports: [

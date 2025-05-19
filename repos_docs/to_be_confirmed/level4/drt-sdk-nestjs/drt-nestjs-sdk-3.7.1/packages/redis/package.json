@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-redis",
-  "version": "3.7.1",
+  "version": "0.0.11",
   "description": "Dharitri SDK Nestjs redis client package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

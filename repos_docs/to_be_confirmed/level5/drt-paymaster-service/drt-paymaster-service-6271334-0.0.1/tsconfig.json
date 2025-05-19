@@ -33,10 +33,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "paths": {
-      "@mvx-monorepo/common": [
+      "@drt-monorepo/common": [
         "libs/common/src"
       ],
-      "@mvx-monorepo/common/*": [
+      "@drt-monorepo/common/*": [
         "libs/common/src/*"
       ],
       "@nestjs/common": [

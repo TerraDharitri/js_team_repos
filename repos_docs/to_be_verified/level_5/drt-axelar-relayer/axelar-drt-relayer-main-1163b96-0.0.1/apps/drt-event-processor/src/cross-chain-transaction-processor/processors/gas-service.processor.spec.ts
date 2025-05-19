@@ -1,20 +1,20 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { GasServiceProcessor } from './gas-service.processor';
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
-import { GasServiceContract } from '@mvx-monorepo/common/contracts/gas-service.contract';
+import { GasServiceContract } from '@drt-monorepo/common/contracts/gas-service.contract';
 import { BinaryUtils } from '@terradharitri/sdk-nestjs-common';
-import { EventIdentifiers, Events } from '@mvx-monorepo/common/utils/event.enum';
+import { EventIdentifiers, Events } from '@drt-monorepo/common/utils/event.enum';
 import { Address, ITransactionEvent } from '@terradharitri/sdk-core/out';
-import { ApiConfigService, GatewayContract } from '@mvx-monorepo/common';
+import { ApiConfigService, GatewayContract } from '@drt-monorepo/common';
 import { TransactionEvent, TransactionOnNetwork } from '@terradharitri/sdk-network-providers/out';
 import {
   GasAddedEvent,
   GasPaidForContractCallEvent,
   RefundedEvent,
-} from '@mvx-monorepo/common/contracts/entities/gas-service-events';
+} from '@drt-monorepo/common/contracts/entities/gas-service-events';
 import BigNumber from 'bignumber.js';
-import { Components, GasRefundedEvent } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
-import { ContractCallEvent } from '@mvx-monorepo/common/contracts/entities/gateway-events';
+import { Components, GasRefundedEvent } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
+import { ContractCallEvent } from '@drt-monorepo/common/contracts/entities/gateway-events';
 import GasCreditEvent = Components.Schemas.GasCreditEvent;
 
 const mockGasServiceContract = 'drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqplllsphc9lf';

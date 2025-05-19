@@ -1,7 +1,7 @@
 import { CacheService } from "@terradharitri/sdk-nestjs-cache";
 import { BatchUtils, Lock, OriginLogger } from "@terradharitri/sdk-nestjs-common";
-import { CacheInfo, ApiService, DharitrixService } from "@mvx-monorepo/common";
-import { OneDexService } from "@mvx-monorepo/common/providers";
+import { CacheInfo, ApiService, DharitrixService } from "@drt-monorepo/common";
+import { OneDexService } from "@drt-monorepo/common/providers";
 import { Inject, Injectable } from "@nestjs/common";
 import { ClientProxy } from "@nestjs/microservices";
 import { Cron, CronExpression } from "@nestjs/schedule";

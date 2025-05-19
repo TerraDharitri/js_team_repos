@@ -1,5 +1,5 @@
-import { FormatAmountType as SdkDappFormatAmountType } from '@terradharitri/sdk-dapp/dist/utils/operations/formatAmount';
-import { stringIsInteger } from '@terradharitri/sdk-dapp/dist/utils/validation/stringIsInteger';
+import { FormatAmountType as SdkDappFormatAmountType } from '@terradharitri/sdk-dapp/utils/operations/formatAmount';
+import { stringIsInteger } from '@terradharitri/sdk-dapp/utils/validation/stringIsInteger';
 import { ELLIPSIS, MAX_DISPLAY_ZERO_DECIMALS, ZERO } from 'appConstants';
 import { DECIMALS, DIGITS } from 'config';
 

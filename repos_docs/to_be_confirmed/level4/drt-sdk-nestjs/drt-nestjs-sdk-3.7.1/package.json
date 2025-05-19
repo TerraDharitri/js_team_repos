@@ -14,9 +14,6 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@terradharitri/sdk-core": "file:../../../../level2/drt-js-sdk-core/drt-js-sdk-core-13.1.0",
-    "@terradharitri/sdk-native-auth-server": "file:../../../level3/drt-js-sdk-native-auth-server/drt-js-sdk-native-auth-server-1.0.19",
-    "@terradharitri/sdk-wallet": "file:../../../../level2/drt-js-sdk-wallet/drt-js-sdk-wallet-4.2.0",
     "ajv": "^8.12.0",
     "bignumber.js": "^9.0.1",
     "js-yaml": "^4.1.0"

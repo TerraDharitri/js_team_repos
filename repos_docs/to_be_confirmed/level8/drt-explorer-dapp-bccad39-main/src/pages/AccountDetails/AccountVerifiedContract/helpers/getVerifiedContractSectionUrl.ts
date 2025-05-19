@@ -1,4 +1,4 @@
-import { VerifiedContractTabsEnum } from '@terradharitri/sdk-dapp-sc-explorer/dist/types/base.types';
+import { VerifiedContractTabsEnum } from '@terradharitri/sdk-dapp-sc-explorer/types/base.types';
 
 import { urlBuilder } from 'helpers';
 

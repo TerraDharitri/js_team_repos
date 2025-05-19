@@ -1,6 +1,6 @@
+import { Message } from '@terradharitri/sdk-core/out';
 import { getWalletWindowMock, WalletWindowMockType } from '../../test-utils';
 import { CrossWindowProvider } from '../CrossWindowProvider';
-import { Message } from '@terradharitri/sdk-core/out';
 
 describe('CrossWindowProvider Login', () => {
   let crossWindowProvider: CrossWindowProvider;

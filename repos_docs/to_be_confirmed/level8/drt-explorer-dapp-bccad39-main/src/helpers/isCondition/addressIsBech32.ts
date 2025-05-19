@@ -1,4 +1,4 @@
-import { Address } from '@terradharitri/sdk-core';
+import { Address } from '@terradharitri/sdk-core/out/';
 
 function canTransformToPublicKey(address: string) {
   try {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { useXaliasLogin } from '@terradharitri/sdk-dapp/dist/hooks/login/useXaliasLogin';
-import { WebWalletLoginButtonPropsType } from '@terradharitri/sdk-dapp/dist/UI/webWallet/WebWalletLoginButton/WebWalletLoginButton';
+import { useXaliasLogin } from '@terradharitri/sdk-dapp/hooks/login/useXaliasLogin';
+import { WebWalletLoginButtonPropsType } from '@terradharitri/sdk-dapp/UI/webWallet/WebWalletLoginButton/WebWalletLoginButton';
 import { XaliasCrossWindowLoginButton } from 'components/sdkDappComponents';
 import { DualLoginButton } from './DualLoginButton';
 

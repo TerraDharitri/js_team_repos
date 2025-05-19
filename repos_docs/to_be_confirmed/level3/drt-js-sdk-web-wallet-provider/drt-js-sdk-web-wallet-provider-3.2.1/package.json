@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-web-wallet-provider",
-  "version": "3.2.1",
+  "version": "0.0.3",
   "description": "Signing provider for dApps: DharitrI (Web) Wallet",
   "main": "out/index.js",
   "types": "out/index.d.js",
@@ -30,6 +30,6 @@
     "typescript": "4.1.2"
   },
   "peerDependencies": {
-    "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-12.18.0"
+    "@terradharitri/sdk-core": "0.0.17"
   }
 }

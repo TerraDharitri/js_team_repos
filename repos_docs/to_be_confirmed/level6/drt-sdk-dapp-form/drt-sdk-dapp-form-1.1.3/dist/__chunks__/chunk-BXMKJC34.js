@@ -1,2 +1,0 @@
-import{d as a}from"./chunk-LQ5GJBXS.js";import{i as r}from"./chunk-BL7T5FXS.js";import{f as e}from"./chunk-RGFNPOTZ.js";e();import f,{useContext as l,useEffect as m,useState as C,createContext as d}from"react";r();var n=d({});function w({children:o,value:{networkConfig:t}}){let[i,s]=C(null);m(()=>{u()},[t]);function u(){let c=a(t.id);s(c)}return f.createElement(n.Provider,{value:{networkConfig:t,delegationContractData:i}},o)}function E(){return l(n)}export{n as a,w as b,E as c};
-//# sourceMappingURL=chunk-BXMKJC34.js.map

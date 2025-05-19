@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ApiMetricsModule, DynamicModuleUtils } from '@mvx-monorepo/common';
+import { ApiMetricsModule, DynamicModuleUtils } from '@drt-monorepo/common';
 import { LoggingModule } from '@terradharitri/sdk-nestjs-common';
 import { EndpointsModule } from './endpoints';
 

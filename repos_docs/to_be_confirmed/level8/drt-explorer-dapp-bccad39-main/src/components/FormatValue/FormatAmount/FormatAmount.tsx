@@ -1,5 +1,5 @@
-import { FormatAmountPropsType as SdkDappFormatAmountType } from '@terradharitri/sdk-dapp/dist/UI/FormatAmount/formatAmount.types';
-import { stringIsInteger } from '@terradharitri/sdk-dapp/dist/utils/validation/stringIsInteger';
+import { FormatAmountPropsType as SdkDappFormatAmountType } from '@terradharitri/sdk-dapp/UI/FormatAmount/formatAmount.types';
+import { stringIsInteger } from '@terradharitri/sdk-dapp/utils/validation/stringIsInteger';
 import BigNumber from 'bignumber.js';
 import classNames from 'classnames';
 import { useSelector } from 'react-redux';

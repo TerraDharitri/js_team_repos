@@ -1,0 +1,2 @@
+import{a as t,c as s}from"./chunk-NF5WHPKU.js";import{c as o}from"./chunk-EXRI3DJM.js";import{a as m,i as r}from"./chunk-P4IVSQC4.js";import{f as a}from"./chunk-JH2LJGTQ.js";a();import i,{useEffect as d}from"react";import l from"classnames";r();var N=e=>{let{formInfo:{setHasGuardianScreen:f}}=o();return d(()=>{e.hasGuardianScreen&&f(!0)},[]),i.createElement("div",{className:l(t.confirm,e.className),"data-testid":"confirmScreen"},i.createElement(s,m({},e)))};a();r();export{N as a};
+//# sourceMappingURL=chunk-NHLS3TA6.js.map

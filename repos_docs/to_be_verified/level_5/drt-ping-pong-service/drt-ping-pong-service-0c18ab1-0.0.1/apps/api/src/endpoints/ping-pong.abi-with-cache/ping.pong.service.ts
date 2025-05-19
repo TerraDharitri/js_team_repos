@@ -2,7 +2,7 @@ import { AbiRegistry, Address, ResultsParser, SmartContract, TokenTransfer } fro
 import { CacheService } from "@terradharitri/sdk-nestjs-cache";
 import { Injectable } from "@nestjs/common";
 import pingPongAbi from './ping.pong.abi.json';
-import { ApiConfigService, CacheInfo } from "@mvx-monorepo/common";
+import { ApiConfigService, CacheInfo } from "@drt-monorepo/common";
 import { ApiNetworkProvider } from "@terradharitri/sdk-network-providers/out";
 
 @Injectable()

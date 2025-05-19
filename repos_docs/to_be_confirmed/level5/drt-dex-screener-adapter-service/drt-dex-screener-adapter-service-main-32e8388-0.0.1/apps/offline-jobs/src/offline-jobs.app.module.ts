@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ApiConfigModule, ApiMetricsModule, DynamicModuleUtils } from '@mvx-monorepo/common';
+import { ApiConfigModule, ApiMetricsModule, DynamicModuleUtils } from '@drt-monorepo/common';
 import { LoggingModule } from '@terradharitri/sdk-nestjs-common';
 import { CronsModule } from './crons';
 import configuration from '../config/configuration';

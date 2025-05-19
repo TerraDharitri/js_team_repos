@@ -1,17 +1,17 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
 import { BinaryUtils } from '@terradharitri/sdk-nestjs-common';
-import { Events } from '@mvx-monorepo/common/utils/event.enum';
+import { Events } from '@drt-monorepo/common/utils/event.enum';
 import { Address, ITransactionEvent } from '@terradharitri/sdk-core/out';
 import { TransactionEvent, TransactionOnNetwork } from '@terradharitri/sdk-network-providers/out';
 import BigNumber from 'bignumber.js';
 import { ItsProcessor } from './its.processor';
-import { ItsContract } from '@mvx-monorepo/common/contracts/its.contract';
+import { ItsContract } from '@drt-monorepo/common/contracts/its.contract';
 import {
   InterchainTokenDeploymentStartedEvent,
   InterchainTransferEvent,
-} from '@mvx-monorepo/common/contracts/entities/its-events';
-import { Components } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
+} from '@drt-monorepo/common/contracts/entities/its-events';
+import { Components } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
 import ITSInterchainTokenDeploymentStartedEvent = Components.Schemas.ITSInterchainTokenDeploymentStartedEvent;
 import ITSInterchainTransferEvent = Components.Schemas.ITSInterchainTransferEvent;
 

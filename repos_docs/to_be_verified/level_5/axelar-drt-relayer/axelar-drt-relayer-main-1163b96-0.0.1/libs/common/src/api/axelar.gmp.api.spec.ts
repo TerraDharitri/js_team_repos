@@ -1,13 +1,13 @@
-import { ApiConfigService } from '@mvx-monorepo/common';
+import { ApiConfigService } from '@drt-monorepo/common';
 import { createMock, DeepMocked } from '@golevelup/ts-jest';
 import { Test } from '@nestjs/testing';
-import { AxelarGmpApi } from '@mvx-monorepo/common/api/axelar.gmp.api';
-import { ProviderKeys } from '@mvx-monorepo/common/utils/provider.enum';
-import { Client as AxelarGmpApiClient, Components } from '@mvx-monorepo/common/api/entities/axelar.gmp.api';
+import { AxelarGmpApi } from '@drt-monorepo/common/api/axelar.gmp.api';
+import { ProviderKeys } from '@drt-monorepo/common/utils/provider.enum';
+import { Client as AxelarGmpApiClient, Components } from '@drt-monorepo/common/api/entities/axelar.gmp.api';
 import { AxiosResponse } from 'axios';
 import Event = Components.Schemas.Event;
 import PublishEventsResult = Components.Schemas.PublishEventsResult;
-import { SlackApi } from '@mvx-monorepo/common/api/slack.api';
+import { SlackApi } from '@drt-monorepo/common/api/slack.api';
 
 describe('AxelarGmpApi', () => {
   let apiClient: DeepMocked<AxelarGmpApiClient>;

@@ -2,9 +2,9 @@ import { createMock, DeepMocked } from '@golevelup/ts-jest';
 import { Test } from '@nestjs/testing';
 import { TransactionPayload } from '@terradharitri/sdk-core/out';
 import { ProxyNetworkProvider } from '@terradharitri/sdk-network-providers/out';
-import { ApiConfigService } from '@mvx-monorepo/common';
-import { FeeHelper } from '@mvx-monorepo/common/contracts/fee.helper';
-import { NotEnoughGasError } from '@mvx-monorepo/common/contracts/entities/gas.error';
+import { ApiConfigService } from '@drt-monorepo/common';
+import { FeeHelper } from '@drt-monorepo/common/contracts/fee.helper';
+import { NotEnoughGasError } from '@drt-monorepo/common/contracts/entities/gas.error';
 
 describe('FeeHelper', () => {
   let proxy: DeepMocked<ProxyNetworkProvider>;

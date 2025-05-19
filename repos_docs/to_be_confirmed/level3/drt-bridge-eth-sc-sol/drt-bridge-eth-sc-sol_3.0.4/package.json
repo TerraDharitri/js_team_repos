@@ -29,7 +29,7 @@
     "@openzeppelin/contracts": "^5.0.1",
     "@openzeppelin/contracts-upgradeable": "^5.0.2",
     "@openzeppelin/hardhat-upgrades": "^3.2.1",
-    "@terradharitri/sdk-core": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level2/drt-js-sdk-core/drt-js-sdk-core-13.2.1",
+    "@terradharitri/sdk-core": "0.1.1",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.2.21",
@@ -95,7 +95,7 @@
     "size": "cross-env TS_NODE_TRANSPILE_ONLY=true hardhat compile; hardhat size-contracts"
   },
   "dependencies": {
-    "@terradharitri/sdk-js-bridge": "/home/dugong/Desktop/teja-work/my_js_works/mxRepos/js_team_repos_test/repos_docs/level1/drt-js-sdk-bridge/drt-js-sdk-bridge-main",
+    "@terradharitri/sdk-js-bridge": "0.0.2",
     "yarn": "^1.22.18"
   },
   "packageManager": "yarn@1.22.22"

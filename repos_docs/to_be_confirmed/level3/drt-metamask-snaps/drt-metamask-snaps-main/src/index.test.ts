@@ -17,7 +17,7 @@ describe('onRpcRequest', () => {
   it('Get public address', async () => {
     const { request, close } = await installSnap();
     const response = await request({
-      method: 'mvx_getAddress',
+      method: 'drt_getAddress',
     });
 
     expect(response).toRespondWith(
@@ -46,7 +46,7 @@ describe('onRpcRequest', () => {
     const { request, close } = await installSnap();
     const userMessage = 'Jest unit test message !';
     const response = request({
-      method: 'mvx_signMessage',
+      method: 'drt_signMessage',
       params: {
         message: userMessage,
       },
@@ -77,7 +77,7 @@ describe('onRpcRequest', () => {
     const { request, close } = await installSnap();
     const userMessage = 'Jest unit test message !';
     const response = request({
-      method: 'mvx_signMessage',
+      method: 'drt_signMessage',
       params: {
         message: userMessage,
       },
@@ -112,7 +112,7 @@ describe('onRpcRequest', () => {
       'aHR0cHM6Ly9kcnQtdGVtcGxhdGUtZGFwcC52ZXJjZWwuYXBw.f587f5591b3c69848bee85aa8225d0030c3c3d77810b8bbebd48dbe55b24e819.86400.eyJ0aW1lc3RhbXAiOjE3MDQ1NDAzMjB9';
     const response = request({
       origin: 'http://localtest:8080',
-      method: 'mvx_signAuthToken',
+      method: 'drt_signAuthToken',
       params: {
         token: authToken,
       },
@@ -148,7 +148,7 @@ describe('onRpcRequest', () => {
       'aHR0cHM6Ly9teC10ZW1wbGF0ZS1kYXBwLnZlcmNlbC5hcHA.f587f5591b3c69848bee85aa8225d0030c3c3d77810b8bbebd48dbe55b24e819.86400.eyJ0aW1lc3RhbXAiOjE3MDQ1NDAzMjB9';
     const response = request({
       origin: 'http://localtest:8080',
-      method: 'mvx_signAuthToken',
+      method: 'drt_signAuthToken',
       params: {
         token: authToken,
       },
@@ -236,7 +236,7 @@ describe('onRpcRequest', () => {
     ];
 
     const response = request({
-      method: 'mvx_signTransactions',
+      method: 'drt_signTransactions',
       params: {
         transactions: transactions,
       },
@@ -338,7 +338,7 @@ describe('onRpcRequest', () => {
     ];
 
     const response = request({
-      method: 'mvx_signTransactions',
+      method: 'drt_signTransactions',
       params: {
         transactions: transactions,
       },
@@ -463,7 +463,7 @@ describe('onRpcRequest', () => {
     ];
 
     const response = request({
-      method: 'mvx_signTransactions',
+      method: 'drt_signTransactions',
       params: {
         transactions: transactions,
       },

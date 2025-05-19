@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-native-auth-client",
-  "version": "1.0.9",
+  "version": "0.0.5",
   "description": "Native authentication client-side",
   "main": "lib/src/index.js",
   "types": "lib/src/index.d.ts",
@@ -33,7 +33,7 @@
     "@types/node": "^16.11.10",
     "@typescript-eslint/eslint-plugin": "^5.12.0",
     "@typescript-eslint/parser": "^5.16.0",
-    "axios-mock-adapter": "^1.20.0",
+    "axios-mock-adapter": "1.20.0",
     "babel-jest": "^27.5.1",
     "eslint": "^8.9.0",
     "jest": "^29.7.0",

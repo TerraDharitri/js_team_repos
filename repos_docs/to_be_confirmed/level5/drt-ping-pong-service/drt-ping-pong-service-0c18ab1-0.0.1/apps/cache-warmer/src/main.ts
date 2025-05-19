@@ -1,6 +1,6 @@
 import 'module-alias/register';
 import { NestFactory } from '@nestjs/core';
-import { ApiConfigService } from '@mvx-monorepo/common';
+import { ApiConfigService } from '@drt-monorepo/common';
 import { CacheWarmerModule } from './cache-warmer';
 
 async function bootstrap() {

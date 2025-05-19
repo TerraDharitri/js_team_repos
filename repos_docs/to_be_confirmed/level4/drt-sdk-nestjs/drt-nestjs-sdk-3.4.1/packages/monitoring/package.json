@@ -1,6 +1,6 @@
 {
   "name": "@terradharitri/sdk-nestjs-monitoring",
-  "version": "3.4.1",
+  "version": "0.0.8",
   "description": "Dharitri SDK Nestjs monitoring package",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

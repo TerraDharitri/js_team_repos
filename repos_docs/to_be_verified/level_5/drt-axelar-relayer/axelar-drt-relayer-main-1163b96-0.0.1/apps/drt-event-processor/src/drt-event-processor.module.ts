@@ -12,4 +12,4 @@ import { CrossChainTransactionProcessorModule } from './cross-chain-transaction-
     CrossChainTransactionProcessorModule,
   ],
 })
-export class MvxEventProcessorModule {}
+export class DrtEventProcessorModule {}
