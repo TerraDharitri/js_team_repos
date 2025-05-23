@@ -22,7 +22,7 @@ jobs:
         run: rm -f package-lock.json
 
       - name: Run npm install
-        run: npm install
+        run: npm install -f
 
       - name: Compare old package-lock with generated package-lock
         run: cmp package-lock.json package-lock-copy.json
